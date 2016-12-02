@@ -1,0 +1,248 @@
+{
+	"menu_id": "sydneyhud_hud_tweaks",
+	"parent_menu_id": "sydneyhud_options",
+	"title": "sydneyhud_hud_tweaks",
+	"description": "sydneyhud_hud_tweaks_desc",
+	"items": [
+		{
+		    "type": "toggle",
+			"id": "enable_pacified",
+			"title": "enable_pacified",
+			"description": "enable_pacified_desc",
+			"callback": "callback_enable_pacified",
+			"value": "enable_pacified",
+			"default_value": true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type": "toggle",
+			"id": "show_suspicion_text",
+			"title": "show_suspicion_text",
+			"description": "show_suspicion_text_desc",
+			"callback": "callback_show_suspicion_text",
+			"value": "show_suspicion_text",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_melee_interaction",
+			"title": "show_melee_interaction",
+			"description": "show_melee_interaction_desc",
+			"callback": "callback_show_melee_interaction",
+			"value": "show_melee_interaction",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_reload_interaction",
+			"title": "show_reload_interaction",
+			"description": "show_reload_interaction_desc",
+			"callback": "callback_show_reload_interaction",
+			"value": "show_reload_interaction",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_interaction_circle",
+			"title": "show_interaction_circle",
+			"description": "show_interaction_circle_desc",
+			"callback": "callback_show_interaction_circle",
+			"value": "show_interaction_circle",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_interaction_text",
+			"title": "show_interaction_text",
+			"description": "show_interaction_text_desc",
+			"callback": "callback_show_interaction_text",
+			"value": "show_interaction_text",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_text_borders",
+			"title": "show_text_borders",
+			"description": "show_text_borders_desc",
+			"callback": "callback_show_text_borders",
+			"value": "show_text_borders",
+			"default_value": true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type": "slider",
+			"id": "interaction_color_r",
+			"title": "interaction_color_r",
+			"description": "interaction_color_r_desc",
+			"callback": "callback_interaction_color_r",
+			"value": "interaction_color_r",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "interaction_color_g",
+			"title": "interaction_color_g",
+			"description": "interaction_color_g_desc",
+			"callback": "callback_interaction_color_g",
+			"value": "interaction_color_g",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0.66
+		},
+		{
+			"type": "slider",
+			"id": "interaction_color_b",
+			"title": "interaction_color_b",
+			"description": "interaction_color_b_desc",
+			"callback": "callback_interaction_color_b",
+			"value": "interaction_color_b",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type": "toggle",
+			"id": "truncate_name_tags",
+			"title": "truncate_name_tags",
+			"description": "truncate_name_tags_desc",
+			"callback": "callback_truncate_name_tags",
+			"value": "truncate_name_tags",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_client_ranks",
+			"title": "show_client_ranks",
+			"description": "show_client_ranks_desc",
+			"callback": "callback_show_client_ranks",
+			"value": "show_client_ranks",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_own_rank",
+			"title": "show_own_rank",
+			"description": "show_own_rank_desc",
+			"callback": "callback_show_own_rank",
+			"value": "show_own_rank",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "colorize_names",
+			"title": "colorize_names",
+			"description": "colorize_names_desc",
+			"callback": "callback_colorize_names",
+			"value": "colorize_names",
+			"default_value": true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type": "toggle",
+			"id": "show_stamina_meter",
+			"title": "show_stamina_meter",
+			"description": "show_stamina_meter_desc",
+			"callback": "callback_show_stamina_meter",
+			"value": "show_stamina_meter",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_armor_timer",
+			"title": "show_armor_timer",
+			"description": "show_armor_timer_desc",
+			"callback": "callback_show_armor_timer",
+			"value": "show_armor_timer",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_inspire_timer",
+			"title": "show_inspire_timer",
+			"description": "show_inspire_timer",
+			"callback": "callback_show_inspire_timer",
+			"value": "show_inspire_timer",
+			"default_value": true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type" : "toggle",
+			"id" : "center_assault_banner",
+			"title" : "center_assault_banner",
+			"description" : "center_assault_banner_desc",
+			"callback" : "callback_center_assault_banner",
+			"value" : "center_assault_banner",
+			"default_value" : true
+		},
+		{
+			"type" : "toggle",
+			"id" : "enable_enhanced_assault_banner",
+			"title" : "enable_enhanced_assault_banner",
+			"description" : "enable_enhanced_assault_banner_desc",
+			"callback" : "callback_enable_enhanced_assault_banner",
+			"value" : "enable_enhanced_assault_banner",
+			"default_value" : true
+		},
+		{
+			"type" : "toggle",
+			"id" : "enhanced_assault_spawns",
+			"title" : "enhanced_assault_spawns",
+			"description" : "enhanced_assault_spawns_desc",
+			"callback" : "callback_enhanced_assault_spawns",
+			"value" : "enhanced_assault_spawns",
+			"default_value" : true
+		},
+		{
+			"type" : "toggle",
+			"id" : "enhanced_assault_time",
+			"title" : "enhanced_assault_time",
+			"description" : "enhanced_assault_time_desc",
+			"callback" : "callback_enhanced_assault_time",
+			"value" : "enhanced_assault_time",
+			"default_value" : true
+		},
+		{
+			"type" : "toggle",
+			"id" : "enhanced_assault_count",
+			"title" : "enhanced_assault_count",
+			"description" : "enhanced_assault_count_desc",
+			"callback" : "callback_enhanced_assault_count",
+			"value" : "enhanced_assault_count",
+			"default_value" : true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type" : "toggle",
+			"id" : "enable_objective_animation",
+			"title" : "enable_objective_animation",
+			"description" : "enable_objective_animation_desc",
+			"callback" : "callback_enable_objective_animation",
+			"value" : "enable_objective_animation",
+			"default_value" : true
+		}
+	]
+}

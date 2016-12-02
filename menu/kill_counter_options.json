@@ -1,0 +1,48 @@
+{
+	"menu_id": "kill_counter_options",
+	"parent_menu_id": "sydneyhud_options",
+	"title": "kill_counter_options",
+	"description": "kill_counter_options_desc",
+	"items": [
+		{
+		    "type": "toggle",
+			"id": "enable_kill_counter",
+			"title": "enable_kill_counter",
+			"description": "enable_kill_counter_desc",
+			"callback": "callback_enable_kill_counter",
+			"value": "enable_kill_counter",
+			"default_value": true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type": "toggle",
+			"id": "show_special_kills",
+			"title": "show_special_kills",
+			"description": "show_special_kills_desc",
+			"callback": "callback_show_special_kills",
+			"value": "show_special_kills",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_headshot_kills",
+			"title": "show_headshot_kills",
+			"description": "show_headshot_kills_desc",
+			"callback": "callback_show_headshot_kills",
+			"value": "show_headshot_kills",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_ai_kills",
+			"title": "show_ai_kills",
+			"description": "show_ai_kills_desc",
+			"callback": "callback_show_ai_kills",
+			"value": "show_ai_kills",
+			"default_value": true
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+	"menu_id": "sydneyhud_options",
+	"parent_menu_id": "lua_mod_options_menu",
+	"title": "sydneyhud_options",
+	"description": "sydneyhud_options_desc",
+	"items": [
+		{}
+	]
+}

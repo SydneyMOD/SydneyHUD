@@ -1,0 +1,108 @@
+{
+	"menu_id": "sydneyhud_menu_tweaks",
+	"parent_menu_id": "sydneyhud_options",
+	"title": "sydneyhud_menu_tweaks",
+	"description": "sydneyhud_menu_tweaks_desc",
+	"items": [
+		{
+			"type" : "multiple_choice",
+			"id" : "lobby_skins_mode",
+			"title" : "lobby_skins_mode",
+			"description" : "lobby_skins_mode_desc",
+			"callback" : "callback_lobby_skins_mode",
+			"items" : [
+				"lobby_skins_vanilla",
+				"lobby_skins_none",
+				"lobby_skins_primary",
+				"lobby_skins_secondary"
+			],
+			"value" : "lobby_skins_mode",
+			"default_value" : 1
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+		    "type": "toggle",
+			"id": "enable_buy_all_assets",
+			"title": "enable_buy_all_assets",
+			"description": "enable_buy_all_assets_desc",
+			"callback": "callback_enable_buy_all_assets",
+			"value": "enable_buy_all_assets",
+			"default_value": true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+		    "type": "toggle",
+			"id": "skip_black_screen",
+			"title": "skip_black_screen",
+			"description": "skip_black_screen_desc",
+			"callback": "callback_skip_black_screen",
+			"value": "skip_black_screen",
+			"default_value": true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+		    "type": "toggle",
+			"id": "skip_stat_screen",
+			"title": "skip_stat_screen",
+			"description": "skip_stat_screen_desc",
+			"callback": "callback_skip_stat_screen",
+			"value": "skip_stat_screen",
+			"default_value": true
+		},
+		{
+			"type": "slider",
+			"id": "stat_screen_skip",
+			"title": "stat_screen_skip",
+			"description": "stat_screen_skip_desc",
+			"callback": "callback_stat_screen_skip",
+			"value": "stat_screen_skip",
+			"max": 5,
+			"min": 0,
+			"step": 1,
+			"default_value": 0
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+		    "type": "toggle",
+			"id": "skip_card_picking",
+			"title": "skip_card_picking",
+			"description": "skip_card_picking_desc",
+			"callback": "callback_skip_card_picking",
+			"value": "skip_card_picking",
+			"default_value": true
+		},
+		{
+		    "type": "toggle",
+			"id": "skip_loot_screen",
+			"title": "skip_loot_screen",
+			"description": "skip_loot_screen_desc",
+			"callback": "callback_skip_loot_screen",
+			"value": "skip_loot_screen",
+			"default_value": true
+		},
+		{
+			"type": "slider",
+			"id": "loot_screen_skip",
+			"title": "loot_screen_skip",
+			"description": "loot_screen_skip_desc",
+			"callback": "callback_loot_screen_skip",
+			"value": "loot_screen_skip",
+			"max": 5,
+			"min": 0,
+			"step": 1,
+			"default_value": 0
+		}
+	]
+}

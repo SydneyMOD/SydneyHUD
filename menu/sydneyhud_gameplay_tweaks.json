@@ -1,0 +1,30 @@
+{
+	"menu_id": "sydneyhud_gameplay_tweaks",
+	"parent_menu_id": "sydneyhud_options",
+	"title": "sydneyhud_gameplay_tweaks",
+	"description": "sydneyhud_gameplay_tweaks_desc",
+	"items": [
+		{
+			"type": "toggle",
+			"id": "remove_answered_pager_contour",
+			"title": "remove_answered_pager_contour",
+			"description": "remove_answered_pager_contour_desc",
+			"callback": "callback_remove_answered_pager_contour",
+			"value": "remove_answered_pager_contour",
+			"default_value": true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type" : "toggle",
+			"id" : "anti_stealth_grenades",
+			"title" : "anti_stealth_grenades",
+			"description" : "anti_stealth_grenades_desc",
+			"callback" : "callback_anti_stealth_grenades",
+			"value" : "anti_stealth_grenades",
+			"default_value" : true
+		}
+	]
+}

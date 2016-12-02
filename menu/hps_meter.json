@@ -1,0 +1,64 @@
+{
+	"menu_id": "hps_meter",
+	"parent_menu_id": "sydneyhud_options",
+	"title": "hps_meter",
+	"description": "hps_meter_desc",
+	"items": [
+		{
+		    "type": "toggle",
+			"id": "enable_hps_meter",
+			"title": "enable_hps_meter",
+			"description": "enable_hps_meter_desc",
+			"callback": "callback_enable_hps_meter",
+			"value": "enable_hps_meter",
+			"default_value": true
+		},
+		{
+			"type": "slider",
+			"id": "hps_refresh_rate",
+			"title": "hps_refresh_rate",
+			"description": "hps_refresh_rate_desc",
+			"callback": "callback_hps_refresh_rate",
+			"value": "hps_refresh_rate",
+			"max": 10,
+			"min": 0.1,
+			"step": 1,
+			"default_value": 1
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type": "toggle",
+			"id": "show_hps_current",
+			"title": "show_hps_current",
+			"description": "show_hps_current_desc",
+			"callback": "callback_show_hps_current",
+			"value": "show_hps_current",
+			"default_value": true
+		},
+		{
+			"type": "slider",
+			"id": "current_hps_timeout",
+			"title": "current_hps_timeout",
+			"description": "current_hps_timeout_desc",
+			"callback": "callback_current_hps_timeout",
+			"value": "current_hps_timeout",
+			"max": 10,
+			"min": 1,
+			"step": 1,
+			"default_value": 5
+		},
+		{
+			"type": "toggle",
+			"id": "show_hps_total",
+			"title": "show_hps_total",
+			"description": "show_hps_total_desc",
+			"callback": "callback_show_hps_total",
+			"value": "show_hps_total",
+			"default_value": true
+		}
+	]
+}
+	"current_hps_timeout" : 5.0

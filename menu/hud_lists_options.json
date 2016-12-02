@@ -1,0 +1,294 @@
+{
+	"menu_id": "hud_lists_options",
+	"parent_menu_id": "sydneyhud_options",
+	"title": "hud_lists_options",
+	"description": "hud_lists_options_desc",
+	"items": [
+		{
+			"type": "toggle",
+			"id": "show_timers",
+			"title": "show_timers",
+			"description": "show_timers_desc",
+			"callback": "callback_show_timers",
+			"value": "show_timers",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_equipment",
+			"title": "show_equipment",
+			"description": "show_equipment_desc",
+			"callback": "callback_show_equipment",
+			"value": "show_equipment",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_sentries",
+			"title": "show_sentries",
+			"description": "show_sentries_desc",
+			"callback": "callback_show_sentries",
+			"value": "show_sentries",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "hide_empty_sentries",
+			"title": "hide_empty_sentries",
+			"description": "hide_empty_sentries_desc",
+			"callback": "callback_hide_empty_sentries",
+			"value": "hide_empty_sentries",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_ecms",
+			"title": "show_ecms",
+			"description": "show_ecms_desc",
+			"callback": "callback_show_ecms",
+			"value": "show_ecms",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_ecm_retrigger",
+			"title": "show_ecm_retrigger",
+			"description": "show_ecm_retrigger_desc",
+			"callback": "callback_show_ecm_retrigger",
+			"value": "show_ecm_retrigger",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_minions",
+			"title": "show_minions",
+			"description": "show_minions_desc",
+			"callback": "callback_show_minions",
+			"value": "show_minions",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_pagers",
+			"title": "show_pagers",
+			"description": "show_pagers_desc",
+			"callback": "callback_show_pagers",
+			"value": "show_pagers",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_tape_loop",
+			"title": "show_tape_loop",
+			"description": "show_tape_loop_desc",
+			"callback": "callback_show_tape_loop",
+			"value": "show_tape_loop",
+			"default_value": true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type": "toggle",
+			"id": "show_enemies",
+			"title": "show_enemies",
+			"description": "show_enemies_desc",
+			"callback": "callback_show_enemies",
+			"value": "show_enemies",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "aggregate_enemies",
+			"title": "aggregate_enemies",
+			"description": "aggregate_enemies_desc",
+			"callback": "callback_aggregate_enemies",
+			"value": "aggregate_enemies",
+			"default_value": false
+		},
+		{
+			"type": "toggle",
+			"id": "show_turrets",
+			"title": "show_turrets",
+			"description": "show_turrets_desc",
+			"callback": "callback_show_turrets",
+			"value": "show_turrets",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_civilians",
+			"title": "show_civilians",
+			"description": "show_civilians_desc",
+			"callback": "callback_show_civilians",
+			"value": "show_civilians",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_hostages",
+			"title": "show_hostages",
+			"description": "show_hostages_desc",
+			"callback": "callback_show_hostages",
+			"value": "show_hostages",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_minion_count",
+			"title": "show_minion_count",
+			"description": "show_minion_count_desc",
+			"callback": "callback_show_minion_count",
+			"value": "show_minion_count",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_pager_count",
+			"title": "show_pager_count",
+			"description": "show_pager_count_desc",
+			"callback": "callback_show_pager_count",
+			"value": "show_pager_count",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_loot",
+			"title": "show_loot",
+			"description": "show_loot_desc",
+			"callback": "callback_show_loot",
+			"value": "show_loot",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "aggregate_loot",
+			"title": "aggregate_loot",
+			"description": "aggregate_loot_desc",
+			"callback": "callback_aggregate_loot",
+			"value": "aggregate_loot",
+			"default_value": false
+		},
+		{
+			"type": "toggle",
+			"id": "separate_bagged_loot",
+			"title": "separate_bagged_loot",
+			"description": "separate_bagged_loot_desc",
+			"callback": "callback_separate_bagged_loot",
+			"value": "separate_bagged_loot",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_gage_packages",
+			"title": "show_gage_packages",
+			"description": "show_gage_packages_desc",
+			"callback": "callback_show_gage_packages",
+			"value": "show_gage_packages",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_special_pickups",
+			"title": "show_special_pickups",
+			"description": "show_special_pickups_desc",
+			"callback": "callback_show_special_pickups",
+			"value": "show_special_pickups",
+			"default_value": true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type": "toggle",
+			"id": "show_buffs",
+			"title": "show_buffs",
+			"description": "show_buffs_desc",
+			"callback": "callback_show_buffs",
+			"value": "show_buffs",
+			"default_value": true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type": "slider",
+			"id": "enemy_color_r",
+			"title": "enemy_color_r",
+			"description": "enemy_color_r_desc",
+			"callback": "callback_enemy_color_r",
+			"value": "enemy_color_r",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "enemy_color_g",
+			"title": "enemy_color_g",
+			"description": "enemy_color_g_desc",
+			"callback": "callback_enemy_color_g",
+			"value": "enemy_color_g",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "enemy_color_b",
+			"title": "enemy_color_b",
+			"description": "enemy_color_b_desc",
+			"callback": "callback_enemy_color_b",
+			"value": "enemy_color_b",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type": "slider",
+			"id": "civilian_color_r",
+			"title": "civilian_color_r",
+			"description": "civilian_color_r_desc",
+			"callback": "callback_civilian_color_r",
+			"value": "civilian_color_r",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "civilian_color_g",
+			"title": "civilian_color_g",
+			"description": "civilian_color_g_desc",
+			"callback": "callback_civilian_color_g",
+			"value": "civilian_color_g",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "civilian_color_b",
+			"title": "civilian_color_b",
+			"description": "civilian_color_b_desc",
+			"callback": "callback_civilian_color_b",
+			"value": "civilian_color_b",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		}
+	]
+}

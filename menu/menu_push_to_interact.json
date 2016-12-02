@@ -1,0 +1,30 @@
+{
+	"menu_id": "menu_push_to_interact",
+	"parent_menu_id": "sydneyhud_options",
+	"title": "push_to_interact",
+	"description": "push_to_interact_desc",
+	"items": [
+		{
+			"type" : "toggle",
+			"id" : "push_to_interact",
+			"title" : "push_to_interact",
+			"description" : "push_to_interact_desc",
+			"callback" : "callback_push_to_interact",
+			"value" : "push_to_interact",
+			"default_value" : true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type" : "toggle",
+			"id" : "equipment_interrupt",
+			"title" : "equipment_interrupt",
+			"description" : "equipment_interrupt_desc",
+			"callback" : "callback_equipment_interrupt",
+			"value" : "equipment_interrupt",
+			"default_value" : true
+		}
+	]
+}
