@@ -50,11 +50,11 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 
 	-- Screen skipping
 	MenuCallbackHandler.callback_skip_black_screen = function(self, item)
-		SydneyHUD._data.skip_black_screen = (item:value() =="on")
+		SydneyHUD._data.skip_black_screen = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_skip_stat_screen = function(self, item)
-		SydneyHUD._data.skip_stat_screen = (item:value() =="on")
+		SydneyHUD._data.skip_stat_screen = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_stat_screen_skip = function(self, item)
@@ -62,11 +62,11 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_skip_card_picking = function(self, item)
-		SydneyHUD._data.skip_card_picking = (item:value() =="on")
+		SydneyHUD._data.skip_card_picking = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_skip_loot_screen = function(self, item)
-		SydneyHUD._data.skip_loot_screen = (item:value() =="on")
+		SydneyHUD._data.skip_loot_screen = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_loot_screen_skip = function(self, item)
@@ -76,95 +76,95 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 
 	-- HUD Lists (Timers)
 	MenuCallbackHandler.callback_show_timers = function(self, item)
-		SydneyHUD._data.show_timers = (item:value() =="on")
+		SydneyHUD._data.show_timers = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_equipment = function(self, item)
-		SydneyHUD._data.show_equipment = (item:value() =="on")
+		SydneyHUD._data.show_equipment = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_sentries = function(self, item)
-		SydneyHUD._data.show_sentries = (item:value() =="on")
+		SydneyHUD._data.show_sentries = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_hide_empty_sentries = function(self, item)
-		SydneyHUD._data.hide_empty_sentries = (item:value() =="on")
+		SydneyHUD._data.hide_empty_sentries = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_ecms = function(self, item)
-		SydneyHUD._data.show_ecms = (item:value() =="on")
+		SydneyHUD._data.show_ecms = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_ecm_retrigger = function(self, item)
-		SydneyHUD._data.show_ecm_retrigger = (item:value() =="on")
+		SydneyHUD._data.show_ecm_retrigger = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_minions = function(self, item)
-		SydneyHUD._data.show_minions = (item:value() =="on")
+		SydneyHUD._data.show_minions = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_pagers = function(self, item)
-		SydneyHUD._data.show_pagers = (item:value() =="on")
+		SydneyHUD._data.show_pagers = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_tape_loop = function(self, item)
-		SydneyHUD._data.show_tape_loop = (item:value() =="on")
+		SydneyHUD._data.show_tape_loop = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 
 	-- HUD Lists (Counters)
 	MenuCallbackHandler.callback_show_enemies = function(self, item)
-		SydneyHUD._data.show_enemies = (item:value() =="on")
+		SydneyHUD._data.show_enemies = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_aggregate_enemies = function(self, item)
-		SydneyHUD._data.aggregate_enemies = (item:value() =="on")
+		SydneyHUD._data.aggregate_enemies = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_turrets = function(self, item)
-		SydneyHUD._data.show_turrets = (item:value() =="on")
+		SydneyHUD._data.show_turrets = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_civilians = function(self, item)
-		SydneyHUD._data.show_civilians = (item:value() =="on")
+		SydneyHUD._data.show_civilians = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_hostages = function(self, item)
-		SydneyHUD._data.show_hostages = (item:value() =="on")
+		SydneyHUD._data.show_hostages = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_minion_count = function(self, item)
-		SydneyHUD._data.show_minion_count = (item:value() =="on")
+		SydneyHUD._data.show_minion_count = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_pager_count = function(self, item)
-		SydneyHUD._data.show_pager_count = (item:value() =="on")
+		SydneyHUD._data.show_pager_count = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_loot = function(self, item)
-		SydneyHUD._data.show_loot = (item:value() =="on")
+		SydneyHUD._data.show_loot = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_aggregate_loot = function(self, item)
-		SydneyHUD._data.aggregate_loot = (item:value() =="on")
+		SydneyHUD._data.aggregate_loot = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_separate_bagged_loot = function(self, item)
-		SydneyHUD._data.separate_bagged_loot = (item:value() =="on")
+		SydneyHUD._data.separate_bagged_loot = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_gage_packages = function(self, item)
-		SydneyHUD._data.show_gage_packages = (item:value() =="on")
+		SydneyHUD._data.show_gage_packages = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_special_pickups = function(self, item)
-		SydneyHUD._data.show_special_pickups = (item:value() =="on")
+		SydneyHUD._data.show_special_pickups = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 
 	-- HUD Lists (Buffs)
 	MenuCallbackHandler.callback_show_buffs = function(self, item)
-		SydneyHUD._data.show_buffs = (item:value() =="on")
+		SydneyHUD._data.show_buffs = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 
@@ -195,25 +195,25 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 
 	-- Kill counter
 	MenuCallbackHandler.callback_enable_kill_counter = function(self, item)
-		SydneyHUD._data.enable_kill_counter = (item:value() =="on")
+		SydneyHUD._data.enable_kill_counter = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_special_kills = function(self, item)
-		SydneyHUD._data.show_special_kills = (item:value() =="on")
+		SydneyHUD._data.show_special_kills = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_headshot_kills = function(self, item)
-		SydneyHUD._data.show_headshot_kills = (item:value() =="on")
+		SydneyHUD._data.show_headshot_kills = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_ai_kills = function(self, item)
-		SydneyHUD._data.show_ai_kills = (item:value() =="on")
+		SydneyHUD._data.show_ai_kills = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 
 	-- HPS Meter
 	MenuCallbackHandler.callback_enable_hps_meter = function(self, item)
-		SydneyHUD._data.enable_hps_meter = (item:value() =="on")
+		SydneyHUD._data.enable_hps_meter = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_hps_refresh_rate = function(self, item)
@@ -221,7 +221,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_hps_current = function(self, item)
-		SydneyHUD._data.show_hps_current = (item:value() =="on")
+		SydneyHUD._data.show_hps_current = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_current_hps_timeout = function(self, item)
@@ -229,13 +229,13 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_hps_total = function(self, item)
-		SydneyHUD._data.show_hps_total = (item:value() =="on")
+		SydneyHUD._data.show_hps_total = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 
 	-- Flashlight extender
 	MenuCallbackHandler.callback_enable_flashlight_extender = function(self, item)
-		SydneyHUD._data.enable_flashlight_extender = (item:value() =="on")
+		SydneyHUD._data.enable_flashlight_extender = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_flashlight_range = function(self, item)
@@ -249,7 +249,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 
 	-- Laser options
 	MenuCallbackHandler.callback_enable_laser_options = function(self, item)
-		SydneyHUD._data.enable_laser_options = (item:value() =="on")
+		SydneyHUD._data.enable_laser_options = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_r = function(self, item)
@@ -265,7 +265,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_rainbow = function(self, item)
-		SydneyHUD._data.laser_color_rainbow = (item:value() =="on")
+		SydneyHUD._data.laser_color_rainbow = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_a = function(self, item)
@@ -281,7 +281,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_enable_laser_options_others = function(self, item)
-		SydneyHUD._data.enable_laser_options_others = (item:value() =="on")
+		SydneyHUD._data.enable_laser_options_others = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_r_others = function(self, item)
@@ -297,7 +297,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_rainbow_others = function(self, item)
-		SydneyHUD._data.laser_color_rainbow_others = (item:value() =="on")
+		SydneyHUD._data.laser_color_rainbow_others = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_a_others = function(self, item)
@@ -313,7 +313,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_enable_laser_options_snipers = function(self, item)
-		SydneyHUD._data.enable_laser_options_snipers = (item:value() =="on")
+		SydneyHUD._data.enable_laser_options_snipers = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_r_snipers = function(self, item)
@@ -329,7 +329,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_rainbow_snipers = function(self, item)
-		SydneyHUD._data.laser_color_rainbow_snipers = (item:value() =="on")
+		SydneyHUD._data.laser_color_rainbow_snipers = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_a_snipers = function(self, item)
@@ -345,7 +345,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_enable_laser_options_turret = function(self, item)
-		SydneyHUD._data.enable_laser_options_turret = (item:value() =="on")
+		SydneyHUD._data.enable_laser_options_turret = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_r_turret = function(self, item)
@@ -361,7 +361,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_rainbow_turret = function(self, item)
-		SydneyHUD._data.laser_color_rainbow_turret = (item:value() =="on")
+		SydneyHUD._data.laser_color_rainbow_turret = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_a_turret = function(self, item)
@@ -377,7 +377,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_enable_laser_options_turretr = function(self, item)
-		SydneyHUD._data.enable_laser_options_turretr = (item:value() =="on")
+		SydneyHUD._data.enable_laser_options_turretr = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_r_turretr = function(self, item)
@@ -393,7 +393,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_rainbow_turretr = function(self, item)
-		SydneyHUD._data.laser_color_rainbow_turretr = (item:value() =="on")
+		SydneyHUD._data.laser_color_rainbow_turretr = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_a_turretr = function(self, item)
@@ -409,7 +409,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_enable_laser_options_turretm = function(self, item)
-		SydneyHUD._data.enable_laser_options_turretm = (item:value() =="on")
+		SydneyHUD._data.enable_laser_options_turretm = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_r_turretm = function(self, item)
@@ -425,7 +425,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_rainbow_turretm = function(self, item)
-		SydneyHUD._data.laser_color_rainbow_turretm = (item:value() =="on")
+		SydneyHUD._data.laser_color_rainbow_turretm = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_laser_color_a_turretm = function(self, item)
@@ -441,13 +441,22 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 
-	-- Push to interact
+	-- Interact Tweak
 	MenuCallbackHandler.callback_push_to_interact = function(self, item)
-		SydneyHUD._data.push_to_interact = (item:value() =="on")
+		SydneyHUD._data.push_to_interact = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_equipment_interrupt = function(self, item)
-		SydneyHUD._data.equipment_interrupt = (item:value() =="on")
+		SydneyHUD._data.equipment_interrupt = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
+	MenuCallbackHandler.callback_hold_to_pick = function(self, item)
+		SydneyHUD._data.hold_to_pick = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_hold_to_pick_delay = function(self, item)
+		SydneyHUD._data.hold_to_pick_delay = item:value()
 		SydneyHUD:Save()
 	end
 
@@ -457,97 +466,97 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_enable_buy_all_assets = function(self, item)
-		SydneyHUD._data.enable_buy_all_assets = (item:value() =="on")
+		SydneyHUD._data.enable_buy_all_assets = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_remove_answered_pager_contour = function(self, item)
-		SydneyHUD._data.remove_answered_pager_contour = (item:value() =="on")
+		SydneyHUD._data.remove_answered_pager_contour = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_enable_pacified = function(self, item)
-		SydneyHUD._data.enable_pacified = (item:value() =="on")
+		SydneyHUD._data.enable_pacified = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_suspicion_text = function(self, item)
-		SydneyHUD._data.show_suspicion_text = (item:value() =="on")
+		SydneyHUD._data.show_suspicion_text = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_melee_interaction = function(self, item)
-		SydneyHUD._data.show_melee_interaction = (item:value() =="on")
+		SydneyHUD._data.show_melee_interaction = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_reload_interaction = function(self, item)
-		SydneyHUD._data.show_reload_interaction = (item:value() =="on")
+		SydneyHUD._data.show_reload_interaction = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_interaction_circle = function(self, item)
-		SydneyHUD._data.show_interaction_circle = (item:value() =="on")
+		SydneyHUD._data.show_interaction_circle = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_interaction_text = function(self, item)
-		SydneyHUD._data.show_interaction_text = (item:value() =="on")
+		SydneyHUD._data.show_interaction_text = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_text_borders = function(self, item)
-		SydneyHUD._data.show_text_borders = (item:value() =="on")
+		SydneyHUD._data.show_text_borders = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_truncate_name_tags = function(self, item)
-		SydneyHUD._data.truncate_name_tags = (item:value() =="on")
+		SydneyHUD._data.truncate_name_tags = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_client_ranks = function(self, item)
-		SydneyHUD._data.show_client_ranks = (item:value() =="on")
+		SydneyHUD._data.show_client_ranks = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_own_rank = function(self, item)
-		SydneyHUD._data.show_own_rank = (item:value() =="on")
+		SydneyHUD._data.show_own_rank = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_colorize_names = function(self, item)
-		SydneyHUD._data.colorize_names = (item:value() =="on")
+		SydneyHUD._data.colorize_names = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_stamina_meter = function(self, item)
-		SydneyHUD._data.show_stamina_meter = (item:value() =="on")
+		SydneyHUD._data.show_stamina_meter = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_armor_timer = function(self, item)
-		SydneyHUD._data.show_armor_timer = (item:value() =="on")
+		SydneyHUD._data.show_armor_timer = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_inspire_timer = function(self, item)
-		SydneyHUD._data.show_inspire_timer = (item:value() =="on")
+		SydneyHUD._data.show_inspire_timer = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_anti_stealth_grenades = function(self, item)
-		SydneyHUD._data.anti_stealth_grenades = (item:value() =="on")
+		SydneyHUD._data.anti_stealth_grenades = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 
 	MenuCallbackHandler.callback_center_assault_banner = function(self, item)
-		SydneyHUD._data.center_assault_banner = (item:value() =="on")
+		SydneyHUD._data.center_assault_banner = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_enable_enhanced_assault_banner = function(self, item)
-		SydneyHUD._data.enable_enhanced_assault_banner = (item:value() =="on")
+		SydneyHUD._data.enable_enhanced_assault_banner = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_enhanced_assault_spawns = function(self, item)
-		SydneyHUD._data.enhanced_assault_spawns = (item:value() =="on")
+		SydneyHUD._data.enhanced_assault_spawns = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_enhanced_assault_time = function(self, item)
-		SydneyHUD._data.enhanced_assault_time = (item:value() =="on")
+		SydneyHUD._data.enhanced_assault_time = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_enhanced_assault_count = function(self, item)
-		SydneyHUD._data.enhanced_assault_count = (item:value() =="on")
+		SydneyHUD._data.enhanced_assault_count = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 
 	MenuCallbackHandler.callback_enable_objective_animation = function(self, item)
-		SydneyHUD._data.enable_objective_animation = (item:value() =="on")
+		SydneyHUD._data.enable_objective_animation = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 
@@ -561,6 +570,11 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 	end
 	MenuCallbackHandler.callback_interaction_color_b = function(self, item)
 		SydneyHUD._data.interaction_color_b = item:value()
+		SydneyHUD:Save()
+	end
+
+	MenuCallbackHandler.callback_anti_bobble = function(self, item)
+		SydneyHUD._data.anti_bobble = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 

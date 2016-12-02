@@ -5,9 +5,11 @@ local add_unit_original = ObjectInteractionManager.add_unit
 local remove_unit_original = ObjectInteractionManager.remove_unit
 local interact_original = ObjectInteractionManager.interact
 local interupt_action_interact_original = ObjectInteractionManager.interupt_action_interact
+local _update_targeted_original = ObjectInteractionManager._update_targeted
 
 ObjectInteractionManager._LISTENER_CALLBACKS = {}
 ObjectInteractionManager.ACTIVE_PAGERS = {}
+ObjectInteractionManager.AUTO_PICKUP_DELAY = SydneyHUD:GetOption("hold_to_pick_delay")
 
 ObjectInteractionManager.COMPOSITE_LOOT_UNITS = {
 	[103428] = 4, [103429] = 3, [103430] = 2, [103431] = 1, --Shadow Raid armor
@@ -185,6 +187,20 @@ ObjectInteractionManager.INTERACTION_TRIGGERS = {
 		[Vector3(3445, 1547, -195.5)] = 151869, --GGC armory cage Y alt 2       (may be reversed)
 	},
 }
+
+function ObjectInteractionManager:_update_targeted(...)
+	_update_targeted_original(self, ...)
+	if SydneyHUD:GetOption("hold_to_pick") then
+		if alive(self._active_unit) then
+			local t = Application:time()
+
+			if self._active_unit:base() and self._active_unit:base().small_loot and managers.menu:get_controller():get_input_bool("interact") and (t >= (self._next_auto_pickup_t or 0)) then
+				self._next_auto_pickup_t = t + ObjectInteractionManager.AUTO_PICKUP_DELAY
+				self:interact(managers.player:player_unit())
+			end
+		end
+	end
+end
 
 function ObjectInteractionManager:init(...)
 	init_original(self, ...)

@@ -243,6 +243,19 @@
 			"callback" : "callback_enable_objective_animation",
 			"value" : "enable_objective_animation",
 			"default_value" : true
+		},
+		{
+			"type" : "divider",
+			"size" : 16
+		},
+		{
+			"type" : "toggle",
+			"id" : "anti_bobble",
+			"title" : "anti_bobble",
+			"description" : "anti_bobble_desc",
+			"callback" : "callback_anti_bobble",
+			"value" : "anti_bobble",
+			"default_value" : true
 		}
 	]
 }

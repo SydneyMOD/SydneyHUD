@@ -72,14 +72,15 @@ if not SydneyHUD.setup then
 		["lib/units/weapons/weaponlaser"] = "WeaponLaser_ext.lua",
 		["lib/units/unitbase"] = "UnitBase_ext.lua",
 
-		["lib/units/beings/player/states/playerbleedout.lua"] = "PlayerBleedOut.lua",
-		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
-		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua",
-		["lib/managers/menu/blackmarketgui"] = "BlackMarketGUI.lua",
 		["lib/units/beings/player/huskplayermovement"] = "HuskPlayerMovement.lua",
+		["lib/managers/menu/blackmarketgui"] = "BlackMarketGUI.lua",
 		["lib/setups/menusetup"] = "MenuSetup.lua",
 		["lib/states/menutitlescreenstate"] = "MenuTitleScreenState.lua",
-		["lib/managers/hud/hudtemp"] = "HUDTemp.lua"
+
+		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
+		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua",
+		-- ["lib/managers/hud/hudtemp"] = "HUDTemp.lua",
+		-- ["lib/units/beings/player/states/playerbleedout.lua"] = "PlayerBleedOut.lua"
 	}
 	SydneyHUD._poco_conflicting_defaults = {
 		buff = {

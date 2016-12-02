@@ -7,6 +7,9 @@
 	"sydneyhud_reset_ok" : "Yes",
 	"sydneyhud_reset_cancel" : "Cancel",
 
+	"interact_tweak" : "Interact Tweak",
+	"interact_tweak_desc" : "tweak your interaction",
+
 	"buy_all_assets" : "Buy All",
 	"buy_all_assets_desc" : "Buy all the assets that you are permitted to acquire",
 
@@ -304,5 +307,13 @@
 	"lobby_skins_vanilla" : "Normal",
 	"lobby_skins_none" : "No Skins",
 	"lobby_skins_primary" : "Always primary",
-	"lobby_skins_secondary" : "Always secondary"
+	"lobby_skins_secondary" : "Always secondary",
+
+	"anti_bobble" : "Anti Bobble",
+	"anti_bobble_desc" : "No more bobble everytime",
+
+	"hold_to_pick": "Hold to Pick",
+	"hold_to_pick_desc": "You can pick the instant cashes only pressing [F]",
+	"hold_to_pick_delay": "Hold to Pick Delay",
+	"hold_to_pick_delay_desc": "Delay time of between the Hold to Pick. Set 0 to pick as fast as can."
 }
