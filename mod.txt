@@ -2,7 +2,7 @@
 	"name" : "SydneyHUD",
 	"description" : "A JackHUD fork",
 	"author" : "SydneyMOD",
-	"version" : "0.0",
+	"version" : "0.1",
 	"priority": -1,
 	"hooks" : [
 		{"script_path" : "SydneyHUD.lua", "hook_id" : "lib/managers/group_ai_states/groupaistatebase"},
