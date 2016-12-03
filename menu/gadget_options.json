@@ -14,8 +14,8 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "slider",
@@ -42,8 +42,8 @@
 			"default_value": 60
 		},
 		{
-			"type" : "divider",
-			"size" : 32
+			"type": "divider",
+			"size": 32
 		},
 		{
 			"type": "toggle",
@@ -55,8 +55,8 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "slider",
@@ -140,8 +140,8 @@
 			"default_value": 10
 		},
 		{
-			"type" : "divider",
-			"size" : 32
+			"type": "divider",
+			"size": 32
 		},
 		{
 			"type": "toggle",
@@ -153,8 +153,8 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "slider",
@@ -238,8 +238,8 @@
 			"default_value": 10
 		},
 		{
-			"type" : "divider",
-			"size" : 32
+			"type": "divider",
+			"size": 32
 		},
 		{
 			"type": "toggle",
@@ -251,8 +251,8 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "slider",
@@ -336,8 +336,8 @@
 			"default_value": 10
 		},
 		{
-			"type" : "divider",
-			"size" : 32
+			"type": "divider",
+			"size": 32
 		},
 		{
 			"type": "toggle",
@@ -349,8 +349,8 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "slider",
@@ -434,8 +434,8 @@
 			"default_value": 10
 		},
 		{
-			"type" : "divider",
-			"size" : 32
+			"type": "divider",
+			"size": 32
 		},
 		{
 			"type": "toggle",
@@ -447,8 +447,8 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "slider",
@@ -532,8 +532,8 @@
 			"default_value": 10
 		},
 		{
-			"type" : "divider",
-			"size" : 32
+			"type": "divider",
+			"size": 32
 		},
 		{
 			"type": "toggle",
@@ -545,8 +545,8 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "slider",

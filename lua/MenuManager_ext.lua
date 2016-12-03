@@ -2,7 +2,7 @@
 --[[
 	Load our localization keys for our menu, and menu items.
 ]]
-Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_sydneyhud", function( loc )
+Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_sydneyhud", function(loc)
 	for _, filename in pairs(file.GetFiles(SydneyHUD._path .. "loc/")) do
 		local str = filename:match('^(.*).json$')
 		if str and Idstring(str) and Idstring(str):key() == SystemInfo:language():key() then
@@ -42,7 +42,7 @@ end)
 --[[
 	Setup our menu callbacks, load our saved data, and build the menu from our json file.
 ]]
-Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function( menu_manager )
+Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(menu_manager)
 
 	--[[
 		Setup our callbacks as defined in our item callback keys, and perform our logic on the data retrieved.
@@ -595,7 +595,7 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 				is_cancel_button = true,
 			},
 		}
-		QuickMenu:new( menu_title, menu_message, menu_options, true )
+		QuickMenu:new(menu_title, menu_message, menu_options, true)
 	end
 
 	--[[
@@ -609,4 +609,4 @@ Hooks:Add( "MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(
 	]]
 	LuaModManager:SetPlayerKeybind("load_pre", LuaModManager:GetPlayerKeybind("load_pre") or "f5")
 	LuaModManager:SetPlayerKeybind("save_pre", LuaModManager:GetPlayerKeybind("save_pre") or "f6")
-end )
+end)

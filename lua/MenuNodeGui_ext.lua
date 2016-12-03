@@ -84,7 +84,7 @@ function MenuNodeMainGui:_setup_item_rows(node, ...)
 					is_cancel_button = true
 				}
 			}
-			QuickMenu:new( menu_title, menu_message, menu_options, true )
+			QuickMenu:new(menu_title, menu_message, menu_options, true)
 			SydneyHUD:ApplyFixedPocoSettings()
 		end
 		local recommendation_found = nil
@@ -197,7 +197,7 @@ function MenuNodeMainGui:_setup_item_rows(node, ...)
 					end
 				}
 			}
-			QuickMenu:new( menu_title, menu_message, menu_options, true )
+			QuickMenu:new(menu_title, menu_message, menu_options, true)
 		end
 		SydneyHUD._poco_warning = true
 	end

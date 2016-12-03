@@ -14,17 +14,17 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
-			"type" : "toggle",
-			"id" : "anti_stealth_grenades",
-			"title" : "anti_stealth_grenades",
-			"description" : "anti_stealth_grenades_desc",
-			"callback" : "callback_anti_stealth_grenades",
-			"value" : "anti_stealth_grenades",
-			"default_value" : true
+			"type": "toggle",
+			"id": "anti_stealth_grenades",
+			"title": "anti_stealth_grenades",
+			"description": "anti_stealth_grenades_desc",
+			"callback": "callback_anti_stealth_grenades",
+			"value": "anti_stealth_grenades",
+			"default_value": true
 		}
 	]
 }

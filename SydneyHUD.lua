@@ -21,7 +21,7 @@ if not SydneyHUD.setup then
 		,"hud_lists_options"
 		,"kill_counter_options"
 		,"hps_meter"
-		,"menu_push_to_interact"
+		,"interact_tweaks"
 		,"gadget_options"
 		,"sydneyhud_gameplay_tweaks"
 	}
@@ -166,15 +166,15 @@ if not SydneyHUD.setup then
 	function SydneyHUD:CheckPoco()
 		local file = io.open(self._poco_path)
 		if file then
-			self._poco_conf = json.decode( file:read("*all") )
+			self._poco_conf = json.decode(file:read("*all"))
 			file:close()
 		end
 	end
 
 	function SydneyHUD:ApplyFixedPocoSettings()
-		local file = io.open( self._poco_path, "w+" )
+		local file = io.open(self._poco_path, "w+")
 		if file and self._fixed_poco_conf then
-			file:write( json.encode( self._fixed_poco_conf ) )
+			file:write(json.encode(self._fixed_poco_conf))
 			file:close()
 			local menu_title = "SydneyHUD: PocoHUD config fixed"
 			local menu_message = "Config fixed. You NEED to restart the game NOW, to finish the process."
@@ -184,7 +184,7 @@ if not SydneyHUD.setup then
 					is_cancel_button = true,
 				}
 			}
-			QuickMenu:new( menu_title, menu_message, menu_options, true )
+			QuickMenu:new(menu_title, menu_message, menu_options, true)
 		end
 	end
 

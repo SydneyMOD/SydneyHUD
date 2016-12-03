@@ -26,8 +26,8 @@
 			"default_value": 1
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "toggle",
@@ -61,4 +61,4 @@
 		}
 	]
 }
-	"current_hps_timeout" : 5.0
+	"current_hps_timeout": 5.0

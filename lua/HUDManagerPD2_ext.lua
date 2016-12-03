@@ -435,7 +435,7 @@ function HUDListManager:_setup_buff_list()
 	self:register_list("buff_list", HUDList.HorizontalList, {
 		align = "center",
 		x = x,
-		y = y ,
+		y = y,
 		w = list_width,
 		h = list_height,
 		centered = true,
@@ -1425,7 +1425,7 @@ do
 	}
 	function HUDList.ItemBase:_get_color_from_table(value, max_value, color_table, default_color)
 		color_table = color_table or HUDList.ItemBase.DEFAULT_COLOR_TABLE
-		local ratio = math.clamp(value / max_value, 0 , 1)
+		local ratio = math.clamp(value / max_value, 0, 1)
 		local tmp_color = color_table[#color_table].color
 		local color = default_color or Color(tmp_color.alpha, tmp_color.red, tmp_color.green, tmp_color.blue)
 

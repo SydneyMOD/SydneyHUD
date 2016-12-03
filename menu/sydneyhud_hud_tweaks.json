@@ -14,8 +14,8 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "toggle",
@@ -72,8 +72,8 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "slider",
@@ -112,8 +112,8 @@
 			"default_value": 0
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "toggle",
@@ -152,8 +152,8 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
 			"type": "toggle",
@@ -183,79 +183,79 @@
 			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
-			"type" : "toggle",
-			"id" : "center_assault_banner",
-			"title" : "center_assault_banner",
-			"description" : "center_assault_banner_desc",
-			"callback" : "callback_center_assault_banner",
-			"value" : "center_assault_banner",
-			"default_value" : true
+			"type": "toggle",
+			"id": "center_assault_banner",
+			"title": "center_assault_banner",
+			"description": "center_assault_banner_desc",
+			"callback": "callback_center_assault_banner",
+			"value": "center_assault_banner",
+			"default_value": true
 		},
 		{
-			"type" : "toggle",
-			"id" : "enable_enhanced_assault_banner",
-			"title" : "enable_enhanced_assault_banner",
-			"description" : "enable_enhanced_assault_banner_desc",
-			"callback" : "callback_enable_enhanced_assault_banner",
-			"value" : "enable_enhanced_assault_banner",
-			"default_value" : true
+			"type": "toggle",
+			"id": "enable_enhanced_assault_banner",
+			"title": "enable_enhanced_assault_banner",
+			"description": "enable_enhanced_assault_banner_desc",
+			"callback": "callback_enable_enhanced_assault_banner",
+			"value": "enable_enhanced_assault_banner",
+			"default_value": true
 		},
 		{
-			"type" : "toggle",
-			"id" : "enhanced_assault_spawns",
-			"title" : "enhanced_assault_spawns",
-			"description" : "enhanced_assault_spawns_desc",
-			"callback" : "callback_enhanced_assault_spawns",
-			"value" : "enhanced_assault_spawns",
-			"default_value" : true
+			"type": "toggle",
+			"id": "enhanced_assault_spawns",
+			"title": "enhanced_assault_spawns",
+			"description": "enhanced_assault_spawns_desc",
+			"callback": "callback_enhanced_assault_spawns",
+			"value": "enhanced_assault_spawns",
+			"default_value": true
 		},
 		{
-			"type" : "toggle",
-			"id" : "enhanced_assault_time",
-			"title" : "enhanced_assault_time",
-			"description" : "enhanced_assault_time_desc",
-			"callback" : "callback_enhanced_assault_time",
-			"value" : "enhanced_assault_time",
-			"default_value" : true
+			"type": "toggle",
+			"id": "enhanced_assault_time",
+			"title": "enhanced_assault_time",
+			"description": "enhanced_assault_time_desc",
+			"callback": "callback_enhanced_assault_time",
+			"value": "enhanced_assault_time",
+			"default_value": true
 		},
 		{
-			"type" : "toggle",
-			"id" : "enhanced_assault_count",
-			"title" : "enhanced_assault_count",
-			"description" : "enhanced_assault_count_desc",
-			"callback" : "callback_enhanced_assault_count",
-			"value" : "enhanced_assault_count",
-			"default_value" : true
+			"type": "toggle",
+			"id": "enhanced_assault_count",
+			"title": "enhanced_assault_count",
+			"description": "enhanced_assault_count_desc",
+			"callback": "callback_enhanced_assault_count",
+			"value": "enhanced_assault_count",
+			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
-			"type" : "toggle",
-			"id" : "enable_objective_animation",
-			"title" : "enable_objective_animation",
-			"description" : "enable_objective_animation_desc",
-			"callback" : "callback_enable_objective_animation",
-			"value" : "enable_objective_animation",
-			"default_value" : true
+			"type": "toggle",
+			"id": "enable_objective_animation",
+			"title": "enable_objective_animation",
+			"description": "enable_objective_animation_desc",
+			"callback": "callback_enable_objective_animation",
+			"value": "enable_objective_animation",
+			"default_value": true
 		},
 		{
-			"type" : "divider",
-			"size" : 16
+			"type": "divider",
+			"size": 16
 		},
 		{
-			"type" : "toggle",
-			"id" : "anti_bobble",
-			"title" : "anti_bobble",
-			"description" : "anti_bobble_desc",
-			"callback" : "callback_anti_bobble",
-			"value" : "anti_bobble",
-			"default_value" : true
+			"type": "toggle",
+			"id": "anti_bobble",
+			"title": "anti_bobble",
+			"description": "anti_bobble_desc",
+			"callback": "callback_anti_bobble",
+			"value": "anti_bobble",
+			"default_value": true
 		}
 	]
 }
