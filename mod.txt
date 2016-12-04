@@ -3,18 +3,18 @@
 	"description": "A JackHUD fork",
 	"author": "SydneyMOD",
 	"contact": "Twitter: @katabame",
-	"version": "0.1",
+	"version": "1.0",
 	"priority": -1,
 	"libraries": [
 		{
 			"identifier": "SydneyHUDAssets",
 			"display_name": "SydneyHUD-Assets",
-			"optional": true
+			"optional": false
 		}
 	],
 	"updates": [
 		{
-			"revision": 0,
+			"revision": 1,
 			"identifier": "SydneyHUD"
 		},
 		{
