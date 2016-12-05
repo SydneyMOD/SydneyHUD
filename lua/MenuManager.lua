@@ -555,11 +555,6 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD:Save()
 	end
 
-	MenuCallbackHandler.callback_enable_objective_animation = function(self, item)
-		SydneyHUD._data.enable_objective_animation = (item:value() == "on")
-		SydneyHUD:Save()
-	end
-
 	MenuCallbackHandler.callback_interaction_color_r = function(self, item)
 		SydneyHUD._data.interaction_color_r = item:value()
 		SydneyHUD:Save()

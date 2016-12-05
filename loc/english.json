@@ -295,9 +295,6 @@
 	"enhanced_assault_count": "Show wave count",
 	"enhanced_assault_count_desc": "Show wave count (depends on enhanced assault banner)",
 
-	"enable_objective_animation": "Animated objective messages",
-	"enable_objective_animation_desc": "Animated objective messages in the middle of the screen",
-
 	"enable_buy_all_assets": "Enable Buy all assets",
 	"enable_buy_all_assets_desc": "Trasnforms the gage package assets into 'Buy All', in the briefing screen",
 

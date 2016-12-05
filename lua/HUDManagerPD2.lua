@@ -238,7 +238,7 @@ function HUDManager:update(t, dt, ...)
 	if managers.hudlist then
 		managers.hudlist:update(t, dt)
 	end
-
+	log(math.floor(1/dt) .. " FPS")
 	return update_original(self, t, dt, ...)
 end
 
@@ -2599,9 +2599,9 @@ do
 	HUDList.ECMItem = HUDList.ECMItem or class(HUDList.ItemBase)
 	function HUDList.ECMItem:init(parent, name)
 		HUDList.ItemBase.init(self, parent, name, { align = "right", w = parent:panel():h(), h = parent:panel():h() })
-		
+
 		battery_upgrade_level = managers.player:upgrade_level("ecm_jammer", "duration_multiplier", 0) + managers.player:upgrade_level("ecm_jammer", "duration_multiplier_2", 0) + 1
-		
+
 		self._max_duration = tweak_data.upgrades.ecm_jammer_base_battery_life * ECMJammerBase.battery_life_multiplier[battery_upgrade_level]
 
 		self._box = HUDBGBox_create(self._panel, {

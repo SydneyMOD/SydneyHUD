@@ -45,3 +45,15 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 ### Get in touch
 * [Steam Group](https://steamcommunity.com/groups/SydneyMOD)
 * [Twitter](https://twitter.com/SydneyMOD)
+
+### Special Thanks
+SydneyHUD using following mods codes / textures.  
+So, Big credit to those!
+
+* JackHUD
+* Hold to pick
+* Drag and Drop Inventory
+* Anti-Bobble
+* Velo Sync
+* WolfyHUD
+* Re-Texture Project
