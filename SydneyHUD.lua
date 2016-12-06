@@ -75,13 +75,11 @@ if not SydneyHUD.setup then
 		["lib/units/beings/player/huskplayermovement"] = "HuskPlayerMovement.lua",
 		["lib/managers/menu/blackmarketgui"] = "BlackMarketGUI.lua",
 		-- ["lib/setups/menusetup"] = "MenuSetup.lua",  -- Disable this cause use this code without setting to steam advanced option "-skip_intro". So I'll made setting menu. wait for that.
-		-- ["lib/states/menutitlescreenstate"] = "MenuTitleScreenState.lua",
 
 		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
 		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua",
 		-- ["lib/managers/hud/hudtemp"] = "HUDTemp.lua",
 		-- ["lib/units/beings/player/states/playerbleedout.lua"] = "PlayerBleedOut.lua",
-
 	}
 	SydneyHUD._poco_conflicting_defaults = {
 		buff = {
