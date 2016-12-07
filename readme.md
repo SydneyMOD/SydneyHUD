@@ -35,6 +35,7 @@
 * Moveable inventory item
 * Anti bobble
 * Anti desync
+* 360° view driving
 
 ### Future Request / Bug Report
 Please create issue at [here](https://github.com/SydneyMOD/SydneyHUD/issues) or Submit at [SteamGroup](https://steamcommunity.com/groups/SydneyMOD/discussions/2/152390648090747618/)
@@ -56,4 +57,5 @@ So, Big credit to those!
 * Anti-Bobble
 * Velo Sync
 * WolfyHUD
-* Re-Texture Project
+* Driver's Neck Brace Removed
+

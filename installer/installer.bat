@@ -3,10 +3,6 @@
 cd /d %~dp0
 title SydneyHUD Installer v1.0
 
-:: Clean dir
-rd /s /q .\SydneyHUD_installer
-mkdir .\SydneyHUD_installer
-
 :: set zipball url
 set SydneyHUD_url="https://raw.githubusercontent.com/SydneyMOD/SydneyHUD/SydneyHUD.zip"
 set SydneyHUD-Assets_url="https://raw.githubusercontent.com/SydneyMOD/SydneyHUD-Assets/SydneyHUD-Assets.zip"

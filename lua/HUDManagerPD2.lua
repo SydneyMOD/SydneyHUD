@@ -238,7 +238,7 @@ function HUDManager:update(t, dt, ...)
 	if managers.hudlist then
 		managers.hudlist:update(t, dt)
 	end
-	log(math.floor(1/dt) .. " FPS")
+	-- log(math.floor(1/dt) .. " FPS")
 	return update_original(self, t, dt, ...)
 end
 

@@ -26,3 +26,13 @@ function PlayerDriving:_check_interact_toggle(t, input)
 		return true
 	end
 end
+
+function PlayerDriving:_set_camera_limits(mode)
+	if mode == "driving" then
+		self._camera_unit:base():set_limits(180, 20)
+	elseif mode == "passenger" then
+		self._camera_unit:base():set_limits(100, 30)
+	elseif mode == "shooting" then
+		self._camera_unit:base():set_limits(180, 40)
+	end
+end
