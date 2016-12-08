@@ -2048,7 +2048,7 @@ do
 				vertical = "center",
 				w = self._panel:w(),
 				h = self._panel:w(),
-				color = Color(0.0, 0.5, 0.0),
+				color = Color(0.0, 0.0, 0.5), -- default: 0.0, 0.5, 0.0
 				blend_mode = "normal",
 				font = tweak_data.hud_corner.assault_font,
 				font_size = self._panel:w() * 0.4,

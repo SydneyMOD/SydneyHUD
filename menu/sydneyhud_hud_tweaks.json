@@ -236,16 +236,21 @@
 			"size": 16
 		},
 		{
-			"type": "divider",
-			"size": 16
-		},
-		{
 			"type": "toggle",
 			"id": "anti_bobble",
 			"title": "anti_bobble",
 			"description": "anti_bobble_desc",
 			"callback": "callback_anti_bobble",
 			"value": "anti_bobble",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "improved_ammo_count",
+			"title": "improved_ammo_count",
+			"description": "improved_ammo_count_desc",
+			"callback": "callback_improved_ammo_count",
+			"value": "improved_ammo_count",
 			"default_value": true
 		}
 	]

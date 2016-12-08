@@ -1,11 +1,9 @@
-
---if not HUDTeammate.increment_kill_count then
-
 	local init_original = HUDTeammate.init
 	local set_name_original = HUDTeammate.set_name
 	local set_state_original = HUDTeammate.set_state
 	local set_health_original = HUDTeammate.set_health
 	local teammate_progress_original = HUDTeammate.teammate_progress
+	local set_ammo_amount_by_type_original = HUDTeammate.set_ammo_amount_by_type
 
 	function HUDTeammate:init(i, ...)
 		init_original(self, i, ...)
@@ -660,4 +658,31 @@
 		end
 	end
 
---end
+	function HUDTeammate:set_ammo_amount_by_type(type, max_clip, current_clip, current_left, max)
+		if SydneyHUD:GetOption("improved_ammo_count") then
+			local weapon_panel = self._player_panel:child("weapons_panel"):child(type .. "_weapon_panel")
+			weapon_panel:set_visible(true)
+			local low_ammo = current_left <= math.round(max_clip / 2)
+			local low_ammo_clip = current_clip <= math.round(max_clip / 4)
+			local out_of_ammo_clip = current_clip <= 0
+			local out_of_ammo = current_left <= 0
+			local color_total = out_of_ammo and Color(1, 0.9, 0.3, 0.3)
+			color_total = color_total or low_ammo and Color(1, 0.9, 0.9, 0.3)
+			color_total = color_total or Color.white
+			local color_clip = out_of_ammo_clip and Color(1, 0.9, 0.3, 0.3)
+			color_clip = color_clip or low_ammo_clip and Color(1, 0.9, 0.9, 0.3)
+			color_clip = color_clip or Color.white
+			local ammo_clip = weapon_panel:child("ammo_clip")
+			local zero = current_clip < 10 and "00" or current_clip < 100 and "0" or ""
+			ammo_clip:set_text(zero .. tostring(current_clip))
+			ammo_clip:set_color(color_clip)
+			ammo_clip:set_range_color(0, string.len(zero), color_clip:with_alpha(0.5))
+			local ammo_total = weapon_panel:child("ammo_total")
+			local zero = current_left - current_clip < 10 and "00" or current_left - current_clip < 100 and "0" or ""
+			ammo_total:set_text(zero .. tostring(current_left - current_clip))
+			ammo_total:set_color(color_total)
+			ammo_total:set_range_color(0, string.len(zero), color_total:with_alpha(0.5))
+		else
+			set_ammo_amount_by_type_original(type, max_clip, current_clip, current_left, max)
+		end
+	end

@@ -5,24 +5,11 @@ function MenuNodeMainGui:_setup_item_rows(node, ...)
 	_setup_item_rows_original(self, node, ...)
 	local mod_name = "SydneyHUD"
 	if alive(self._version_string) and not self["_" .. mod_name .. "_version_added"] then
-		local version, revision = SydneyHUD:GetVersion()
-		local fullversion = mod_name .. " v" .. version .. "r" .. revision
-		revision = "r" .. revision
+		local version = SydneyHUD:GetVersion()
+		local fullversion = mod_name .. " v" .. version
 		local versionstring = self._version_string:text()
 		if versionstring == Application:version() then
 			self._version_string:set_text("PAYDAY2 v" .. versionstring .. " with " .. fullversion)
-		elseif self["_JackPackVersion_version_added"] then
-			local jackpack_version = SydneyHUD:GetJackPackVersion()
-			self._version_string:set_text(versionstring .. " (" .. mod_name .. " " .. revision .. ")")
-			if jackpack_version ~= version and not SydneyHUD._pack_warning then
-				SydneyHUD._pack_warning = true
-				QuickMenu:new("JackPack update", "Guys, the new JackPack... go get it!", {
-					[1] = {text = "Go to downloads page", callback = function()
-						SydneyHUD:ShowJackPackDownloads()
-					end},
-					[2] = {text = "Remind me later", is_cancel_button = true}
-				}, true)
-			end
 		else
 			self._version_string:set_text(versionstring .. " and " .. fullversion)
 		end

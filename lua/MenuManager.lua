@@ -74,6 +74,12 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD:Save()
 	end
 
+	-- HUD panel
+	MenuCallbackHandler.callback_improved_ammo_count = function(self, item)
+		SydneyHUD._data.improved_ammo_count = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
 	-- HUD Lists (Timers)
 	MenuCallbackHandler.callback_show_timers = function(self, item)
 		SydneyHUD._data.show_timers = (item:value() == "on")
@@ -581,7 +587,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 				text = managers.localization:text("sydneyhud_reset_ok"),
 				callback = function()
 					SydneyHUD:LoadDefaults()
-					SydneyHUD:ForceReloadAllMenus()
+					-- SydneyHUD:ForceReloadAllMenus()
 					SydneyHUD:Save()
 				end,
 			},

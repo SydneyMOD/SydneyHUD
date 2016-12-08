@@ -219,37 +219,14 @@ if not SydneyHUD.setup then
 
 	function SydneyHUD:GetVersion()
 		local version = "1.0"
-		local revision = "0"
+		-- local revision = "0"
 		for k, v in pairs(LuaModManager.Mods) do
 			local info = v.definition
 			if info["name"] == "SydneyHUD" then
 				version = info["version"]
-				local updates = info["updates"]
-				if updates then
-					for k2, v2 in pairs(updates) do
-						if v2.identifier == "sydneyhud" then
-							revision = v2.revision
-						end
-					end
-				end
 			end
 		end
-		return version, revision
-	end
-
-	function SydneyHUD:GetJackPackVersion()
-		local version = "1.0"
-		for k, v in pairs(LuaModManager.Mods) do
-			local info = v.definition
-			if info["name"] == "JackPackVersion" then
-				version = info["version"]
-			end
-		end
-		return version
-	end
-
-	function SydneyHUD:ShowJackPackDownloads()
-		os.execute("start https://cloud.bangl.de/index.php/s/P5iWCDJgq8zBHiA?path=%2FJackPacks")
+		return version -- , revision
 	end
 
 	SydneyHUD:Load()

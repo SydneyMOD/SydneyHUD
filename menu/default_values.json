@@ -124,5 +124,6 @@
 	"interaction_color_b": 0,
 	"anti_bobble": true,
 	"hold_to_pick": true,
-	"hold_to_pick_delay": 0.1
+	"hold_to_pick_delay": 0.1,
+	"improved_ammo_count": true
 }
