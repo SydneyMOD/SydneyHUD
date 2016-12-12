@@ -9,21 +9,45 @@ end
 ]]
 SydneyHUD = SydneyHUD or {}
 if not SydneyHUD.setup then
+
+	--[[
+		Alias for EZ to write log
+
+		Info: Infomation Log. Something successed.
+		Warn: Warning Log. Something Errored, but can keep working.
+		Error: Error Log. Something Errored. Can not keep working.
+		Dev: Develop Log. Printing var, Breakpoint.
+	]]
+	info = "[SydneyHUD Info] "
+	warn = "[SydneyHUD Warn] "
+	error = "[SydneyHUD Error] "
+	dev = "[SydneyHUD Dev] "
+
+	-- var for script
+	-- IDK why lua can not create blank var and use niled var
+	SydneyHUD._current_phase = ""
+	SydneyHUD._pre_phase = ""
+
+	SydneyHUD._current_wave = 0
+	SydneyHUD._pre_wave = 0
+
+	-- var for util
 	SydneyHUD._path = ModPath
 	SydneyHUD._lua_path = ModPath .. "lua/"
 	SydneyHUD._data_path = SavePath .. "SydneyHUD.json"
 	SydneyHUD._poco_path = SavePath .. "hud3_config.json"
 	SydneyHUD._data = {}
 	SydneyHUD._menus = {
-		"sydneyhud_options"
-		,"sydneyhud_menu_tweaks"
-		,"sydneyhud_hud_tweaks"
-		,"hud_lists_options"
-		,"kill_counter_options"
-		,"hps_meter"
-		,"interact_tweaks"
-		,"gadget_options"
-		,"sydneyhud_gameplay_tweaks"
+		"sydneyhud_options",
+		"sydneyhud_menu_tweaks",
+		"sydneyhud_hud_tweaks",
+		"hud_lists_options",
+		"kill_counter_options",
+		"hps_meter",
+		"interact_tweaks",
+		"gadget_options",
+		"sydneyhud_gameplay_tweaks",
+		"sydneyhud_chat_info"
 	}
 	SydneyHUD._hook_files = {
 		["lib/managers/menumanager"] = "MenuManager.lua",
@@ -77,7 +101,7 @@ if not SydneyHUD.setup then
 		-- ["lib/setups/menusetup"] = "MenuSetup.lua",  -- Disable this cause use this code without setting to steam advanced option "-skip_intro". So I'll made setting menu. wait for that.
 
 		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
-		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua",
+		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua"
 		-- ["lib/managers/hud/hudtemp"] = "HUDTemp.lua",
 		-- ["lib/units/beings/player/states/playerbleedout.lua"] = "PlayerBleedOut.lua",
 	}
@@ -227,6 +251,35 @@ if not SydneyHUD.setup then
 			end
 		end
 		return version -- , revision
+	end
+
+	function SydneyHUD:SendChatMessage(name, message, isfeed, color)
+		if not message then
+			message = name
+			name = ""
+		end
+		if not isfeed then
+			isfeed = false
+		end
+		isfeed = isfeed or false
+		if not tostring(color):find('Color') then
+			color = nil
+		end
+		message = tostring(message)
+		--if managers and managers.chat and managers.chat._receives and managers.chat._receivers[1] then
+			for __, rcvr in pairs(managers.chat._receivers[1]) do
+				rcvr:receive_message(name or "*", message, color or tweak_data.chat_colors[5])
+			end
+		--end
+		if Network:is_server() and isfeed then
+			local num_player_slots = BigLobbyGlobals and BigLobbyGlobals:num_player_slots() or 4
+			for i=2,num_player_slots do
+				local peer = managers.network:session():peer(i)
+				if peer then
+					peer:send("send_chat_message", ChatManager.GAME, name .. ": " .. message)
+				end
+			end
+		end
 	end
 
 	SydneyHUD:Load()

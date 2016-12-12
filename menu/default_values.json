@@ -125,5 +125,9 @@
 	"anti_bobble": true,
 	"hold_to_pick": true,
 	"hold_to_pick_delay": 0.1,
-	"improved_ammo_count": true
+	"improved_ammo_count": true,
+	"assault_phase_chat_info": true,
+	"assault_phase_chat_info_feed": true,
+	"ecm_battery_chat_info": true,
+	"ecm_battery_chat_info_feed": true
 }

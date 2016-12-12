@@ -1,7 +1,3 @@
--- Preplanned - By ThatGuyFromBreakingBad
--- LoadPreplanning.lua
--- v1.34.3_0
-
 function MElement(sp_melementtype, sp_id)
     local lockData = tweak_data:get_raw_value("preplanning", "types", sp_melementtype, "upgrade_lock") or false
     if not lockData or managers.player:has_category_upgrade(lockData.category, lockData.upgrade) then

@@ -1,7 +1,3 @@
--- Preplanned - By ThatGuyFromBreakingBad
--- SavePreplanning.lua
--- v1.34.3_0
-
 function sp_formatString(sp_value)
     if type(sp_value) == "string" then
         return string.format("%q", sp_value)

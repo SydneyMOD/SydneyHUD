@@ -13,6 +13,33 @@ function LocalizationManager:text(string_id, ...)
 end
 
 function LocalizationManager:hud_assault_enhanced()
+	SydneyHUD._current_wave = managers.groupai:state()._wave_counter or 0
+
+	if managers.groupai:state():get_hunt_mode() then
+		SydneyHUD._current_phase = "Endless"
+	elseif managers.groupai:state()._task_data.assault.phase == "build" then
+		SydneyHUD._current_phase = "Build"
+	elseif managers.groupai:state()._task_data.assault.phase == "sustain" then
+		SydneyHUD._current_phase = "Sustain"
+	elseif managers.groupai:state()._task_data.assault.phase == "fade" then
+		SydneyHUD._current_phase = "Fade"
+	else
+		SydneyHUD._current_phase = managers.groupai:state()._task_data.assault.phase
+	end
+
+	if SydneyHUD:GetOption("assault_phase_chat_info") then
+		if SydneyHUD._current_phase ~= SydneyHUD._pre_phase and SydneyHUD._current_wave ~= SydneyHUD._pre_wav then
+			if SydneyHUD:GetOption("assault_phase_chat_info_feed") then
+				SydneyHUD:SendChatMessage("Assault", SydneyHUD._current_phase .. " Wave: " .. SydneyHUD._current_wave, true)
+			else
+				SydneyHUD:SendChatMessage("Assault", SydneyHUD._current_phase .. " Wave: " .. SydneyHUD._current_wave, false)
+			end
+			SydneyHUD._pre_phase = SydneyHUD._current_phase
+			SydneyHUD._pre_wave = SydneyHUD._current_wave
+		end
+	end
+
+
 	if not SydneyHUD:GetOption("enable_enhanced_assault_banner") then
 		return self:text("hud_assault_assault")
 	else

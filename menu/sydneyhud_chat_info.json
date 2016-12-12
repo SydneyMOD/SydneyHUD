@@ -1,0 +1,56 @@
+{
+	"menu_id": "sydneyhud_chat_info",
+	"parent_menu_id": "sydneyhud_options",
+	"title": "sydneyhud_chat_info",
+	"description": "sydneyhud_chat_info_desc",
+	"items": [
+		{
+			"type": "toggle",
+			"id": "assault_phase_chat_info",
+			"title": "assault_phase_chat_info",
+			"description": "assault_phase_chat_info_desc",
+			"callback": "callback_assault_phase_chat_info",
+			"value": "assault_phase_chat_info",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "assault_phase_chat_info_feed",
+			"title": "assault_phase_chat_info_feed",
+			"description": "assault_phase_chat_info_feed_desc",
+			"callback": "callback_assault_phase_chat_info_feed",
+			"value": "assault_phase_chat_info_feed",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "toggle",
+			"id": "ecm_battery_chat_info",
+			"title": "ecm_battery_chat_info",
+			"description": "ecm_battery_chat_info_desc",
+			"callback": "ecm_battery_phase_chat_info",
+			"value": "ecm_bettery_chat_info",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "ecm_battery_chat_info_feed",
+			"title": "ecm_battery_chat_info_feed",
+			"description": "ecm_battery_chat_info_feed_desc",
+			"callback": "ecm_battery_phase_chat_info_feed",
+			"value": "ecm_bettery_chat_info_feed",
+			"default_value": true
+		}
+	]
+}

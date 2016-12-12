@@ -37,6 +37,8 @@
 * Anti desync
 * 360° view driving
 * Ammo total left count without including clip
+* Health bar
+* Chat feed system (Assault Phase / ECM battery)
 
 ### Future Request / Bug Report
 Please create issue at [here](https://github.com/SydneyMOD/SydneyHUD/issues) or Submit at [SteamGroup](https://steamcommunity.com/groups/SydneyMOD/discussions/2/152390648090747618/)

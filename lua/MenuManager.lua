@@ -579,6 +579,25 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD:Save()
 	end
 
+	-- Chat Info
+	MenuCallbackHandler.callback_assault_phase_chat_info = function(self, item)
+		SydneyHUD._data.assault_phase_chat_info = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_assault_phase_chat_info_feed = function(self, item)
+		SydneyHUD._data.assault_phase_chat_info_feed = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
+	MenuCallbackHandler.callback_ecm_battery_chat_info = function(self, item)
+		SydneyHUD._data.ecm_battery_chat_info = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_ecm_battery_chat_info_feed = function(self, item)
+		SydneyHUD._data.ecm_battery_chat_info_feed = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
 	MenuCallbackHandler.callback_sydneyhud_reset = function(self, item)
 		local menu_title = managers.localization:text("sydneyhud_reset")
 		local menu_message = managers.localization:text("sydneyhud_reset_message")

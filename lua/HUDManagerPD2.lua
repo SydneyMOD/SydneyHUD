@@ -1874,13 +1874,14 @@ do
 	HUDList.UnitCountItem.ENEMY_ICON_MAP = {
 		all =				{ atlas = {0, 5}, color = enemy_color, manual_add = true },     --Aggregated enemies
 		cop =				{ atlas = {0, 5}, color = enemy_color, priority = 5 },  --Non-special police
+		security =			{ spec = {1, 4}, color = enemy_color, priority = 4 },
 		sniper =			{ atlas = {6, 5}, color = special_color, priority = 6 },
 		tank =				{ atlas = {3, 1}, color = special_color, priority = 6 },
 		taser =				{ atlas = {3, 5}, color = special_color, priority = 6 },
 		spooc =				{ atlas = {1, 3}, color = special_color, priority = 6 },
 		shield =			{ texture = "guis/textures/pd2/hud_buff_shield", color = special_color, priority = 6 },
 		security =			{ spec = {1, 4}, color = guard_color, priority = 4 },
-		mobster_boss =			{ atlas = {1, 1}, color = thug_color, priority = 4 },
+		mobster_boss =		{ atlas = {1, 1}, color = thug_color, priority = 4 },
 		thug =				{ atlas = {4, 12}, color = thug_color, priority = 4 },
 		phalanx =			{ texture = "guis/textures/pd2/hud_buff_shield", color = special_color, priority = 7 },
 	}
@@ -2046,9 +2047,9 @@ do
 				text = string.sub(loot_data.text, 1, 5) or "",
 				align = "center",
 				vertical = "center",
-				w = self._panel:w(),
+				w = self._panel:w() * 0.8,
 				h = self._panel:w(),
-				color = Color(0.0, 0.0, 0.5), -- default: 0.0, 0.5, 0.0
+				color = Color(0.0, 0.5, 1.0), -- default: 0.0, 0.5, 0.0
 				blend_mode = "normal",
 				font = tweak_data.hud_corner.assault_font,
 				font_size = self._panel:w() * 0.4,

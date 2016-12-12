@@ -3,7 +3,7 @@
 	"sydneyhud_options_desc": "SydneyHUD Options",
 	"sydneyhud_reset": "Reset all options",
 	"sydneyhud_reset_desc": "Sets all SydneyHUD options back to default",
-	"sydneyhud_reset_message": "Are you sure you want to reset all SydneyHUD options?",
+	"sydneyhud_reset_message": "Are you sure you want to reset all SydneyHUD options?\nNote: Restart Required!",
 	"sydneyhud_reset_ok": "Yes",
 	"sydneyhud_reset_cancel": "Cancel",
 
@@ -312,5 +312,20 @@
 	"hold_to_pick": "Hold to Pick",
 	"hold_to_pick_desc": "You can pick the instant cashes only pressing [F]",
 	"hold_to_pick_delay": "Hold to Pick Delay",
-	"hold_to_pick_delay_desc": "Delay time of between the Hold to Pick. Set 0 to pick as fast as can."
+	"hold_to_pick_delay_desc": "Delay time of between the Hold to Pick. Set 0 to pick as fast as can.",
+
+	"improved_ammo_count": "Improved Ammo Count",
+	"improved_ammo_count_desc": "Show Total Ammo without including Clip Ammo",
+
+	"sydneyhud_chat_info": "Chat Infomation",
+	"sydneyhud_chat_info_desc": "Feed Infomation to Chat",
+
+	"assault_phase_chat_info": "Feed Assault Phase",
+	"assault_phase_chat_info_desc": "Feed Assault Phase to Chat",
+	"assault_phase_chat_info_feed": "Peer Feed Assault Phase",
+	"assault_phase_chat_info_feed_desc": "If you're host, send Assault Phase Info chat message to every crew. (Feed Assault Phase Required)",
+	"ecm_battery_chat_info": "Feed ECM Battery",
+	"ecm_battery_chat_info_desc": "Feed ECM Battery to Chat",
+	"ecm_battery_chat_info_feed": "Peer Feed ECM Battery",
+	"ecm_battery_chat_info_feed_desc": "If you're host, send ECM battery info chat messgage to every crew. (Feed ECM Battery Required)"
 }
