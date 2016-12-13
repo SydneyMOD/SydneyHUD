@@ -102,8 +102,6 @@ if not SydneyHUD.setup then
 
 		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
 		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua"
-		-- ["lib/managers/hud/hudtemp"] = "HUDTemp.lua",
-		-- ["lib/units/beings/player/states/playerbleedout.lua"] = "PlayerBleedOut.lua",
 	}
 	SydneyHUD._poco_conflicting_defaults = {
 		buff = {
