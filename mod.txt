@@ -83,7 +83,7 @@
 			"keybind_id": "save_pre",
 			"name": "Save Preplanning",
 			"description": "Save your Preplanning",
-			"script_path": "scripts/SavePreplanning.lua",
+			"script_path": "script/SavePreplanning.lua",
 			"run_in_menu": false,
 			"run_in_game": true,
 			"localized": false
@@ -92,7 +92,7 @@
 			"keybind_id": "load_pre",
 			"name": "Load Preplanning",
 			"description": "Loads your Preplanning",
-			"script_path": "scripts/LoadPreplanning.lua",
+			"script_path": "script/LoadPreplanning.lua",
 			"run_in_menu": false,
 			"run_in_game": true,
 			"localized": false

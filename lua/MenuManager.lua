@@ -5,7 +5,8 @@
 Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_sydneyhud", function(loc)
 	for _, filename in pairs(file.GetFiles(SydneyHUD._path .. "loc/")) do
 		local str = filename:match('^(.*).json$')
-		if str and Idstring(str) and Idstring(str):key() == SystemInfo:language():key() then
+		-- if str and Idstring(str) and Idstring(str):key() == SystemInfo:language():key() then
+		if str == SydneyHUD._language[SydneyHUD:GetOption("sydneyhud_language")] then
 			loc:load_localization_file(SydneyHUD._path .. "loc/" .. filename)
 			break
 		end
@@ -595,6 +596,12 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	end
 	MenuCallbackHandler.callback_ecm_battery_chat_info_feed = function(self, item)
 		SydneyHUD._data.ecm_battery_chat_info_feed = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
+	-- SydneyHUD
+	MenuCallbackHandler.callback_sydneyhud_language = function(self, item)
+		SydneyHUD._data.language = item:value()
 		SydneyHUD:Save()
 	end
 

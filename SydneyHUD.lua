@@ -31,6 +31,12 @@ if not SydneyHUD.setup then
 	SydneyHUD._current_wave = 0
 	SydneyHUD._pre_wave = 0
 
+	SydneyHUD._language =
+	{
+		[1] = "english",
+		[2] = "japanese"
+	}
+
 	-- var for util
 	SydneyHUD._path = ModPath
 	SydneyHUD._lua_path = ModPath .. "lua/"

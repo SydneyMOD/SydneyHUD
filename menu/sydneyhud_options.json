@@ -4,6 +4,18 @@
 	"title": "sydneyhud_options",
 	"description": "sydneyhud_options_desc",
 	"items": [
-		{}
+		{
+			"type": "multiple_choice",
+			"id": "sydneyhud_language",
+			"title": "sydneyhud_language",
+			"description": "sydneyhud_language_desc",
+			"callback": "callback_sydneyhud_language",
+			"items": [
+				"language_english",
+				"language_japanese"
+			],
+			"value": "sydneyhud_language",
+			"default_value": 1
+		}
 	]
 }

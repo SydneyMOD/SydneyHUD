@@ -1,4 +1,6 @@
 {
+	"sydneyhud_language": 1,
+
 	"skip_black_screen": true,
 	"skip_stat_screen": true,
 	"stat_screen_skip": 0,
