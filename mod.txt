@@ -3,7 +3,7 @@
 	"description": "A JackHUD fork",
 	"author": "SydneyMOD",
 	"contact": "Twitter: @katabame",
-	"version": "1.1",
+	"version": "1.2",
 	"priority": -1,
 	"libraries": [
 		{
@@ -14,7 +14,7 @@
 	],
 	"updates": [
 		{
-			"revision": 2,
+			"revision": 3,
 			"identifier": "SydneyHUD"
 		},
 		{
