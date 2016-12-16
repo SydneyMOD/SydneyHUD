@@ -3,6 +3,8 @@ _G.DragDropInventory = _G.DragDropInventory or { from_x = 0, from_y = 0 }
 local mousepressed_original = BlackMarketGui.mouse_pressed
 local mousemoved_original = BlackMarketGui.mouse_moved
 local mousereleased_original = BlackMarketGui.mouse_released
+local select_original = BlackMarketGuiSlotItem.select
+local deselect_original = BlackMarketGuiSlotItem.deselect
 
 function BlackMarketGui:mouse_pressed(button, x, y)
 	local result = mousepressed_original(self, button, x, y)
@@ -77,4 +79,14 @@ function BlackMarketGui:mouse_released(button, x, y)
 	end
 
 	return mousereleased_original(self, button, x, y)
+end
+
+function BlackMarketGuiSlotItem:select(instant, no_sound)
+	self._data.hide_unselected_mini_icons = false
+	return select_original(self, instant, no_sound)
+end
+
+function BlackMarketGuiSlotItem:deselect(instant)
+	self._data.hide_unselected_mini_icons = false
+	return deselect_original(self, instant)
 end

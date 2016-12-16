@@ -39,6 +39,7 @@
 * Ammo total left count without including clip
 * Health bar
 * Chat feed system (Assault Phase / ECM battery)
+* Always Show MOD Icons
 
 ### Future Request / Bug Report
 Please create issue at [here](https://github.com/SydneyMOD/SydneyHUD/issues) or Submit at [SteamGroup](https://steamcommunity.com/groups/SydneyMOD/discussions/2/152390648090747618/)
@@ -61,4 +62,4 @@ So, Big credit to those!
 * Velo Sync
 * WolfyHUD
 * Driver's Neck Brace Removed
-
+* Always Show MOD Icons
