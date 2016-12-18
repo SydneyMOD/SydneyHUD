@@ -332,5 +332,20 @@
 	"ecm_battery_chat_info": "Feed ECM Battery",
 	"ecm_battery_chat_info_desc": "Feed ECM Battery to Chat",
 	"ecm_battery_chat_info_feed": "Peer Feed ECM Battery",
-	"ecm_battery_chat_info_feed_desc": "If you're host, send ECM battery info chat messgage to every crew. (Feed ECM Battery Required)"
+	"ecm_battery_chat_info_feed_desc": "If you're host, send ECM battery info chat messgage to every crew. (Feed ECM Battery Required)",
+
+	"sydneyhud_experimental": "Experimental Future",
+	"sydneyhud_experimental_desc": "Those futures is NOT stable. When you use this, please proceed at your own risk.",
+
+	"waypoint_color_r": "Waypoint Color (Red)",
+	"waypoint_color_r_desc": "Custom Waypoint Color",
+	"waypoint_color_g": "Waypoint Color (Green)",
+	"waypoint_color_g_desc": "Custom Waypoint Color",
+	"waypoint_color_b": "Waypoint Color (Blue)",
+	"waypoint_color_b_desc": "Custom Waypoint Color",
+
+	"civilian_spot": "Civilian Spot",
+	"civilian_spot_desc": "Can spot civilian when stealth",
+	"civilian_spot_voice": "Civilian Spot Voice",
+	"civilian_spot_voice_desc": "When you're spot civilian, say and motion like spotting guard"
 }

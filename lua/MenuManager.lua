@@ -6,7 +6,8 @@ Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_sydneyhud"
 	for _, filename in pairs(file.GetFiles(SydneyHUD._path .. "loc/")) do
 		local str = filename:match('^(.*).json$')
 		-- if str and Idstring(str) and Idstring(str):key() == SystemInfo:language():key() then
-		if str == SydneyHUD._language[SydneyHUD:GetOption("sydneyhud_language")] then
+		local langid = SydneyHUD:GetOption("sydneyhud_language")
+		if str == SydneyHUD._language[langid] then
 			loc:load_localization_file(SydneyHUD._path .. "loc/" .. filename)
 			break
 		end
@@ -596,6 +597,29 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	end
 	MenuCallbackHandler.callback_ecm_battery_chat_info_feed = function(self, item)
 		SydneyHUD._data.ecm_battery_chat_info_feed = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
+	-- EXPERIMENTAL
+	MenuCallbackHandler.callback_waypoint_color_r = function(self, item)
+		SydneyHUD._data.waypoint_color_r = item:value()
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_waypoint_color_g = function(self, item)
+		SydneyHUD._data.waypoint_color_g = item:value()
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_waypoint_color_b = function(self, item)
+		SydneyHUD._data.waypoint_color_b = item:value()
+		SydneyHUD:Save()
+	end
+
+	MenuCallbackHandler.callback_civilian_spot = function(self, item)
+		SydneyHUD._data.civilian_spot = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_civilian_spot_voice = function(self, item)
+		SydneyHUD._data.civilian_spot_voice = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 

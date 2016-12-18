@@ -40,6 +40,8 @@
 * Health bar
 * Chat feed system (Assault Phase / ECM battery)
 * Always Show MOD Icons
+* Spot Civilians
+* Changeable Waypoint Text Color
 
 ### Future Request / Bug Report
 Please create issue at [here](https://github.com/SydneyMOD/SydneyHUD/issues) or Submit at [SteamGroup](https://steamcommunity.com/groups/SydneyMOD/discussions/2/152390648090747618/)
@@ -63,3 +65,4 @@ So, Big credit to those!
 * WolfyHUD
 * Driver's Neck Brace Removed
 * Always Show MOD Icons
+* Civilian Marking in Stealth

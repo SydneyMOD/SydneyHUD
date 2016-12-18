@@ -35,8 +35,8 @@
 			"id": "ecm_battery_chat_info",
 			"title": "ecm_battery_chat_info",
 			"description": "ecm_battery_chat_info_desc",
-			"callback": "ecm_battery_phase_chat_info",
-			"value": "ecm_bettery_chat_info",
+			"callback": "callback_ecm_battery_chat_info",
+			"value": "ecm_battery_chat_info",
 			"default_value": true
 		},
 		{
@@ -48,8 +48,8 @@
 			"id": "ecm_battery_chat_info_feed",
 			"title": "ecm_battery_chat_info_feed",
 			"description": "ecm_battery_chat_info_feed_desc",
-			"callback": "ecm_battery_phase_chat_info_feed",
-			"value": "ecm_bettery_chat_info_feed",
+			"callback": "callback_ecm_battery_chat_info_feed",
+			"value": "ecm_battery_chat_info_feed",
 			"default_value": true
 		}
 	]

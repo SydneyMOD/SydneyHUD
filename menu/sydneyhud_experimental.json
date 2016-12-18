@@ -1,0 +1,66 @@
+{
+	"menu_id": "sydneyhud_experimental",
+	"parent_menu_id": "sydneyhud_options",
+	"title": "sydneyhud_experimental",
+	"description": "sydneyhud_experimental_desc",
+	"items": [
+		{
+			"type": "slider",
+			"id": "waypoint_color_r",
+			"title": "waypoint_color_r",
+			"description": "waypoint_color_r_desc",
+			"callback": "callback_waypoint_color_r",
+			"value": "waypoint_color_r",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "slider",
+			"id": "waypoint_color_g",
+			"title": "waypoint_color_g",
+			"description": "waypoint_color_g_desc",
+			"callback": "callback_waypoint_color_g",
+			"value": "waypoint_color_g",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0.5
+		},
+		{
+			"type": "slider",
+			"id": "waypoint_color_b",
+			"title": "waypoint_color_b",
+			"description": "waypoint_color_b_desc",
+			"callback": "callback_waypoint_color_b",
+			"value": "waypoint_color_b",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "toggle",
+			"id": "civilian_spot",
+			"title": "civilian_spot",
+			"description": "civilian_spot_desc",
+			"callback": "callback_civilian_spot",
+			"value": "civilian_spot",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "civilian_spot_voice",
+			"title": "civilian_spot_voice",
+			"description": "civilian_spot_voice_desc",
+			"callback": "callback_civilian_spot_voice",
+			"value": "civilian_spot_voice",
+			"default_value": true
+		}
+	]
+}

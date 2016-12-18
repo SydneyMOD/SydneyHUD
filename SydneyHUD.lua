@@ -47,12 +47,13 @@ if not SydneyHUD.setup then
 		"sydneyhud_options",
 		"sydneyhud_menu_tweaks",
 		"sydneyhud_hud_tweaks",
+		"sydneyhud_gameplay_tweaks",
+		"sydneyhud_experimental",
 		"hud_lists_options",
 		"kill_counter_options",
 		"hps_meter",
 		"interact_tweaks",
 		"gadget_options",
-		"sydneyhud_gameplay_tweaks",
 		"sydneyhud_chat_info"
 	}
 	SydneyHUD._hook_files = {
@@ -107,7 +108,8 @@ if not SydneyHUD.setup then
 		-- ["lib/setups/menusetup"] = "MenuSetup.lua",  -- Disable this cause use this code without setting to steam advanced option "-skip_intro". So I'll made setting menu. wait for that.
 
 		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
-		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua"
+		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua",
+		["lib/tweak_data/charactertweakdata"] = "CharacterTweakData.lua"
 	}
 	SydneyHUD._poco_conflicting_defaults = {
 		buff = {

@@ -131,5 +131,12 @@
 	"assault_phase_chat_info": true,
 	"assault_phase_chat_info_feed": true,
 	"ecm_battery_chat_info": true,
-	"ecm_battery_chat_info_feed": true
+	"ecm_battery_chat_info_feed": true,
+
+	"waypoint_color_r": 0,
+	"waypoint_color_g": 0.5,
+	"waypoint_color_b": 1,
+
+	"civilian_spot": true,
+	"civilian_spot_voice": true
 }
