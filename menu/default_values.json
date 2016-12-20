@@ -137,6 +137,7 @@
 	"waypoint_color_g": 0.5,
 	"waypoint_color_b": 1,
 
-	"civilian_spot": true,
-	"civilian_spot_voice": true
+	"civilian_spot": false,
+	"civilian_spot_voice": false,
+	"clean_flashbang": false
 }

@@ -109,7 +109,8 @@ if not SydneyHUD.setup then
 
 		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
 		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua",
-		["lib/tweak_data/charactertweakdata"] = "CharacterTweakData.lua"
+		["lib/tweak_data/charactertweakdata"] = "CharacterTweakData.lua",
+		["core/lib/managers/coreenvironmentcontrollermanager"] = "CoreEnvironmentControllerManager.lua"
 	}
 	SydneyHUD._poco_conflicting_defaults = {
 		buff = {

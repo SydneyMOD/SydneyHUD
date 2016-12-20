@@ -623,6 +623,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD:Save()
 	end
 
+	MenuCallbackHandler.callback_clean_flashbang = function(self, item)
+		SydneyHUD._data.clean_flashbang = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
 	-- SydneyHUD
 	MenuCallbackHandler.callback_sydneyhud_language = function(self, item)
 		SydneyHUD._data.language = item:value()

@@ -332,5 +332,20 @@
 	"ecm_battery_chat_info": "Feed ECM Battery",
 	"ecm_battery_chat_info_desc": "Feed ECM Battery to Chat",
 	"ecm_battery_chat_info_feed": "Peer Feed ECM Battery",
-	"ecm_battery_chat_info_feed_desc": "あなたがホストの場合、メンバー全員にECMバッテリーの情報をチャットで送信します (Feed ECM Battery が必要です)"
+	"ecm_battery_chat_info_feed_desc": "あなたがホストの場合、メンバー全員にECMバッテリーの情報をチャットで送信します (Feed ECM Battery が必要です)",
+
+	"sydneyhud_experimental": "試験的機能",
+	"sydneyhud_experimental_desc": "この機能は安定版ではありません。自己責任でご利用ください",
+
+	"waypoint_color_r": "Waypoint Color (Red)",
+	"waypoint_color_r_desc": "Custom Waypoint Color",
+	"waypoint_color_g": "Waypoint Color (Green)",
+	"waypoint_color_g_desc": "Custom Waypoint Color",
+	"waypoint_color_b": "Waypoint Color (Blue)",
+	"waypoint_color_b_desc": "Custom Waypoint Color",
+
+	"civilian_spot": "民間人スポット",
+	"civilian_spot_desc": "ステルス中に民間人をスポット出来るようにします",
+	"civilian_spot_voice": "民間人スポットボイス",
+	"civilian_spot_voice_desc": "民間人をスポットした際にガードをスポットした際の音声を再生します"
 }

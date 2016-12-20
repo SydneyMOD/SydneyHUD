@@ -51,7 +51,7 @@
 			"description": "civilian_spot_desc",
 			"callback": "callback_civilian_spot",
 			"value": "civilian_spot",
-			"default_value": true
+			"default_value": false
 		},
 		{
 			"type": "toggle",
@@ -60,7 +60,16 @@
 			"description": "civilian_spot_voice_desc",
 			"callback": "callback_civilian_spot_voice",
 			"value": "civilian_spot_voice",
-			"default_value": true
+			"default_value": false
+		},
+		{
+			"type": "toggle",
+			"id": "clean_flashbang",
+			"title": "clean_flashbang",
+			"description": "clean_flashbang_desc",
+			"callback": "callback_clean_flashbang",
+			"value": "clean_flashbang",
+			"default_value": false
 		}
 	]
 }
