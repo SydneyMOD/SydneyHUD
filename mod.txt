@@ -77,7 +77,8 @@
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/units/beings/player/huskplayermovement"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/setups/menusetup"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/tweak_data/charactertweakdata"},
-		{"script_path": "SydneyHUD.lua", "hook_id": "core/lib/managers/coreenvironmentcontrollermanager"}
+		{"script_path": "SydneyHUD.lua", "hook_id": "core/lib/managers/coreenvironmentcontrollermanager"},
+		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/chatmanager"}
 	],
 	"keybinds": [
 		{
@@ -95,6 +96,15 @@
 			"description": "Loads your Preplanning",
 			"script_path": "script/LoadPreplanning.lua",
 			"run_in_menu": false,
+			"run_in_game": true,
+			"localized": false
+		},
+		{
+			"keybind_id": "check_ping",
+			"name": "Ping Check",
+			"description": "Send ping to host.",
+			"script_path": "script/CheckPing.lua",
+			"run_in_menu": true,
 			"run_in_game": true,
 			"localized": false
 		}

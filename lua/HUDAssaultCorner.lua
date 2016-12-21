@@ -44,6 +44,26 @@ function HUDAssaultCorner:init(hud, full_hud, tweak_hud, ...)
 end
 
 function HUDAssaultCorner:feed_heist_time(t, ...)
+	local time = "00:00"
+
+	if t >= 60 then
+		local m = tonumber(string.format("%d", t/60))
+		local s = t - m*60
+
+		if m >= 60 then
+			local h = tonumber(string.format("%d", m/60))
+				m = m - h*60
+			time = string.format("%02d:%02d:%02d", h, m, s)
+		else
+			time = string.format("%02d:%02d", m, s)
+		end
+
+	else
+		r = string.format("00:%02d", t)
+	end
+
+	SydneyHUD._heist_time = time
+	-- log(dev .. t)
 	if self._assault_timer then
 		self._assault_timer:set_time(t)
 		local _, _, cw, _ = self._assault_timer._timer_text:text_rect()

@@ -31,6 +31,8 @@ if not SydneyHUD.setup then
 	SydneyHUD._current_wave = 0
 	SydneyHUD._pre_wave = 0
 
+	SydneyHUD._heist_time = ""
+
 	SydneyHUD._language =
 	{
 		[1] = "english",
@@ -110,7 +112,8 @@ if not SydneyHUD.setup then
 		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
 		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua",
 		["lib/tweak_data/charactertweakdata"] = "CharacterTweakData.lua",
-		["core/lib/managers/coreenvironmentcontrollermanager"] = "CoreEnvironmentControllerManager.lua"
+		["core/lib/managers/coreenvironmentcontrollermanager"] = "CoreEnvironmentControllerManager.lua",
+		["lib/managers/chatmanager"] = "ChatManager.lua"
 	}
 	SydneyHUD._poco_conflicting_defaults = {
 		buff = {
