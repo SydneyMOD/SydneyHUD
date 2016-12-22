@@ -41,3 +41,7 @@ function DoctorBagBase:destroy(...)
 	self._do_listener_callback("on_bag_destroy", self._unit)
 	return destroy_original(self, ...)
 end
+
+Hooks:PostHook(DoctorBagBase, "take", "SydneyHUD:DoctorBag", function(self, unit)
+	SydneyHUD:Replenish(_G.LuaNetworking:LocalPeerID())
+end)

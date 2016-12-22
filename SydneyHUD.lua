@@ -31,7 +31,9 @@ if not SydneyHUD.setup then
 	SydneyHUD._current_wave = 0
 	SydneyHUD._pre_wave = 0
 
-	SydneyHUD._heist_time = ""
+	SydneyHUD._heist_time = "00:00"
+
+	SydneyHUD._down_count = {}
 
 	SydneyHUD._language =
 	{
@@ -109,11 +111,14 @@ if not SydneyHUD.setup then
 		["lib/managers/menu/blackmarketgui"] = "BlackMarketGUI.lua",
 		-- ["lib/setups/menusetup"] = "MenuSetup.lua",  -- Disable this cause use this code without setting to steam advanced option "-skip_intro". So I'll made setting menu. wait for that.
 
+		["lib/units/beings/player/states/playerbleedout"] = "PlayerBleedOut.lua",
 		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
 		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua",
 		["lib/tweak_data/charactertweakdata"] = "CharacterTweakData.lua",
 		["core/lib/managers/coreenvironmentcontrollermanager"] = "CoreEnvironmentControllerManager.lua",
-		["lib/managers/chatmanager"] = "ChatManager.lua"
+		["lib/managers/chatmanager"] = "ChatManager.lua",
+		["lib/network/base/networkpeer"] = "NetworkPeer.lua",
+		["lib/managers/trademanager"] = "TradeManager.lua"
 	}
 	SydneyHUD._poco_conflicting_defaults = {
 		buff = {
@@ -272,9 +277,12 @@ if not SydneyHUD.setup then
 			isfeed = false
 		end
 		isfeed = isfeed or false
+		--[[
 		if not tostring(color):find('Color') then
 			color = nil
 		end
+		--]]
+		color = Color(color)
 		message = tostring(message)
 		--if managers and managers.chat and managers.chat._receives and managers.chat._receivers[1] then
 			for __, rcvr in pairs(managers.chat._receivers[1]) do
@@ -290,6 +298,78 @@ if not SydneyHUD.setup then
 				end
 			end
 		end
+	end
+
+	function SydneyHUD:Replenish(peer_id)
+		local peer = managers.network:session():peer(peer_id)
+		if peer then
+			local down = "down"
+			if self._down_count[peer_id] > 1 then
+				down = "downs"
+			end
+			local message = peer:name() .. " +" .. tostring(self._down_count[peer_id]) .. " " .. down
+			self:SendChatMessage("Replenished", message, true, "00ff04")
+			self._down_count[peer_id] = 0
+		end
+	end
+
+	function SydneyHUD:Down(peer_id, local_peer)
+		local peer = managers.network:session():peer(peer_id)
+		if peer then
+			local warn_down = 3
+			if local_peer then
+				local nine_lives = managers.player:upgrade_value('player', 'additional_lives', 0) or 0
+				warn_down = warn_down + nine_lives
+			end
+
+			if not SydneyHUD._down_count[peer_id] then
+				SydneyHUD._down_count[peer_id] = 1
+			else
+				SydneyHUD._down_count[peer_id] = SydneyHUD._down_count[peer_id] + 1
+			end
+
+			if SydneyHUD._down_count[peer_id] == warn_down then
+				local message = peer:name() .. " was downed " .. tostring(SydneyHUD._down_count[peer_id]) .. " times"
+				self:SendChatMessage("Warning!", message, true, "ff0000")
+			end
+		end
+	end
+
+	function SydneyHUD:Custody(criminal_name, local_peer)
+		local peer_id = criminal_name
+		if not local_peer then
+			for __, data in pairs(managers.criminals._characters) do
+				if data.token and criminal_name == data.name then
+					peer_id = data.peer_id
+					break
+				end
+			end
+		end
+		local peer = managers.network:session():peer(peer_id)
+		if peer then
+			SydneyHUD._down_count[peer_id] = 0
+		end
+	end
+
+	function SydneyHUD:Peer_id_To_Peer(peer_id)
+		local session = managers.network.session()
+		return session and session:peer(peer_id)
+	end
+
+	function SydneyHUD:Peer(input)
+		local t = type(input)
+		if t == 'userdata' then
+			return alive(input) and input:network():peer()
+		elseif t == 'number' then
+			return self:Peer_id_To_Peer(input)
+		elseif t == 'string' then
+			return self:Peer(managers.criminals:character_peer_id_by_name(input))
+		end
+	end
+
+	function SydneyHUD:Peer_Info(input)
+		local peer = self:Peer(input)
+		return peer and peer:id() or 0
 	end
 
 	SydneyHUD:Load()

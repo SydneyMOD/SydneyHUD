@@ -78,3 +78,15 @@ function UnitNetworkHandler:sync_teammate_progress(type_index, enabled, tweak_da
 	end
 	return sync_teammate_progress_original(self, type_index, enabled, tweak_data_id, timer, success, sender, ...)
 end
+
+Hooks:PostHook(UnitNetworkHandler, "sync_doctor_bag_taken", "SydneyHUD:DoctorBagOther", function(self, unit, amount, sender)
+	local peer = self._verify_sender(sender)
+	local peer_id = peer and peer:id()
+	if peer_id then
+		SydneyHUD:Replenish(peer_id)
+	end
+end)
+
+Hooks:PostHook(UnitNetworkHandler, 'set_trade_death', "SydneyHUD:CustodyOther", function(self, criminal_name, respawn_penalty, hostages_killed)
+	SydneyHUD:Custody(criminal_name)
+end)
