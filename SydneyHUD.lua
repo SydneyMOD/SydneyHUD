@@ -282,7 +282,10 @@ if not SydneyHUD.setup then
 			color = nil
 		end
 		--]]
-		color = Color(color)
+		if color and #color == 6 then
+			color = Color(color)
+		end
+
 		message = tostring(message)
 		--if managers and managers.chat and managers.chat._receives and managers.chat._receivers[1] then
 			for __, rcvr in pairs(managers.chat._receivers[1]) do
