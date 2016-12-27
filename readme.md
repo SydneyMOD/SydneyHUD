@@ -43,6 +43,7 @@
 * Changeable Waypoint Text Color
 * ChatTime
 * Down Warning
+* Changeable HUD scale
 
 ### Future Request / Bug Report
 Please create issue at [here](https://github.com/SydneyMOD/SydneyHUD/issues) or Submit at [SteamGroup](https://steamcommunity.com/groups/SydneyMOD/discussions/2/152390648090747618/)
