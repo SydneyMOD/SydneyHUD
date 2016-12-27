@@ -1,10 +1,6 @@
 <h1 align="center">SydneyHUD</h1>
 <p align="center">HUD mod with some Utils</p>
 
-<p align="center">
-    <img src="https://img.shields.io/badge/Version-1.0-brightgreen.svg?style=flat-square">
-</p>
-
 ### Futures
 * HUD Tab Stats
 * HUD Panel Lists
@@ -29,6 +25,7 @@
 * Laser options
 * HPS Meters
 * contract broker quick link
+
 
 * Hold to pick
 * Moveable inventory item
