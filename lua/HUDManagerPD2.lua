@@ -255,11 +255,11 @@ HUDListManager = HUDListManager or class()
 HUDListManager.ListOptions = {
 	--General settings
 	right_list_height_offset = SydneyHUD:GetOption("center_assault_banner") and 0 or 50,   --Margin from top for the right list
-	right_list_scale = 1,   --Size scale of right list
+	right_list_scale = SydneyHUD:GetOption("right_list_scale") or 1,   --Size scale of right list
 	left_list_height_offset = 80,   --Margin from top for the left list
-	left_list_scale = 1,    --Size scale of left list
+	left_list_scale = SydneyHUD:GetOption("left_list_scale") or 1,    --Size scale of left list
 	buff_list_height_offset = 80,   --Margin from bottom for the buff list
-	buff_list_scale = 1,    --Size scale of buff list
+	buff_list_scale = SydneyHUD:GetOption("buff_list_scale") or 1,    --Size scale of buff list
 
 	--Left side list
 	show_timers = SydneyHUD:GetOption("show_timers"),     --Drills, time locks, hacking etc.

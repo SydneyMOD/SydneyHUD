@@ -137,6 +137,7 @@ local CharacterData = {
 	["security"] = "SECURITY GUARD",
 	["gensec"] = "GENSEC UNIT",
 	["cop"] = "POLICE OFFICER",
+	["cop_famale"] = "POLICE OFFICER",
 	["inside_man"] = "INSIDE MAN",
 	["fbi"] = "FBI UNIT",
 	["swat"] = "SWAT UNIT",

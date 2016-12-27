@@ -82,6 +82,19 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD:Save()
 	end
 
+	MenuCallbackHandler.callback_right_list_scale = function(self, item)
+		SydneyHUD._data.right_list_scale = item:value()
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_left_list_scale = function(self, item)
+		SydneyHUD._data.left_list_scale = item:value()
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_buff_list_scale = function(self, item)
+		SydneyHUD._data.buff_list_scale = item:value()
+		SydneyHUD:Save()
+	end
+
 	-- HUD Lists (Timers)
 	MenuCallbackHandler.callback_show_timers = function(self, item)
 		SydneyHUD._data.show_timers = (item:value() == "on")

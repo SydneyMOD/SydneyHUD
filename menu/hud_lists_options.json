@@ -5,6 +5,46 @@
 	"description": "hud_lists_options_desc",
 	"items": [
 		{
+			"type": "slider",
+			"id": "right_list_scale",
+			"title": "right_list_scale",
+			"description": "right_list_scale_desc",
+			"callback": "callback_right_list_scale",
+			"value": "right_list_scale",
+			"max": 2,
+			"min": 1,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "left_list_scale",
+			"title": "left_list_scale",
+			"description": "left_list_scale_desc",
+			"callback": "callback_left_list_scale",
+			"value": "left_list_scale",
+			"max": 2,
+			"min": 1,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "buff_list_scale",
+			"title": "buff_list_scale",
+			"description": "buff_list_scale_desc",
+			"callback": "callback_buff_list_scale",
+			"value": "buff_list_scale",
+			"max": 2,
+			"min": 1,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
 			"type": "toggle",
 			"id": "show_timers",
 			"title": "show_timers",
