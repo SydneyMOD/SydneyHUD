@@ -40,6 +40,11 @@
 * Down Warning
 * Changeable HUD scale
 
+### Known issue
+* FPS drop when use Extended Flashlight
+* Sometime crash when rendering Drag and Drop Inventory
+* AntiBobble isn't working Sometime
+
 ### Future Request / Bug Report
 Please create issue at [here](https://github.com/SydneyMOD/SydneyHUD/issues) or Submit at [SteamGroup](https://steamcommunity.com/groups/SydneyMOD/discussions/2/152390648090747618/)
 
