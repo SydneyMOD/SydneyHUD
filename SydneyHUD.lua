@@ -307,10 +307,12 @@ if not SydneyHUD.setup then
 		local peer = managers.network:session():peer(peer_id)
 		if peer then
 			local down = "down"
-			if self._down_count[peer_id] > 1 then
+			-- NOTE: Add existence check of _down_count (can be nil when not downed)
+			if self._down_count[peer_id] and self._down_count[peer_id] > 1 then
 				down = "downs"
 			end
-			local message = peer:name() .. " +" .. tostring(self._down_count[peer_id]) .. " " .. down
+			-- NOTE: Display 0 instead of nil
+			local message = peer:name() .. " +" .. tostring(self._down_count[peer_id] or 0) .. " " .. down
 			self:SendChatMessage("Replenished", message, true, "00ff04")
 			self._down_count[peer_id] = 0
 		end
