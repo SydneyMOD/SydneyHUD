@@ -25,8 +25,6 @@
 * Laser options
 * HPS Meters
 * contract broker quick link
-
-
 * Hold to pick
 * Moveable inventory item
 * Anti bobble
@@ -51,6 +49,11 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 ### Get in touch
 * [Steam Group](https://steamcommunity.com/groups/SydneyMOD)
 * [Twitter](https://twitter.com/SydneyMOD)
+
+### Contributer
+* katabame: Main Developper
+* IfiwFR: French Translator
+* Nox-404: Bug fixes
 
 ### Special Thanks
 SydneyHUD using following mods codes / textures.  
