@@ -143,5 +143,7 @@
 
 	"right_list_scale": 1,
 	"left_list_scale": 1,
-	"buff_list_scale": 1
+	"buff_list_scale": 1,
+
+	"counter_font_size": 14
 }

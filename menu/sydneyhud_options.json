@@ -12,7 +12,8 @@
 			"callback": "callback_sydneyhud_language",
 			"items": [
 				"language_english",
-				"language_japanese"
+				"language_japanese",
+				"language_french"
 			],
 			"value": "sydneyhud_language",
 			"default_value": 1

@@ -63,7 +63,7 @@
 			h = self._player_panel:child("radial_health_panel"):h(),
 			vertical = "center",
 			align = "center",
-			font_size = 14,
+			font_size = SydneyHUD:GetOption("counter_font_size"), -- default 14
 			font = tweak_data.hud_players.ammo_font
 		})
 		self._revives_counter = self._player_panel:child("radial_health_panel"):text({
@@ -78,7 +78,7 @@
 			h = self._player_panel:child("radial_health_panel"):h(),
 			vertical = "center",
 			align = "center",
-			font_size = 14,
+			font_size = SydneyHUD:GetOption("counter_font_size"), -- default 14
 			font = tweak_data.hud_players.ammo_font
 		})
 		self._revives_count = 0

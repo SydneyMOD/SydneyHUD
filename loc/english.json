@@ -11,6 +11,7 @@
 	"sydneyhud_language_desc": "Choose language what you want to see in SydneyHUD",
 	"language_english": "English",
 	"language_japanese": "日本語",
+	"language_french": "Français",
 
 	"interact_tweak": "Interact Tweak",
 	"interact_tweak_desc": "tweak your interaction",
@@ -357,5 +358,8 @@
 	"left_list_scale": "HUD left list Scale",
 	"left_list_scale_desc": "Change list scale multiplier",
 	"buff_list_scale": "HUD buff list Scale",
-	"buff_list_scale_desc": "Change list scale multiplier"
+	"buff_list_scale_desc": "Change list scale multiplier",
+
+	"counter_font_size": "Counter Font Size",
+	"counter_font_size_desc": "adjust right bottom HUD panel font size"
 }

@@ -5,6 +5,18 @@
 	"description": "sydneyhud_hud_tweaks_desc",
 	"items": [
 		{
+			"type": "slider",
+			"id": "counter_font_size",
+			"title": "counter_font_size",
+			"description": "counter_font_size_desc",
+			"callback": "callback_counter_font_size",
+			"value": "counter_font_size",
+			"max": 24,
+			"min": 14,
+			"step": 1,
+			"default_value": 14
+		},
+		{
 		    "type": "toggle",
 			"id": "enable_pacified",
 			"title": "enable_pacified",

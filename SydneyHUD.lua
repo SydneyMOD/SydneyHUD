@@ -38,7 +38,8 @@ if not SydneyHUD.setup then
 	SydneyHUD._language =
 	{
 		[1] = "english",
-		[2] = "japanese"
+		[2] = "japanese",
+		[3] = "france"
 	}
 
 	-- var for util

@@ -77,6 +77,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	end
 
 	-- HUD panel
+	MenuCallbackHandler.callback_counter_font_size = function(self, item)
+		SydneyHUD._data.counter_font_size = item:value()
+		SydneyHUD:Save()
+	end
+
 	MenuCallbackHandler.callback_improved_ammo_count = function(self, item)
 		SydneyHUD._data.improved_ammo_count = (item:value() == "on")
 		SydneyHUD:Save()
