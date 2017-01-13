@@ -658,8 +658,8 @@
 		end
 	end
 
-	function HUDTeammate:set_ammo_amount_by_type(type, max_clip, current_clip, current_left, max)
-		if SydneyHUD:GetOption("improved_ammo_count") then
+	if SydneyHUD:GetOption("improved_ammo_count") then
+		function HUDTeammate:set_ammo_amount_by_type(type, max_clip, current_clip, current_left, max)
 			local weapon_panel = self._player_panel:child("weapons_panel"):child(type .. "_weapon_panel")
 			weapon_panel:set_visible(true)
 			local low_ammo = current_left - current_clip <= math.round(max_clip / 2)
@@ -682,7 +682,5 @@
 			ammo_total:set_text(zero .. tostring(current_left - current_clip))
 			ammo_total:set_color(color_total)
 			ammo_total:set_range_color(0, string.len(zero), color_total:with_alpha(0.5))
-		else
-			set_ammo_amount_by_type_original(type, max_clip, current_clip, current_left, max)
 		end
 	end

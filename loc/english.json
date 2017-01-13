@@ -353,6 +353,9 @@
 	"clean_flashbang": "Clean Flashbang",
 	"clean_flashbang_desc": "When you got Flashbang, it can not flashing your view anymore",
 
+	"new_icon": "New Icon Type",
+	"new_icon_desc": "Use new icon made for SydneyHUD",
+
 	"right_list_scale": "HUD right list Scale",
 	"right_list_scale_desc": "Change list scale multiplier",
 	"left_list_scale": "HUD left list Scale",

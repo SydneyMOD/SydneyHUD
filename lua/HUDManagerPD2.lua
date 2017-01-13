@@ -1779,7 +1779,8 @@ do
 			or icon.hudtabs and "guis/textures/pd2/hud_tabs"
 			or icon.hudpickups and "guis/textures/pd2/hud_pickups"
 			or icon.hudicons and "guis/textures/hud_icons"
-		local texture_rect = (icon.spec or icon.atlas) and { x * 64, y * 64, 64, 64 } or icon.waypoints or icon.hudtabs or icon.hudpickups or icon.hudicons or icon.texture_rect
+			or icon.sydney and "guis/textures/controller"
+		local texture_rect = (icon.spec or icon.atlas) and { x * 64, y * 64, 64, 64 } or icon.waypoints or icon.hudtabs or icon.hudpickups or icon.hudicons or icon.sydney or icon.texture_rect
 
 		self._icon = self._panel:bitmap({
 			name = "icon",
@@ -1983,14 +1984,26 @@ do
 
 
 	HUDList.SpecialPickupItem = HUDList.SpecialPickupItem or class(HUDList.RightListItem)
-	HUDList.SpecialPickupItem.SPECIAL_PICKUP_ICON_MAP = {
-		crowbar =			{ hudpickups = { 0, 64, 32, 32 } },
-		keycard =			{ hudpickups = { 32, 0, 32, 32 } },
-		courier =			{ atlas = { 6, 0 } },
-		planks =			{ hudpickups = { 0, 32, 32, 32 } },
-		meth_ingredients =	{ waypoints = { 192, 32, 32, 32 } },
-		Blowtorch =			{ hudpickups = { 96, 192, 32, 32 } }
-	}
+	if SydneyHUD:GetOption("new_icon") then
+		HUDList.SpecialPickupItem.SPECIAL_PICKUP_ICON_MAP = {
+			crowbar =			{ sydney = { 0, 0, 32, 32 } },
+			keycard =			{ sydney = { 32, 0, 32, 32 } },
+			courier =			{ sydney = { 224, 0, 32, 32 } },
+			planks =			{ sydney = { 64, 0, 32, 32 } },
+			meth_ingredients =	{ sydney = { 160, 0, 32, 32 } },
+			Blowtorch =			{ sydney = { 96, 0, 32, 32 } }
+		}
+	else
+		HUDList.SpecialPickupItem.SPECIAL_PICKUP_ICON_MAP = {
+			crowbar =			{ hudpickups = { 0, 64, 32, 32 } },
+			keycard =			{ hudpickups = { 32, 0, 32, 32 } },
+			courier =			{ atlas = { 6, 0 } },
+			planks =			{ hudpickups = { 0, 32, 32, 32 } },
+			meth_ingredients =	{ waypoints = { 192, 32, 32, 32 } },
+			Blowtorch =			{ hudpickups = { 96, 192, 32, 32 } }
+		}
+	end
+
 	function HUDList.SpecialPickupItem:init(parent, name, pickup_data)
 		pickup_data = pickup_data or HUDList.SpecialPickupItem.SPECIAL_PICKUP_ICON_MAP[name]
 		HUDList.SpecialPickupItem.super.init(self, parent, name, pickup_data)
@@ -2131,7 +2144,6 @@ do
 			elseif icon.halign == "right" then
 				bitmap:set_right(self._panel:right())
 			end
-
 			table.insert(self._icons, bitmap)
 		end
 	end
@@ -2411,6 +2423,7 @@ do
 		security = "Security",
 		gensec = "Security",
 		cop = "Cop",
+		cop_female = "Cop",
 		fbi = "FBI",
 		swat = "SWAT",
 		heavy_swat = "H. SWAT",

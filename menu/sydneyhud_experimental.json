@@ -61,8 +61,17 @@
 			"callback": "callback_civilian_spot_voice",
 			"value": "civilian_spot_voice",
 			"default_value": false
+		},
+		{
+			"type": "toggle",
+			"id": "new_icon",
+			"title": "new_icon",
+			"description": "new_icon_desc",
+			"callback": "callback_new_icon",
+			"value": "new_icon",
+			"default_value": false
 		}
-		/*,
+		/*
 		{
 			"type": "toggle",
 			"id": "clean_flashbang",

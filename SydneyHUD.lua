@@ -337,6 +337,9 @@ if not SydneyHUD.setup then
 			if SydneyHUD._down_count[peer_id] == warn_down then
 				local message = peer:name() .. " was downed " .. tostring(SydneyHUD._down_count[peer_id]) .. " times"
 				self:SendChatMessage("Warning!", message, true, "ff0000")
+			else
+				local message = peer:name() .. " was downed (" .. tostring(SydneyHUD._down_count[peer_id]) .. "/" .. warn_down .. ")"
+				self:SendChatMessage("Warning", message, true, "ff0000")
 			end
 		end
 	end
