@@ -300,7 +300,7 @@ function HUDManager:set_unit_health(current, total, tweak_table)
 	local r = self._unit_health:width()
 	local rn = (self._health_text_rect[3] - 2) * _r
 	self._unit_health_enemy_text:set_text(enemy)
-	self._unit_health_text:set_text(string.format("%d/%d", current * 10, total * 10))
+	self._unit_health_text:set_text(string.format("%d / %d (%d%%)", current * 10, total * 10, current/total * 100))
 	local hx, hy, hw, hh = self._unit_health_text:text_rect()
 	local ex, ey, ew, eh = self._unit_health_enemy_text:text_rect()
 	self._unit_health_text:set_size(hw, hh)
