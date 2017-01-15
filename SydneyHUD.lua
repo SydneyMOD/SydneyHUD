@@ -39,7 +39,7 @@ if not SydneyHUD.setup then
 	{
 		[1] = "english",
 		[2] = "japanese",
-		[3] = "france"
+		[3] = "french"
 	}
 
 	-- var for util

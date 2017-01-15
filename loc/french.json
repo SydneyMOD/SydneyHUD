@@ -321,9 +321,9 @@
 	"hold_to_pick_delay_desc": "Délai de temps avant l'activation de 'Maintiens pour prendre'. Mettez le à 0 pour prendre l'argent le plus rapidement possible.",
 
 	"improved_ammo_count": "Compteur de munitions amélioré",
-	"improved_ammo_count_desc": "Montre le total de munitions sans prendre en compte le nombre de balles dans le chargeurs",
+	"improved_ammo_count_desc": "Montre le total de munitions sans prendre en compte le nombre de balles dans le chargeur",
 
-	"sydneyhud_chat_info": "Chat Infomation",
+	"sydneyhud_chat_info": "Informations du chat",
 	"sydneyhud_chat_info_desc": "Donne des informations via le chat",
 
 	"assault_phase_chat_info": "Feed de phases d'assault",
@@ -334,4 +334,35 @@
 	"ecm_battery_chat_info_desc": "Feed de la batterie du CME du chat",
 	"ecm_battery_chat_info_feed": "Peer Feed ECM Battery",
 	"ecm_battery_chat_info_feed_desc": "Si vous êtes l'hôte, Cela envoie les infos de la Feed de la batterie du CME à tout votre équipe. (Feed de la batterie du CME Requis)"
+	
+	"sydneyhud_experimental": "Options expérimentales",
+	"sydneyhud_experimental_desc": "Ces options ne sont PAS stables. Utilisez-les à vos risques.",
+
+	"waypoint_color_r": "Couleur du point de repère (Rouge)",
+	"waypoint_color_r_desc": "Couleur du point de repère personalisé",
+	"waypoint_color_g": "ouleur du point de repère (Vert)",
+	"waypoint_color_g_desc": "Couleur du point de repère personalisé",
+	"waypoint_color_b": "ouleur du point de repère (Bleu)",
+	"waypoint_color_b_desc": "Couleur du point de repère personalisé",
+
+	"civilian_spot": "Repérer les civils",
+	"civilian_spot_desc": "Permet de marquer les civils en stealth",
+	"civilian_spot_voice": "Indicateur sonore",
+	"civilian_spot_voice_desc": "Quand vous repérez un civil, Parle et montre comme si vous étiez en train de repérer un guarde.",
+
+	"clean_flashbang": "Anti-Flashbang",
+	"clean_flashbang_desc": "Quand vous recevez un flashbang, Vous ne vous feriez plus flasher comme auparavant.",
+
+	"new_icon": "Nouvelles icônes",
+	"new_icon_desc": "Utilise les nouvelles icônes crées pour SydneyHUD",
+
+	"right_list_scale": "Taille de l'HUD droit",
+	"right_list_scale_desc": "Modify la taille de l'HUD de droite.",
+	"left_list_scale": "Taille de l'HUD gauche",
+	"left_list_scale_desc": "Modify la taille de l'HUD de gauche",
+	"buff_list_scale": "Taille de l'HUD des buff",
+	"buff_list_scale_desc": "Modify la taille de l'HUD des buff",
+
+	"counter_font_size": "Taille de la police d'écriture du compteur",
+	"counter_font_size_desc": "Ajuste la taille de la police d'écriture de l'HUD en haut à droite."
 }
