@@ -11,6 +11,7 @@ local aquire_team_upgrade_original = PlayerManager.aquire_team_upgrade
 local unaquire_team_upgrade_original = PlayerManager.unaquire_team_upgrade
 local add_synced_team_upgrade_original = PlayerManager.add_synced_team_upgrade
 local peer_dropped_out_original = PlayerManager.peer_dropped_out
+local has_enabled_cooldown_upgrade_original = PlayerManager.has_enabled_cooldown_upgrade
 
 PlayerManager._CHECK_BUFF_ACED = {
 	overkill = function() return managers.player:has_category_upgrade("player", "overkill_all_weapons") end,
@@ -337,5 +338,21 @@ function PlayerManager._do_listener_callback(event, ...)
 		for _, clbk in pairs(PlayerManager._LISTENER_CALLBACKS[event]) do
 			clbk(...)
 		end
+	end
+end
+
+if SydneyHUD:GetOption("inspire_ace_chat_info") then
+	function PlayerManager:has_enabled_cooldown_upgrade(category, upgrade)
+	    if category == "cooldown" and upgrade == "long_dis_revive" then
+	        if self._global.cooldown_upgrades[category][upgrade] then
+	            local remaining = self._global.cooldown_upgrades[category][upgrade].cooldown_time - Application:time()
+	            if remaining > 0 then
+	                local text = string.format("%.1f sec", remaining)
+
+	            	SydneyHUD:SendChatMessage("Inspire Ace CT", text, false, "FF9800")
+				end
+	        end
+	    end
+	    return has_enabled_cooldown_upgrade_original(self, category, upgrade)
 	end
 end

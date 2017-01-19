@@ -51,6 +51,19 @@
 			"callback": "callback_ecm_battery_chat_info_feed",
 			"value": "ecm_battery_chat_info_feed",
 			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "toggle",
+			"id": "inspire_ace_chat_info",
+			"title": "inspire_ace_chat_info",
+			"description": "inspire_ace_chat_info_desc",
+			"callback": "callback_inspire_ace_chat_info",
+			"value": "inspire_ace_chat_info",
+			"default_value": true
 		}
 	]
 }

@@ -489,6 +489,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	end
 
 	-- Other
+	MenuCallbackHandler.callback_show_enemy_health = function(self, item)
+		SydneyHUD._data.show_enemy_health = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
 	MenuCallbackHandler.callback_lobby_skins_mode = function(self, item)
 		SydneyHUD._data.lobby_skins_mode = item:value()
 		SydneyHUD:Save()
@@ -617,6 +622,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	end
 	MenuCallbackHandler.callback_ecm_battery_chat_info_feed = function(self, item)
 		SydneyHUD._data.ecm_battery_chat_info_feed = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
+	MenuCallbackHandler.callback_inspire_ace_chat_info = function(self, item)
+		SydneyHUD._data.inspire_ace_chat_info = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 

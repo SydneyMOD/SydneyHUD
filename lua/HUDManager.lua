@@ -269,7 +269,7 @@ Hooks:PostHook(HUDManager, "_player_hud_layout", "uHUDPostHUDManagerPlayerInfoHU
 end)
 
 function HUDManager:set_unit_health_visible(visible)
-	if visible == true and not self._unit_health_visible then
+	if SydneyHUD:GetOption("show_enemy_health") and visible and not self._unit_health_visible then
 		self._unit_health_visible = true
 		self._unit_health_panel:stop()
 		self._unit_health_panel:animate(function(p)
@@ -278,7 +278,7 @@ function HUDManager:set_unit_health_visible(visible)
 				self._unit_health_panel:set_alpha(math.lerp(self._unit_health_panel:alpha(), 1, o))
 			end)
 		end)
-	elseif visible == false and self._unit_health_visible then
+	elseif not visible and self._unit_health_visible then
 		self._unit_health_visible = nil
 		self._unit_health_panel:stop()
 		self._unit_health_panel:animate(function(p)
@@ -292,6 +292,7 @@ function HUDManager:set_unit_health_visible(visible)
 		end)
 	end
 end
+
 
 function HUDManager:set_unit_health(current, total, tweak_table)
 	if not current or not total then return end
@@ -320,7 +321,7 @@ function HUDManager:set_unit_health(current, total, tweak_table)
 			end)
 		end)
 	end
-
+	
 	self._unit_health:set_w(_r * (self._health_text_rect[3] - 2))
 	self._unit_health:set_texture_rect(self._health_text_rect[1], self._health_text_rect[2], self._health_text_rect[3] * _r, self._health_text_rect[4])
 end

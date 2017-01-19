@@ -323,6 +323,9 @@
 	"improved_ammo_count": "Improved Ammo Count",
 	"improved_ammo_count_desc": "Show Total Ammo without including Clip Ammo",
 
+	"show_enemy_health": "Enemy Health Bar",
+	"show_enemy_health_desc": "Show Enemy Health Bar",
+
 	"sydneyhud_chat_info": "Chat Infomation",
 	"sydneyhud_chat_info_desc": "Feed Infomation to Chat",
 
@@ -334,6 +337,9 @@
 	"ecm_battery_chat_info_desc": "Feed ECM Battery to Chat",
 	"ecm_battery_chat_info_feed": "Peer Feed ECM Battery",
 	"ecm_battery_chat_info_feed_desc": "If you're host, send ECM battery info chat messgage to every crew. (Feed ECM Battery Required)",
+	"inspire_ace_chat_info": "Inspire ACE CT",
+	"inspire_ace_chat_info_desc": "Show Inspire Ace CoolTime Remining",
+
 
 	"sydneyhud_experimental": "Experimental Future",
 	"sydneyhud_experimental_desc": "Those futures is NOT stable. When you use this, please proceed at your own risk.",
