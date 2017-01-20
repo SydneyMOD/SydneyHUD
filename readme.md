@@ -32,7 +32,7 @@
 * 360° view driving
 * Ammo total left count without including clip
 * Health bar
-* Chat feed system (Assault Phase / ECM battery)
+* Chat feed system (Assault Phase / ECM battery / Inspire ACE CT)
 * Always Show MOD Icons
 * Spot Civilians
 * Changeable Waypoint Text Color
