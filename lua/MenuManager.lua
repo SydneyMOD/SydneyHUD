@@ -7,7 +7,7 @@ Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_sydneyhud"
 		local str = filename:match('^(.*).json$')
 		-- if str and Idstring(str) and Idstring(str):key() == SystemInfo:language():key() then
 		local langid = SydneyHUD:GetOption("language")
-		log(dev..langid)
+		-- log(dev..langid)
 		if str == SydneyHUD._language[langid] then
 			loc:load_localization_file(SydneyHUD._path .. "loc/" .. filename)
 			log(info.."language: "..filename)
