@@ -132,6 +132,9 @@
 	"assault_phase_chat_info_feed": true,
 	"ecm_battery_chat_info": true,
 	"ecm_battery_chat_info_feed": true,
+	"inspire_ace_chat_info": true,
+
+	"show_enemy_health": true,
 
 	"waypoint_color_r": 0,
 	"waypoint_color_g": 0.5,
