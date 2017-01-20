@@ -3,7 +3,7 @@
 	"description": "A JackHUD fork",
 	"author": "SydneyMOD",
 	"contact": "Twitter: @SydneyMOD",
-	"version": "1.7",
+	"version": "1.8",
 	"priority": -1,
 	"libraries": [
 		{
