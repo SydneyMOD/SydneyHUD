@@ -8,18 +8,18 @@
 	"sydneyhud_reset_cancel": "Cancel",
 
 	"sydneyhud_language": "Language",
-	"sydneyhud_language_desc": "Choose language what you want to see in SydneyHUD",
+	"sydneyhud_language_desc": "Choose the language you want to see in SydneyHUD",
 	"language_english": "English",
 	"language_japanese": "日本語",
 	"language_french": "Français",
 
-	"interact_tweak": "Interact Tweak",
-	"interact_tweak_desc": "tweak your interaction",
+	"interact_tweak": "Interaction Tweaks",
+	"interact_tweak_desc": "tweak your interactions",
 
 	"buy_all_assets": "Buy All",
 	"buy_all_assets_desc": "Buy all the assets that you are permitted to acquire",
 
-	"sydneyhud_menu_tweaks": "menu/Lobby Tweaks",
+	"sydneyhud_menu_tweaks": "Menu/Lobby Tweaks",
 	"sydneyhud_menu_tweaks_desc": "Skip Screens, show/hide weapons",
 
 	"skip_black_screen": "Skip the black screen",
@@ -240,7 +240,7 @@
 	"remove_answered_pager_contour_desc": "Removes the interaction contour on answered pagers",
 
 	"anti_stealth_grenades": "Anti stealth grenades",
-	"anti_stealth_grenades_desc": "Supresses throwing of grenades in stealth (click again to force throw)",
+	"anti_stealth_grenades_desc": "Suppress throwing of grenades in stealth (click again to force throw)",
 
 	"sydneyhud_hud_tweaks": "HUD tweaks",
 	"sydneyhud_hud_tweaks_desc": "HUD tweaks",
@@ -275,7 +275,7 @@
 	"show_armor_timer": "Show armor timer",
 	"show_armor_timer_desc": "Show the time until armor regenerates",
 	"show_inspire_timer": "Show inspire timer",
-	"show_inspire_timer_desc": "Show the time of beeing inspired",
+	"show_inspire_timer_desc": "Show the time of being inspired",
 
 	"hps_meter": "HPS Meter",
 	"hps_meter_desc": "Heal per second meter options",
@@ -302,7 +302,7 @@
 	"enhanced_assault_count_desc": "Show wave count (depends on enhanced assault banner)",
 
 	"enable_buy_all_assets": "Enable Buy all assets",
-	"enable_buy_all_assets_desc": "Trasnforms the gage package assets into 'Buy All', in the briefing screen",
+	"enable_buy_all_assets_desc": "Transforms the gage package assets into 'Buy All', in the briefing screen",
 
 	"lobby_skins_mode": "Lobby weapon skins",
 	"lobby_skins_mode_desc": "Force enable or disable weapon skins in game lobbies (only visible for you)",
@@ -313,12 +313,12 @@
 	"lobby_skins_secondary": "Always secondary",
 
 	"anti_bobble": "Anti Bobble",
-	"anti_bobble_desc": "No more bobble everytime",
+	"anti_bobble_desc": "No more bobble every time",
 
 	"hold_to_pick": "Hold to Pick",
-	"hold_to_pick_desc": "You can pick the instant cashes only pressing [F]",
+	"hold_to_pick_desc": "You can pick the instant cashes by only pressing [F]",
 	"hold_to_pick_delay": "Hold to Pick Delay",
-	"hold_to_pick_delay_desc": "Delay time of between the Hold to Pick. Set 0 to pick as fast as can.",
+	"hold_to_pick_delay_desc": "Delay the time between the Hold to Pick. Set 0 to pick as fast as you can.",
 
 	"improved_ammo_count": "Improved Ammo Count",
 	"improved_ammo_count_desc": "Show Total Ammo without including Clip Ammo",
@@ -326,8 +326,8 @@
 	"show_enemy_health": "Enemy Health Bar",
 	"show_enemy_health_desc": "Show Enemy Health Bar",
 
-	"sydneyhud_chat_info": "Chat Infomation",
-	"sydneyhud_chat_info_desc": "Feed Infomation to Chat",
+	"sydneyhud_chat_info": "Chat Information",
+	"sydneyhud_chat_info_desc": "Feed Information to Chat",
 
 	"assault_phase_chat_info": "Feed Assault Phase",
 	"assault_phase_chat_info_desc": "Feed Assault Phase to Chat",
@@ -336,13 +336,13 @@
 	"ecm_battery_chat_info": "Feed ECM Battery",
 	"ecm_battery_chat_info_desc": "Feed ECM Battery to Chat",
 	"ecm_battery_chat_info_feed": "Peer Feed ECM Battery",
-	"ecm_battery_chat_info_feed_desc": "If you're host, send ECM battery info chat messgage to every crew. (Feed ECM Battery Required)",
+	"ecm_battery_chat_info_feed_desc": "If you're host, send ECM battery info chat message to every crew. (Feed ECM Battery Required)",
+
 	"inspire_ace_chat_info": "Inspire ACE CT",
-	"inspire_ace_chat_info_desc": "Show Inspire Ace CoolTime Remining",
+	"inspire_ace_chat_info_desc": "Show remaining Inspire Ace cooldown time",
 
-
-	"sydneyhud_experimental": "Experimental Future",
-	"sydneyhud_experimental_desc": "Those futures is NOT stable. When you use this, please proceed at your own risk.",
+	"sydneyhud_experimental": "Experimental Features",
+	"sydneyhud_experimental_desc": "Experimental features are NOT stable. When you use this, please proceed at your own risk.",
 
 	"waypoint_color_r": "Waypoint Color (Red)",
 	"waypoint_color_r_desc": "Custom Waypoint Color",
@@ -352,12 +352,12 @@
 	"waypoint_color_b_desc": "Custom Waypoint Color",
 
 	"civilian_spot": "Civilian Spot",
-	"civilian_spot_desc": "Can spot civilian when stealth",
+	"civilian_spot_desc": "You can spot a civilian when in stealth",
 	"civilian_spot_voice": "Civilian Spot Voice",
-	"civilian_spot_voice_desc": "When you're spot civilian, say and motion like spotting guard",
+	"civilian_spot_voice_desc": "When you have spotted a civilian, say and motion as if spotting a guard",
 
 	"clean_flashbang": "Clean Flashbang",
-	"clean_flashbang_desc": "When you got Flashbang, it can not flashing your view anymore",
+	"clean_flashbang_desc": "When you get flashbanged, it will not flash your view anymore",
 
 	"new_icon": "New Icon Type",
 	"new_icon_desc": "Use new icon made for SydneyHUD",
@@ -370,5 +370,5 @@
 	"buff_list_scale_desc": "Change list scale multiplier",
 
 	"counter_font_size": "Counter Font Size",
-	"counter_font_size_desc": "adjust right bottom HUD panel font size"
+	"counter_font_size_desc": "adjust the font size of the right bottom HUD panel"
 }

@@ -323,6 +323,9 @@
 	"improved_ammo_count": "Compteur de munitions amélioré",
 	"improved_ammo_count_desc": "Montre le total de munitions sans prendre en compte le nombre de balles dans le chargeur",
 
+	"show_enemy_health": "Barre de santé ennemie",
+	"show_enemy_health_desc": "Montre le barre de santé ennemie",
+
 	"sydneyhud_chat_info": "Informations du chat",
 	"sydneyhud_chat_info_desc": "Donne des informations via le chat",
 
@@ -334,7 +337,10 @@
 	"ecm_battery_chat_info_desc": "Feed de la batterie du CME du chat",
 	"ecm_battery_chat_info_feed": "Peer Feed ECM Battery",
 	"ecm_battery_chat_info_feed_desc": "Si vous êtes l'hôte, Cela envoie les infos de la Feed de la batterie du CME à tout votre équipe. (Feed de la batterie du CME Requis)"
-	
+
+	"inspire_ace_chat_info": "Inspire ACE temps de recharge",
+	"inspire_ace_chat_info_desc": "Montre le inspire ACE temps de recharge",
+
 	"sydneyhud_experimental": "Options expérimentales",
 	"sydneyhud_experimental_desc": "Ces options ne sont PAS stables. Utilisez-les à vos risques.",
 
