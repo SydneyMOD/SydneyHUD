@@ -677,7 +677,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 				text = managers.localization:text("sydneyhud_reset_ok"),
 				callback = function()
 					SydneyHUD:LoadDefaults()
-					-- SydneyHUD:ForceReloadAllMenus()
+					SydneyHUD:ForceReloadAllMenus()
 					SydneyHUD:Save()
 				end,
 			},

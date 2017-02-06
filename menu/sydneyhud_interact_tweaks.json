@@ -1,5 +1,5 @@
 {
-	"menu_id": "menu_interact_tweak",
+	"menu_id": "sydneyhud_interact_tweaks",
 	"parent_menu_id": "sydneyhud_options",
 	"title": "interact_tweak",
 	"description": "interact_tweak_desc",

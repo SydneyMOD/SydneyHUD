@@ -57,7 +57,7 @@ if not SydneyHUD.setup then
 		"hud_lists_options",
 		"kill_counter_options",
 		"hps_meter",
-		"interact_tweaks",
+		"sydneyhud_interact_tweaks",
 		"gadget_options",
 		"sydneyhud_chat_info"
 	}
