@@ -52,8 +52,8 @@ Please create issue at [here](https://github.com/SydneyMOD/SydneyHUD/issues) or 
 Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and read about the group.
 
 ### Get in touch
-* [Steam Group](https://steamcommunity.com/groups/SydneyMOD)
-* [Twitter](https://twitter.com/SydneyMOD)
+* Steam Group [🔗](https://steamcommunity.com/groups/SydneyMOD)
+* Twitter [🔗](https://twitter.com/SydneyMOD)
 
 ### Contributer
 * katabame: Main Developper
@@ -65,13 +65,16 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 SydneyHUD using following mods codes / textures.  
 So, Big credit to those!
 
-* JackHUD
-* Hold to pick
-* Drag and Drop Inventory
-* Anti-Bobble
-* Velo Sync
-* WolfyHUD
-* Driver's Neck Brace Removed
-* Always Show MOD Icons
-* Civilian Marking in Stealth
-* Replenished
+* 🐔**JackHUD** by BangL [🔗](https://steamcommunity.com/groups/jackhud)
+* 💎**Hold to pick** by Malo [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13518)
+* 🖱**Drag and Drop Inventory** by TdlQ [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=14217)
+* 🏃**Anti-Bobble** by Schmuddel [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15363)
+* 🔄**Velo Sync** by VELOCiTY [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15451)
+* 🐺**WolfyHUD** by KAMIKAZE94 [🔗](http://paydaymods.com/mods/298/wolfhud)
+* 🚙**Driver's Neck Brace Removed** by EdisLeado [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13569)
+* 🔧**Always Show MOD Icons** by Slippy [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13975)
+* 👦🏻**Civilian Marking in Stealth** by EdisLeado [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13517)
+* ⛑**Replenished** by FishTaco [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15309)
+* many of inspired mod
+
+**AND YOU.**
