@@ -1,9 +1,9 @@
 {
 	"name": "SydneyHUD",
 	"description": "A JackHUD fork",
-	"author": "SydneyMOD",
-	"contact": "Twitter: @SydneyMOD",
-	"version": "1.9",
+	"author": "SydneyMOD Project Team",
+	"contact": "http://steamcommunity.com/groups/SydneyMOD",
+	"version": "2.0",
 	"priority": -1,
 	"libraries": [
 		{
@@ -13,7 +13,7 @@
 	],
 	"updates": [
 		{
-			"revision": 9,
+			"revision": 10,
 			"identifier": "SydneyHUD"
 		},
 		{

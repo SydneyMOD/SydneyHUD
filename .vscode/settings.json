@@ -1,7 +1,6 @@
-// Write settings in this file to Override default settings and user settings
 {
 	"files.associations": {
-		"*.txt": "json", // BLT is using .txt file to save .json file
+		"*.txt": "json",
 		"*.disable": "lua"
 	}
 }
