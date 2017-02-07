@@ -202,7 +202,17 @@ Hooks:PostHook(HUDManager, "_player_hud_layout", "uHUDPostHUDManagerPlayerInfoHU
 						},
 		blend_mode 		= "normal"
 	})
-	self._health_text_rect = { 2, 18, 232, 11 }
+
+	if SydneyHUD:GetOption("health_bar_color") == 1 then
+		self._health_text_rect = { 2, 18, 232, 11 }
+	elseif SydneyHUD:GetOption("health_bar_color") == 2 then
+		self._health_text_rect = { 2, 34, 232, 11 }
+	elseif SydneyHUD:GetOption("health_bar_color") == 3 then
+		self._health_text_rect = { 2, 82, 232, 11 }
+	elseif SydneyHUD:GetOption("health_bar_color") == 4 then
+		self._health_text_rect = { 2, 98, 232, 11 }
+	end
+
 	self._unit_shield = self._unit_health_panel:bitmap({
 		name 			= "unit_shield",
 		texture 		= "guis/textures/pd2/healthshield",
@@ -216,7 +226,7 @@ Hooks:PostHook(HUDManager, "_player_hud_layout", "uHUDPostHUDManagerPlayerInfoHU
 	})
 	self._unit_health_text = self._unit_health_panel:text({
 		name 		= "unit_health_text",
-		text 		= "250000/250000",
+		text 		= "N/A",
 		blend_mode 	= "normal",
 		alpha 		= 1,
 		halign 		= "right",

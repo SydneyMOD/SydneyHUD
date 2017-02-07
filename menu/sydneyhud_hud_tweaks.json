@@ -273,6 +273,21 @@
 			"callback": "callback_show_enemy_health",
 			"value": "show_enemy_health",
 			"default_value": true
+		},
+		{
+			"type": "multiple_choice",
+			"id": "health_bar_color",
+			"title": "health_bar_color",
+			"description": "health_bar_color_desc",
+			"callback": "callback_health_bar_color",
+			"items": [
+				"health_bar_color_green",
+				"health_bar_color_blue",
+				"health_bar_color_mix_green",
+				"health_bar_color_mix_blue"
+			],
+			"value": "health_bar_color",
+			"default_value": 2
 		}
 	]
 }

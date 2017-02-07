@@ -2036,7 +2036,7 @@ do
 		bomb =			{ text = "Bomb" },
 		evidence =		{ text = "Evidence" },
 		warhead =		{ text = "Warhead" },
-		dentist =		{ text = "Unknown" },
+		dentist =		{ text = "DentistLoot" },
 		pig =			{ text = "Pig" },
 		safe =			{ text = "Safe" },
 		prototype =		{ text = "Prototype" },

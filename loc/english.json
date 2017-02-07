@@ -325,6 +325,12 @@
 
 	"show_enemy_health": "Enemy Health Bar",
 	"show_enemy_health_desc": "Show Enemy Health Bar",
+	"health_bar_color": "Health Bar color",
+	"health_bar_color_desc": "Choose Health bar color",
+	"health_bar_color_green": "Green",
+	"health_bar_color_blue": "Blue",
+	"health_bar_color_mix_green": "mixed Green",
+	"health_bar_color_mix_blue": "mixed Blue",
 
 	"sydneyhud_chat_info": "Chat Information",
 	"sydneyhud_chat_info_desc": "Feed Information to Chat",

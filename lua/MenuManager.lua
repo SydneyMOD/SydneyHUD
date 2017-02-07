@@ -493,6 +493,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD._data.show_enemy_health = (item:value() == "on")
 		SydneyHUD:Save()
 	end
+	MenuCallbackHandler.callback_health_bar_color = function(self, item)
+		SydneyHUD._data.health_bar_color = item:value()
+		SydneyHUD:Save()
+	end
 
 	MenuCallbackHandler.callback_lobby_skins_mode = function(self, item)
 		SydneyHUD._data.lobby_skins_mode = item:value()

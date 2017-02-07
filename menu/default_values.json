@@ -140,6 +140,7 @@
 	"critical_down_warning_chat_info_feed": true,
 
 	"show_enemy_health": true,
+	"health_bar_color": 2,
 
 	"waypoint_color_r": 0,
 	"waypoint_color_g": 0.5,
