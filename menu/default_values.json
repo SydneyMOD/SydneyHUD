@@ -134,6 +134,10 @@
 	"ecm_battery_chat_info": true,
 	"ecm_battery_chat_info_feed": true,
 	"inspire_ace_chat_info": true,
+	"down_warning_chat_info": true,
+	"down_warning_chat_info_feed": true,
+	"critical_down_warning_chat_info": true,
+	"critical_down_warning_chat_info_feed": true,
 
 	"show_enemy_health": true,
 

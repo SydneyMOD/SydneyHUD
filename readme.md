@@ -57,8 +57,9 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 
 ### Contributer
 * katabame: Main Developper
+* BangL: Main Developper
 * IfiwFR: French Translator
-* Nox-404: Bug fixes
+* Nox-404: Bug fixer
 
 ### Special Thanks
 SydneyHUD using following mods codes / textures.  

@@ -232,11 +232,11 @@ if not SydneyHUD.setup then
 			if io.file_is_readable(fileName) then
 				dofile(fileName)
 			else
-				log("[SydneyHUD Error] Could not open file '" .. fileName .. "'! Does it exist, is it readable?")
+				log(error .. "Could not open file '" .. fileName .. "'! Does it exist, is it readable?")
 			end
 		end)
 		if not success then
-			log("[SydneyHUD Error]\nFile: " .. fileName .. "\n" .. errorMsg)
+			log(error .. "File: " .. fileName .. "\n" .. errorMsg)
 		end
 	end
 
@@ -334,12 +334,14 @@ if not SydneyHUD.setup then
 				SydneyHUD._down_count[peer_id] = SydneyHUD._down_count[peer_id] + 1
 			end
 
-			if SydneyHUD._down_count[peer_id] == warn_down then
+			if SydneyHUD._down_count[peer_id] == warn_down and SydneyHUD:GetOption("critical_down_warning_chat_info") then
 				local message = peer:name() .. " was downed " .. tostring(SydneyHUD._down_count[peer_id]) .. " times"
-				self:SendChatMessage("Warning!", message, true, "ff0000")
-			else
+				local is_feed = SydneyHUD:GetOption("critical_down_warning_chat_info_feed")
+				self:SendChatMessage("Warning!", message, is_feed, "ff0000")
+			elseif SydneyHUD:GetOption("down_warning_chat_info") then
 				local message = peer:name() .. " was downed (" .. tostring(SydneyHUD._down_count[peer_id]) .. "/" .. warn_down .. ")"
-				self:SendChatMessage("Warning", message, true, "ff0000")
+				local is_feed = SydneyHUD:GetOption("down_warning_chat_info_feed")
+				self:SendChatMessage("Warning", message, is_feed, "ff0000")
 			end
 		end
 	end
@@ -383,7 +385,7 @@ if not SydneyHUD.setup then
 
 	SydneyHUD:Load()
 	SydneyHUD.setup = true
-	log("[SydneyHUD Info] SydneyHUD loaded.")
+	log(info .. "SydneyHUD loaded.")
 end
 
 if RequiredScript then
@@ -391,6 +393,6 @@ if RequiredScript then
 	if SydneyHUD._hook_files[requiredScript] then
 		SydneyHUD:SafeDoFile(SydneyHUD._lua_path .. SydneyHUD._hook_files[requiredScript])
 	else
-		log("[SydneyHUD Warn] unlinked script called: " .. requiredScript)
+		log(warn .. "unlinked script called: " .. requiredScript)
 	end
 end
