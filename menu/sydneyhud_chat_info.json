@@ -6,6 +6,19 @@
 	"items": [
 		{
 			"type": "toggle",
+			"id": "show_heist_time",
+			"title": "show_heist_time",
+			"description": "show_heist_time_desc",
+			"callback": "callback_show_heist_time",
+			"value": "show_heist_time",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "toggle",
 			"id": "assault_phase_chat_info",
 			"title": "assault_phase_chat_info",
 			"description": "assault_phase_chat_info_desc",

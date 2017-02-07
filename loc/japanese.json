@@ -329,6 +329,8 @@
 	"sydneyhud_chat_info": "Chat Information",
 	"sydneyhud_chat_info_desc": "Feed Information to Chat",
 
+	"show_heist_time": "Show heist time",
+	"show_heist_time_desc": "Show heist time as prefix on all messages",
 	"assault_phase_chat_info": "Feed Assault Phase",
 	"assault_phase_chat_info_desc": "Feed Assault Phase to Chat",
 	"assault_phase_chat_info_feed": "Peer Feed Assault Phase",
