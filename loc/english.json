@@ -367,7 +367,7 @@
 	"waypoint_color_b": "Waypoint color (Blue)",
 	"waypoint_color_b_desc": "Custom waypoint color",
 
-	"civilian_spot": "Civilian Sspot",
+	"civilian_spot": "Civilian spot",
 	"civilian_spot_desc": "You can spot a civilian when in stealth",
 	"civilian_spot_voice": "Civilian spot voice",
 	"civilian_spot_voice_desc": "When you have spotted a civilian, say and motion as if spotting a guard",
