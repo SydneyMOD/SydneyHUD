@@ -1,7 +1,7 @@
 <h1 align="center">SydneyHUD</h1>
 <p align="center">HUD mod with some Utils</p>
 
-### Futures
+### Features
 * HUD Tab Stats
 * HUD Panel Lists
 * Pacified Civilian Markers
@@ -41,12 +41,12 @@
 * Changeable HUD scale
 
 ### Known issue
-* FPS drop when use Extended Flashlight
-* Sometime crash when rendering Drag and Drop Inventory
-* AntiBobble isn't working Sometime
+* FPS drops when using Extended Flashlight
+* Sometimes game crashes when rendering Drag and Drop Inventory
+* AntiBobble sometimes does not work
 
-### Future Request / Bug Report
-Please create issue at [here](https://github.com/SydneyMOD/SydneyHUD/issues) or Submit at [SteamGroup](https://steamcommunity.com/groups/SydneyMOD/discussions/2/152390648090747618/)
+### Future Requests / Bug Reports
+Please create issues [here](https://github.com/SydneyMOD/SydneyHUD/issues) or Submit at [SteamGroup](https://steamcommunity.com/groups/SydneyMOD/discussions/2/152390648090747618/)
 
 ### Downloads
 Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and read about the group.
@@ -60,10 +60,11 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 * BangL: Main Developper
 * IfiwFR: French Translator
 * Nox-404: Bug fixer
+* IPowis: English Translator & Minor Development
 
 ### Special Thanks
-SydneyHUD using following mods codes / textures.  
-So, Big credit to those!
+SydneyHUD is using the following mods codes / textures.  
+So, Big credit to these guys!
 
 * 🐔**JackHUD** by BangL [🔗](https://steamcommunity.com/groups/jackhud)
 * 💎**Hold to pick** by Malo [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13518)
