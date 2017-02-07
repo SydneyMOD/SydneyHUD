@@ -1,5 +1,5 @@
-<h1 align="center">SydneyHUD</h1>
-<p align="center">HUD mod with some Utils</p>
+﻿<h1 align="center">SydneyHUD</h1>
+<p align="center">HUD mods, information and credits</p>
 
 ### Features
 * HUD Tab Stats
@@ -40,12 +40,12 @@
 * Down Warning
 * Changeable HUD scale
 
-### Known issue
+### Known issues
 * FPS drops when using Extended Flashlight
 * Sometimes game crashes when rendering Drag and Drop Inventory
 * AntiBobble sometimes does not work
 
-### Future Requests / Bug Reports
+### Feature Requests / Bug Reports
 Please create issues [here](https://github.com/SydneyMOD/SydneyHUD/issues) or Submit at [SteamGroup](https://steamcommunity.com/groups/SydneyMOD/discussions/2/152390648090747618/)
 
 ### Downloads
@@ -56,14 +56,15 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 * Twitter [🔗](https://twitter.com/SydneyMOD)
 
 ### Contributer
-* katabame: Main Developper
-* BangL: Main Developper
+* katabame: Main Developer
+* BangL: Main Developer
+* IPowis: English Translator & Developer
 * IfiwFR: French Translator
 * Nox-404: Bug fixer
-* IPowis: English Translator & Minor Development
+
 
 ### Special Thanks
-SydneyHUD is using the following mods codes / textures.  
+SydneyHUD is using the following mods, codes & textures.  
 So, Big credit to these guys!
 
 * 🐔**JackHUD** by BangL [🔗](https://steamcommunity.com/groups/jackhud)
