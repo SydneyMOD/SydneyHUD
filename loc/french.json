@@ -346,7 +346,7 @@
 	"ecm_battery_chat_info": "Feed de la batterie du CME",
 	"ecm_battery_chat_info_desc": "Feed de la batterie du CME du chat",
 	"ecm_battery_chat_info_feed": "Peer Feed ECM Battery",
-	"ecm_battery_chat_info_feed_desc": "Si vous êtes l'hôte, Cela envoie les infos de la Feed de la batterie du CME à tout votre équipe. (Feed de la batterie du CME Requis)"
+	"ecm_battery_chat_info_feed_desc": "Si vous êtes l'hôte, Cela envoie les infos de la Feed de la batterie du CME à tout votre équipe. (Feed de la batterie du CME Requis)",
 	//"down_warning_chat_info": "Show down warning",
 	//"down_warning_chat_info_desc": "Show down warning in chat when you and your crew are downed.",
 	//"critical_down_warning_chat_info": "Show critical down warning",
@@ -355,6 +355,10 @@
 	//"down_warning_chat_info_feed_desc": "If you're host, send down warning chat message to everyone in your crew. (show down warning required)",
 	//"critical_down_warning_chat_info_feed": "Feed critical down warning",
 	//"critical_down_warning_chat_info_feed_desc": "If you're host, send critical down warning chat message to everyone in your crew. (show critical down warning required)",
+	//"replenished_chat_info": "Show replenished",
+	//"replenished_chat_info_desc": "Show replenished in chat when you and your crew are use doctor bag.",
+	//"replenished_chat_info_feed": "Feed replenished",
+	//"replenished_chat_info_feed_desc": "If you're host, send replenished chat message to everyone in your crew. (show replenished required)",
 
 	"inspire_ace_chat_info": "Inspire ACE temps de recharge",
 	"inspire_ace_chat_info_desc": "Montre le inspire ACE temps de recharge",

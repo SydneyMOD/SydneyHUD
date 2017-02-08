@@ -355,6 +355,10 @@
 	//"down_warning_chat_info_feed_desc": "If you're host, send down warning chat message to everyone in your crew. (show down warning required)",
 	//"critical_down_warning_chat_info_feed": "Feed critical down warning",
 	//"critical_down_warning_chat_info_feed_desc": "If you're host, send critical down warning chat message to everyone in your crew. (show critical down warning required)",
+	//"replenished_chat_info": "Show replenished",
+	//"replenished_chat_info_desc": "Show replenished in chat when you and your crew are use doctor bag.",
+	//"replenished_chat_info_feed": "Feed replenished",
+	//"replenished_chat_info_feed_desc": "If you're host, send replenished chat message to everyone in your crew. (show replenished required)",
 
 	//"inspire_ace_chat_info": "Inspire ACE CT",
 	//"inspire_ace_chat_info_desc": "Show remaining Inspire Ace cooldown time",

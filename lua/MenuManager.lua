@@ -661,6 +661,15 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD:Save()
 	end
 
+	MenuCallbackHandler.callback_replenished_chat_info = function(self, item)
+		SydneyHUD._data.replenished_chat_info = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_replenished_chat_info_feed = function(self, item)
+		SydneyHUD._data.replenished_chat_info_feed = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
 	-- EXPERIMENTAL
 	MenuCallbackHandler.callback_waypoint_color_r = function(self, item)
 		SydneyHUD._data.waypoint_color_r = item:value()

@@ -321,7 +321,10 @@ if not SydneyHUD.setup then
 			end
 			-- NOTE: Display 0 instead of nil
 			local message = peer:name() .. " +" .. tostring(self._down_count[peer_id] or 0) .. " " .. down
-			self:SendChatMessage("Replenished", message, true, "00ff04")
+			local is_feed = SydneyHUD:GetOption("replenished_chat_info_feed")
+			if SydneyHUD:GetOption("replenished_chat_info") then
+				self:SendChatMessage("Replenished", message, is_feed, "00ff04")
+			end
 			self._down_count[peer_id] = 0
 		end
 	end
