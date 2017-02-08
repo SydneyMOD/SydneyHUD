@@ -1,7 +1,0 @@
-{
-	"version": "0.1.0",
-	"command": "start",
-	"isShellCommand": true,
-	"args": ["cd ../","/B","build.bat"],
-	"showOutput": "always"
-}
