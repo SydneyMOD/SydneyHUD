@@ -856,8 +856,8 @@ function HUDListManager:_buff_event(event, id, data)
 	for _, item in ipairs(items) do
 		if item[event] then
 			item[event](item, id, data)
-		else
-			printf("(%.3f) HUDListManager:_buff_event: No matching function for event %s for buff %s", event, id)
+		--else
+			--printf("(%.3f) HUDListManager:_buff_event: No matching function for event %s for buff %s", event, id)
 		end
 	end
 

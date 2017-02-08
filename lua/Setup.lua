@@ -460,8 +460,8 @@ function GameInfoManager:event(source, ...)
 
 	if self[target] then
 		self[target](self, ...)
-	else
-		printf("Error: No event handler for %s\n", target)
+	--else
+		--printf("Error: No event handler for %s\n", target)
 	end
 end
 
@@ -999,11 +999,11 @@ function GameInfoManager:_temporary_buff_event(event, data)
 		if data.value ~= 0 then
 			self:_buff_event("set_value", id, { value = data.value })
 		end
-	else
-		printf("Unknown temporary buff event: %s %s %s\n", event, data.category, data.upgrade)
-		for k, v in pairs(data or {}) do
-			printf("\t%s -> %s", tostring(k), tostring(v))
-		end
+	--else
+		--printf("Unknown temporary buff event: %s %s %s\n", event, data.category, data.upgrade)
+		--for k, v in pairs(data or {}) do
+			--printf("\t%s -> %s", tostring(k), tostring(v))
+		--end
 	end
 end
 
@@ -1120,8 +1120,8 @@ function GameInfoManager:_team_buff_event(event, data)
 				end
 			end
 		end
-	else
-		printf("Unknown team buff event: %s %s %s\n", event, data.category, data.upgrade)
+	--else
+		--printf("Unknown team buff event: %s %s %s\n", event, data.category, data.upgrade)
 	end
 end
 
@@ -1168,9 +1168,9 @@ function GameInfoManager:_camera_event(event, key, data)
 				self:_camera_event("set_active", key, { active = true })
 			end
 
-			if not type then
+			--if not type then
 				--printf("\tUNKNOWN CAMERA UNIT TYPE: %s\n", tostring(data.unit:name():key()))
-			end
+			--end
 		end
 	elseif self._cameras[key] then
 		if event == "set_active" then
