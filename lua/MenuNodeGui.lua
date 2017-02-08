@@ -1,20 +1,14 @@
 
 local _setup_item_rows_original = MenuNodeMainGui._setup_item_rows
+local _add_version_string_original = MenuNodeMainGui._add_version_string
+
+function MenuNodeMainGui:_add_version_string()
+	_add_version_string_original(self)
+	self._version_string:set_text("PAYDAY2 v" .. Application:version() .. " with SydneyHUD v" .. SydneyHUD:GetVersion())
+end
 
 function MenuNodeMainGui:_setup_item_rows(node, ...)
 	_setup_item_rows_original(self, node, ...)
-	local mod_name = "SydneyHUD"
-	if alive(self._version_string) and not self["_" .. mod_name .. "_version_added"] then
-		local version = SydneyHUD:GetVersion()
-		local fullversion = mod_name .. " v" .. version
-		local versionstring = self._version_string:text()
-		if versionstring == Application:version() then
-			self._version_string:set_text("PAYDAY2 v" .. versionstring .. " with " .. fullversion)
-		else
-			self._version_string:set_text(versionstring .. " and " .. fullversion)
-		end
-		self["_" .. mod_name .. "_version_added"] = true
-	end
 	if SydneyHUD._poco_conf and not SydneyHUD._poco_warning then
 		SydneyHUD._fixed_poco_conf = deep_clone(SydneyHUD._poco_conflicting_defaults)
 		for k, v in pairs(SydneyHUD._poco_conf) do
