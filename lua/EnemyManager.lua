@@ -29,3 +29,11 @@ function EnemyManager:on_civilian_destroyed(unit, ...)
 	managers.gameinfo:event("unit", "remove", tostring(unit:key()))
 	return on_civilian_destroyed_original(self, unit, ...)
 end
+
+function EnemyManager:get_delayed_clbk_expire_t(clbk_id)
+	for _, clbk in ipairs(self._delayed_clbks) do
+		if clbk[1] == clbk_id then
+			return clbk[2]
+		end
+	end
+end
