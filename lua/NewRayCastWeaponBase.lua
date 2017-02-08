@@ -1,14 +1,14 @@
 
-local on_equip_original = NewRaycastWeaponBase.on_equip
+local setup_original = NewRaycastWeaponBase.setup
 
-function NewRaycastWeaponBase:on_equip(...)
+function NewRaycastWeaponBase:setup(...)
+	setup_original(self, ...)
 	if self._has_gadget then
 		self:_setup_laser()
 		if alive(self._second_gun) then
 			self._second_gun:base():_setup_laser()
 		end
 	end
-	return on_equip_original(self, ...)
 end
 
 function NewRaycastWeaponBase:_setup_laser()
