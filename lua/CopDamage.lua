@@ -1,5 +1,7 @@
 
+local convert_to_criminal_original = CopDamage.convert_to_criminal
 local _on_damage_received_original = CopDamage._on_damage_received
+local chk_killshot_original = CopDamage.chk_killshot
 local bullet_original = CopDamage.damage_bullet
 local explosion_original = CopDamage.damage_explosion
 local melee_original = CopDamage.damage_melee
@@ -10,11 +12,38 @@ local sync_melee_original = CopDamage.sync_damage_melee
 local sync_fire_original = CopDamage.sync_damage_fire
 local sync_damage_dot_original = CopDamage.sync_damage_dot
 
+function CopDamage:_update_minion_dmg_resist(data)
+	if alive(self._unit) then
+		managers.gameinfo:event("minion", "set_damage_resistance", tostring(self._unit:key()), data)
+	end
+end
+
+function CopDamage:convert_to_criminal(...)
+	convert_to_criminal_original(self, ...)
+	if self._damage_reduction_multiplier < 1 then
+		local key = tostring(self._unit:key())
+		local data = { damage_resistance = self._damage_reduction_multiplier }
+		managers.enemy:add_delayed_clbk(key .. "_update_minion_dmg_resist", callback(self, self, "_update_minion_dmg_resist", data), 0)
+	end
+end
+
 function CopDamage:_on_damage_received(damage_info, ...)
 	if self._unit:in_slot(16) then
-		managers.enemy:update_minion_health(self._unit, self._health)
+		managers.gameinfo:event("minion", "set_health_ratio", tostring(self._unit:key()), { health_ratio = self:health_ratio() })
 	end
 	return _on_damage_received_original(self, damage_info, ...)
+end
+
+function CopDamage:chk_killshot(attacker_unit, ...)
+	if alive(attacker_unit) then
+		local key = tostring(attacker_unit:key())
+		if attacker_unit:in_slot(16) and managers.gameinfo:get_minions(key) then
+			managers.gameinfo:event("minion", "increment_kills", key)
+		elseif attacker_unit:in_slot(25) and managers.gameinfo:get_sentries(key) then
+			managers.gameinfo:event("sentry", "increment_kills", key)
+		end
+	end
+	return chk_killshot_original(self, attacker_unit, ...)
 end
 
 function CopDamage:_process_kill(aggressor, i_body)

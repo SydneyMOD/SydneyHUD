@@ -115,10 +115,6 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD._data.show_sentries = (item:value() == "on")
 		SydneyHUD:Save()
 	end
-	MenuCallbackHandler.callback_hide_empty_sentries = function(self, item)
-		SydneyHUD._data.hide_empty_sentries = (item:value() == "on")
-		SydneyHUD:Save()
-	end
 	MenuCallbackHandler.callback_show_ecms = function(self, item)
 		SydneyHUD._data.show_ecms = (item:value() == "on")
 		SydneyHUD:Save()
@@ -161,12 +157,20 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD._data.show_hostages = (item:value() == "on")
 		SydneyHUD:Save()
 	end
+	MenuCallbackHandler.callback_aggregate_hostages = function(self, item)
+		SydneyHUD._data.aggregate_hostages = (item:value() == "on")
+		SydneyHUD:Save()
+	end
 	MenuCallbackHandler.callback_show_minion_count = function(self, item)
 		SydneyHUD._data.show_minion_count = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_pager_count = function(self, item)
 		SydneyHUD._data.show_pager_count = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_show_camera_count = function(self, item)
+		SydneyHUD._data.show_camera_count = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_show_loot = function(self, item)

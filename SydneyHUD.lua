@@ -62,6 +62,7 @@ if not SydneyHUD.setup then
 		"sydneyhud_chat_info"
 	}
 	SydneyHUD._hook_files = {
+		["core/lib/managers/coreenvironmentcontrollermanager"] = "CoreEnvironmentControllerManager.lua",
 		["lib/managers/menumanager"] = "MenuManager.lua",
 		["lib/managers/group_ai_states/groupaistatebase"] = "GroupAIStateBase.lua",
 		["lib/managers/hud/hudassaultcorner"] = "HUDAssaultCorner.lua",
@@ -70,11 +71,13 @@ if not SydneyHUD.setup then
 		["lib/managers/hud/hudpresenter"] = "HUDPresenter.lua",
 		["lib/managers/hud/hudsuspicion"] = "HUDSuspicion.lua",
 		["lib/managers/hud/hudteammate"] = "HUDTeammate.lua",
+		["lib/managers/menu/blackmarketgui"] = "BlackMarketGUI.lua",
 		["lib/managers/menu/lootdropscreengui"] = "LootDropScreenGui.lua",
 		["lib/managers/menu/menubackdropgui"] = "MenuBackDropGUI.lua",
 		["lib/managers/menu/menunodegui"] = "MenuNodeGui.lua",
 		["lib/managers/menu/menuscenemanager"] = "MenuSceneManager.lua",
 		["lib/managers/menu/stageendscreengui"] = "StageEndScreenGui.lua",
+		["lib/managers/chatmanager"] = "ChatManager.lua",
 		["lib/managers/enemymanager"] = "EnemyManager.lua",
 		["lib/managers/hudmanager"] = "HUDManager.lua",
 		["lib/managers/hudmanagerpd2"] = "HUDManagerPD2.lua",
@@ -82,12 +85,26 @@ if not SydneyHUD.setup then
 		["lib/managers/missionassetsmanager"] = "MissionAssetsManager.lua",
 		["lib/managers/objectinteractionmanager"] = "ObjectInteractionManager.lua",
 		["lib/managers/playermanager"] = "PlayerManager.lua",
+		["lib/managers/trademanager"] = "TradeManager.lua",
 		["lib/network/base/handlers/connectionnetworkhandler"] = "ConnectionNetworkHandler.lua",
+		["lib/network/base/networkpeer"] = "NetworkPeer.lua",
 		["lib/network/handlers/unitnetworkhandler"] = "UnitNetworkHandler.lua",
+		-- ["lib/setups/menusetup"] = "MenuSetup.lua",  -- Disable this cause use this code without setting to steam advanced option "-skip_intro". So I'll made setting menu. wait for that.
+		["lib/setups/setup"] = "Setup.lua",
 		["lib/states/ingamewaitingforplayers"] = "IngameWaitingForPlayersState.lua",
+		["lib/player_actions/skills/playeractionammoefficiency"] = "PlayerActionAmmoefficiency.lua",
+		["lib/player_actions/skills/playeractionbloodthirstbase"] = "PlayerActionBloodthirstBase.lua",
+		["lib/player_actions/skills/playeractionexperthandling"] = "PlayerActionExperthandling.lua",
+		["lib/player_actions/skills/playeractionshockandawe"] = "PlayerActionShockandawe.lua",
+		["lib/player_actions/skills/playeractiondireneed"] = "PlayerActionDireneed.lua",
+		["lib/player_actions/skills/playeractionunseenstrike"] = "PlayerActionUnseenstrike.lua",
+		["lib/player_actions/skills/playeractiontriggerhappy"] = "PlayerActionTriggerhappy.lua",
+		["lib/units/beings/player/states/playerbleedout"] = "PlayerBleedOut.lua",
 		["lib/units/beings/player/states/playercivilian"] = "PlayerCivilian.lua",
 		["lib/units/beings/player/states/playerdriving"] = "PlayerDriving.lua",
+		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
 		["lib/units/beings/player/states/playerstandard"] = "PlayerStandard.lua",
+		["lib/units/beings/player/huskplayermovement"] = "HuskPlayerMovement.lua",
 		["lib/units/beings/player/playerdamage"] = "PlayerDamage.lua",
 		["lib/units/beings/player/playermovement"] = "PlayerMovement.lua",
 		["lib/units/equipment/ammo_bag/ammobagbase"] = "AmmoBagBase.lua",
@@ -98,28 +115,18 @@ if not SydneyHUD.setup then
 		["lib/units/equipment/sentry_gun/sentrygunbase"] = "SentryGunBase.lua",
 		["lib/units/equipment/sentry_gun/sentrygundamage"] = "SentryGunDamage.lua",
 		["lib/units/enemies/cop/copdamage"] = "CopDamage.lua",
+		["lib/units/interactions/interactionext"] = "InteractionExt.lua",
 		["lib/units/props/digitalgui"] = "DigitalGui.lua",
-		["lib/units/props/missiondoor"] = "MissionDoor.lua",
 		["lib/units/props/securitycamera"] = "SecurityCamera.lua",
+		["lib/units/props/securitylockgui"] = "SecurityLockGui.lua",
 		["lib/units/props/timergui"] = "TimerGui.lua",
 		["lib/units/weapons/newraycastweaponbase"] = "NewRayCastWeaponBase.lua",
 		["lib/units/weapons/sentrygunweapon"] = "SentryGunWeapon.lua",
 		["lib/units/weapons/weaponflashlight"] = "WeaponFlashlight.lua",
 		["lib/units/weapons/weaponlaser"] = "WeaponLaser.lua",
-		["lib/units/unitbase"] = "UnitBase.lua",
-
-		["lib/units/beings/player/huskplayermovement"] = "HuskPlayerMovement.lua",
-		["lib/managers/menu/blackmarketgui"] = "BlackMarketGUI.lua",
-		-- ["lib/setups/menusetup"] = "MenuSetup.lua",  -- Disable this cause use this code without setting to steam advanced option "-skip_intro". So I'll made setting menu. wait for that.
-
-		["lib/units/beings/player/states/playerbleedout"] = "PlayerBleedOut.lua",
-		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
-		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua",
+		["lib/utils/temporarypropertymanager"] = "TemporaryPropertyManager.lua",
 		["lib/tweak_data/charactertweakdata"] = "CharacterTweakData.lua",
-		["core/lib/managers/coreenvironmentcontrollermanager"] = "CoreEnvironmentControllerManager.lua",
-		["lib/managers/chatmanager"] = "ChatManager.lua",
-		["lib/network/base/networkpeer"] = "NetworkPeer.lua",
-		["lib/managers/trademanager"] = "TradeManager.lua"
+		["lib/tweak_data/playertweakdata"] = "PlayerTweakData.lua"
 	}
 	SydneyHUD._poco_conflicting_defaults = {
 		buff = {
