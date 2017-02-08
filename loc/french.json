@@ -1,5 +1,5 @@
 {
-	"sydneyhud_options": "SydneyHUD",
+	//"sydneyhud_options": "SydneyHUD",
 	"sydneyhud_options_desc": "Options SydneyHUD",
 	"sydneyhud_reset": "Réinitialiser les options",
 	"sydneyhud_reset_desc": "Définis toutes les options de SydneyHUD par défaut",
@@ -7,10 +7,10 @@
 	"sydneyhud_reset_ok": "Oui",
 	"sydneyhud_reset_cancel": "Annuler",
 
-	"sydneyhud_language": "Language",
+	"sydneyhud_language": "La langue",
 	"sydneyhud_language_desc": "Choisissez le language de votre choix pour SydneyHUD",
-	"language_english": "English",
-	"language_japanese": "日本語",
+	"language_english": "Anglais",
+	"language_japanese": "Japonais",
 	"language_french": "Français",
 
 	"interact_tweak": "Amélioration d'interaction",
@@ -220,12 +220,12 @@
 	"laser_light_turretm": "Luminosité du point",
 	"laser_light_turretm_desc": "Luminosité du point",
 
-	"interaction_color_r": "interaction text red",
-	"interaction_color_r_desc": "interaction text color",
-	"interaction_color_g": "interaction text green",
-	"interaction_color_g_desc": "interaction text color",
-	"interaction_color_b": "interaction text blue",
-	"interaction_color_b_desc": "interaction text color",
+	//"interaction_color_r": "interaction text red",
+	//"interaction_color_r_desc": "interaction text color",
+	//"interaction_color_g": "interaction text green",
+	//"interaction_color_g_desc": "interaction text color",
+	//"interaction_color_b": "interaction text blue",
+	//"interaction_color_b_desc": "interaction text color",
 
 	"push_to_interact": "Appuyer pour interagir",
 	"push_to_interact_desc": "Plus besoin de maintenir la touche d'interraction [F]",
@@ -325,12 +325,18 @@
 
 	"show_enemy_health": "Barre de santé ennemie",
 	"show_enemy_health_desc": "Montre le barre de santé ennemie",
+	"health_bar_color": "Health bar color",
+	"health_bar_color_desc": "Choose health bar color",
+	"health_bar_color_green": "Green",
+	"health_bar_color_blue": "Blue",
+	"health_bar_color_mix_green": "Mixed Green",
+	"health_bar_color_mix_blue": "Mixed Blue",
 
 	"sydneyhud_chat_info": "Informations du chat",
 	"sydneyhud_chat_info_desc": "Donne des informations via le chat",
 
-	"show_heist_time": "Show heist time",
-	"show_heist_time_desc": "Show heist time as prefix on all messages",
+	//"show_heist_time": "Show heist time",
+	//"show_heist_time_desc": "Show heist time as prefix on all messages",
 	"assault_phase_chat_info": "Feed de phases d'assault",
 	"assault_phase_chat_info_desc": "Feed de phases d'assault du chat",
 	"assault_phase_chat_info_feed": "Paires de la feed de phase d'assault",
@@ -339,6 +345,14 @@
 	"ecm_battery_chat_info_desc": "Feed de la batterie du CME du chat",
 	"ecm_battery_chat_info_feed": "Peer Feed ECM Battery",
 	"ecm_battery_chat_info_feed_desc": "Si vous êtes l'hôte, Cela envoie les infos de la Feed de la batterie du CME à tout votre équipe. (Feed de la batterie du CME Requis)"
+	//"down_warning_chat_info": "Show down warning",
+	//"down_warning_chat_info_desc": "Show down warning in chat when you and your crew are downed.",
+	//"critical_down_warning_chat_info": "Show critical down warning",
+	//"critical_down_warning_chat_info_desc": "Show down warning in chat when you and your crew are downed 3 or 4 times.",
+	//"down_warning_chat_info_feed": "Feed down warning",
+	//"down_warning_chat_info_feed_desc": "If you're host, send down warning chat message to everyone in your crew. (show down warning required)",
+	//"critical_down_warning_chat_info_feed": "Feed critical down warning",
+	//"critical_down_warning_chat_info_feed_desc": "If you're host, send critical down warning chat message to everyone in your crew. (show critical down warning required)",
 
 	"inspire_ace_chat_info": "Inspire ACE temps de recharge",
 	"inspire_ace_chat_info_desc": "Montre le inspire ACE temps de recharge",
