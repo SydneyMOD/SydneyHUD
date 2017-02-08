@@ -343,16 +343,15 @@ end
 
 if SydneyHUD:GetOption("inspire_ace_chat_info") then
 	function PlayerManager:has_enabled_cooldown_upgrade(category, upgrade)
-	    if category == "cooldown" and upgrade == "long_dis_revive" then
-	        if self._global.cooldown_upgrades[category][upgrade] then
-	            local remaining = self._global.cooldown_upgrades[category][upgrade].cooldown_time - Application:time()
-	            if remaining > 0 then
-	                local text = string.format("%.1f sec", remaining)
-
-	            	SydneyHUD:SendChatMessage("Inspire Ace CT", text, false, "FF9800")
+		if category == "cooldown" and upgrade == "long_dis_revive" then
+			if self._global.cooldown_upgrades[category][upgrade] then
+				local remaining = self._global.cooldown_upgrades[category][upgrade].cooldown_time - Application:time()
+				if remaining > 0 then
+					local text = string.format("%.1f sec", remaining)
+					SydneyHUD:SendChatMessage(managers.localization:text("inspire_ace_chat_info"), text, false, "FF9800")
 				end
-	        end
-	    end
-	    return has_enabled_cooldown_upgrade_original(self, category, upgrade)
+			end
+		end
+		return has_enabled_cooldown_upgrade_original(self, category, upgrade)
 	end
 end
