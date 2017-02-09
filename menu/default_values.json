@@ -149,7 +149,6 @@
 	"skip_loot_screen": true,
 	"skip_stat_screen": true,
 	"stat_screen_skip": 0,
-	"sydneyhud_language": 1,
 	"truncate_name_tags": true,
 	"waypoint_color_b": 1,
 	"waypoint_color_g": 0.5,
