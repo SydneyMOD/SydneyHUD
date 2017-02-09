@@ -647,7 +647,7 @@ end
 function HUDListManager:_setup_buff_list()
 	local hud_panel = managers.hud:script(PlayerBase.PLAYER_INFO_HUD_PD2).panel
 	local scale = HUDListManager.ListOptions.buff_list_scale or 1
-	local list_height = 45 * scale
+	local list_height = 70 * scale
 	local list_width = hud_panel:w()
 	local x = 0
 	local y = hud_panel:bottom() - ((HUDListManager.ListOptions.buff_list_height_offset or 80) + list_height)
