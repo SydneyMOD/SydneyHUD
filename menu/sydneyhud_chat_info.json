@@ -63,19 +63,6 @@
 		},
 		{
 			"type": "toggle",
-			"id": "inspire_ace_chat_info",
-			"title": "inspire_ace_chat_info",
-			"description": "inspire_ace_chat_info_desc",
-			"callback": "callback_inspire_ace_chat_info",
-			"value": "inspire_ace_chat_info",
-			"default_value": true
-		},
-		{
-			"type": "divider",
-			"size": 16
-		},
-		{
-			"type": "toggle",
 			"id": "down_warning_chat_info",
 			"title": "down_warning_chat_info",
 			"description": "down_warning_chat_info_desc",
@@ -85,37 +72,24 @@
 		},
 		{
 			"type": "toggle",
-			"id": "critical_down_warning_chat_info",
-			"title": "critical_down_warning_chat_info",
-			"description": "critical_down_warning_chat_info_desc",
-			"callback": "callback_critical_down_warning_chat_info",
-			"value": "critical_down_warning_chat_info",
-			"default_value": true
-		},
-		{
-			"type": "divider",
-			"size": 16
-		},
-		{
-			"type": "toggle",
-			"id": "replenished_chat_info",
-			"title": "replenished_chat_info",
-			"description": "replenished_chat_info_desc",
-			"callback": "callback_replenished_chat_info",
-			"value": "replenished_chat_info",
-			"default_value": true
-		},
-		{
-			"type": "divider",
-			"size": 16
-		},
-		{
-			"type": "toggle",
 			"id": "down_warning_chat_info_feed",
 			"title": "down_warning_chat_info_feed",
 			"description": "down_warning_chat_info_feed_desc",
 			"callback": "callback_down_warning_chat_info_feed",
 			"value": "down_warning_chat_info_feed",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "critical_down_warning_chat_info",
+			"title": "critical_down_warning_chat_info",
+			"description": "critical_down_warning_chat_info_desc",
+			"callback": "callback_critical_down_warning_chat_info",
+			"value": "critical_down_warning_chat_info",
 			"default_value": true
 		},
 		{
@@ -133,11 +107,33 @@
 		},
 		{
 			"type": "toggle",
+			"id": "replenished_chat_info",
+			"title": "replenished_chat_info",
+			"description": "replenished_chat_info_desc",
+			"callback": "callback_replenished_chat_info",
+			"value": "replenished_chat_info",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
 			"id": "replenished_chat_info_feed",
 			"title": "replenished_chat_info_feed",
 			"description": "replenished_chat_info_feed_desc",
 			"callback": "callback_replenished_chat_info_feed",
 			"value": "replenished_chat_info_feed",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "inspire_ace_chat_info",
+			"title": "inspire_ace_chat_info",
+			"description": "inspire_ace_chat_info_desc",
+			"callback": "callback_inspire_ace_chat_info",
+			"value": "inspire_ace_chat_info",
 			"default_value": true
 		}
 	]
