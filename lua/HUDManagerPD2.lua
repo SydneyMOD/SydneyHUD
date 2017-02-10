@@ -2403,6 +2403,7 @@ end
 HUDList.TimerItem = HUDList.TimerItem or class(HUDList.ItemBase)
 HUDList.TimerItem.STANDARD_COLOR = Color(1, 1, 1, 1)
 HUDList.TimerItem.UPGRADE_COLOR = Color(1, 0.0, 0.8, 1.0)
+HUDList.TimerItem.AUTOREPAIR_COLOR = Color(1, 1, 0, 1)
 HUDList.TimerItem.DISABLED_COLOR = Color(1, 1, 0, 0)
 HUDList.TimerItem.FLASH_SPEED = 2
 HUDList.TimerItem.DEVICE_TYPES = {
@@ -2460,7 +2461,7 @@ function HUDList.TimerItem:init(parent, name, data)
 		font_size = self._box:h() * 0.6
 	})
 
-	local current_color = self._upgradable and self.UPGRADE_COLOR or self.STANDARD_COLOR
+	local current_color = self:_get_color()
 	self._flash_color_table = {
 		{ ratio = 0.0, color = self.DISABLED_COLOR },
 		{ ratio = 1.0, color = current_color }
@@ -2517,9 +2518,19 @@ function HUDList.TimerItem:_set_powered(data)
 	self:_check_is_running()
 end
 
+function HUDList.TimerItem:_get_color()
+	local current_color = self._upgradable and self.UPGRADE_COLOR or self.STANDARD_COLOR
+	if self._device_type == "drill" then
+		if SydneyHUD._autorepair_map[tostring(self._unit:key())] then
+			current_color = self.AUTOREPAIR_COLOR
+		end
+	end
+	return current_color
+end
+
 function HUDList.TimerItem:_set_upgradable(data)
 	self._upgradable = data.upgradable
-	local current_color = self._upgradable and self.UPGRADE_COLOR or self.STANDARD_COLOR
+	local current_color = self:_get_color()
 	self._flash_color_table[2].color = current_color
 	self:_set_colors(current_color)
 end

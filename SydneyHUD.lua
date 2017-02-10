@@ -25,6 +25,7 @@ if not SydneyHUD.setup then
 
 	-- var for script
 	-- IDK why lua can not create blank var and use niled var
+	SydneyHUD._autorepair_map = {}
 	SydneyHUD._current_phase = ""
 	SydneyHUD._pre_phase = ""
 
@@ -117,6 +118,7 @@ if not SydneyHUD.setup then
 		["lib/units/enemies/cop/copdamage"] = "CopDamage.lua",
 		["lib/units/interactions/interactionext"] = "InteractionExt.lua",
 		["lib/units/props/digitalgui"] = "DigitalGui.lua",
+		["lib/units/props/drill"] = "Drill.lua",
 		["lib/units/props/securitycamera"] = "SecurityCamera.lua",
 		["lib/units/props/securitylockgui"] = "SecurityLockGui.lua",
 		["lib/units/props/timergui"] = "TimerGui.lua",
