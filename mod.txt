@@ -3,7 +3,7 @@
 	"description": "A JackHUD fork",
 	"author": "SydneyMOD Project Team",
 	"contact": "http://steamcommunity.com/groups/SydneyMOD",
-	"version": "2.2",
+	"version": "2.3",
 	"priority": -1,
 	"libraries": [
 		{
@@ -13,7 +13,7 @@
 	],
 	"updates": [
 		{
-			"revision": 11,
+			"revision": 12,
 			"identifier": "SydneyHUD"
 		},
 		{
