@@ -178,7 +178,9 @@ local CharacterData = {
 	["dragon"] = "JIRO",
 	["bodhi"] = "BODHI",
 	["old_hoxton_mission"] = "HOXTON / LOCKE",
-	["medic"] = "MEDIC"
+	["medic"] = "MEDIC",
+	["spa_vip"] = "CHARON",
+	["spa_vip_hurt"] = "CHARON"
 }
 
 Hooks:PostHook(HUDManager, "_player_hud_layout", "uHUDPostHUDManagerPlayerInfoHUDLayout", function(self)
