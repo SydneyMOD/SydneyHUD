@@ -506,16 +506,8 @@
 		if data.revives then
 			local revive_colors = { Color("FF8000"), Color("FFFF00"), Color("80FF00"), Color("00FF00") }
 			self._revives_counter:set_color(revive_colors[data.revives - 1] or Color.red)
-			local has_messiah = false
-			local messiah_charges = 0
-			if self._main_player then
-				has_messiah = managers.player:has_category_upgrade("player", "pistol_revive_from_bleed_out")
-				if has_messiah and managers.player:player_unit() and managers.player:player_unit():character_damage() then
-					messiah_charges = managers.player:player_unit():character_damage()._messiah_charges
-				end
-			end
-			if has_messiah then
-				self._revives_counter:set_text(tostring(data.revives - 1) .. "/" .. tostring(messiah_charges))
+			if self._main_player and managers.player:has_category_upgrade("player", "messiah_revive_from_bleed_out") then
+				self._revives_counter:set_text(tostring(data.revives - 1) .. "/" .. tostring(managers.player._messiah_charges or 0))
 			else
 				self._revives_counter:set_text(tostring(data.revives - 1))
 			end
