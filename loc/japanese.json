@@ -391,6 +391,15 @@
 	"clean_flashbang_desc": "フラッシュバンで視界が白くならないようにします",
 	"new_icon": "新しいアイコンタイプ",
 	"new_icon_desc": "SydneyHUDのために作られた新しいアイコンを使用します",
+
+	/*
+	"flashing_swansong": "Flashing Swan song",
+	"flashing_swansong_desc": "When your teammate in Swan song, puts a yellow blinking contour",
+
+	"swansong_effect": "Swan Song Effect",
+	"swansong_effect_desc": "When you in Swan song, apply a fullscreen effect",
+	*/
+
 	"right_list_scale": "右側リストのサイズ",
 	"right_list_scale_desc": "リストのサイズの倍率を変更します",
 	"left_list_scale": "左側リストのサイズ",

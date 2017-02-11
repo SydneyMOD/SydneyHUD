@@ -61,7 +61,7 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 * IPowis: English Translator & Developer
 * IfiwFR: French Translator
 * Nox-404: Bug fixer
-
+* kash: Japanese Translator
 
 ### Special Thanks
 SydneyHUD is using the following mods, codes & textures.  
@@ -77,6 +77,8 @@ So, Big credit to these guys!
 * 🔧**Always Show MOD Icons** by Slippy [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13975)
 * 👦🏻**Civilian Marking in Stealth** by EdisLeado [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13517)
 * ⛑**Replenished** by FishTaco [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15309)
+* ☠**Swan Song Effect** by Simon [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=681)
+* 🔦**Flashing Swan Song** by TdlQ[🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13438)
 * many of inspired mod
 
 **AND YOU.**

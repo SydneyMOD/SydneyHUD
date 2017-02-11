@@ -1,10 +1,11 @@
-
 local mark_minion_original = UnitNetworkHandler.mark_minion
 local hostage_trade_original = UnitNetworkHandler.hostage_trade
 local unit_traded_original = UnitNetworkHandler.unit_traded
 local interaction_set_active_original = UnitNetworkHandler.interaction_set_active
 local alarm_pager_interaction_original = UnitNetworkHandler.alarm_pager_interaction
 local sync_teammate_progress_original = UnitNetworkHandler.sync_teammate_progress
+local sync_swansong_hud_original = UnitNetworkHandler.sync_swansong_hud
+local sync_contour_state_orignal = UnitNetworkHandler.sync_contour_state
 
 function UnitNetworkHandler:mark_minion(unit, owner_id, joker_level, ...)
 	mark_minion_original(self, unit, owner_id, joker_level, ...)
@@ -88,3 +89,31 @@ end)
 Hooks:PostHook(UnitNetworkHandler, 'set_trade_death', "SydneyHUD:CustodyOther", function(self, criminal_name, respawn_penalty, hostages_killed)
 	SydneyHUD:Custody(criminal_name)
 end)
+
+function UnitNetworkHandler:sync_swansong_hud(unit, ...)
+	sync_swansong_hud_original(self, unit, ...)
+
+	if SydneyHUD:GetOption("flashing_swansong") then
+		if alive(unit) then
+			local state = unit:movement():current_state_name()
+			if state == "standard" or state == "tased" then
+				if not unit:contour():is_flashing() then
+					unit:contour():add("teammate_downed")
+					unit:contour():flash("teammate_downed", 0.15)
+				end
+			end
+		end
+	end
+end
+
+function UnitNetworkHandler:sync_contour_state(unit, u_id, type, state, ...)
+	if SydneyHUD:GetOption("flashing_swansong") then
+		if alive(unit) and unit:id() ~= -1 then
+			if state and ContourExt.indexed_types[type] == "teammate_downed" then
+				unit:contour():remove("teammate_downed")
+			end
+		end
+	end
+
+	sync_contour_state_orignal(self, unit, u_id, type, state, ...)
+end

@@ -717,6 +717,16 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD:Save()
 	end
 
+	MenuCallbackHandler.callback_flashing_swansong = function(self, item)
+		SydneyHUD._data.flashing_swansong = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
+	MenuCallbackHandler.callback_swansong_effect = function(self, item)
+		SydneyHUD._data.swansong_effect = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
 	-- SydneyHUD
 	MenuCallbackHandler.callback_sydneyhud_language = function(self, item)
 		SydneyHUD._data.language = item:value()

@@ -70,7 +70,7 @@
 			"callback": "callback_new_icon",
 			"value": "new_icon",
 			"default_value": false
-		}
+		},
 		/*
 		{
 			"type": "toggle",
@@ -82,5 +82,23 @@
 			"default_value": false
 		}
 		*/
+		{
+			"type": "toggle",
+			"id": "flashing_swansong",
+			"title": "flashing_swansong",
+			"description": "flashing_swansong_desc",
+			"callback": "callback_flashing_swansong",
+			"value": "flashing_swansong",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "swansong_effect",
+			"title": "swansong_effect",
+			"description": "swansong_effect_desc",
+			"callback": "callback_swansong_effect",
+			"value": "swansong_effect",
+			"default_value": true
+		}
 	]
 }
