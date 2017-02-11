@@ -5,6 +5,19 @@
 	"description": "sydneyhud_menu_tweaks_desc",
 	"items": [
 		{
+			"type": "toggle",
+			"id": "remove_ads",
+			"title": "remove_ads",
+			"description": "remove_ads_desc",
+			"callback": "callback_remove_ads",
+			"value": "remove_ads",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
 			"type": "multiple_choice",
 			"id": "lobby_skins_mode",
 			"title": "lobby_skins_mode",

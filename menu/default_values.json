@@ -101,6 +101,7 @@
 	"loot_screen_skip": 2,
 	"new_icon": false,
 	"push_to_interact": false,
+	"remove_ads": true,
 	"remove_answered_pager_contour": true,
 	"replenished_chat_info": false,
 	"replenished_chat_info_feed": false,

@@ -1,4 +1,14 @@
 
+local is_dlc_latest_locked_original = MenuCallbackHandler.is_dlc_latest_locked
+
+function MenuCallbackHandler:is_dlc_latest_locked(...)
+	if SydneyHUD:GetOption("remove_ads") then
+		return false
+	else
+		return is_dlc_latest_locked_original(self, ...)
+	end
+end
+
 --[[
 	Load our localization keys for our menu, and menu items.
 ]]
@@ -502,6 +512,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD:Save()
 	end
 
+	MenuCallbackHandler.callback_remove_ads = function(self, item)
+		SydneyHUD._data.remove_ads = (item:value() == "on")
+		SydneyHUD:Save()
+	end
 	MenuCallbackHandler.callback_lobby_skins_mode = function(self, item)
 		SydneyHUD._data.lobby_skins_mode = item:value()
 		SydneyHUD:Save()

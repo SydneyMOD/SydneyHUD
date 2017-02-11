@@ -306,6 +306,9 @@
 	"enable_buy_all_assets": "Active 'Acheter tout les atouts'",
 	"enable_buy_all_assets_desc": "Transforme l'atout 'Packets de Gage' en 'Buy All', dans le menu de briefing",
 
+	/*"remove_ads": "Remove Ads",
+	"remove_ads_desc": "Removes the announcements and ads from the main menu",*/
+
 	"lobby_skins_mode": "Skins d'armes du lobby",
 	"lobby_skins_mode_desc": "Force d'activer ou de désactiver les skins d'armes dans les lobbies (visible uniquement pour vous)",
 

@@ -75,6 +75,7 @@ if not SydneyHUD.setup then
 		["lib/managers/menu/blackmarketgui"] = "BlackMarketGUI.lua",
 		["lib/managers/menu/lootdropscreengui"] = "LootDropScreenGui.lua",
 		["lib/managers/menu/menubackdropgui"] = "MenuBackDropGUI.lua",
+		["lib/managers/menu/menucomponentmanager"] = "MenuComponentManager.lua",
 		["lib/managers/menu/menunodegui"] = "MenuNodeGui.lua",
 		["lib/managers/menu/menuscenemanager"] = "MenuSceneManager.lua",
 		["lib/managers/menu/stageendscreengui"] = "StageEndScreenGui.lua",
