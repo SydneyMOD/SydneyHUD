@@ -1,0 +1,97 @@
+[align=center]
+    [size=large][color=#3399ff][font=Arial Black]SydneyHUD[/font][/color][/size]
+
+    [img]https://img.shields.io/github/release/SydneyMOD/SydneyHUD.svg?style=flat-square[/img]
+    [img]https://img.shields.io/github/issues/SydneyMOD/SydneyHUD.svg?style=flat-square[/img]
+
+    HUD mods, information and credits
+[/align]
+
+[size=medium][b]Features[/b][/size]
+[list]
+[*]HUD Tab Stats
+[*]HUD Panel Lists
+[*]Pacified Civilian Markers
+[*]Numerical Suspicion
+[*]Numerical interaction countdown
+[*]Reload interaction circle
+[*]Down Counter / Detection risk indicator
+[*]Kill-Counters
+[*]Flashlight Extender
+[*]Save/Load Preplanning
+[*]Screen Skipping
+[*]Anti accidentally throwing grenades in stealth
+[*]Enhanced Assault Banner
+[*]Some graphical tweaks
+[*]Ingame-voice indicators
+[*]Stamina Meter
+[*]Push to Interact
+[*]Force enable/disable showing of weapon skins in lobby
+[*]Buy all assets
+[*]Armor/Inspire timers
+[*]Laser options
+[*]HPS Meters
+[*]contract broker quick link
+[*]Hold to pick
+[*]Moveable inventory item
+[*]Anti bobble
+[*]Anti desync
+[*]360° view driving
+[*]Ammo total left count without including clip
+[*]Health bar
+[*]Chat feed system (Assault Phase / ECM battery / Inspire ACE CT)
+[*]Always Show MOD Icons
+[*]Spot Civilians
+[*]Changeable Waypoint Text Color
+[*]ChatTime
+[*]Down Warning
+[*]Changeable HUD scale
+[/list]
+
+[size=medium][b]Known issues[/b][/size]
+[list]
+[*]FPS drops when using Extended Flashlight
+[*]Sometimes game crashes when rendering Drag and Drop Inventory
+[*]AntiBobble sometimes does not work
+[/list]
+
+[size=medium][b]Feature Requests / Bug Reports[/b][/size]
+Please create issues [url=https://github.com/SydneyMOD/SydneyHUD/issues]here[/url] or Submit at [url=https://steamcommunity.com/groups/SydneyMOD/discussions/2/152390648090747618/]Steam Group[/url]
+
+[size=medium][b]Downloads[/b][/size]
+Join SydneyMOD [url=https://steamcommunity.com/groups/SydneyMOD]Steam Group[/url] and read about the group.
+
+[size=medium][b]Get in touch[/b][/size]
+[list]
+[*][url=https://steamcommunity.com/groups/SydneyMOD]Steam Group[/url]
+[*][url=https://twitter.com/SydneyMOD]Twitter[/url]
+[/list]
+
+[size=medium][b]Contributer[/b][/size]
+[list]
+[*]katabame: Main Developer
+[*]BangL: Main Developer
+[*]IPowis: English Translator & Developer
+[*]IfiwFR: French Translator
+[*]Nox-404: Bug fixer
+[/list]
+
+[size=medium][b]Special Thanks[/b][/size]
+SydneyHUD is using the following mods, codes & textures.
+So, Big credit to these guys!
+
+[list]
+[*][b][url=https://steamcommunity.com/groups/jackhud]JackHUD[/url][/b] by BangL
+[*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=13518]Hold to pick[/url][/b] by Malo
+[*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=14217]Drag and Drop Inventory[/url][/b] by TdlQ
+[*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=15363]Anti-Bobble[/url][/b] by Schmuddel
+[*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=15451]Velo Sync[/url][/b] by VELOCiTY
+[*][b][url=http://paydaymods.com/mods/298/wolfhud]WolfyHUD[/url][/b] by KAMIKAZE94
+[*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=13569]Driver's Neck Brace Removed[/url][/b] by EdisLeado
+[*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=13975]Always Show MOD Icons[/url][/b] by Slippy
+[*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=13517]Civilian Marking in Stealth[/url][/b] by EdisLeado
+[*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=15309]Replenished[/url][/b] by FishTaco
+[*]many of inspired mod
+[/list]
+
+[b]AND YOU.[/b]
