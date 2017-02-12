@@ -59,7 +59,7 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 * katabame: Main Developer
 * BangL: Main Developer
 * IPowis: English Translator & Developer
-* IfiwFR: French Translator
+* PoorPockets McNewHold: French Translator
 * Nox-404: Bug fixer
 * kash: Japanese Translator
 
