@@ -37,7 +37,20 @@
 			"size": 16
 		},
 		{
-		    "type": "toggle",
+			"type": "toggle",
+			"id": "move_lpi_lobby_box",
+			"title": "move_lpi_lobby_box",
+			"description": "move_lpi_lobby_box_desc",
+			"callback": "callback_move_lpi_lobby_box",
+			"value": "move_lpi_lobby_box",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
 			"id": "enable_buy_all_assets",
 			"title": "enable_buy_all_assets",
 			"description": "enable_buy_all_assets_desc",
@@ -50,7 +63,7 @@
 			"size": 16
 		},
 		{
-		    "type": "toggle",
+			"type": "toggle",
 			"id": "skip_black_screen",
 			"title": "skip_black_screen",
 			"description": "skip_black_screen_desc",

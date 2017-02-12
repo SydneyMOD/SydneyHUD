@@ -309,6 +309,9 @@
 	"remove_ads": "Remove Ads",
 	"remove_ads_desc": "Removes the announcements and ads from the main menu",
 
+	"move_lpi_lobby_box": "Center Lobby Player Info box",
+	"move_lpi_lobby_box_desc": "Moves the Lobby Player Info box to the top center of the screen",
+
 	"lobby_skins_mode": "Lobby weapon skins",
 	"lobby_skins_mode_desc": "Force enable or disable weapon skins in game lobbies (only visible for you)",
 

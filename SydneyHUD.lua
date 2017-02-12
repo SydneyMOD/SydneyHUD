@@ -73,6 +73,7 @@ if not SydneyHUD.setup then
 		["lib/managers/hud/hudsuspicion"] = "HUDSuspicion.lua",
 		["lib/managers/hud/hudteammate"] = "HUDTeammate.lua",
 		["lib/managers/menu/blackmarketgui"] = "BlackMarketGUI.lua",
+		["lib/managers/menu/contractboxgui"] = "ContractBoxGui.lua",
 		["lib/managers/menu/lootdropscreengui"] = "LootDropScreenGui.lua",
 		["lib/managers/menu/menubackdropgui"] = "MenuBackDropGUI.lua",
 		["lib/managers/menu/menucomponentmanager"] = "MenuComponentManager.lua",

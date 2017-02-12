@@ -100,6 +100,7 @@
 	"left_list_scale": 1,
 	"lobby_skins_mode": 4,
 	"loot_screen_skip": 2,
+	"move_lpi_lobby_box": true,
 	"new_icon": false,
 	"push_to_interact": false,
 	"remove_ads": true,

@@ -516,6 +516,13 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD._data.remove_ads = (item:value() == "on")
 		SydneyHUD:Save()
 	end
+	MenuCallbackHandler.callback_move_lpi_lobby_box = function(self, item)
+		SydneyHUD._data.move_lpi_lobby_box = (item:value() == "on")
+		if managers.menu_component._contract_gui and managers.menu_component._contract_gui.UpdateTeamBox then
+			managers.menu_component._contract_gui:UpdateTeamBox()
+		end
+		SydneyHUD:Save()
+	end
 	MenuCallbackHandler.callback_lobby_skins_mode = function(self, item)
 		SydneyHUD._data.lobby_skins_mode = item:value()
 		SydneyHUD:Save()
