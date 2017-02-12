@@ -19,6 +19,45 @@
 		},
 		{
 			"type": "toggle",
+			"id": "flashing_swansong",
+			"title": "flashing_swansong",
+			"description": "flashing_swansong_desc",
+			"callback": "callback_flashing_swansong",
+			"value": "flashing_swansong",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "swansong_effect",
+			"title": "swansong_effect",
+			"description": "swansong_effect_desc",
+			"callback": "callback_swansong_effect",
+			"value": "swansong_effect",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "anti_bobble",
+			"title": "anti_bobble",
+			"description": "anti_bobble_desc",
+			"callback": "callback_anti_bobble",
+			"value": "anti_bobble",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
 			"id": "anti_stealth_grenades",
 			"title": "anti_stealth_grenades",
 			"description": "anti_stealth_grenades_desc",

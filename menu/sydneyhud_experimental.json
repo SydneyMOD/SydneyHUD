@@ -5,46 +5,6 @@
 	"description": "sydneyhud_experimental_desc",
 	"items": [
 		{
-			"type": "slider",
-			"id": "waypoint_color_r",
-			"title": "waypoint_color_r",
-			"description": "waypoint_color_r_desc",
-			"callback": "callback_waypoint_color_r",
-			"value": "waypoint_color_r",
-			"max": 1,
-			"min": 0,
-			"step": 0.01,
-			"default_value": 0
-		},
-		{
-			"type": "slider",
-			"id": "waypoint_color_g",
-			"title": "waypoint_color_g",
-			"description": "waypoint_color_g_desc",
-			"callback": "callback_waypoint_color_g",
-			"value": "waypoint_color_g",
-			"max": 1,
-			"min": 0,
-			"step": 0.01,
-			"default_value": 0.5
-		},
-		{
-			"type": "slider",
-			"id": "waypoint_color_b",
-			"title": "waypoint_color_b",
-			"description": "waypoint_color_b_desc",
-			"callback": "callback_waypoint_color_b",
-			"value": "waypoint_color_b",
-			"max": 1,
-			"min": 0,
-			"step": 0.01,
-			"default_value": 1
-		},
-		{
-			"type": "divider",
-			"size": 32
-		},
-		{
 			"type": "toggle",
 			"id": "civilian_spot",
 			"title": "civilian_spot",
@@ -70,7 +30,7 @@
 			"callback": "callback_new_icon",
 			"value": "new_icon",
 			"default_value": false
-		},
+		}
 		/*
 		{
 			"type": "toggle",
@@ -82,23 +42,5 @@
 			"default_value": false
 		}
 		*/
-		{
-			"type": "toggle",
-			"id": "flashing_swansong",
-			"title": "flashing_swansong",
-			"description": "flashing_swansong_desc",
-			"callback": "callback_flashing_swansong",
-			"value": "flashing_swansong",
-			"default_value": true
-		},
-		{
-			"type": "toggle",
-			"id": "swansong_effect",
-			"title": "swansong_effect",
-			"description": "swansong_effect_desc",
-			"callback": "callback_swansong_effect",
-			"value": "swansong_effect",
-			"default_value": true
-		}
 	]
 }

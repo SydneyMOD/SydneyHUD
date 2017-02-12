@@ -195,6 +195,15 @@
 			"default_value": true
 		},
 		{
+			"type": "toggle",
+			"id": "improved_ammo_count",
+			"title": "improved_ammo_count",
+			"description": "improved_ammo_count_desc",
+			"callback": "callback_improved_ammo_count",
+			"value": "improved_ammo_count",
+			"default_value": true
+		},
+		{
 			"type": "divider",
 			"size": 16
 		},
@@ -249,24 +258,6 @@
 		},
 		{
 			"type": "toggle",
-			"id": "anti_bobble",
-			"title": "anti_bobble",
-			"description": "anti_bobble_desc",
-			"callback": "callback_anti_bobble",
-			"value": "anti_bobble",
-			"default_value": true
-		},
-		{
-			"type": "toggle",
-			"id": "improved_ammo_count",
-			"title": "improved_ammo_count",
-			"description": "improved_ammo_count_desc",
-			"callback": "callback_improved_ammo_count",
-			"value": "improved_ammo_count",
-			"default_value": true
-		},
-		{
-			"type": "toggle",
 			"id": "show_enemy_health",
 			"title": "show_enemy_health",
 			"description": "show_enemy_health_desc",
@@ -288,6 +279,46 @@
 			],
 			"value": "health_bar_color",
 			"default_value": 2
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "slider",
+			"id": "waypoint_color_r",
+			"title": "waypoint_color_r",
+			"description": "waypoint_color_r_desc",
+			"callback": "callback_waypoint_color_r",
+			"value": "waypoint_color_r",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "slider",
+			"id": "waypoint_color_g",
+			"title": "waypoint_color_g",
+			"description": "waypoint_color_g_desc",
+			"callback": "callback_waypoint_color_g",
+			"value": "waypoint_color_g",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0.5
+		},
+		{
+			"type": "slider",
+			"id": "waypoint_color_b",
+			"title": "waypoint_color_b",
+			"description": "waypoint_color_b_desc",
+			"callback": "callback_waypoint_color_b",
+			"value": "waypoint_color_b",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
 		}
 	]
 }
