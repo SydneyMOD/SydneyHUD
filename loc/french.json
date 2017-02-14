@@ -306,6 +306,12 @@
 	"enable_buy_all_assets": "Active 'Acheter tout les atouts'",
 	"enable_buy_all_assets_desc": "Transforme l'atout 'Packets de Gage' en 'Buy All', dans le menu de briefing",
 
+	/*"remove_ads": "Remove Ads",
+	"remove_ads_desc": "Removes the announcements and ads from the main menu",
+
+	"move_lpi_lobby_box": "Center Lobby Player Info box",
+	"move_lpi_lobby_box_desc": "Moves the Lobby Player Info box to the top center of the screen",*/
+
 	"lobby_skins_mode": "Skins d'armes du lobby",
 	"lobby_skins_mode_desc": "Force d'activer ou de désactiver les skins d'armes dans les lobbies (visible uniquement pour vous)",
 
@@ -383,6 +389,12 @@
 
 	"new_icon": "Nouvelles icônes",
 	"new_icon_desc": "Utilise les nouvelles icônes crées pour SydneyHUD",
+
+	/*"flashing_swansong": "Flashing Swan song",
+	"flashing_swansong_desc": "When your teammate in Swan song, puts a yellow blinking contour",
+
+	"swansong_effect": "Swan Song Effect",
+	"swansong_effect_desc": "When you in Swan song, apply a fullscreen effect",*/
 
 	"right_list_scale": "Taille de l'HUD droit",
 	"right_list_scale_desc": "Modify la taille de l'HUD de droite.",
