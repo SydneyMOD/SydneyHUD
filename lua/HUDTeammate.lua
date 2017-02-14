@@ -650,14 +650,18 @@
 		end
 	end
 
-	if SydneyHUD:GetOption("improved_ammo_count") then
-		function HUDTeammate:set_ammo_amount_by_type(type, max_clip, current_clip, current_left, max)
+	function HUDTeammate:set_ammo_amount_by_type(type, max_clip, current_clip, current_left, max, ...)
+		if SydneyHUD:GetOption("improved_ammo_count") then
 			local weapon_panel = self._player_panel:child("weapons_panel"):child(type .. "_weapon_panel")
 			weapon_panel:set_visible(true)
-			local low_ammo = current_left - current_clip <= math.round(max_clip / 2)
+			local total_left = current_left - current_clip
+			if total_left < 0 then -- dirty fix for saws (will still show bullshit when blade is around 1~3 though)
+				total_left = current_left
+			end
+			local low_ammo = total_left <= math.round(max_clip / 2)
 			local low_ammo_clip = current_clip <= math.round(max_clip / 4)
 			local out_of_ammo_clip = current_clip <= 0
-			local out_of_ammo = current_left - current_clip <= 0
+			local out_of_ammo = total_left <= 0
 			local color_total = out_of_ammo and Color(1, 0.9, 0.3, 0.3)
 			color_total = color_total or low_ammo and Color(1, 0.9, 0.9, 0.3)
 			color_total = color_total or Color.white
@@ -665,14 +669,16 @@
 			color_clip = color_clip or low_ammo_clip and Color(1, 0.9, 0.9, 0.3)
 			color_clip = color_clip or Color.white
 			local ammo_clip = weapon_panel:child("ammo_clip")
-			local zero = current_clip < 10 and "00" or current_clip < 100 and "0" or ""
-			ammo_clip:set_text(zero .. tostring(current_clip))
+			local zero_clip = current_clip < 10 and "00" or current_clip < 100 and "0" or ""
+			ammo_clip:set_text(zero_clip .. tostring(current_clip))
 			ammo_clip:set_color(color_clip)
-			ammo_clip:set_range_color(0, string.len(zero), color_clip:with_alpha(0.5))
+			ammo_clip:set_range_color(0, string.len(zero_clip), color_clip:with_alpha(0.5))
 			local ammo_total = weapon_panel:child("ammo_total")
-			local zero = current_left - current_clip < 10 and "00" or current_left - current_clip < 100 and "0" or ""
-			ammo_total:set_text(zero .. tostring(current_left - current_clip))
+			local zero_total = total_left < 10 and "00" or total_left < 100 and "0" or ""
+			ammo_total:set_text(zero_total .. tostring(total_left))
 			ammo_total:set_color(color_total)
-			ammo_total:set_range_color(0, string.len(zero), color_total:with_alpha(0.5))
+			ammo_total:set_range_color(0, string.len(zero_total), color_total:with_alpha(0.5))
+		else
+			set_ammo_amount_by_type_original(self, type, max_clip, current_clip, current_left, max, ...)
 		end
 	end
