@@ -1,5 +1,5 @@
 {
-	/*"sydneyhud_options": "SydneyHUD",*/
+	"sydneyhud_options": "SydneyHUD",
 	"sydneyhud_options_desc": "Options SydneyHUD",
 	"sydneyhud_reset": "Réinitialiser les options",
 	"sydneyhud_reset_desc": "Définis toutes les options de SydneyHUD par défaut",
@@ -64,14 +64,14 @@
 	"show_civilians_desc": "Civils non attachés en jeu",
 	"show_hostages": "Montre les otages",
 	"show_hostages_desc": "Otages attachés et ennemis dominés en jeu",
-	/*"aggregate_hostages": "Aggregate hostages",
-	"aggregate_hostages_desc": "Aggregate all hostages into a single item",*/
+	"aggregate_hostages": "Rassemble les otages",
+	"aggregate_hostages_desc": "Rassemble les otages en un seul objet",
 	"show_minion_count": "Montre le nombre d'alliés",
 	"show_minion_count_desc": "Nombre d'ennemis dominés en jeu",
 	"show_pager_count": "Montre le nombre de bipeurs",
 	"show_pager_count_desc": "Montre le nombre de bipeurs répondus",
-	/*"show_camera_count": "Show camera count",
-	"show_camera_count_desc": "Show number of active cameras on the map. Auto-disabled if heist goes loud (experimental, has some issues)",*/
+	"show_camera_count": "Montre le nombre de caméras",
+	"show_camera_count_desc": "Montre le nombre de caméra actives sur la map. Se désactive automatiquement quand le braquage passe en mode bourrin (Experimental, a quelques bugs)",
 	"show_loot": "Montre le loot",
 	"show_loot_desc": "Montre le loot récupérable",
 	"aggregate_loot": "Regroupement de loot",
@@ -222,12 +222,12 @@
 	"laser_light_turretm": "Luminosité du point",
 	"laser_light_turretm_desc": "Luminosité du point",
 
-	/*"interaction_color_r": "interaction text red",
-	"interaction_color_r_desc": "interaction text color",
-	"interaction_color_g": "interaction text green",
-	"interaction_color_g_desc": "interaction text color",
-	"interaction_color_b": "interaction text blue",
-	"interaction_color_b_desc": "interaction text color",*/
+	"interaction_color_r": "Couleur d'interaction rouge",
+	"interaction_color_r_desc": "Couleur du texte d'interaction",
+	"interaction_color_g": "Couleur d'interaction vert",
+	"interaction_color_g_desc": "Couleur du texte d'interaction",
+	"interaction_color_b": "Couleur d'interaction bleu",
+	"interaction_color_b_desc": "Couleur du texte d'interaction",
 
 	"push_to_interact": "Appuyer pour interagir",
 	"push_to_interact_desc": "Plus besoin de maintenir la touche d'interraction [F]",
@@ -306,12 +306,6 @@
 	"enable_buy_all_assets": "Active 'Acheter tout les atouts'",
 	"enable_buy_all_assets_desc": "Transforme l'atout 'Packets de Gage' en 'Buy All', dans le menu de briefing",
 
-	/*"remove_ads": "Remove Ads",
-	"remove_ads_desc": "Removes the announcements and ads from the main menu",
-
-	"move_lpi_lobby_box": "Center Lobby Player Info box",
-	"move_lpi_lobby_box_desc": "Moves the Lobby Player Info box to the top center of the screen",*/
-
 	"lobby_skins_mode": "Skins d'armes du lobby",
 	"lobby_skins_mode_desc": "Force d'activer ou de désactiver les skins d'armes dans les lobbies (visible uniquement pour vous)",
 
@@ -333,50 +327,50 @@
 
 	"show_enemy_health": "Barre de santé ennemie",
 	"show_enemy_health_desc": "Montre le barre de santé ennemie",
-	"health_bar_color": "Health bar color",
-	"health_bar_color_desc": "Choose health bar color",
-	"health_bar_color_green": "Green",
-	"health_bar_color_blue": "Blue",
-	"health_bar_color_mix_green": "Mixed Green",
-	"health_bar_color_mix_blue": "Mixed Blue",
+	"health_bar_color": "Couleur de la barre de santée",
+	"health_bar_color_desc": "Choisit la couleur de la barre de santée",
+	"health_bar_color_green": "Vert",
+	"health_bar_color_blue": "Bleu",
+	"health_bar_color_mix_green": "Vert mixte",
+	"health_bar_color_mix_blue": "Bleu mixte",
 
 	"sydneyhud_chat_info": "Informations du chat",
 	"sydneyhud_chat_info_desc": "Donne des informations via le chat",
 
-	/*"show_heist_time": "Show heist time",
-	"show_heist_time_desc": "Show heist time as prefix on all messages",*/
+	"show_heist_time": "Montre la date des messages",
+	"show_heist_time_desc": "Montre la date des messages du chat",
 	"assault_phase_chat_info": "Feed de phases d'assault",
 	"assault_phase_chat_info_desc": "Feed de phases d'assault du chat",
 	"assault_phase_chat_info_feed": "Paires de la feed de phase d'assault",
 	"assault_phase_chat_info_feed_desc": "Si vous êtes l'hôte, Cela envoie les infos de la Feed de phases d'assault à tout votre équipe. (Feed de phases d'assault Requis)",
 	"ecm_battery_chat_info": "Feed de la batterie du CME",
 	"ecm_battery_chat_info_desc": "Feed de la batterie du CME du chat",
-	"ecm_battery_chat_info_feed": "Peer Feed ECM Battery",
+	"ecm_battery_chat_info_feed": "Feed de la batterie du CME",
 	"ecm_battery_chat_info_feed_desc": "Si vous êtes l'hôte, Cela envoie les infos de la Feed de la batterie du CME à tout votre équipe. (Feed de la batterie du CME Requis)",
-	/*"down_warning_chat_info": "Show down warning",
-	"down_warning_chat_info_desc": "Show down warning in chat when you and your crew are downed.",
-	"critical_down_warning_chat_info": "Show critical down warning",
-	"critical_down_warning_chat_info_desc": "Show down warning in chat when you and your crew are downed 3 or 4 times.",
-	"down_warning_chat_info_feed": "Feed down warning",
-	"down_warning_chat_info_feed_desc": "If you're host, send down warning chat message to everyone in your crew. (show down warning required)",
-	"critical_down_warning_chat_info_feed": "Feed critical down warning",
-	"critical_down_warning_chat_info_feed_desc": "If you're host, send critical down warning chat message to everyone in your crew. (show critical down warning required)",
-	"replenished_chat_info": "Show replenished",
-	"replenished_chat_info_desc": "Show replenished in chat when you and your crew are use doctor bag.",
-	"replenished_chat_info_feed": "Feed replenished",
-	"replenished_chat_info_feed_desc": "If you're host, send replenished chat message to everyone in your crew. (show replenished required)",*/
+	"down_warning_chat_info": "Montre les coéquipiers à terre",
+	"down_warning_chat_info_desc": "Montre un avertissement dans le chat quand vous ou plusieurs membres de votre équipe sont à terre.",
+	"critical_down_warning_chat_info": "Montre un avertissement de mise à terre critique",
+	"critical_down_warning_chat_info_desc": "Montre un avertissement dans le chat quand vous ou plusieurs membres de votre équipe sont à terre 3 ou 4 fois.",
+	"down_warning_chat_info_feed": "Avertissement de coéquipiers à terre",
+	"down_warning_chat_info_feed_desc": "Si vous êtes l'hôte, envoie un avertissement dans le chat à tout vos coéquipiers.(Montre les coéquipiers à terre requis)",
+	"critical_down_warning_chat_info_feed": "Avertissement de mise à terre critique",
+	"critical_down_warning_chat_info_feed_desc": "Si vous êtes l'hôte, envoie un avertissement dans le chat à tout vos coéquipiers.(Montre un avertissement de mise à terre critique)",
+	"replenished_chat_info": "Montre les rétablissements",
+	"replenished_chat_info_desc": "Montre les rétablissements quand vous et votre équipe utilise un sac médical.",
+	"replenished_chat_info_feed": "Montre les rétablissements dans la feed",
+	"replenished_chat_info_feed_desc": "Si vous êtes l'hôte, envoie un avertissement dans le chat à tout vos coéquipiers. (Montre les rétablissements requis)",
 
 	"inspire_ace_chat_info": "Inspire ACE temps de recharge",
-	"inspire_ace_chat_info_desc": "Montre le inspire ACE temps de recharge",
+	"inspire_ace_chat_info_desc": "Montre le temps de recharge de inspire",
 
 	"sydneyhud_experimental": "Options expérimentales",
 	"sydneyhud_experimental_desc": "Ces options ne sont PAS stables. Utilisez-les à vos risques.",
 
 	"waypoint_color_r": "Couleur du point de repère (Rouge)",
 	"waypoint_color_r_desc": "Couleur du point de repère personalisé",
-	"waypoint_color_g": "ouleur du point de repère (Vert)",
+	"waypoint_color_g": "Couleur du point de repère (Vert)",
 	"waypoint_color_g_desc": "Couleur du point de repère personalisé",
-	"waypoint_color_b": "ouleur du point de repère (Bleu)",
+	"waypoint_color_b": "Couleur du point de repère (Bleu)",
 	"waypoint_color_b_desc": "Couleur du point de repère personalisé",
 
 	"civilian_spot": "Repérer les civils",
@@ -389,14 +383,6 @@
 
 	"new_icon": "Nouvelles icônes",
 	"new_icon_desc": "Utilise les nouvelles icônes crées pour SydneyHUD",
-
-	/*
-	"flashing_swansong": "Flashing Swan song",
-	"flashing_swansong_desc": "When your teammate in Swan song, puts a yellow blinking contour",
-
-	"swansong_effect": "Swan Song Effect",
-	"swansong_effect_desc": "When you in Swan song, apply a fullscreen effect",
-	*/
 
 	"right_list_scale": "Taille de l'HUD droit",
 	"right_list_scale_desc": "Modify la taille de l'HUD de droite.",
