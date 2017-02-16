@@ -391,10 +391,10 @@
 	"new_icon_desc": "Use new icon made for SydneyHUD",
 
 	"flashing_swansong": "Flashing Swan song",
-	"flashing_swansong_desc": "When your teammate in Swan song, puts a yellow blinking contour",
+	"flashing_swansong_desc": "Teammate blinks with yellow contour when they are in Swan song.",
 
 	"swansong_effect": "Swan Song Effect",
-	"swansong_effect_desc": "When you in Swan song, apply a fullscreen effect",
+	"swansong_effect_desc": "Fullscreen effect when you're in Swan song",
 
 	"right_list_scale": "HUD right list scale",
 	"right_list_scale_desc": "Change list scale multiplier",
@@ -404,5 +404,5 @@
 	"buff_list_scale_desc": "Change list scale multiplier",
 
 	"counter_font_size": "Counter font size",
-	"counter_font_size_desc": "adjust the font size of the right bottom HUD panel"
+	"counter_font_size_desc": "adjust the font size of the bottom right HUD panel"
 }
