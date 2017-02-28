@@ -18,15 +18,6 @@
 			"size": 16
 		},
 		{
-			"type": "toggle",
-			"id": "flashing_swansong",
-			"title": "flashing_swansong",
-			"description": "flashing_swansong_desc",
-			"callback": "callback_flashing_swansong",
-			"value": "flashing_swansong",
-			"default_value": true
-		},
-		{
 			"type": "divider",
 			"size": 16
 		},

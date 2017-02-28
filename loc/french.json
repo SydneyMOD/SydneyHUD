@@ -390,9 +390,6 @@
 	"new_icon": "Nouvelles icônes",
 	"new_icon_desc": "Utilise les nouvelles icônes crées pour SydneyHUD",
 
-	"flashing_swansong": "\"Chant du signe\" clignotant",
-	"flashing_swansong_desc": "Quand votre coéquipier est en état \"Chant du signe\", Cela ajoute un contour clignotant jaune",
-
 	"swansong_effect": "Effet \"Chant du signe\"",
 	"swansong_effect_desc": "Quand vous activez la compétence \"Chant du signe\", Un effet clignotant visuel apparait",
 

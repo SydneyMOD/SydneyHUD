@@ -33,7 +33,6 @@
 [*]HPS Meters
 [*]contract broker quick link
 [*]Hold to pick
-[*]Moveable inventory item
 [*]Anti bobble
 [*]Anti desync
 [*]360° view driving
@@ -46,13 +45,6 @@
 [*]ChatTime
 [*]Down Warning
 [*]Changeable HUD scale
-[/list]
-
-[size=medium][b]Known issues[/b][/size]
-[list]
-[*]FPS drops when using Extended Flashlight
-[*]Sometimes game crashes when rendering Drag and Drop Inventory
-[*]AntiBobble sometimes does not work
 [/list]
 
 [size=medium][b]Feature Requests / Bug Reports[/b][/size]
@@ -72,7 +64,7 @@ Join SydneyMOD [url=https://steamcommunity.com/groups/SydneyMOD]Steam Group[/url
 [*]katabame: Main Developer
 [*]BangL: Main Developer
 [*]IPowis: English Translator & Developer
-[*]IfiwFR: French Translator
+[*]PoorPockets McNewHold: French Translator
 [*]Nox-404: Bug fixer
 [/list]
 
@@ -83,7 +75,6 @@ So, Big credit to these guys!
 [list]
 [*][b][url=https://steamcommunity.com/groups/jackhud]JackHUD[/url][/b] by BangL
 [*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=13518]Hold to pick[/url][/b] by Malo
-[*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=14217]Drag and Drop Inventory[/url][/b] by TdlQ
 [*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=15363]Anti-Bobble[/url][/b] by Schmuddel
 [*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=15451]Velo Sync[/url][/b] by VELOCiTY
 [*][b][url=http://paydaymods.com/mods/298/wolfhud]WolfyHUD[/url][/b] by KAMIKAZE94
@@ -95,3 +86,5 @@ So, Big credit to these guys!
 [/list]
 
 [b]AND YOU.[/b]
+
+[size=big]View full readme on: [url=https://github.com/SydneyMOD/SydneyHUD/blob/master/readme.md]Github[/url][/size]

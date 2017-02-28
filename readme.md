@@ -26,7 +26,6 @@
 * HPS Meters
 * contract broker quick link
 * Hold to pick
-* Moveable inventory item
 * Anti bobble
 * Anti desync
 * 360° view driving
@@ -42,7 +41,6 @@
 
 ### Known issues
 * FPS drops when using Extended Flashlight
-* Sometimes game crashes when rendering Drag and Drop Inventory
 * AntiBobble sometimes does not work
 
 ### Feature Requests / Bug Reports
@@ -69,7 +67,6 @@ So, Big credit to these guys!
 
 * 🐔**JackHUD** by BangL [🔗](https://steamcommunity.com/groups/jackhud)
 * 💎**Hold to pick** by Malo [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13518)
-* 🖱**Drag and Drop Inventory** by TdlQ [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=14217)
 * 🏃**Anti-Bobble** by Schmuddel [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15363)
 * 🔄**Velo Sync** by VELOCiTY [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15451)
 * 🐺**WolfyHUD** by KAMIKAZE94 [🔗](http://paydaymods.com/mods/298/wolfhud)
@@ -78,7 +75,6 @@ So, Big credit to these guys!
 * 👦🏻**Civilian Marking in Stealth** by EdisLeado [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13517)
 * ⛑**Replenished** by FishTaco [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15309)
 * ☠**Swan Song Effect** by Simon [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=681)
-* 🔦**Flashing Swan Song** by TdlQ[🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13438)
 * many of inspired mod
 
 **AND YOU.**
