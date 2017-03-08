@@ -6,6 +6,8 @@
 	"anti_stealth_grenades": false,
 	"assault_phase_chat_info": true,
 	"assault_phase_chat_info_feed": true,
+	"auto_laser": true,
+	"auto_sentry_ap": true,
 	"buff_list_scale": 1,
 	"center_assault_banner": true,
 	"civilian_color_b": 1,

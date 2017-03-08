@@ -120,6 +120,8 @@
 	"flashlight_angle": "Flashlight angle",
 	"flashlight_angle_desc": "Angle/width of beam, 0-160 (default 60)",
 
+	"auto_laser": "Auto on laser",
+	"auto_laser_desc": "Auto on your weapon laser",
 	"enable_laser_options": "Custom player laser (own)",
 	"enable_laser_options_desc": "Change the color of player lasers",
 	"laser_color_r": "Red",
@@ -243,6 +245,9 @@
 
 	"anti_stealth_grenades": "Anti stealth grenades",
 	"anti_stealth_grenades_desc": "Suppress throwing of grenades in stealth (click again to force throw)",
+
+	"auto_sentry_ap": "Auto AP mode",
+	"auto_sentry_ap_desc": "Auto set your sentry gun mode to AP mode",
 
 	"sydneyhud_hud_tweaks": "HUD tweaks",
 	"sydneyhud_hud_tweaks_desc": "HUD tweaks",

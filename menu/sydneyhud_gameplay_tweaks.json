@@ -55,6 +55,19 @@
 			"callback": "callback_anti_stealth_grenades",
 			"value": "anti_stealth_grenades",
 			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "auto_sentry_ap",
+			"title": "auto_sentry_ap",
+			"description": "auto_sentry_ap_desc",
+			"callback": "callback_auto_sentry_ap",
+			"value": "auto_sentry_ap",
+			"default_value": true
 		}
 	]
 }

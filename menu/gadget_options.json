@@ -47,6 +47,19 @@
 		},
 		{
 			"type": "toggle",
+			"id": "auto_laser",
+			"title": "auto_laser",
+			"description": "auto_laser_desc",
+			"callback": "callback_auto_laser",
+			"value": "auto_laser",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
 			"id": "enable_laser_options",
 			"title": "enable_laser_options",
 			"description": "enable_laser_options_desc",

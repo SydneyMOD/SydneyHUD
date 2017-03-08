@@ -120,6 +120,8 @@
 	"flashlight_angle": "フラッシュライトアングル",
 	"flashlight_angle_desc": "フラッシュライトのアングル/幅を変更します。 0-160 (デフォルト 60)",
 
+	"auto_laser": "オートレーザー",
+	"auto_laser_desc": "武器のレーザーを自動的にOnにします。",
 	"enable_laser_options": "カスタムプレイヤーレーザー (自分)",
 	"enable_laser_options_desc": "プレイヤーのレーザーカラーを変更します。",
 	"laser_color_r": "赤",
@@ -247,6 +249,9 @@
 
 	"anti_stealth_grenades": "Stealth時の投擲武器の抑制",
 	"anti_stealth_grenades_desc": "Suppress throwing of grenades in stealth (click again to force throw)",
+
+	"auto_sentry_ap": "オートAPモード",
+	"auto_sentry_ap_desc": "セントリーガンのモードを自動的にAPモードにします",
 
 	"sydneyhud_hud_tweaks": "HUDの改良",
 	"sydneyhud_hud_tweaks_desc": "HUDを改良します。",

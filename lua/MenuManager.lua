@@ -290,6 +290,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	end
 
 	-- Laser options
+	MenuCallbackHandler.callback_auto_laser = function(self, item)
+		SydneyHUD._data.auto_laser = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
 	MenuCallbackHandler.callback_enable_laser_options = function(self, item)
 		SydneyHUD._data.enable_laser_options = (item:value() == "on")
 		SydneyHUD:Save()
@@ -503,6 +508,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	end
 
 	-- Other
+	MenuCallbackHandler.callback_auto_sentry_ap = function(self, item)
+		SydneyHUD._data.auto_sentry_ap = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+
 	MenuCallbackHandler.callback_show_enemy_health = function(self, item)
 		SydneyHUD._data.show_enemy_health = (item:value() == "on")
 		SydneyHUD:Save()

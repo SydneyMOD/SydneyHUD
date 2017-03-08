@@ -87,4 +87,4 @@ So, Big credit to these guys!
 
 [b]AND YOU.[/b]
 
-[size=big]View full readme on: [url=https://github.com/SydneyMOD/SydneyHUD/blob/master/readme.md]Github[/url][/size]
+[size=medium]View full readme on: [url=https://github.com/SydneyMOD/SydneyHUD/blob/master/readme.md]Github[/url][/size]
