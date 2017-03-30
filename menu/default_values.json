@@ -154,6 +154,7 @@
 	"skip_stat_screen": true,
 	"stat_screen_skip": 0,
 	"swansong_effect": true,
+	"tab_font_size": 14,
 	"truncate_name_tags": true,
 	"waypoint_color_b": 1,
 	"waypoint_color_g": 0.5,

@@ -6,6 +6,18 @@
 	"items": [
 		{
 			"type": "slider",
+			"id": "tab_font_size",
+			"title": "tab_font_size",
+			"description": "tab_font_size_desc",
+			"callback": "callback_tab_font_size",
+			"value": "tab_font_size",
+			"max": 20,
+			"min": 10,
+			"step": 1,
+			"default_value": 14
+		},
+		{
+			"type": "slider",
 			"id": "counter_font_size",
 			"title": "counter_font_size",
 			"description": "counter_font_size_desc",

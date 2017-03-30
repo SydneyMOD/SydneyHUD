@@ -508,6 +508,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	end
 
 	-- Other
+	MenuCallbackHandler.callback_tab_font_size = function(self, item)
+		SydneyHUD._data.tab_font_size = item:value()
+		SydneyHUD:Save()
+	end
+
 	MenuCallbackHandler.callback_auto_sentry_ap = function(self, item)
 		SydneyHUD._data.auto_sentry_ap = (item:value() == "on")
 		SydneyHUD:Save()

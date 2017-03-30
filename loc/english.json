@@ -98,6 +98,9 @@
 	"civilian_color_b": "Civilian-Blue",
 	"civilian_color_b_desc": "Civilian color",
 
+	"tab_font_size": "Tab stats font size",
+	"tab_font_size_desc": "Change font size of tab menu",
+
 	"kill_counter_options": "Kill counter",
 	"kill_counter_options_desc": "Configure kill counter",
 

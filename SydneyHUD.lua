@@ -336,9 +336,6 @@ if not SydneyHUD.setup then
 	function SydneyHUD:Down(peer_id, local_peer)
 		local peer = managers.network:session():peer(peer_id)
 		if peer then
-
-			log(dev .. "difficulty: " .. Global.game_settings.difficulty)
-
 			local warn_down = 3
 
 			if Global.game_settings.difficulty == "sm_wish" then

@@ -36,13 +36,13 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "paygrade_text",
 		color = Color.yellow,
-		font_size = 14,
+		font_size = SydneyHUD:GetOption("tab_font_size"),
 		font = tweak_data.hud_stats.objectives_font,
 		text = "0",
 		align = "right",
 		vertical = "top",
 		w = day_wrapper_panel:w()/2-5,
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local paygrade_title = day_wrapper_panel:text({
 		layer = 0,
@@ -50,13 +50,13 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "paygrade_title",
 		color = Color.white,
-		font_size = 14,
+		font_size = SydneyHUD:GetOption("tab_font_size"),
 		font = tweak_data.hud_stats.objectives_font,
 		text = "DIFFICULTY:",
 		align = "left",
 		vertical = "top",
 		w = day_wrapper_panel:w()/2-5,
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	--local job_stars = managers.job:current_job_stars()
 	--local job_and_difficulty_stars = managers.job:current_job_and_difficulty_stars()
@@ -72,13 +72,13 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "day_payout_text",
 		color = Color.white,
-		font_size = 14,
+		font_size = SydneyHUD:GetOption("tab_font_size"),
 		font = tweak_data.hud_stats.objectives_font,
 		text = "0",
 		align = "right",
 		vertical = "top",
 		w = day_wrapper_panel:w()/2-5,
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local day_payout_title = day_wrapper_panel:text({
 		layer = 0,
@@ -86,13 +86,13 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "day_payout_title",
 		color = Color.white,
-		font_size = 14,
+		font_size = SydneyHUD:GetOption("tab_font_size"),
 		font = tweak_data.hud_stats.objectives_font,
 		text = "PAYOUT:",
 		align = "left",
 		vertical = "top",
 		w = day_wrapper_panel:w()/2-5,
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	day_payout_text:set_text(managers.experience:cash_string(0))
 	day_payout_text:set_y(math.round(paygrade_text:bottom()))
@@ -103,13 +103,13 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "offshore_payout_text",
 		color = Color.white,
-		font_size = 14,
+		font_size = SydneyHUD:GetOption("tab_font_size"),
 		font = tweak_data.hud_stats.objectives_font,
 		text = "0",
 		align = "right",
 		vertical = "top",
 		w = day_wrapper_panel:w()/2-5,
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local offshore_payout_title = day_wrapper_panel:text({
 		layer = 0,
@@ -117,13 +117,13 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "offshore_payout_title",
 		color = Color.white,
-		font_size = 14,
+		font_size = SydneyHUD:GetOption("tab_font_size"),
 		font = tweak_data.hud_stats.objectives_font,
 		text = "OFFSHORE PAYOUT:",
 		align = "left",
 		vertical = "top",
 		w = day_wrapper_panel:w()/2-5,
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	offshore_payout_text:set_y(math.round(day_payout_text:bottom()))
 	offshore_payout_title:set_top(offshore_payout_text:top())
@@ -133,13 +133,13 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "cleaner_costs_text",
 		color = Color.white,
-		font_size = 14,
+		font_size = SydneyHUD:GetOption("tab_font_size"),
 		font = tweak_data.hud_stats.objectives_font,
 		text = "0",
 		align = "right",
 		vertical = "top",
 		w = day_wrapper_panel:w()/2-5,
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local cleaner_costs_title = day_wrapper_panel:text({
 		layer = 0,
@@ -147,13 +147,13 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "cleaner_costs_title",
 		color = Color.white,
-		font_size = 14,
+		font_size = SydneyHUD:GetOption("tab_font_size"),
 		font = tweak_data.hud_stats.objectives_font,
 		text = "CLEANER COSTS:",
 		align = "left",
 		vertical = "top",
 		w = day_wrapper_panel:w()/2-5,
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	cleaner_costs_text:set_y(math.round(offshore_payout_text:bottom()))
 	cleaner_costs_title:set_top(cleaner_costs_text:top())
@@ -163,13 +163,13 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "spending_cash_text",
 		color = Color.white,
-		font_size = 14,
+		font_size = SydneyHUD:GetOption("tab_font_size"),
 		font = tweak_data.hud_stats.objectives_font,
 		text = "0",
 		align = "right",
 		vertical = "top",
 		w = day_wrapper_panel:w()/2-5,
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local spending_cash_title = day_wrapper_panel:text({
 		layer = 0,
@@ -177,13 +177,13 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "spending_cash_title",
 		color = Color.white,
-		font_size = 14,
+		font_size = SydneyHUD:GetOption("tab_font_size"),
 		font = tweak_data.hud_stats.objectives_font,
 		text = "SPENDING CASH:",
 		align = "left",
 		vertical = "top",
 		w = day_wrapper_panel:w()/2-5,
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	spending_cash_text:set_y(math.round(cleaner_costs_text:bottom()))
 	spending_cash_title:set_top(spending_cash_text:top())
@@ -221,12 +221,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "accuracy_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local accuracy_title = day_wrapper_panel:text({
 		layer = 0,
@@ -234,12 +234,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "accuracy_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "ACCURACY:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	accuracy_text:set_y(math.round(blanka:bottom()))
 	accuracy_title:set_top(accuracy_text:top())
@@ -249,12 +249,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "headshot_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local headshot_title = day_wrapper_panel:text({
 		layer = 0,
@@ -262,12 +262,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "headshot_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "HEADSHOTS:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	headshot_text:set_y(math.round(accuracy_text:bottom()))
 	headshot_title:set_top(headshot_text:top())
@@ -277,12 +277,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "total_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local total_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -290,12 +290,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "total_killed_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "TOTAL KILLS:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	total_killed_text:set_y(math.round(headshot_text:bottom()))
 	total_killed_title:set_top(total_killed_text:top())
@@ -305,12 +305,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "non_specials_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local non_specials_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -318,12 +318,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "non_specials_killed_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "NON SPECIALS KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	non_specials_killed_text:set_y(math.round(total_killed_text:bottom()))
 	non_specials_killed_title:set_top(non_specials_killed_text:top())
@@ -333,12 +333,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "tanks_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local tanks_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -346,12 +346,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "tanks_killed_title",
 		color = Color.red, -- RED
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "BULLDOZERS KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	tanks_killed_text:set_y(math.round(non_specials_killed_text:bottom()))
 	tanks_killed_title:set_top(tanks_killed_text:top())
@@ -361,12 +361,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "tank_green_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local tank_green_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -374,12 +374,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "tank_green_killed_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "GREEN DOZERS KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	tank_green_killed_text:set_y(math.round(tanks_killed_text:bottom()))
 	tank_green_killed_title:set_top(tank_green_killed_text:top())
@@ -389,12 +389,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "tank_black_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local tank_black_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -402,12 +402,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "tank_black_killed_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "BLACK DOZERS KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	tank_black_killed_text:set_y(math.round(tank_green_killed_text:bottom()))
 	tank_black_killed_title:set_top(tank_black_killed_text:top())
@@ -417,12 +417,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "tank_skull_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local tank_skull_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -430,12 +430,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "tank_skull_killed_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "SKULLDOZERS KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	tank_skull_killed_text:set_y(math.round(tank_black_killed_text:bottom()))
 	tank_skull_killed_title:set_top(tank_skull_killed_text:top())
@@ -445,12 +445,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "cloakers_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local cloakers_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -458,12 +458,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "cloakers_killed_title",
 		color = tweak_data.screen_colors.friend_color, -- Green
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "CLOAKERS KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	cloakers_killed_text:set_y(math.round(tank_skull_killed_text:bottom()))
 	cloakers_killed_title:set_top(cloakers_killed_text:top())
@@ -473,12 +473,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "shields_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local shields_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -486,12 +486,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "shields_killed_title",
 		color = Color("888888"), -- Grey
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "SHIELDS KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	shields_killed_text:set_y(math.round(cloakers_killed_text:bottom()))
 	shields_killed_title:set_top(shields_killed_text:top())
@@ -501,12 +501,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "snipers_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local snipers_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -514,12 +514,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "snipers_killed_title",
 		color = Color("FF9912"), -- Orange/Yellow
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "SNIPERS KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	snipers_killed_text:set_y(math.round(shields_killed_text:bottom()))
 	snipers_killed_title:set_top(snipers_killed_text:top())
@@ -529,12 +529,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "tasers_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local tasers_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -542,12 +542,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "tasers_killed_title",
 		color = Color.cyan, -- Blue
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "TASERS KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	tasers_killed_text:set_y(math.round(snipers_killed_text:bottom()))
 	tasers_killed_title:set_top(tasers_killed_text:top())
@@ -557,12 +557,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "phalanx_vip_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local phalanx_vip_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -570,12 +570,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "phalanx_vip_killed_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "WINTER KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	phalanx_vip_killed_text:set_y(math.round(tasers_killed_text:bottom()))
 	phalanx_vip_killed_title:set_top(phalanx_vip_killed_text:top())
@@ -585,12 +585,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "phalanx_minion_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local phalanx_minion_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -598,12 +598,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "phalanx_minion_killed_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "WINTER'S MINIONS KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	phalanx_minion_killed_text:set_y(math.round(phalanx_vip_killed_text:bottom()))
 	phalanx_minion_killed_title:set_top(phalanx_minion_killed_text:top())
@@ -613,12 +613,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "medic_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local medic_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -626,12 +626,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "medic_killed_title",
 		color = Color(1, 0.5, 0, 0.5),
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "MEDICS KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	medic_killed_text:set_y(math.round(phalanx_minion_killed_text:bottom()))
 	medic_killed_title:set_top(medic_killed_text:top())
@@ -641,12 +641,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "boss_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local boss_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -654,12 +654,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "boss_killed_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "BOSSES KILLED:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	boss_killed_text:set_y(math.round(medic_killed_text:bottom()))
 	boss_killed_title:set_top(boss_killed_text:top())
@@ -669,12 +669,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "melee_killed_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local melee_killed_title = day_wrapper_panel:text({
 		layer = 0,
@@ -682,12 +682,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "melee_killed_title",
 		color = Color("8B4500"), -- Brown
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "MELEE KILLS:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	melee_killed_text:set_y(math.round(boss_killed_text:bottom()))
 	melee_killed_title:set_top(melee_killed_text:top())
@@ -711,12 +711,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "revives_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local revives_title = day_wrapper_panel:text({
 		layer = 0,
@@ -724,12 +724,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "revives_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "REVIVES:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	revives_text:set_y(math.round(blank:bottom()))
 	revives_title:set_top(revives_text:top())
@@ -739,12 +739,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "downs_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local downs_title = day_wrapper_panel:text({
 		layer = 0,
@@ -752,12 +752,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "downs_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "DOWNS:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	downs_text:set_y(math.round(revives_text:bottom()))
 	downs_title:set_top(downs_text:top())
@@ -781,12 +781,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "time_text",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "",
 		align = "right",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	local time_title = day_wrapper_panel:text({
 		layer = 0,
@@ -794,12 +794,12 @@ function HUDStatsScreen:init()
 		y = 0,
 		name = "time_title",
 		color = Color.white,
-		font_size = 13,
+		font_size = SydneyHUD:GetOption("tab_font_size") - 1,
 		font = tweak_data.hud_stats.objectives_font,
 		text = "TIME:",
 		align = "left",
 		vertical = "top",
-		h = 16
+		h = SydneyHUD:GetOption("tab_font_size") + 2
 	})
 	time_text:set_y(math.round(blank:bottom()))
 	time_title:set_top(time_text:top())
