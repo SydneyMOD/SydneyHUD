@@ -98,6 +98,9 @@
 	"civilian_color_b": "Civils-Bleu",
 	"civilian_color_b_desc": "Couleur des civils",
 
+	"tab_font_size": "Taille de la police des stats",
+	"tab_font_size_desc": "Change la taille de la police du menu Tab",
+	
 	"kill_counter_options": "Compteur de Kills",
 	"kill_counter_options_desc": "Configure le compteur de kills",
 
@@ -120,6 +123,8 @@
 	"flashlight_angle": "Angle de la lampe",
 	"flashlight_angle_desc": "Angle/largeur du rayon, 0-160 (default 60)",
 
+	"auto_laser": "Laser Automatique",
+	"auto_laser_desc": "Allume automatiquement le laser de votre arme",
 	"enable_laser_options": "Customisation du laser (votre)",
 	"enable_laser_options_desc": "Change le couleur des lasers du joueur",
 	"laser_color_r": "Rouge",
@@ -244,6 +249,9 @@
 	"anti_stealth_grenades": "Protection furtive Anti-grenades",
 	"anti_stealth_grenades_desc": "Empêche de pouvoir lancer des grenades en mode furtif (clique encore pour forcer l'utilisation des grenades)",
 
+	"auto_sentry_ap": "Mode PA Auto",
+	"auto_sentry_ap_desc": "Configure vos tourelles en mode PA automatiquement",
+	
 	"sydneyhud_hud_tweaks": "Amélioration de l'HUD",
 	"sydneyhud_hud_tweaks_desc": "Amélioration de L'HUD",
 
