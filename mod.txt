@@ -13,7 +13,7 @@
 	],
 	"updates": [
 		{
-			"revision": 17,
+			"revision": 18,
 			"identifier": "SydneyHUD"
 		},
 		{

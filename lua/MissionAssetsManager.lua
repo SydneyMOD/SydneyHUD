@@ -1,9 +1,7 @@
 function MissionAssetsManager:unlock_all_buyable_assets()
-	if SydneyHUD:GetOption("enable_buy_all_assets") then
-		for _, asset in ipairs(self._global.assets) do
-			if self:asset_is_buyable(asset) then
-				self:unlock_asset(asset.id)
-			end
+	for _, asset in ipairs(self._global.assets) do
+		if self:asset_is_buyable(asset) then
+			self:unlock_asset(asset.id)
 		end
 	end
 end
