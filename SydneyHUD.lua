@@ -24,7 +24,6 @@ if not SydneyHUD.setup then
 	dev = "[SydneyHUD Dev] "
 
 	-- var for script
-	-- IDK why lua can not create blank var and use niled var
 	SydneyHUD._autorepair_map = {}
 	SydneyHUD._current_phase = ""
 	SydneyHUD._pre_phase = ""
@@ -86,6 +85,7 @@ if not SydneyHUD.setup then
 		["lib/managers/hudmanagerpd2"] = "HUDManagerPD2.lua",
 		["lib/managers/localizationmanager"] = "LocalizationManager.lua",
 		["lib/managers/missionassetsmanager"] = "MissionAssetsManager.lua",
+		["lib/managers/menu/missionbriefinggui"] = "MissionBriefingGui.lua",
 		["lib/managers/objectinteractionmanager"] = "ObjectInteractionManager.lua",
 		["lib/managers/playermanager"] = "PlayerManager.lua",
 		["lib/managers/trademanager"] = "TradeManager.lua",
