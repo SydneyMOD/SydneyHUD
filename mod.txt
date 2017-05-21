@@ -92,7 +92,8 @@
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/units/weapons/weaponlaser"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/utils/temporarypropertymanager"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/tweak_data/charactertweakdata"},
-		{"script_path": "SydneyHUD.lua", "hook_id": "lib/tweak_data/playertweakdata"}
+		{"script_path": "SydneyHUD.lua", "hook_id": "lib/tweak_data/playertweakdata"},
+		{"script_path": "SydneyHUD.lua", "hook_id": "lib/units/civilians/civiliandamage"}
 	],
 	"keybinds": [
 		{

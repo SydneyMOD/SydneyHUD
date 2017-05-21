@@ -1,3 +1,18 @@
+--[[
+   _____           __                 __  ____  ______
+  / ___/__  ______/ /___  ___  __  __/ / / / / / / __ \
+  \__ \/ / / / __  / __ \/ _ \/ / / / /_/ / / / / / / /
+ ___/ / /_/ / /_/ / / / /  __/ /_/ / __  / /_/ / /_/ /
+/____/\__, /\__,_/_/ /_/\___/\__, /_/ /_/\____/_____/
+     /____/                 /____/
+
+01010011011110010110010001101110011001010111100100100000
+01101001011100110010000001100001011011000111011101100001
+01111001011100110010000001100010011001010010000001101101
+01111001001000000111011101101001011001100110010100101110
+]]
+
+
 if not Steam then
 	return
 end
@@ -110,6 +125,7 @@ if not SydneyHUD.setup then
 		["lib/units/beings/player/huskplayermovement"] = "HuskPlayerMovement.lua",
 		["lib/units/beings/player/playerdamage"] = "PlayerDamage.lua",
 		["lib/units/beings/player/playermovement"] = "PlayerMovement.lua",
+		["lib/units/civilians/civiliandamage"] = "CivilianDamage.lua",
 		["lib/units/equipment/ammo_bag/ammobagbase"] = "AmmoBagBase.lua",
 		["lib/units/equipment/bodybags_bag/bodybagsbagbase"] = "BodyBagBase.lua",
 		["lib/units/equipment/doctor_bag/doctorbagbase"] = "DoctorBagBase.lua",

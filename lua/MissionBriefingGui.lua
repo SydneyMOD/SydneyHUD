@@ -24,6 +24,11 @@ function AssetsItem:create_assets(...)
 	})
 
 	self:update_buy_all_btn()
+
+	if SydneyHUD:GetOption("enable_buy_all_assets") then
+		managers.assets:unlock_all_buyable_assets()
+		self:update_buy_all_btn()
+	end
 end
 
 function AssetsItem:unlock_asset_by_id(...)
