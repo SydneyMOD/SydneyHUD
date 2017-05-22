@@ -55,6 +55,7 @@ Join SydneyMOD [url=https://steamcommunity.com/groups/SydneyMOD]Steam Group[/url
 
 [size=medium][b]Get in touch[/b][/size]
 [list]
+[*][url=http://bit.ly/Join-SydneyMOD-Discord]Discord[/url]
 [*][url=https://steamcommunity.com/groups/SydneyMOD]Steam Group[/url]
 [*][url=https://twitter.com/SydneyMOD]Twitter[/url]
 [/list]
@@ -82,6 +83,8 @@ So, Big credit to these guys!
 [*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=13975]Always Show MOD Icons[/url][/b] by Slippy
 [*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=13517]Civilian Marking in Stealth[/url][/b] by EdisLeado
 [*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=15309]Replenished[/url][/b] by FishTaco
+[*][b][url=https://github.com/mluzarow/No-Bag-Bendy-Tilt]No Bag Bendy Tilt[/url][/b] by mluzarow
+[*][b][url=https://github.com/SlashNephy/FAK-Notifier]FAK-Notifier[/url][/b] by SlashNephy
 [*]many of inspired mod
 [/list]
 

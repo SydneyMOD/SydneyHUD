@@ -75,6 +75,8 @@ So, Big credit to these guys!
 * 👦🏻**Civilian Marking in Stealth** by EdisLeado [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13517)
 * ⛑**Replenished** by FishTaco [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15309)
 * ☠**Swan Song Effect** by Simon [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=681)
+* 📦**No Bag Bendy Tilt** by mluzarow [🔗](https://github.com/mluzarow/No-Bag-Bendy-Tilt)
+* 💉**FAK-Notifier** by SlashNephy [🔗](https://github.com/SlashNephy/FAK-Notifier)
 * many of inspired mod
 
 **AND YOU.**

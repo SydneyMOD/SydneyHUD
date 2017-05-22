@@ -65,6 +65,7 @@
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/player_actions/skills/playeractionunseenstrike"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/player_actions/skills/playeractiontriggerhappy"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/units/beings/player/states/playerbleedout"},
+		{"script_path": "SydneyHUD.lua", "hook_id": "lib/units/beings/player/states/playercarry"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/units/beings/player/states/playercivilian"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/units/beings/player/states/playerdriving"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/units/beings/player/states/playermaskoff"},

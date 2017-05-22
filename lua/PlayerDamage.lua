@@ -161,14 +161,30 @@ function PlayerDamage:set_armor(armor, ...)
 	end
 end
 
-function PlayerDamage:_check_bleed_out(...)
+function PlayerDamage:_check_bleed_out(can_activate_berserker, ignore_movement_state)
 	local last_uppers = self._uppers_elapsed or 0
 
-	local result = _check_bleed_out_original(self, ...)
+	if self:get_real_health() == 0 and not self._check_berserker_done then
+		if self._unit:movement():zipline_unit() then
+			return
+		end
+		if not ignore_movement_state and self._unit:movement():current_state():bleed_out_blocked() then
+			return
+		end
+		local time = Application:time()
+		if not self._block_medkit_auto_revive and time > self._uppers_elapsed + self._UPPERS_COOLDOWN then
+			local auto_recovery_kit = FirstAidKitBase.GetFirstAidKit(self._unit:position())
+			if auto_recovery_kit then
+				managers.hud:show_hint( { text = "You survived with First Aid Kit around you!" } )
+			end
+		end
+	end
 
 	if (self._uppers_elapsed or 0) > last_uppers then
 		managers.gameinfo:event("timed_buff", "activate", "uppers_debuff", { duration = self._UPPERS_COOLDOWN })
 	end
+
+	local result = _check_bleed_out_original(self, can_activate_berserker, ignore_movement_state)
 end
 
 

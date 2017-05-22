@@ -118,6 +118,7 @@ if not SydneyHUD.setup then
 		["lib/player_actions/skills/playeractionunseenstrike"] = "PlayerActionUnseenstrike.lua",
 		["lib/player_actions/skills/playeractiontriggerhappy"] = "PlayerActionTriggerhappy.lua",
 		["lib/units/beings/player/states/playerbleedout"] = "PlayerBleedOut.lua",
+		["lib/units/beings/player/states/playercarry"] = "PlayerCarry.lua",
 		["lib/units/beings/player/states/playercivilian"] = "PlayerCivilian.lua",
 		["lib/units/beings/player/states/playerdriving"] = "PlayerDriving.lua",
 		["lib/units/beings/player/states/playermaskoff"] = "PlayerMaskOff.lua",
