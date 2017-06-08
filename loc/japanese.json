@@ -69,7 +69,7 @@
 	"show_minion_count": "ミニオンの表示",
 	"show_minion_count_desc": "現在の味方にした敵の数を表示します。",
 	"show_pager_count": "Pager数の表示",
-	"show_pager_count_desc": "すでに応えたPagerの数を表示します。",
+	"show_pager_count_desc": "既に応えたPagerの数を表示します。",
 	"show_camera_count": "カメラ数の表示",
 	"show_camera_count_desc": "MAP上にある有効なカメラの数を表示します。 LOUDに移行した場合、自動的に無効化されます。 (実験的です。 幾つかの問題があります)",
 	"show_loot": "戦利品の表示",
@@ -239,8 +239,8 @@
 	"sydneyhud_gameplay_tweaks": "ゲームプレイの改良",
 	"sydneyhud_gameplay_tweaks_desc": "ゲームプレイを改良します。",
 
-	"remove_answered_pager_contour": "Pager応答スポットの除去",
-	"remove_answered_pager_contour_desc": "応答したPagerのインタラクトスポットを除去します。",
+	"remove_answered_pager_contour": "Pager応答枠の除去",
+	"remove_answered_pager_contour_desc": "応答したPagerのインタラクト枠を除去します。",
 
 	"anti_stealth_grenades": "Stealth時の投擲武器の抑制",
 	"anti_stealth_grenades_desc": "Stealth時、投擲武器を投げるのを抑制します。 (もう一度押すことで投げることができます。)",
