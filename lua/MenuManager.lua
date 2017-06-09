@@ -13,18 +13,18 @@ end
 	Load our localization keys for our menu, and menu items.
 ]]
 Hooks:Add("LocalizationManagerPostInit", "LocalizationManagerPostInit_sydneyhud", function(loc)
-	for _, filename in pairs(file.GetFiles(SydneyHUD._path .. "loc/")) do
+	for _, filename in pairs(file.GetFiles(SydneyHUD._path .. "lang/")) do
 		local str = filename:match('^(.*).json$')
 		-- if str and Idstring(str) and Idstring(str):key() == SystemInfo:language():key() then
 		local langid = SydneyHUD:GetOption("language")
 		-- log(dev..langid)
 		if str == SydneyHUD._language[langid] then
-			loc:load_localization_file(SydneyHUD._path .. "loc/" .. filename)
+			loc:load_localization_file(SydneyHUD._path .. "lang/" .. filename)
 			log(info.."language: "..filename)
 			break
 		end
 	end
-	loc:load_localization_file(SydneyHUD._path .. "loc/english.json", false)
+	loc:load_localization_file(SydneyHUD._path .. "lang/english.json", false)
 end)
 
 Hooks:Add("MenuManagerBuildCustomMenus", "MenuManagerBuildCustomMenus_sydneyhud", function(menu_manager, nodes)
