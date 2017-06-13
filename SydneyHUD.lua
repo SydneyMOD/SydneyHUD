@@ -67,29 +67,32 @@ if not SydneyHUD.setup then
 		"sydneyhud_options",
 
 		"sydneyhud_gadget_options",
-		"sydneyhud_gadget_options_player",
 		"sydneyhud_gadget_options_others",
+		"sydneyhud_gadget_options_player",
 		"sydneyhud_gadget_options_sniper",
 		"sydneyhud_gadget_options_turret",
 
 		"sydneyhud_hud_lists_options",
+		"sydneyhud_hud_lists_options_buffs",
+		"sydneyhud_hud_lists_options_civilian_color",
+		"sydneyhud_hud_lists_options_enemy_color",
 		"sydneyhud_hud_lists_options_left",
 		"sydneyhud_hud_lists_options_right",
-		"sydneyhud_hud_lists_options_buffs",
-		"sydneyhud_hud_lists_options_enemy_color",
-		"sydneyhud_hud_lists_options_civilian_color",
 
-		"sydneyhud_hps_meter",
-
-		-- not yet
-		"sydneyhud_menu_tweaks",
-		"sydneyhud_hud_tweaks",
-		"sydneyhud_gameplay_tweaks",
+		"sydneyhud_chat_info",
 		"sydneyhud_experimental",
-
-		"kill_counter_options",
+		"sydneyhud_gameplay_tweaks",
+		"sydneyhud_hps_meter",
 		"sydneyhud_interact_tweaks",
-		"sydneyhud_chat_info"
+		"sydneyhud_kill_counter_options",
+		"sydneyhud_menu_tweaks",
+
+		"sydneyhud_hud_tweaks",
+		"sydneyhud_hud_tweaks_assault",
+		"sydneyhud_hud_tweaks_interact",
+		"sydneyhud_hud_tweaks_name",
+		"sydneyhud_hud_tweaks_panel",
+		"sydneyhud_hud_tweaks_waypoint"
 	}
 	SydneyHUD._hook_files = {
 		-- ["lib/setups/menusetup"] = "MenuSetup.lua",  -- Disable this cause use this code without setting to steam advanced option "-skip_intro". So I'll made setting menu. wait for that.

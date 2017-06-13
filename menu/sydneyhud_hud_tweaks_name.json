@@ -1,0 +1,44 @@
+{
+	"menu_id": "sydneyhud_hud_tweaks_name",
+	"parent_menu_id": "sydneyhud_hud_tweaks",
+	"title": "sydneyhud_hud_tweaks_name",
+	"description": "sydneyhud_hud_tweaks_name_desc",
+	"items": [
+		{
+			"type": "toggle",
+			"id": "truncate_name_tags",
+			"title": "truncate_name_tags",
+			"description": "truncate_name_tags_desc",
+			"callback": "callback_truncate_name_tags",
+			"value": "truncate_name_tags",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_client_ranks",
+			"title": "show_client_ranks",
+			"description": "show_client_ranks_desc",
+			"callback": "callback_show_client_ranks",
+			"value": "show_client_ranks",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_own_rank",
+			"title": "show_own_rank",
+			"description": "show_own_rank_desc",
+			"callback": "callback_show_own_rank",
+			"value": "show_own_rank",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "colorize_names",
+			"title": "colorize_names",
+			"description": "colorize_names_desc",
+			"callback": "callback_colorize_names",
+			"value": "colorize_names",
+			"default_value": true
+		}
+	]
+}

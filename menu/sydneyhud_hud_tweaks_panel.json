@@ -1,0 +1,56 @@
+{
+	"menu_id": "sydneyhud_hud_tweaks_panel",
+	"parent_menu_id": "sydneyhud_hud_tweaks",
+	"title": "sydneyhud_hud_tweaks_panel",
+	"description": "sydneyhud_hud_tweaks_panel_desc",
+	"items": [
+		{
+			"type": "slider",
+			"id": "counter_font_size",
+			"title": "counter_font_size",
+			"description": "counter_font_size_desc",
+			"callback": "callback_counter_font_size",
+			"value": "counter_font_size",
+			"max": 24,
+			"min": 14,
+			"step": 1,
+			"default_value": 14
+		},
+		{
+			"type": "toggle",
+			"id": "show_stamina_meter",
+			"title": "show_stamina_meter",
+			"description": "show_stamina_meter_desc",
+			"callback": "callback_show_stamina_meter",
+			"value": "show_stamina_meter",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_armor_timer",
+			"title": "show_armor_timer",
+			"description": "show_armor_timer_desc",
+			"callback": "callback_show_armor_timer",
+			"value": "show_armor_timer",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "show_inspire_timer",
+			"title": "show_inspire_timer",
+			"description": "show_inspire_timer",
+			"callback": "callback_show_inspire_timer",
+			"value": "show_inspire_timer",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "improved_ammo_count",
+			"title": "improved_ammo_count",
+			"description": "improved_ammo_count_desc",
+			"callback": "callback_improved_ammo_count",
+			"value": "improved_ammo_count",
+			"default_value": true
+		}
+	]
+}
