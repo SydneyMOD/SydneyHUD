@@ -1,0 +1,106 @@
+{
+	"menu_id": "sydneyhud_gadget_options_player",
+	"parent_menu_id": "sydneyhud_gadget_options",
+	"title": "sydneyhud_gadget_options_player",
+	"description": "sydneyhud_gadget_options_player_desc",
+	"items": [
+		{
+			"type": "toggle",
+			"id": "enable_laser_options",
+			"title": "enable_laser_options",
+			"description": "enable_laser_options_desc",
+			"callback": "callback_enable_laser_options",
+			"value": "enable_laser_options",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_r",
+			"title": "laser_color_r",
+			"description": "laser_color_r_desc",
+			"callback": "callback_laser_color_r",
+			"value": "laser_color_r",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_g",
+			"title": "laser_color_g",
+			"description": "laser_color_g_desc",
+			"callback": "callback_laser_color_g",
+			"value": "laser_color_g",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_b",
+			"title": "laser_color_b",
+			"description": "laser_color_b_desc",
+			"callback": "callback_laser_color_b",
+			"value": "laser_color_b",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "laser_color_rainbow",
+			"title": "laser_color_rainbow",
+			"description": "laser_color_rainbow_desc",
+			"callback": "callback_laser_color_rainbow",
+			"value": "laser_color_rainbow",
+			"default_value": true
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_a",
+			"title": "laser_color_a",
+			"description": "laser_color_a_desc",
+			"callback": "callback_laser_color_a",
+			"value": "laser_color_a",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0.5
+		},
+		{
+			"type": "slider",
+			"id": "laser_glow",
+			"title": "laser_glow",
+			"description": "laser_glow_desc",
+			"callback": "callback_laser_glow",
+			"value": "laser_glow",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_light",
+			"title": "laser_light",
+			"description": "laser_light_desc",
+			"callback": "callback_laser_light",
+			"value": "laser_light",
+			"max": 10,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 10
+		}
+	]
+}

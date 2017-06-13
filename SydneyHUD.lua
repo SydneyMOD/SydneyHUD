@@ -65,6 +65,13 @@ if not SydneyHUD.setup then
 	SydneyHUD._data = {}
 	SydneyHUD._menus = {
 		"sydneyhud_options",
+
+		"sydneyhud_gadget_options",
+		"sydneyhud_gadget_options_player",
+		"sydneyhud_gadget_options_others",
+		"sydneyhud_gadget_options_sniper",
+		"sydneyhud_gadget_options_turret",
+
 		"sydneyhud_menu_tweaks",
 		"sydneyhud_hud_tweaks",
 		"sydneyhud_gameplay_tweaks",
@@ -73,7 +80,6 @@ if not SydneyHUD.setup then
 		"kill_counter_options",
 		"hps_meter",
 		"sydneyhud_interact_tweaks",
-		"gadget_options",
 		"sydneyhud_chat_info"
 	}
 	SydneyHUD._hook_files = {

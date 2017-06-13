@@ -113,8 +113,8 @@
 	"show_ai_kills": "Affiche les kills des bots",
 	"show_ai_kills_desc": "Le compteur de kills Affiche les kills des bots",
 
-	"gadget_options": "Options des gadgets",
-	"gadget_options_desc": "Options des gadgets",
+	"sydneyhud_gadget_options": "Options des gadgets",
+	"sydneyhud_gadget_options_desc": "Options des gadgets",
 
 	"enable_flashlight_extender": "Active l'agrandisseur de rayon de la lampe",
 	"enable_flashlight_extender_desc": "Active l'agrandisseur de rayon de la lampe",

@@ -110,8 +110,8 @@
 	"show_ai_kills": "AIキル数の表示",
 	"show_ai_kills_desc": "キルカウンターにAIキル数を表示します。",
 
-	"gadget_options": "Gadgetオプション",
-	"gadget_options_desc": "Gadgetオプション",
+	"sydneyhud_gadget_options": "Gadgetオプション",
+	"sydneyhud_gadget_options_desc": "Gadgetオプション",
 
 	"enable_flashlight_extender": "フラッシュライト拡張の有効化",
 	"enable_flashlight_extender_desc": "フラッシュライト拡張を有効化します。",

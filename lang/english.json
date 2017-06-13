@@ -113,8 +113,20 @@
 	"show_ai_kills": "Show AI kills",
 	"show_ai_kills_desc": "Kill counter shows AI kills",
 
-	"gadget_options": "Gadget options",
-	"gadget_options_desc": "Gadget options",
+	"sydneyhud_gadget_options": "Gadget options",
+	"sydneyhud_gadget_options_desc": "Gadget options",
+
+	"sydneyhud_gadget_options_player": "Player laser options",
+	"sydneyhud_gadget_options_player_desc": "Player laser options",
+
+	"sydneyhud_gadget_options_others": "Others laser options",
+	"sydneyhud_gadget_options_others_desc": "Others laser options",
+
+	"sydneyhud_gadget_options_sniper": "Sniper laser options",
+	"sydneyhud_gadget_options_snipers": "Sniper laser options",
+
+	"sydneyhud_gadget_options_turret": "Turret laser options",
+	"sydneyhud_gadget_options_turret_desc": "Turret laser options",
 
 	"enable_flashlight_extender": "Enable flashlight extender",
 	"enable_flashlight_extender_desc": "Enables the flashlight extender",

@@ -1,0 +1,58 @@
+{
+	"menu_id": "sydneyhud_gadget_options",
+	"parent_menu_id": "sydneyhud_options",
+	"title": "sydneyhud_gadget_options",
+	"description": "sydneyhud_gadget_options_desc",
+	"items": [
+		{
+		    "type": "toggle",
+			"id": "enable_flashlight_extender",
+			"title": "enable_flashlight_extender",
+			"description": "enable_flashlight_extender_desc",
+			"callback": "callback_enable_flashlight_extender",
+			"value": "enable_flashlight_extender",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "slider",
+			"id": "flashlight_range",
+			"title": "flashlight_range",
+			"description": "flashlight_range_desc",
+			"callback": "callback_flashlight_range",
+			"value": "flashlight_range",
+			"max": 20000,
+			"min": 0,
+			"step": 1000,
+			"default_value": 1000
+		},
+		{
+			"type": "slider",
+			"id": "flashlight_angle",
+			"title": "flashlight_angle",
+			"description": "flashlight_angle_desc",
+			"callback": "callback_flashlight_angle",
+			"value": "flashlight_angle",
+			"max": 160,
+			"min": 0,
+			"step": 1,
+			"default_value": 60
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "toggle",
+			"id": "auto_laser",
+			"title": "auto_laser",
+			"description": "auto_laser_desc",
+			"callback": "callback_auto_laser",
+			"value": "auto_laser",
+			"default_value": true
+		}
+	]
+}
