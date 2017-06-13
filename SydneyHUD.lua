@@ -79,6 +79,8 @@ if not SydneyHUD.setup then
 		"sydneyhud_hud_lists_options_enemy_color",
 		"sydneyhud_hud_lists_options_civilian_color",
 
+		"sydneyhud_hps_meter",
+
 		-- not yet
 		"sydneyhud_menu_tweaks",
 		"sydneyhud_hud_tweaks",
@@ -86,7 +88,6 @@ if not SydneyHUD.setup then
 		"sydneyhud_experimental",
 
 		"kill_counter_options",
-		"hps_meter",
 		"sydneyhud_interact_tweaks",
 		"sydneyhud_chat_info"
 	}
