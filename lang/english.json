@@ -339,8 +339,6 @@
 	"sydneyhud_hps_meter": "HPS meter",
 	"sydneyhud_hps_meter_desc": "Heal per second meter options",
 	"sydneyhud_hud_lists_options": "HUD lists",
-	"sydneyhud_hud_lists_options_buffs": "Buff lists",
-	"sydneyhud_hud_lists_options_buffs_desc": "Configure buff lists contents",
 	"sydneyhud_hud_lists_options_civilian_color": "Civilian Color",
 	"sydneyhud_hud_lists_options_civilian_color_desc": "Configure civilian color",
 	"sydneyhud_hud_lists_options_desc": "Configure lists for timers, drills, ECM's, pagers, bags, hostages, enemies, buffs etc.",
