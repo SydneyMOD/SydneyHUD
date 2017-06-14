@@ -1,0 +1,310 @@
+{
+	"menu_id": "sydneyhud_gadget_options_turret",
+	"parent_menu_id": "sydneyhud_gadget_options",
+	"title": "sydneyhud_gadget_options_turret",
+	"description": "sydneyhud_gadget_options_turret_desc",
+	"items": [
+		{
+			"type": "toggle",
+			"id": "enable_laser_options_turret",
+			"title": "enable_laser_options_turret",
+			"description": "enable_laser_options_turret_desc",
+			"callback": "callback_enable_laser_options_turret",
+			"value": "enable_laser_options_turret",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_r_turret",
+			"title": "laser_color_r_turret",
+			"description": "laser_color_r_turret_desc",
+			"callback": "callback_laser_color_r_turret",
+			"value": "laser_color_r_turret",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_g_turret",
+			"title": "laser_color_g_turret",
+			"description": "laser_color_g_turret_desc",
+			"callback": "callback_laser_color_g_turret",
+			"value": "laser_color_g_turret",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_b_turret",
+			"title": "laser_color_b_turret",
+			"description": "laser_color_b_turret_desc",
+			"callback": "callback_laser_color_b_turret",
+			"value": "laser_color_b_turret",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "laser_color_rainbow_turret",
+			"title": "laser_color_rainbow_turret",
+			"description": "laser_color_rainbow_turret_desc",
+			"callback": "callback_laser_color_rainbow_turret",
+			"value": "laser_color_rainbow_turret",
+			"default_value": true
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_a_turret",
+			"title": "laser_color_a_turret",
+			"description": "laser_color_a_turret_desc",
+			"callback": "callback_laser_color_a_turret",
+			"value": "laser_color_a_turret",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0.5
+		},
+		{
+			"type": "slider",
+			"id": "laser_glow_turret",
+			"title": "laser_glow_turret",
+			"description": "laser_glow_turret_desc",
+			"callback": "callback_laser_glow_turret",
+			"value": "laser_glow_turret",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_light_turret",
+			"title": "laser_light_turret",
+			"description": "laser_light_turret_desc",
+			"callback": "callback_laser_light_turret",
+			"value": "laser_light_turret",
+			"max": 10,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 10
+		},
+		{
+			"type": "divider",
+			"size": 64
+		},
+		{
+			"type": "toggle",
+			"id": "enable_laser_options_turretr",
+			"title": "enable_laser_options_turretr",
+			"description": "enable_laser_options_turretr_desc",
+			"callback": "callback_enable_laser_options_turretr",
+			"value": "enable_laser_options_turretr",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_r_turretr",
+			"title": "laser_color_r_turretr",
+			"description": "laser_color_r_turretr_desc",
+			"callback": "callback_laser_color_r_turretr",
+			"value": "laser_color_r_turretr",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_g_turretr",
+			"title": "laser_color_g_turretr",
+			"description": "laser_color_g_turretr_desc",
+			"callback": "callback_laser_color_g_turretr",
+			"value": "laser_color_g_turretr",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_b_turretr",
+			"title": "laser_color_b_turretr",
+			"description": "laser_color_b_turretr_desc",
+			"callback": "callback_laser_color_b_turretr",
+			"value": "laser_color_b_turretr",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "laser_color_rainbow_turretr",
+			"title": "laser_color_rainbow_turretr",
+			"description": "laser_color_rainbow_turretr_desc",
+			"callback": "callback_laser_color_rainbow_turretr",
+			"value": "laser_color_rainbow_turretr",
+			"default_value": true
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_a_turretr",
+			"title": "laser_color_a_turretr",
+			"description": "laser_color_a_turretr_desc",
+			"callback": "callback_laser_color_a_turretr",
+			"value": "laser_color_a_turretr",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0.5
+		},
+		{
+			"type": "slider",
+			"id": "laser_glow_turretr",
+			"title": "laser_glow_turretr",
+			"description": "laser_glow_turretr_desc",
+			"callback": "callback_laser_glow_turretr",
+			"value": "laser_glow_turretr",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_light_turretr",
+			"title": "laser_light_turretr",
+			"description": "laser_light_turretr_desc",
+			"callback": "callback_laser_light_turretr",
+			"value": "laser_light_turretr",
+			"max": 10,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 10
+		},
+		{
+			"type": "divider",
+			"size": 64
+		},
+		{
+			"type": "toggle",
+			"id": "enable_laser_options_turretm",
+			"title": "enable_laser_options_turretm",
+			"description": "enable_laser_options_turretm_desc",
+			"callback": "callback_enable_laser_options_turretm",
+			"value": "enable_laser_options_turretm",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_r_turretm",
+			"title": "laser_color_r_turretm",
+			"description": "laser_color_r_turretm_desc",
+			"callback": "callback_laser_color_r_turretm",
+			"value": "laser_color_r_turretm",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_g_turretm",
+			"title": "laser_color_g_turretm",
+			"description": "laser_color_g_turretm_desc",
+			"callback": "callback_laser_color_g_turretm",
+			"value": "laser_color_g_turretm",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_b_turretm",
+			"title": "laser_color_b_turretm",
+			"description": "laser_color_b_turretm_desc",
+			"callback": "callback_laser_color_b_turretm",
+			"value": "laser_color_b_turretm",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "laser_color_rainbow_turretm",
+			"title": "laser_color_rainbow_turretm",
+			"description": "laser_color_rainbow_turretm_desc",
+			"callback": "callback_laser_color_rainbow_turretm",
+			"value": "laser_color_rainbow_turretm",
+			"default_value": true
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_a_turretm",
+			"title": "laser_color_a_turretm",
+			"description": "laser_color_a_turretm_desc",
+			"callback": "callback_laser_color_a_turretm",
+			"value": "laser_color_a_turretm",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0.5
+		},
+		{
+			"type": "slider",
+			"id": "laser_glow_turretm",
+			"title": "laser_glow_turretm",
+			"description": "laser_glow_turretm_desc",
+			"callback": "callback_laser_glow_turretm",
+			"value": "laser_glow_turretm",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_light_turretm",
+			"title": "laser_light_turretm",
+			"description": "laser_light_turretm_desc",
+			"callback": "callback_laser_light_turretm",
+			"value": "laser_light_turretm",
+			"max": 10,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 10
+		}
+	]
+}

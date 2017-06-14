@@ -1,0 +1,44 @@
+{
+	"menu_id": "sydneyhud_hud_lists_options_enemy_color",
+	"parent_menu_id": "sydneyhud_hud_lists_options",
+	"title": "sydneyhud_hud_lists_options_enemy_color",
+	"description": "sydneyhud_hud_lists_options_enemy_color_desc",
+	"items": [
+		{
+			"type": "slider",
+			"id": "enemy_color_r",
+			"title": "enemy_color_r",
+			"description": "enemy_color_r_desc",
+			"callback": "callback_enemy_color_r",
+			"value": "enemy_color_r",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "enemy_color_g",
+			"title": "enemy_color_g",
+			"description": "enemy_color_g_desc",
+			"callback": "callback_enemy_color_g",
+			"value": "enemy_color_g",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "enemy_color_b",
+			"title": "enemy_color_b",
+			"description": "enemy_color_b_desc",
+			"callback": "callback_enemy_color_b",
+			"value": "enemy_color_b",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		}
+	]
+}

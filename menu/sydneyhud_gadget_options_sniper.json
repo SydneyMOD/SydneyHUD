@@ -1,0 +1,106 @@
+{
+	"menu_id": "sydneyhud_gadget_options_sniper",
+	"parent_menu_id": "sydneyhud_gadget_options",
+	"title": "sydneyhud_gadget_options_sniper",
+	"description": "sydneyhud_gadget_options_sniper_desc",
+	"items": [
+		{
+			"type": "toggle",
+			"id": "enable_laser_options_snipers",
+			"title": "enable_laser_options_snipers",
+			"description": "enable_laser_options_snipers_desc",
+			"callback": "callback_enable_laser_options_snipers",
+			"value": "enable_laser_options_snipers",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_r_snipers",
+			"title": "laser_color_r_snipers",
+			"description": "laser_color_r_snipers_desc",
+			"callback": "callback_laser_color_r_snipers",
+			"value": "laser_color_r_snipers",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_g_snipers",
+			"title": "laser_color_g_snipers",
+			"description": "laser_color_g_snipers_desc",
+			"callback": "callback_laser_color_g_snipers",
+			"value": "laser_color_g_snipers",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_b_snipers",
+			"title": "laser_color_b_snipers",
+			"description": "laser_color_b_snipers_desc",
+			"callback": "callback_laser_color_b_snipers",
+			"value": "laser_color_b_snipers",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "laser_color_rainbow_snipers",
+			"title": "laser_color_rainbow_snipers",
+			"description": "laser_color_rainbow_snipers_desc",
+			"callback": "callback_laser_color_rainbow_snipers",
+			"value": "laser_color_rainbow_snipers",
+			"default_value": true
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_a_snipers",
+			"title": "laser_color_a_snipers",
+			"description": "laser_color_a_snipers_desc",
+			"callback": "callback_laser_color_a_snipers",
+			"value": "laser_color_a_snipers",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0.5
+		},
+		{
+			"type": "slider",
+			"id": "laser_glow_snipers",
+			"title": "laser_glow_snipers",
+			"description": "laser_glow_snipers_desc",
+			"callback": "callback_laser_glow_snipers",
+			"value": "laser_glow_snipers",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_light_snipers",
+			"title": "laser_light_snipers",
+			"description": "laser_light_snipers_desc",
+			"callback": "callback_laser_light_snipers",
+			"value": "laser_light_snipers",
+			"max": 10,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 10
+		}
+	]
+}

@@ -1,0 +1,106 @@
+{
+	"menu_id": "sydneyhud_gadget_options_others",
+	"parent_menu_id": "sydneyhud_gadget_options",
+	"title": "sydneyhud_gadget_options_others",
+	"description": "sydneyhud_gadget_options_others_desc",
+	"items": [
+		{
+			"type": "toggle",
+			"id": "enable_laser_options_others",
+			"title": "enable_laser_options_others",
+			"description": "enable_laser_options_others_desc",
+			"callback": "callback_enable_laser_options_others",
+			"value": "enable_laser_options_others",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_r_others",
+			"title": "laser_color_r_others",
+			"description": "laser_color_r_others_desc",
+			"callback": "callback_laser_color_r_others",
+			"value": "laser_color_r_others",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_g_others",
+			"title": "laser_color_g_others",
+			"description": "laser_color_g_others_desc",
+			"callback": "callback_laser_color_g_others",
+			"value": "laser_color_g_others",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_b_others",
+			"title": "laser_color_b_others",
+			"description": "laser_color_b_others_desc",
+			"callback": "callback_laser_color_b_others",
+			"value": "laser_color_b_others",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "laser_color_rainbow_others",
+			"title": "laser_color_rainbow_others",
+			"description": "laser_color_rainbow_others_desc",
+			"callback": "callback_laser_color_rainbow_others",
+			"value": "laser_color_rainbow_others",
+			"default_value": true
+		},
+		{
+			"type": "slider",
+			"id": "laser_color_a_others",
+			"title": "laser_color_a_others",
+			"description": "laser_color_a_others_desc",
+			"callback": "callback_laser_color_a_others",
+			"value": "laser_color_a_others",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0.5
+		},
+		{
+			"type": "slider",
+			"id": "laser_glow_others",
+			"title": "laser_glow_others",
+			"description": "laser_glow_others_desc",
+			"callback": "callback_laser_glow_others",
+			"value": "laser_glow_others",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		},
+		{
+			"type": "slider",
+			"id": "laser_light_others",
+			"title": "laser_light_others",
+			"description": "laser_light_others_desc",
+			"callback": "callback_laser_light_others",
+			"value": "laser_light_others",
+			"max": 10,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 10
+		}
+	]
+}

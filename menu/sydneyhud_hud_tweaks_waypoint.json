@@ -1,0 +1,44 @@
+{
+	"menu_id": "sydneyhud_hud_tweaks_waypoint",
+	"parent_menu_id": "sydneyhud_hud_tweaks",
+	"title": "sydneyhud_hud_tweaks_waypoint",
+	"description": "sydneyhud_hud_tweaks_waypoint_desc",
+	"items": [
+		{
+			"type": "slider",
+			"id": "waypoint_color_r",
+			"title": "waypoint_color_r",
+			"description": "waypoint_color_r_desc",
+			"callback": "callback_waypoint_color_r",
+			"value": "waypoint_color_r",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0
+		},
+		{
+			"type": "slider",
+			"id": "waypoint_color_g",
+			"title": "waypoint_color_g",
+			"description": "waypoint_color_g_desc",
+			"callback": "callback_waypoint_color_g",
+			"value": "waypoint_color_g",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 0.5
+		},
+		{
+			"type": "slider",
+			"id": "waypoint_color_b",
+			"title": "waypoint_color_b",
+			"description": "waypoint_color_b_desc",
+			"callback": "callback_waypoint_color_b",
+			"value": "waypoint_color_b",
+			"max": 1,
+			"min": 0,
+			"step": 0.01,
+			"default_value": 1
+		}
+	]
+}

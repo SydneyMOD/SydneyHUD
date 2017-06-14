@@ -88,3 +88,16 @@ function HUDInteraction:destroy()
 	self._hud_panel:remove(self._hud_panel:child("bgtext4"))
 	destroy_original(self)
 end
+
+function HUDInteraction:set_locked(status)
+	if status then
+		if self._interact_circle_locked then
+			self._interact_circle_locked._circle:set_color(status and Color.green or Color.red)
+			self._interact_circle_locked._circle:set_alpha(0.25)
+		end
+
+		if SydneyHUD:GetOption("equipment_interrupt") then
+			self._hud_panel:child(self._child_name_text):set_text(managers.localization:to_upper_text("Press [G] to release"))
+		end
+	end
+end
