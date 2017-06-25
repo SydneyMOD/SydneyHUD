@@ -50,15 +50,6 @@
 			"size": 16
 		},
 		{
-			"type": "toggle",
-			"id": "enable_buy_all_assets",
-			"title": "enable_buy_all_assets",
-			"description": "enable_buy_all_assets_desc",
-			"callback": "callback_enable_buy_all_assets",
-			"value": "enable_buy_all_assets",
-			"default_value": true
-		},
-		{
 			"type": "divider",
 			"size": 16
 		},
