@@ -729,11 +729,6 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD:Save()
 	end
 
-	MenuCallbackHandler.callback_clean_flashbang = function(self, item)
-		SydneyHUD._data.clean_flashbang = (item:value() == "on")
-		SydneyHUD:Save()
-	end
-
 	MenuCallbackHandler.callback_new_icon = function(self, item)
 		SydneyHUD._data.new_icon = (item:value() == "on")
 		SydneyHUD:Save()

@@ -33,8 +33,6 @@
 	"civilian_spot_desc": "ステルス中に民間人をスポット出来るようにします。",
 	"civilian_spot_voice": "民間人スポットボイス",
 	"civilian_spot_voice_desc": "民間人をスポットした際にガードをスポットした際の音声を再生します。",
-	"clean_flashbang": "フラッシュバンの除去",
-	"clean_flashbang_desc": "フラッシュバンで視界が白くならないようにします。",
 	"colorize_names": "Colorize names",
 	"colorize_names_desc": "Colorize player names",
 	"counter_font_size": "カウンターフォントサイズ",

@@ -96,8 +96,6 @@ if not SydneyHUD.setup then
 		"sydneyhud_hud_tweaks_waypoint"
 	}
 	SydneyHUD._hook_files = {
-		-- ["lib/setups/menusetup"] = "MenuSetup.lua",  -- Disable this cause use this code without setting to steam advanced option "-skip_intro". So I'll made setting menu. wait for that.
-		["core/lib/managers/coreenvironmentcontrollermanager"] = "CoreEnvironmentControllerManager.lua",
 		["lib/managers/chatmanager"] = "ChatManager.lua",
 		["lib/managers/enemymanager"] = "EnemyManager.lua",
 		["lib/managers/group_ai_states/groupaistatebase"] = "GroupAIStateBase.lua",
@@ -279,7 +277,7 @@ if not SydneyHUD.setup then
 			if io.file_is_readable(fileName) then
 				dofile(fileName)
 			else
-				log(error .. "Could not open file '" .. fileName .. "'! Does it exist, is it readable?")
+				log(error .. "Could not open file '" .. fileName .. "'!")
 			end
 		end)
 		if not success then

@@ -33,8 +33,6 @@
 	"civilian_spot_desc": "Permet de marquer les civils en mode furtif",
 	"civilian_spot_voice": "Indicateur sonore",
 	"civilian_spot_voice_desc": "Quand vous repérez un civil, Parle et montre comme si vous étiez en train de repérer un guarde",
-	"clean_flashbang": "Anti-Flashbang",
-	"clean_flashbang_desc": "Quand vous recevez un flashbang, Vous ne vous feriez plus flasher comme auparavant",
 	"colorize_names": "Colorier les noms",
 	"colorize_names_desc": "Colorie les noms des joueurs",
 	"counter_font_size": "Taille de la police d'écriture du compteur",

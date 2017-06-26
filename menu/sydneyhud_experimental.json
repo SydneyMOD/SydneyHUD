@@ -31,16 +31,5 @@
 			"value": "new_icon",
 			"default_value": false
 		}
-		/*
-		{
-			"type": "toggle",
-			"id": "clean_flashbang",
-			"title": "clean_flashbang",
-			"description": "clean_flashbang_desc",
-			"callback": "callback_clean_flashbang",
-			"value": "clean_flashbang",
-			"default_value": false
-		}
-		*/
 	]
 }

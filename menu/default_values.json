@@ -15,7 +15,6 @@
 	"civilian_color_r": 1,
 	"civilian_spot": false,
 	"civilian_spot_voice": false,
-	"clean_flashbang": false,
 	"colorize_names": true,
 	"counter_font_size": 14,
 	"critical_down_warning_chat_info": true,

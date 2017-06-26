@@ -17,7 +17,7 @@
 			"identifier": "SydneyHUD"
 		},
 		{
-			"revision": "revision.txt",
+			"revision": "./assets/mod_overrides/SydneyHUD-Assets/revision.txt",
 			"identifier": "SydneyHUDAssets",
 			"install_dir": "assets/mod_overrides/",
 			"install_folder": "SydneyHUD-Assets",
@@ -25,9 +25,6 @@
 		}
 	],
 	"hooks": [
-		{"script_path": "script/DamagePopup.lua", "hook_id": "lib/units/enemies/cop/copdamage"},
-		{"script_path": "script/DamagePopup.lua", "hook_id": "lib/units/civilians/civiliandamage"},
-		{"script_path": "SydneyHUD.lua", "hook_id": "core/lib/managers/coreenvironmentcontrollermanager"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/chatmanager"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/enemymanager"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/group_ai_states/groupaistatebase"},

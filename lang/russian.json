@@ -33,8 +33,6 @@
 	"civilian_spot_desc": "Вы можете помечать гражданских пока вы в стелсе",
 	"civilian_spot_voice": "Civilian spot voice",
 	"civilian_spot_voice_desc": "When you have spotted a civilian, say and motion as if spotting a guard",
-	"clean_flashbang": "Clean flashbang",
-	"clean_flashbang_desc": "When you get flashbanged, it will not flash your view anymore",
 	"colorize_names": "Раскраска имен",
 	"colorize_names_desc": "Раскрасить имена игроков",
 	"counter_font_size": "Размер шрифта",
