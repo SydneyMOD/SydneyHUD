@@ -13,7 +13,8 @@
 			"items": [
 				"language_english",
 				"language_japanese",
-				"language_french"
+				"language_french",
+				"language_russian"
 			],
 			"value": "language",
 			"default_value": 1
