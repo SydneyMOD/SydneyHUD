@@ -369,6 +369,8 @@
 	"sydneyhud_hud_tweaks_panel_desc": "Configure le panneau d'information",
 	"sydneyhud_hud_tweaks_waypoint": "Couleur du repère",
 	"sydneyhud_hud_tweaks_waypoint_desc": "Configure la couleur du repère",
+	"sydneyhud_int_locked_pager": "Press $BTN_CANCEL to release the pager (triggers alarm)",
+	"sydneyhud_int_locked": "Press $BTN_CANCEL to cancel interaction",
 	"sydneyhud_kill_counter_options": "Compteur de Kills",
 	"sydneyhud_kill_counter_options_desc": "Configure le compteur de kills",
 	"sydneyhud_language": "Langue",

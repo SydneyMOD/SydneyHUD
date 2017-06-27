@@ -369,6 +369,8 @@
 	"sydneyhud_hud_tweaks_panel_desc": "情報パネルの設定を変更します。",
 	"sydneyhud_hud_tweaks_waypoint": "Waypointカラーの設定",
 	"sydneyhud_hud_tweaks_waypoint_desc": "Waypointカラーの設定を変更します。",
+	"sydneyhud_int_locked_pager": "Press $BTN_CANCEL to release the pager (triggers alarm)",
+	"sydneyhud_int_locked": "Press $BTN_CANCEL to cancel interaction",
 	"sydneyhud_kill_counter_options": "キルカウンター",
 	"sydneyhud_kill_counter_options_desc": "キルカウンターの設定を変更します。",
 	"sydneyhud_language": "言語",

@@ -35,6 +35,8 @@ local hide_point_of_no_return_timer_original = HUDManager.hide_point_of_no_retur
 local set_player_condition_original = HUDManager.set_player_condition
 local set_slot_outfit_original = HUDManager.set_slot_outfit
 local add_teammate_panel_original = HUDManager.add_teammate_panel
+local show_interact_original = HUDManager.show_interact
+local remove_interact_original = HUDManager.remove_interact
 local custom_radial_original = HUDManager.set_teammate_custom_radial
 
 function HUDManager:init(...)
@@ -268,6 +270,28 @@ end
 
 function HUDManager:reset_kill_count(teammate_panel_id)
 	self._teammate_panels[teammate_panel_id]:reset_kill_count()
+end
+
+function HUDManager:press_substitute(text, new)
+	return text:gsub("Hold", new)
+end
+
+function HUDManager.show_interact(self, data)
+	if self._interact_visible and not data.force then
+		return
+	end
+
+	if SydneyHUD:GetOption("push_to_interact") then
+		data.text = HUDManager:press_substitute(data.text, "Press")
+	end
+
+	self._interact_visible = true
+	return show_interact_original(self, data)
+end
+
+function HUDManager.remove_interact(self)
+	self._interact_visible = nil
+	return remove_interact_original(self)
 end
 
 function HUDManager:_setup_player_info_hud_pd2(...)
