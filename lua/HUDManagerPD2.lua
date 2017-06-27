@@ -131,6 +131,31 @@ function HUDManager:hide_point_of_no_return_timer(...)
 end
 
 function HUDManager:feed_heist_time(t, ...)
+	if SydneyHUD:GetOption("enable_corpse_remover_plus") then
+		if t - SydneyHUD._last_removed_time >= SydneyHUD:GetOption("remove_interval") then
+
+			if SydneyHUD:GetOption("remove_shield") then
+				if managers.enemy then
+					local enemy_data = managers.enemy._enemy_data
+					local corpses = enemy_data.corpses
+					for u_key, u_data in pairs(corpses) do
+						if u_data.unit:inventory() ~= nil then
+							u_data.unit:inventory():destroy_all_items()
+						end
+					end
+				end
+			end
+
+			if SydneyHUD:GetOption("remove_body") then
+				if managers.enemy and not managers.groupai:state():whisper_mode() then
+					managers.enemy:dispose_all_corpses()
+				end
+			end
+
+			SydneyHUD._last_removed_time = t
+		end
+	end
+
 	if self._hud_assault_corner then
 		self._hud_assault_corner:feed_heist_time(t)
 	end

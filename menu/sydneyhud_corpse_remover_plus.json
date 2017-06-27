@@ -1,0 +1,55 @@
+{
+	"menu_id": "sydneyhud_corpse_remover_plus",
+	"parent_menu_id": "sydneyhud_options",
+	"title": "sydneyhud_corpse_remover_plus",
+	"description": "sydneyhud_corpse_remover_plus_desc",
+	"items": [
+		{
+			"type": "toggle",
+			"id": "enable_corpse_remover_plus",
+			"title": "enable_corpse_remover_plus",
+			"description": "enable_corpse_remover_plus_desc",
+			"callback": "callback_enable_corpse_remover_plus",
+			"value": "enable_corpse_remover_plus",
+			"default_value": false
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "remove_shield",
+			"title": "remove_shield",
+			"description": "remove_shield_desc",
+			"callback": "callback_remove_shield",
+			"value": "remove_shield",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "remove_body",
+			"title": "remove_body",
+			"description": "remove_body_desc",
+			"callback": "callback_remove_body",
+			"value": "remove_body",
+			"default_value": true
+		},
+		{
+			"type": "divider",
+			"size": 32
+		},
+		{
+			"type": "slider",
+			"id": "remove_interval",
+			"title": "remove_interval",
+			"description": "remove_interval_desc",
+			"callback": "callback_remove_interval",
+			"value": "remove_interval",
+			"max": 60,
+			"min": 0,
+			"step": 1,
+			"default_value": 30
+		}
+	]
+}

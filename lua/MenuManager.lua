@@ -706,6 +706,24 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD:Save()
 	end
 
+	-- Corpse Remover Plus
+	MenuCallbackHandler.callback_enable_corpse_remover_plus = function(self, item)
+		SydneyHUD._data.enable_corpse_remover_plus = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_remove_shield = function(self, item)
+		SydneyHUD._data.remove_shield = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_remove_body = function(self, item)
+		SydneyHUD._data.remove_body = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_remove_interval = function(self, item)
+		SydneyHUD._data.remove_interval = item:value()
+		SydneyHUD:Save()
+	end
+
 	-- EXPERIMENTAL
 	MenuCallbackHandler.callback_waypoint_color_r = function(self, item)
 		SydneyHUD._data.waypoint_color_r = item:value()

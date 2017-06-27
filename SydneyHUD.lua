@@ -47,6 +47,7 @@ if not SydneyHUD.setup then
 	SydneyHUD._pre_wave = 0
 
 	SydneyHUD._heist_time = "00:00"
+	SydneyHUD._last_removed_time = 0
 
 	SydneyHUD._down_count = {}
 
