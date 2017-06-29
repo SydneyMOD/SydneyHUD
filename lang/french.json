@@ -223,6 +223,8 @@
 	"new_icon_desc": "Utilise les nouvelles icônes crées pour SydneyHUD",
 	"push_to_interact": "Appuyer pour interagir",
 	"push_to_interact_desc": "Plus besoin de maintenir la touche d'interraction [F]",
+	"push_to_interact_delay": "push to interact delay",
+	"push_to_interact_delay_desc": "desc",
 	"remove_ads": "Anti publicité",
 	"remove_ads_desc": "Enlève les annonces et le publicités du menu principal",
 	"remove_answered_pager_contour": "Enlève le contour des bipeurs répondus",

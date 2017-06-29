@@ -223,6 +223,8 @@
 	"new_icon_desc": "SydneyHUDのために作られた新しいアイコンを使用します。",
 	"push_to_interact": "Push to interact",
 	"push_to_interact_desc": "インタラクトキー([F]キー)を長押ししなくてもインタラクトできるようにします。",
+	"push_to_interact_delay": "push to interact delay",
+	"push_to_interact_delay_desc": "desc",
 	"remove_ads": "広告の削除",
 	"remove_ads_desc": "メインメニューからお知らせや広告を削除します。",
 	"remove_answered_pager_contour": "Pager応答枠の除去",
