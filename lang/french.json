@@ -253,6 +253,8 @@
 	"show_civilians_desc": "Civils non attachés en jeu",
 	"show_client_ranks": "Affiche les rangs des joueurs",
 	"show_client_ranks_desc": "Affiche les rangs des coéquipiers devant leurs noms",
+	"show_damage_popup": "Damage popup",
+	"show_damage_popup_desc": "Show damage popup",
 	"show_ecm_retrigger": "Affiche les secondes restantes des ECMs",
 	"show_ecm_retrigger_desc": "Décompte pour le délai de fonctionement de ton propre CME",
 	"show_ecms": "Affiche les CMEs",
