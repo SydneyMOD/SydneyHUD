@@ -526,6 +526,11 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD._data.health_bar_color = item:value()
 		SydneyHUD:Save()
 	end
+	
+	MenuCallbackHandler.callback_show_damage_popup = function(self, item)
+		SydneyHUD._data.show_damage_popup = (item:value() == "on")
+		SydneyHUD:Save()
+	end
 
 	MenuCallbackHandler.callback_remove_ads = function(self, item)
 		SydneyHUD._data.remove_ads = (item:value() == "on")

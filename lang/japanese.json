@@ -253,6 +253,8 @@
 	"show_civilians_desc": "現在スポーンしている、縛られていない民間人の数を表示します。",
 	"show_client_ranks": "プレイヤーランクの表示",
 	"show_client_ranks_desc": "名前の中二チームメイトのランクを表示します。",
+	"show_damage_popup": "Damage popup",
+	"show_damage_popup_desc": "Show damage popup",
 	"show_ecm_retrigger": "ECM Retriggerの表示",
 	"show_ecm_retrigger_desc": "自身のECMのフィードバックが再度使用可能になるまでのクールタイムを表示します。",
 	"show_ecms": "ECMの表示",

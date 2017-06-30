@@ -253,6 +253,8 @@
 	"show_civilians_desc": "Заспавненные, не связанные гражданские",
 	"show_client_ranks": "Показывать ранг игрока",
 	"show_client_ranks_desc": "Показывть ранг тиммейтов перед ником",
+	"show_damage_popup": "Damage popup",
+	"show_damage_popup_desc": "Show damage popup",
 	"show_ecm_retrigger": "Показывать продление ECM",
 	"show_ecm_retrigger_desc": "Обратный отсчет до перезапуска ECM",
 	"show_ecms": "Показывать ECM",
