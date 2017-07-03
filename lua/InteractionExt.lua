@@ -21,7 +21,7 @@ function SecurityCameraInteractionExt:set_active(active, ...)
 end
 
 function BaseInteractionExt.interact_start(self, player, data)
-	if SydneyHUD:GetOption("push_to_interact_delay") <= self:_get_timer() and SydneyHUD:GetOption("push_to_interact") and self:can_interact(managers.player:player_unit()) then
+	if SydneyHUD:GetOption("push_to_interact_delay") <= self:_get_timer() and SydneyHUD:GetOption("push_to_interact") and self:can_interact(managers.player:player_unit()) then -- crash when immidiately picking/opening/closing 
 		local btn_cancel = SydneyHUD:GetOption("equipment_interrupt") and (managers.localization:btn_macro("use_item", true) or managers.localization:get_default_macro("BTN_USE_ITEM")) or (managers.localization:btn_macro("interact", true) or managers.localization:get_default_macro("BTN_INTERACT"))
 		managers.hud:show_interact({
 			text = managers.localization:text(self.tweak_data == "corpse_alarm_pager" and "sydneyhud_int_locked_pager" or "sydneyhud_int_locked", {BTN_CANCEL = btn_cancel}),
