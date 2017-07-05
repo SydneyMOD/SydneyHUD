@@ -36,7 +36,7 @@
 	"colorize_names": "Цветные ники",
 	"colorize_names_desc": "Цветные ники игроков",
 	"counter_font_size": "Размер шрифта",
-	"counter_font_size_desc": "Изменение размера шрифта на нижней правой панели HUD"
+	"counter_font_size_desc": "Изменение размера шрифта на нижней правой панели HUD",
 	"critical_down_warning_chat_info": "Показывать критические падения",
 	"critical_down_warning_chat_info_desc": "Показывает критические падения ваших поддельников в чате, если они упали 3 или 4 раз",
 	"critical_down_warning_chat_info_feed": "Показывать критические падения в чате",
@@ -164,7 +164,7 @@
 	"laser_color_r_others": "Красный",
 	"laser_color_r_others_desc": "Добавление красного цвета",
 	"laser_color_r_snipers": "Красный",
-	"laser_color_r_snipers_desc": "Добавление красного цвета",	
+	"laser_color_r_snipers_desc": "Добавление красного цвета",
 	"laser_color_r_turret": "Красный",
 	"laser_color_r_turret_desc": "Добавление красного цвета",
 	"laser_color_r_turretm": "Красный",
@@ -182,7 +182,7 @@
 	"laser_color_rainbow_turretm": "Цвет радуги",
 	"laser_color_rainbow_turretm_desc": "Переливается цветами радуги",
 	"laser_color_rainbow_turretr": "Цвет радуги",
-	"laser_color_rainbow_turretr_desc": "Переливается цветами радуги",	
+	"laser_color_rainbow_turretr_desc": "Переливается цветами радуги",
 	"laser_glow": "Свечение точки",
 	"laser_glow_desc": "Изменение cвечения точки лазера",
 	"laser_glow_others": "Свечение точки",
@@ -254,6 +254,7 @@
 	"show_client_ranks": "Показыватьуровни поддельников",
 	"show_client_ranks_desc": "Показывает уровни и ДР ваших поддельников рядом с никами",
 	"show_damage_popup": "Всплывающий урон",
+	"show_damage_popup_desc": "Показывает урон по противнику всплывающими цифрами",
 	"show_ecm_retrigger": "Время отката ECM петли",
 	"show_ecm_retrigger_desc": "Показывать время отката ECM петли",
 	"show_ecms": "Показать ECM",
@@ -394,6 +395,5 @@
 	"waypoint_color_g": "Цвет точки (Зеленый)",
 	"waypoint_color_g_desc": "Добавление зеленого цвета",
 	"waypoint_color_r": "Цвет точки (Красный)",
-	"waypoint_color_r_desc": "Добавление красного цвета",
- 	"show_damage_popup_desc": "Показывает урон по противнику всплывающими цифрами",
+	"waypoint_color_r_desc": "Добавление красного цвета"
 }
