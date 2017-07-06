@@ -494,7 +494,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_push_to_interact_delay = function(self, item)
-		SydneyHUD._data.push_to_interact_delay = item.value()
+		SydneyHUD._data.push_to_interact_delay = item:value()
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_equipment_interrupt = function(self, item)
