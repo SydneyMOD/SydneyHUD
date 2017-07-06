@@ -1,5 +1,0 @@
-install:
-  - ps: wget https://github.com/mpeterv/luacheck/releases/download/0.20.0/luacheck.exe
-
-test_script:
-  - luacheck .
