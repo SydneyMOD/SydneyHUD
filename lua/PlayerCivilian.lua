@@ -9,4 +9,3 @@ function PlayerCivilian:_check_action_interact(t, input, ...)
 		return _check_action_interact_original(self, t, input, ...)
 	end
 end
-
