@@ -65,6 +65,15 @@
 			],
 			"value": "health_bar_color",
 			"default_value": 2
+		},
+		{
+			"type": "toggle",
+			"id": "show_damage_popup",
+			"title": "show_damage_popup",
+			"description": "show_damage_popup_desc",
+			"callback": "callback_show_damage_popup",
+			"value": "show_damage_popup",
+			"default_value": true
 		}
 	]
 }

@@ -255,6 +255,8 @@
 	"show_civilians_desc": "Currently spawned, untied civilians",
 	"show_client_ranks": "Show player ranks",
 	"show_client_ranks_desc": "Show team mate ranks in front of the names",
+	"show_damage_popup": "Damage popup",
+	"show_damage_popup_desc": "Show damage popup",
 	"show_ecm_retrigger": "Show ECM Retrigger",
 	"show_ecm_retrigger_desc": "Countdown for own ECM feedback retrigger delay",
 	"show_ecms": "Show ECM's",
