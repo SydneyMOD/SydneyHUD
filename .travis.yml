@@ -18,4 +18,4 @@ install:
 
 script:
   # - busted
-  - luacheck .
+  - luacheck SydneyHUD.lua lua/ script/
