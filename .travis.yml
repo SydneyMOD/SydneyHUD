@@ -18,4 +18,4 @@ install:
 
 script:
   # - busted
-  - luacheck SydneyHUD.lua lua/ script/
+  - luacheck -g -u -r -a -s --no-self --no-max-line-length --no-max-code-line-length --no-max-string-line-length --no-max-comment-line-length -q SydneyHUD.lua lua/ script/
