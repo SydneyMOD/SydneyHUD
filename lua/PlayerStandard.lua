@@ -261,7 +261,8 @@ function PlayerStandard:_check_action_throw_grenade(t, input, ...)
 end
 
 function PlayerStandard:_check_action_interact(t, input, ...)
-	if not (self:_check_interact_toggle(t, input) and SydneyHUD:GetOption("push_to_interact") and SydneyHUD:GetOption("push_to_interact_delay") <= self._interact_expire_t) then -- crash when interrupting
+	local check_interact = {} and (self._interact_params or 0)
+	if not (self:_check_interact_toggle(t, input) and SydneyHUD:GetOption("push_to_interact") and check_interact.timer >= SydneyHUD:GetOption("push_to_interact_delay")) then
 		return _check_action_interact_original(self, t, input, ...)
 	end
 end

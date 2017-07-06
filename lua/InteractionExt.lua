@@ -21,11 +21,8 @@ function SecurityCameraInteractionExt:set_active(active, ...)
 end
 
 function BaseInteractionExt:interact_start(player, data)
-	local timer_sub = self:_timer_value()
-	if not timer_sub then
-		timer_sub = 0
-	end
-	if SydneyHUD:GetOption("push_to_interact") and self:can_interact(player) and timer_sub >= SydneyHUD:GetOption("push_to_interact_delay") then
+	local interact_timer = self:_get_timer() or 0
+	if SydneyHUD:GetOption("push_to_interact") and self:can_interact(player) and interact_timer >= SydneyHUD:GetOption("push_to_interact_delay") then
 		local btn_cancel = SydneyHUD:GetOption("equipment_interrupt") and (managers.localization:btn_macro("use_item", true) or managers.localization:get_default_macro("BTN_USE_ITEM")) or (managers.localization:btn_macro("interact", true) or managers.localization:get_default_macro("BTN_INTERACT"))
 		managers.hud:show_interact({
 			text = managers.localization:text(self.tweak_data == "corpse_alarm_pager" and "sydneyhud_int_locked_pager" or "sydneyhud_int_locked", {BTN_CANCEL = btn_cancel}),
