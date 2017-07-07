@@ -1,6 +1,12 @@
 ﻿<h1 align="center">SydneyHUD</h1>
 <p align="center">HUD mods, information and credits</p>
 
+<p align="center">
+<a href="https://styleci.io/repos/75427456" target="_blank"><img src="https://styleci.io/repos/75427456/shield?branch=master"></a>
+<a href="https://github.com/SydneyMOD/SydneyHUD/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/SydneyMOD/SydneyHUD.svg?style=flat-square"></a>
+<a href="" target="_blank"><img src="https://img.shields.io/github/license/SydneyMOD/SydneyHUD.svg?style=flat-square"></a>
+</p>
+
 ### Features
 * HUD Tab Stats
 * HUD Panel Lists

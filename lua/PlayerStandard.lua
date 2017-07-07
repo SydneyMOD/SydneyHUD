@@ -124,7 +124,6 @@ function PlayerStandard:_update_omniscience(t, dt)
 					self._state_data.omniscience_units_detected[unit:key()] = t + tweak_data.player.omniscience.target_resense_t
 					managers.game_play_central:auto_highlight_enemy(unit, true)
 				end
-			else
 			end
 		end
 		self._state_data.omniscience_t = t + tweak_data.player.omniscience.interval_t
@@ -205,8 +204,8 @@ end
 function PlayerStandard:_update_melee_timers(t, ...)
 	if SydneyHUD:GetOption("show_melee_interaction") then
 		if self._state_data.meleeing and not self._state_data.melee_attack_allowed_t and not tweak_data.blackmarket.melee_weapons[managers.blackmarket:equipped_melee_weapon()].instant then
-			if math.clamp(t - (self._state_data.melee_start_t or 0), 0, tweak_data.blackmarket.melee_weapons[managers.blackmarket:equipped_melee_weapon()].stats.charge_time) < 0.12 or self._state_data._at_max_melee then
-			elseif math.clamp(t - (self._state_data.melee_start_t or 0), 0, tweak_data.blackmarket.melee_weapons[managers.blackmarket:equipped_melee_weapon()].stats.charge_time) >= tweak_data.blackmarket.melee_weapons[managers.blackmarket:equipped_melee_weapon()].stats.charge_time then
+			--if math.clamp(t - (self._state_data.melee_start_t or 0), 0, tweak_data.blackmarket.melee_weapons[managers.blackmarket:equipped_melee_weapon()].stats.charge_time) < 0.12 or self._state_data._at_max_melee then
+			if math.clamp(t - (self._state_data.melee_start_t or 0), 0, tweak_data.blackmarket.melee_weapons[managers.blackmarket:equipped_melee_weapon()].stats.charge_time) >= tweak_data.blackmarket.melee_weapons[managers.blackmarket:equipped_melee_weapon()].stats.charge_time then
 				managers.hud:hide_interaction_bar(true)
 				self._state_data._at_max_melee = true
 			elseif math.clamp(t - (self._state_data.melee_start_t or 0), 0, tweak_data.blackmarket.melee_weapons[managers.blackmarket:equipped_melee_weapon()].stats.charge_time) >= 0.12 and self._state_data._need_show_interact == nil then
@@ -261,7 +260,8 @@ function PlayerStandard:_check_action_throw_grenade(t, input, ...)
 end
 
 function PlayerStandard:_check_action_interact(t, input, ...)
-	if not (self:_check_interact_toggle(t, input) and SydneyHUD:GetOption("push_to_interact")) then
+	local check_interact = {} and (self._interact_params or 0)
+	if not (self:_check_interact_toggle(t, input) and SydneyHUD:GetOption("push_to_interact") and check_interact.timer >= SydneyHUD:GetOption("push_to_interact_delay")) then
 		return _check_action_interact_original(self, t, input, ...)
 	end
 end

@@ -4533,7 +4533,7 @@ function PanelFrame:set_ratio(r)
 	end
 end
 
-
+--[[
 if false then
 	HUDList.BuffItemBase.BUFF_MAP = {
 		bow_charge = {
@@ -4731,7 +4731,7 @@ if false then
 	end
 
 end
-
+--]]
 function HUDManager:set_teammate_custom_radial(i, data)
 	if SydneyHUD:GetOption("swansong_effect") then
 		local hud = managers.hud:script(PlayerBase.PLAYER_INFO_HUD_FULLSCREEN_PD2)

@@ -42,9 +42,9 @@ function UnitNetworkHandler:interaction_set_active(unit, u_id, active, tweak_dat
 				unit = u_data and u_data.unit
 			end
 			if alive(unit) then
-				if not active then
+				--if not active then
 					--managers.gameinfo:event("pager", "remove", tostring(unit:key()))
-				elseif not flash then
+				if not flash then
 					managers.gameinfo:event("pager", "set_answered", tostring(unit:key()))
 				end
 			end
@@ -59,7 +59,7 @@ function UnitNetworkHandler:alarm_pager_interaction(u_id, tweak_table, status, s
 		if unit_data and unit_data.unit:interaction():active() and unit_data.unit:interaction().tweak_data == tweak_table and self._verify_sender(sender) then
 			if status == 1 then
 				managers.gameinfo:event("pager", "set_answered", tostring(unit_data.unit:key()))
-			else
+			--else
 				--managers.gameinfo:event("pager", "remove", tostring(unit_data.unit:key()))
 			end
 		end

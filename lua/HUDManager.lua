@@ -350,7 +350,7 @@ function HUDManager:set_unit_health(current, total, tweak_table)
 			end)
 		end)
 	end
-	
+
 	self._unit_health:set_w(_r * (self._health_text_rect[3] - 2))
 	self._unit_health:set_texture_rect(self._health_text_rect[1], self._health_text_rect[2], self._health_text_rect[3] * _r, self._health_text_rect[4])
 end

@@ -1,0 +1,21 @@
+language: python
+
+sudo: false
+
+env:
+  - LUA="luajit 2.0"
+  - LUA="luajit 2.1"
+
+before_install:
+  - pip install hererocks
+  - hererocks env --$LUA -rlatest
+  - source env/bin/activate
+  # - luarocks make
+
+install:
+  - luarocks install busted
+  - luarocks install luacheck
+
+script:
+  # - busted
+  - luacheck -g -u -r -a -s --no-self --no-max-line-length --no-max-code-line-length --no-max-string-line-length --no-max-comment-line-length -q SydneyHUD.lua lua/ script/
