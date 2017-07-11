@@ -1,53 +1,57 @@
 ﻿<h1 align="center">SydneyHUD</h1>
-<p align="center">HUD mods, information and credits</p>
+<p align="center">All-In-One PAYDAY2 HUD mod</p>
 
 <p align="center">
+<a href="https://travis-ci.org/SydneyMOD/SydneyHUD" target="_blank"><img src="https://img.shields.io/travis/SydneyMOD/SydneyHUD.svg?style=flat-square"></a>
 <a href="https://styleci.io/repos/75427456" target="_blank"><img src="https://styleci.io/repos/75427456/shield?branch=master"></a>
+<img src="https://reposs.herokuapp.com/?path=SydneyMOD/SydneyHUD&style=flat-square&color=lightgray">
 <a href="https://github.com/SydneyMOD/SydneyHUD/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/SydneyMOD/SydneyHUD.svg?style=flat-square"></a>
 <a href="" target="_blank"><img src="https://img.shields.io/github/license/SydneyMOD/SydneyHUD.svg?style=flat-square"></a>
 </p>
 
 ### Features
-* HUD Tab Stats
+* 360° view driving
+* Always Show MOD Icons
+* Ammo total left count without including clip
+* Anti accidentally throwing grenades in stealth
+* Anti bobble
+* Armor/Inspire timers
+* Auto enable Sentry Gun AP
+* Auto laser on
+* Buy all assets
+* Changeable HUD scale
+* Changeable Waypoint Text Color
+* Chat feed system (Assault Phase / ECM battery / Inspire ACE CT / Down Warning)
+* ChatTime
+* Contract broker quick link
+* Corpse Remover Plus
+* Damage Pop-up
+* Down Counter / Detection risk indicator
+* Down Warning
+* Enhanced Assault Banner
+* First Aid Kit notifyer
+* Flashlight Extender
+* Force enable / disable showing of weapon skins in lobby
+* HPS Meters
 * HUD Panel Lists
-* Pacified Civilian Markers
+* HUD Tab Stats
+* Health bar
+* Hold to pick
+* Ingame-voice indicators
+* Kill-Counters
+* Laser options
+* Multi language Support (English / Japanese / French / Russian)
 * Numerical Suspicion
 * Numerical interaction countdown
+* Pacified Civilian Markers
+* Push to Interact
+* Push to Interact Delay
 * Reload interaction circle
-* Down Counter / Detection risk indicator
-* Kill-Counters
-* Flashlight Extender
 * Save/Load Preplanning
 * Screen Skipping
-* Anti accidentally throwing grenades in stealth
-* Enhanced Assault Banner
 * Some graphical tweaks
-* Ingame-voice indicators
-* Stamina Meter
-* Push to Interact
-* Force enable/disable showing of weapon skins in lobby
-* Buy all assets
-* Armor/Inspire timers
-* Laser options
-* HPS Meters
-* contract broker quick link
-* Hold to pick
-* Anti bobble
-* Anti desync
-* 360° view driving
-* Ammo total left count without including clip
-* Health bar
-* Chat feed system (Assault Phase / ECM battery / Inspire ACE CT)
-* Always Show MOD Icons
 * Spot Civilians
-* Changeable Waypoint Text Color
-* ChatTime
-* Down Warning
-* Changeable HUD scale
-
-### Known issues
-* FPS drops when using Extended Flashlight
-* AntiBobble sometimes does not work
+* Stamina Meter
 
 ### Feature Requests / Bug Reports
 Please create issues [here](https://github.com/SydneyMOD/SydneyHUD/issues) or Submit at [SteamGroup](https://steamcommunity.com/groups/SydneyMOD/discussions/2/152390648090747618/)
@@ -57,15 +61,20 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 
 ### Get in touch
 * Steam Group [🔗](https://steamcommunity.com/groups/SydneyMOD)
+* Discord [🔗](https://discord.gg/vF5a7gw)
 * Twitter [🔗](https://twitter.com/SydneyMOD)
 
-### Contributer
+### Contributers
 * katabame: Main Developer
 * BangL: Main Developer
+* kash: Japanese Translator & Developer
 * IPowis: English Translator & Developer
-* PoorPockets McNewHold: French Translator
+* PoorPockets McNewHold: French Translator & Community Manager
+* hexco321: Feature contributer
+* STaJIKeR1: Russian Translator
+* exp1os1on: Russian Translator
 * Nox-404: Bug fixer
-* kash: Japanese Translator
+
 
 ### Special Thanks
 SydneyHUD is using the following mods, codes & textures.  
@@ -74,7 +83,6 @@ So, Big credit to these guys!
 * 🐔**JackHUD** by BangL [🔗](https://steamcommunity.com/groups/jackhud)
 * 💎**Hold to pick** by Malo [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13518)
 * 🏃**Anti-Bobble** by Schmuddel [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15363)
-* 🔄**Velo Sync** by VELOCiTY [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15451)
 * 🐺**WolfyHUD** by KAMIKAZE94 [🔗](http://paydaymods.com/mods/298/wolfhud)
 * 🚙**Driver's Neck Brace Removed** by EdisLeado [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13569)
 * 🔧**Always Show MOD Icons** by Slippy [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13975)
