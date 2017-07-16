@@ -1,6 +1,6 @@
 {
 	"aggregate_enemies": "Regroupement d'ennemis",
-	"aggregate_enemies_desc": "Ne sépare pas les enemmis par leurs types; utilise la même entrée pour tous",
+	"aggregate_enemies_desc": "Ne sépare pas les ennemis par leurs types; utilise la même entrée pour tous",
 	"aggregate_hostages": "Rassemble les otages",
 	"aggregate_hostages_desc": "Rassemble les otages en un seul objet",
 	"aggregate_loot": "Regroupement de loot",
