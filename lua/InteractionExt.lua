@@ -21,8 +21,10 @@ function SecurityCameraInteractionExt:set_active(active, ...)
 end
 
 function BaseInteractionExt:interact_start(player, data)
-	local interact_timer = (self:_timer_value() or 0) * managers.player:toolset_value()
-	interact_timer = interact_timer / 3 + math.random() * interact_timer / 3
+	local interact_timer = 0
+	if self:_timer_value() then
+		interact_timer = self:_get_timer()
+	end
 	if SydneyHUD:GetOption("push_to_interact") and self:can_interact(player) and interact_timer >= SydneyHUD:GetOption("push_to_interact_delay") then
 		local btn_cancel = SydneyHUD:GetOption("equipment_interrupt") and (managers.localization:btn_macro("use_item", true) or managers.localization:get_default_macro("BTN_USE_ITEM")) or (managers.localization:btn_macro("interact", true) or managers.localization:get_default_macro("BTN_INTERACT"))
 		managers.hud:show_interact({
