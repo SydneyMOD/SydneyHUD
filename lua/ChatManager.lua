@@ -56,7 +56,7 @@ end
 
 function ChatGui:_layout_input_panel()
 	_layout_input_panel_original(self)
-	self._input_panel:set_y(self._input_panel:parent:h() - self._input_panel:h() - 24)
+	self._input_panel:set_y(self._input_panel:parent():h() - self._input_panel:h() - 24)
 end
 
 function ChatGui:_layout_info_panel()
