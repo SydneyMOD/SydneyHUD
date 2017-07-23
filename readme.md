@@ -6,7 +6,7 @@
 <a href="https://styleci.io/repos/75427456" target="_blank"><img src="https://styleci.io/repos/75427456/shield?branch=master"></a>
 <img src="https://reposs.herokuapp.com/?path=SydneyMOD/SydneyHUD&style=flat-square&color=lightgray">
 <a href="https://github.com/SydneyMOD/SydneyHUD/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/SydneyMOD/SydneyHUD.svg?style=flat-square"></a>
-<a href="" target="_blank"><img src="https://img.shields.io/github/license/SydneyMOD/SydneyHUD.svg?style=flat-square"></a>
+<a href="https://github.com/SydneyMOD/SydneyHUD/blob/master/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/SydneyMOD/SydneyHUD.svg?style=flat-square"></a>
 </p>
 
 ### Features
@@ -22,6 +22,7 @@
 * Changeable HUD scale
 * Changeable Waypoint Text Color
 * Chat feed system (Assault Phase / ECM battery / Inspire ACE CT / Down Warning)
+* Chat Info
 * ChatTime
 * Contract broker quick link
 * Corpse Remover Plus
@@ -87,10 +88,11 @@ So, Big credit to these guys!
 * 🚙**Driver's Neck Brace Removed** by EdisLeado [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13569)
 * 🔧**Always Show MOD Icons** by Slippy [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13975)
 * 👦🏻**Civilian Marking in Stealth** by EdisLeado [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=13517)
-* ⛑**Replenished** by FishTaco [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15309)
-* ☠**Swan Song Effect** by Simon [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=681)
+* 🚑**Replenished** by FishTaco [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=15309)
+* 💀**Swan Song Effect** by Simon [🔗](http://modworkshop.net/mydownloads.php?action=view_down&did=681)
 * 📦**No Bag Bendy Tilt** by mluzarow [🔗](https://github.com/mluzarow/No-Bag-Bendy-Tilt)
 * 💉**FAK-Notifier** by SlashNephy [🔗](https://github.com/SlashNephy/FAK-Notifier)
+* 💬**Chat Info** by Nebby [🔗](https://modworkshop.net/mydownloads.php?action=view_down&did=19181)
 * many of inspired mod
 
 **AND YOU.**
