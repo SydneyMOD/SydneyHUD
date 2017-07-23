@@ -128,7 +128,7 @@ end
 
 Hooks:Add("NetworkReceivedData", "NetworkReceivedDataTypingInfo", function(sender, id, data)
 	local peer = LuaNetworking:GetPeers()[sender]
-	if id = "typing_info" and peer then
+	if id == "typing_info" and peer then
 		peer._last_typing_info_t = TimerManger:game():time()
 	end
 end)
