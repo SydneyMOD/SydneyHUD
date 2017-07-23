@@ -8,7 +8,13 @@
 	"libraries": [
 		{
 			"identifier": "SydneyHUDAssets",
-			"display_name": "SydneyHUD-Assets"
+			"install_dir": "assets/mod_overrides/",
+			"install_folder": "SydneyHUD-Assets",
+			"display_name": "SydneyHUD Assets"
+		},
+		{
+			"identifier" : "delayedcallsfix",
+			"display_name" : "Delayed Calls Fix"
 		}
 	],
 	"updates": [
