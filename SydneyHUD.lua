@@ -33,10 +33,10 @@ if not SydneyHUD.setup then
 		Error: Error Log. Something Errored. Can not keep working.
 		Dev: Develop Log. Printing var, Breakpoint.
 	]]
-	info = "[SydneyHUD Info] "
-	warn = "[SydneyHUD Warn] "
-	error = "[SydneyHUD Error] "
-	dev = "[SydneyHUD Dev] "
+	SydneyHUD.info = "[SydneyHUD Info] "
+	SydneyHUD.warn = "[SydneyHUD Warn] "
+	SydneyHUD.error = "[SydneyHUD Error] "
+	SydneyHUD.dev = "[SydneyHUD Dev] "
 
 	-- var for script
 	SydneyHUD._autorepair_map = {}
@@ -278,11 +278,11 @@ if not SydneyHUD.setup then
 			if io.file_is_readable(fileName) then
 				dofile(fileName)
 			else
-				log(error .. "Could not open file '" .. fileName .. "'!")
+				log(SydneyHUD.error .. "Could not open file '" .. fileName .. "'!")
 			end
 		end)
 		if not success then
-			log(error .. "File: " .. fileName .. "\n" .. errorMsg)
+			log(SydneyHUD.error .. "File: " .. fileName .. "\n" .. errorMsg)
 		end
 	end
 
@@ -439,7 +439,7 @@ if not SydneyHUD.setup then
 
 	SydneyHUD:Load()
 	SydneyHUD.setup = true
-	log(info .. "SydneyHUD loaded.")
+	log(SydneyHUD.info .. "SydneyHUD loaded.")
 end
 
 if RequiredScript then
@@ -447,6 +447,6 @@ if RequiredScript then
 	if SydneyHUD._hook_files[requiredScript] then
 		SydneyHUD:SafeDoFile(SydneyHUD._lua_path .. SydneyHUD._hook_files[requiredScript])
 	else
-		log(warn .. "unlinked script called: " .. requiredScript)
+		log(SydneyHUD.warn .. "unlinked script called: " .. requiredScript)
 	end
 end
