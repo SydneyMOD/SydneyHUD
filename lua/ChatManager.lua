@@ -46,8 +46,8 @@ function ChatGui:_create_info_panel()
 		font_size = tweak_data.menu.pd2_small_font_size,
 		x = 0,
 		y = 0,
-		w = self._panel:w()
-		h = 24
+		w = self._panel:w(),
+		h = 24,
 		color = Color.white,
 		alpha = 0.75,
 		layer = 1
