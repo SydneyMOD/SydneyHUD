@@ -1,7 +1,7 @@
 local receive_message_by_peer_original = ChatManager.receive_message_by_peer
 local init_original = ChatGui.init
 local _layout_input_panel_original = ChatGui._layout_input_panel
-local key_press_original ChatGui.key_press
+local key_press_original = ChatGui.key_press
 local close_original = ChatGui.close
 
 function ChatManager:_receive_message(channel_id, name, message, color, icon)
