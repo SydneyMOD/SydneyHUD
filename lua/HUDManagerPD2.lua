@@ -280,8 +280,8 @@ function HUDManager.show_interact(self, data)
 	if self._interact_visible and not data.force then
 		return
 	end
-	local timer_data = 0 * managers.player:toolset_value()
-	if SydneyHUD:GetOption("push_to_interact") and timer_data >= SydneyHUD:GetOption("push_to_interact_delay")  then
+
+	if SydneyHUD:GetOption("push_to_interact") and 0 >= SydneyHUD:GetOption("push_to_interact_delay")  then
 		data.text = HUDManager:press_substitute(data.text, "Press")
 	end
 
