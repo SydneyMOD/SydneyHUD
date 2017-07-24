@@ -281,7 +281,7 @@ function HUDManager.show_interact(self, data)
 		return
 	end
 
-	if SydneyHUD:GetOption("push_to_interact") and managers.player:toolset_value() >= SydneyHUD:GetOption("push_to_interact_delay")  then
+	if SydneyHUD:GetOption("push_to_interact") and 0 >= SydneyHUD:GetOption("push_to_interact_delay")  then
 		data.text = HUDManager:press_substitute(data.text, "Press")
 	end
 
