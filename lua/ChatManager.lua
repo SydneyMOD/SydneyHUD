@@ -9,7 +9,7 @@ function ChatManager:_receive_message(channel_id, name, message, color, icon)
 		return
 	end
 	local time = SydneyHUD._heist_time
-	log(SydneyHUD.dev .. "TimerManger: " .. TimerManger:game():time() or "nil")
+	log(SydneyHUD.dev .. "TimerManager: " .. TimerManager:game():time() or "nil")
 	for i, receiver in ipairs(self._receivers[channel_id]) do
 		if SydneyHUD:GetOption("show_heist_time") then
 			receiver:receive_message(time .. " " .. name, message, color, icon)
@@ -69,7 +69,7 @@ function ChatGui:update_info_text()
 	local info_panel_text = self._panel:child("info_text")
 	local text = ""
 	local amount = 0
-	local t = TimerManger:game():time()
+	local t = TimerManager:game():time()
 	local ranges = {}
 
 	for _, peer in pairs(LuaNetworking:GetPeers()) do
@@ -102,7 +102,7 @@ function ChatGui:update_info_text()
 	info_panel_text:set_text(text)
 
 	for i, range in ipairs(ranges) do
-		info_panel_text:set_range_color(range.from, rangeto, tweak_data.chat_colors[range.id])
+		info_panel_text:set_range_color(range.from, range.to, tweak_data.chat_colors[range.id])
 	end
 
 	DelayedCallsFix:Add("chat_info_update_info_text", 0.1, function()
@@ -112,7 +112,7 @@ end
 
 function ChatGui:key_press(o, k)
 	key_press_original(self, o, k)
-	local t = TimerManger:game():time()
+	local t = TimerManager:game():time()
 	if k ~= Idstring("enter") and (not self._last_typing_info_t or t > self._last_press_t + 2) then
 		LuaNetworking:SendToPeers("typing_info", "")
 		self._last_press_t = t
@@ -129,6 +129,6 @@ end
 Hooks:Add("NetworkReceivedData", "NetworkReceivedDataTypingInfo", function(sender, id, data)
 	local peer = LuaNetworking:GetPeers()[sender]
 	if id == "typing_info" and peer then
-		peer._last_typing_info_t = TimerManger:game():time()
+		peer._last_typing_info_t = TimerManager:game():time()
 	end
 end)
