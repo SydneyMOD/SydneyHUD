@@ -4,47 +4,60 @@
     [img]https://img.shields.io/github/release/SydneyMOD/SydneyHUD.svg?style=flat-square[/img]
     [img]https://img.shields.io/github/issues/SydneyMOD/SydneyHUD.svg?style=flat-square[/img]
 
-    HUD mods, information and credits
+	[url="https://travis-ci.org/SydneyMOD/SydneyHUD"][img]https://img.shields.io/travis/SydneyMOD/SydneyHUD.svg?style=flat-square[/img][/url]
+	[url="https://styleci.io/repos/75427456"][img]"https://styleci.io/repos/75427456/shield?branch=master"[/img][/url]
+	[img]"https://reposs.herokuapp.com/?path=SydneyMOD/SydneyHUD&style=flat-square&color=lightgray"[/img]
+	[url="https://github.com/SydneyMOD/SydneyHUD/releases/latest"][img]"https://img.shields.io/github/release/SydneyMOD/SydneyHUD.svg?style=flat-square"[/img][/url]
+	[url="https://github.com/SydneyMOD/SydneyHUD/blob/master/LICENSE"][img]"https://img.shields.io/github/license/SydneyMOD/SydneyHUD.svg?style=flat-square"[/img][/url]
+
+    All-In-One PAYDAY2 HUD mod
 [/align]
 
 [size=medium][b]Features[/b][/size]
 [list]
-[*]HUD Tab Stats
+[*]360° view driving
+[*]Always Show MOD Icons
+[*]Ammo total left count without including clip
+[*]Anti accidentally throwing grenades in stealth
+[*]Anti bobble
+[*]Armor/Inspire timers
+[*]Auto enable Sentry Gun AP
+[*]Auto laser on
+[*]Buy all assets
+[*]Changeable HUD scale
+[*]Changeable Waypoint Text Color
+[*]Chat feed system (Assault Phase / ECM battery / Inspire ACE CT / Down Warning)
+[*]Chat Info
+[*]ChatTime
+[*]Contract broker quick link
+[*]Corpse Remover Plus
+[*]Damage Pop-up
+[*]Down Counter / Detection risk indicator
+[*]Down Warning
+[*]Enhanced Assault Banner
+[*]First Aid Kit notifyer
+[*]Flashlight Extender
+[*]Force enable / disable showing of weapon skins in lobby
+[*]HPS Meters
 [*]HUD Panel Lists
-[*]Pacified Civilian Markers
+[*]HUD Tab Stats
+[*]Health bar
+[*]Hold to pick
+[*]Ingame-voice indicators
+[*]Kill-Counters
+[*]Laser options
+[*]Multi language Support (English / Japanese / French / Russian)
 [*]Numerical Suspicion
 [*]Numerical interaction countdown
+[*]Pacified Civilian Markers
+[*]Push to Interact
+[*]Push to Interact Delay
 [*]Reload interaction circle
-[*]Down Counter / Detection risk indicator
-[*]Kill-Counters
-[*]Flashlight Extender
 [*]Save/Load Preplanning
 [*]Screen Skipping
-[*]Anti accidentally throwing grenades in stealth
-[*]Enhanced Assault Banner
 [*]Some graphical tweaks
-[*]Ingame-voice indicators
-[*]Stamina Meter
-[*]Push to Interact
-[*]Force enable/disable showing of weapon skins in lobby
-[*]Buy all assets
-[*]Armor/Inspire timers
-[*]Laser options
-[*]HPS Meters
-[*]contract broker quick link
-[*]Hold to pick
-[*]Anti bobble
-[*]Anti desync
-[*]360° view driving
-[*]Ammo total left count without including clip
-[*]Health bar
-[*]Chat feed system (Assault Phase / ECM battery / Inspire ACE CT)
-[*]Always Show MOD Icons
 [*]Spot Civilians
-[*]Changeable Waypoint Text Color
-[*]ChatTime
-[*]Down Warning
-[*]Changeable HUD scale
+[*]Stamina Meter
 [/list]
 
 [size=medium][b]Feature Requests / Bug Reports[/b][/size]
@@ -60,12 +73,16 @@ Join SydneyMOD [url=https://steamcommunity.com/groups/SydneyMOD]Steam Group[/url
 [*][url=https://twitter.com/SydneyMOD]Twitter[/url]
 [/list]
 
-[size=medium][b]Contributer[/b][/size]
+[size=medium][b]Contributers[/b][/size]
 [list]
 [*]katabame: Main Developer
 [*]BangL: Main Developer
+[*]kash: Japanese Translator & Developer
 [*]IPowis: English Translator & Developer
-[*]PoorPockets McNewHold: French Translator
+[*]PoorPockets McNewHold: French Translator & Community Manager
+[*]hexco321: Feature contributer
+[*]STaJIKeR1: Russian Translator
+[*]exp1os1on: Russian Translator
 [*]Nox-404: Bug fixer
 [/list]
 
@@ -77,7 +94,6 @@ So, Big credit to these guys!
 [*][b][url=https://steamcommunity.com/groups/jackhud]JackHUD[/url][/b] by BangL
 [*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=13518]Hold to pick[/url][/b] by Malo
 [*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=15363]Anti-Bobble[/url][/b] by Schmuddel
-[*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=15451]Velo Sync[/url][/b] by VELOCiTY
 [*][b][url=http://paydaymods.com/mods/298/wolfhud]WolfyHUD[/url][/b] by KAMIKAZE94
 [*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=13569]Driver's Neck Brace Removed[/url][/b] by EdisLeado
 [*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=13975]Always Show MOD Icons[/url][/b] by Slippy
@@ -85,6 +101,7 @@ So, Big credit to these guys!
 [*][b][url=http://modworkshop.net/mydownloads.php?action=view_down&did=15309]Replenished[/url][/b] by FishTaco
 [*][b][url=https://github.com/mluzarow/No-Bag-Bendy-Tilt]No Bag Bendy Tilt[/url][/b] by mluzarow
 [*][b][url=https://github.com/SlashNephy/FAK-Notifier]FAK-Notifier[/url][/b] by SlashNephy
+[*][b][url=https://modworkshop.net/mydownloads.php?action=view_down&did=19181]Chat Info[/url][/b] by Nebby
 [*]many of inspired mod
 [/list]
 

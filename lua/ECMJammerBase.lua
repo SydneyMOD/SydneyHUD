@@ -51,7 +51,7 @@ function ECMJammerBase:update(unit, t, dt, ...)
 	update_original(self, unit, t, dt, ...)
 
 	if self._jammer_active then
-		-- log(dev .. "batt. life: " .. string.format("%.1f", self._battery_life))
+		-- log(SydneyHUD.dev .. "batt. life: " .. string.format("%.1f", self._battery_life))
 		if string.format("%.1f", self._battery_life) == "5.0" then -- 5.0sec remining
 			if SydneyHUD:GetOption("ecm_battery_chat_info") then
 				if SydneyHUD:GetOption("ecm_battery_chat_info_feed") then
