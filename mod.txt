@@ -3,7 +3,7 @@
 	"description": "All-In-One HUD mod",
 	"author": "SydneyMOD Project Team",
 	"contact": "http://steamcommunity.com/groups/SydneyMOD",
-	"version": "3.0.1",
+	"version": "3.1.0",
 	"priority": -1,
 	"libraries": [
 		{
@@ -19,7 +19,7 @@
 	],
 	"updates": [
 		{
-			"revision": 20,
+			"revision": 21,
 			"identifier": "SydneyHUD"
 		},
 		{
