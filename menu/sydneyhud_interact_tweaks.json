@@ -62,6 +62,19 @@
 			"min": 0,
 			"step": 0.1,
 			"default_value": 0.1
+		},
+		{
+			"type": "divider",
+			"size": 16
+		},
+		{
+			"type": "toggle",
+			"id": "interact_time_hint",
+			"title": "interact_time_hint",
+			"description": "interact_time_hint_desc",
+			"callback": "callback_interact_time_hint",
+			"value": "interact_time_hint",
+			"default_value": true
 		}
 	]
 }

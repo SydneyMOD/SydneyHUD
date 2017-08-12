@@ -119,6 +119,8 @@
 	"interaction_color_g_desc": "Добавление зеленого цвета",
 	"interaction_color_r": "Красный",
 	"interaction_color_r_desc": "Добавление красного цвета",
+	"interact_time_hint": "Interact time hint",
+	"interact_time_hint_desc": "Show interact time when seeing interactable objects.",
 	"language_english": "English",
 	"language_french": "Français",
 	"language_japanese": "日本語",
