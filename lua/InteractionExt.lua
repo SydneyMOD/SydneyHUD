@@ -2,6 +2,7 @@
 local set_tweak_data_original = BaseInteractionExt.set_tweak_data
 local SecurityCameraInteractionExt_set_active_original = SecurityCameraInteractionExt.set_active
 local interact_start_original = BaseInteractionExt.interact_start
+local selected_original = BaseInteractionExt.selected
 
 function BaseInteractionExt:set_tweak_data(...)
 	local old_tweak = self.tweak_data
@@ -38,6 +39,7 @@ end
 
 function BaseInteractionExt:selected(player)
 	if SydneyHUD:GetOption("interact_time_hint") then
+		selected_original(self, player)
 		local interact_timer = 0
 		if self:_timer_value() then
 		interact_timer = self:_get_timer()
