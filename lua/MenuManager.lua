@@ -510,7 +510,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD._data.hold_to_pick_delay = item:value()
 		SydneyHUD:Save()
 	end
-
+	MenuCallbackHandler.callback_interact_time_hint = function(self, item)
+		SydneyHUD._data.interact_time_hint = (item:value() == "on")
+		SydneyHUD:Save()
+	end
 	-- Other
 	MenuCallbackHandler.callback_tab_font_size = function(self, item)
 		SydneyHUD._data.tab_font_size = item:value()
