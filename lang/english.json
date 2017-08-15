@@ -119,6 +119,8 @@
 	"interaction_color_g_desc": "Configure ratio of interaction-sec text green color (Max:1.00)",
 	"interaction_color_r": "Interaction-sec text color (Red)",
 	"interaction_color_r_desc": "Configure ratio of interaction-sec text red color (Mac:1.00)",
+  	"interact_time_hint": "Interact time hint",
+  	"interact_time_hint_desc": "Show interact time when seeing interactable objects.",
 	"language_english": "English",
 	"language_french": "Français",
 	"language_japanese": "日本語",
