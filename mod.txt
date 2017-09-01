@@ -5,6 +5,8 @@
 	"contact": "http://steamcommunity.com/groups/SydneyMOD",
 	"version": "3.1.0",
 	"priority": -1,
+	"blt_version": 2,
+	"color": "0 0 255"
 	"libraries": [
 		{
 			"identifier": "SydneyHUDAssets",
