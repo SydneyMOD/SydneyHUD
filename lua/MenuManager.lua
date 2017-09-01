@@ -804,6 +804,6 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	--[[
 		Set keybind defaults
 	]]
-	LuaModManager:SetPlayerKeybind("load_pre", LuaModManager:GetPlayerKeybind("load_pre") or "f5")
-	LuaModManager:SetPlayerKeybind("save_pre", LuaModManager:GetPlayerKeybind("save_pre") or "f6")
+	--LuaModManager:SetPlayerKeybind("load_pre", LuaModManager:GetPlayerKeybind("load_pre") or "f5")
+	--LuaModManager:SetPlayerKeybind("save_pre", LuaModManager:GetPlayerKeybind("save_pre") or "f6")
 end)
