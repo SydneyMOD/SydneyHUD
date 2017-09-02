@@ -1,6 +1,6 @@
 
 local unseenstrike_original = PlayerAction.UnseenStrike.Function
-local unseenstrike_start_original = PlayerAction.UnseenStrikeStart.Function
+-- local unseenstrike_start_original = PlayerAction.UnseenStrikeStart.Function
 
 function PlayerAction.UnseenStrike.Function(player_manager, min_time, ...)
 	local function on_damage_taken()
@@ -15,6 +15,7 @@ function PlayerAction.UnseenStrike.Function(player_manager, min_time, ...)
 	managers.gameinfo:event("buff", "deactivate", "unseen_strike_debuff")
 end
 
+--[[
 function PlayerAction.UnseenStrikeStart.Function(player_manager, max_duration, ...)
 	local start_t = Application:time()
 
@@ -31,3 +32,4 @@ function PlayerAction.UnseenStrikeStart.Function(player_manager, max_duration, .
 	managers.player:unregister_message(Message.OnPlayerDamage, "unseen_strike_buff_listener")
 	managers.gameinfo:event("buff", "deactivate", "unseen_strike")
 end
+]]
