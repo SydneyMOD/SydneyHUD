@@ -105,7 +105,7 @@ function ChatGui:update_info_text()
 		info_panel_text:set_range_color(range.from, range.to, tweak_data.chat_colors[range.id])
 	end
 
-	DelayedCallsFix:Add("chat_info_update_info_text", 0.1, function()
+	SydneyHUD:DelayedCallsAdd("SydneyHUD_chat_info_update_info_text", 0.1, function()
 		self:update_info_text()
 	end)
 end
@@ -122,7 +122,7 @@ function ChatGui:key_press(o, k)
 end
 
 function ChatGui:close(...)
-	DelayedCallsFix:Remove("chat_info_update_info_text")
+	SydneyHUD:DelayedCallsRemove("sydneyHUD_chat_info_update_info_text")
 	close_original(self, ...)
 end
 

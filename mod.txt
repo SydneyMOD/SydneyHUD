@@ -4,20 +4,16 @@
 	"author": "SydneyMOD Project Team",
 	"contact": "http://steamcommunity.com/groups/SydneyMOD",
 	"priority": -1,
-  	"version" : "4.0.0",
-	"blt_version" : 2.0,
-	"color" : "0.3 0 1",
-	"image" : "logo.png",
+  	"version": "4.0.0",
+	"blt_version": 2.0,
+	"color": "0.3 0 1",
+	"image": "logo.png",
 	"libraries": [
 		{
 			"identifier": "SydneyHUDAssets",
 			"install_dir": "assets/mod_overrides/",
 			"install_folder": "SydneyHUD-Assets",
 			"display_name": "SydneyHUD Assets"
-		},
-		{
-			"identifier" : "delayedcallsfix",
-			"display_name" : "Delayed Calls Fix"
 		}
 	],
 	"updates": [
@@ -30,8 +26,11 @@
 			"identifier": "SydneyHUDAssets",
 			"install_dir": "assets/mod_overrides/",
 			"install_folder": "SydneyHUD-Assets",
-			"display_name": "SydneyHUD-Assets"
+			"display_name": "SydneyHUD Assets"
 		}
+	],
+	"pre_hooks": [
+		{"script_path": "SydneyHUD.lua", "hook_id": "core/lib/utils/coreapp"}
 	],
 	"hooks": [
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/chatmanager"},

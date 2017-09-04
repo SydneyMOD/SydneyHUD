@@ -1,16 +1,12 @@
 --[[
    _____           __                 __  ____  ______
-  / ___/__  ______/ /___  ___  __  __/ / / / / / / __ \
-  \__ \/ / / / __  / __ \/ _ \/ / / / /_/ / / / / / / /
- ___/ / /_/ / /_/ / / / /  __/ /_/ / __  / /_/ / /_/ /
-/____/\__, /\__,_/_/ /_/\___/\__, /_/ /_/\____/_____/
+  / ___/__  ______/ /___  ___  __  __/ / / / / / / __ \        ____
+  \__ \/ / / / __  / __ \/ _ \/ / / / /_/ / / / / / / /	 _  __/ / /
+ ___/ / /_/ / /_/ / / / /  __/ /_/ / __  / /_/ / /_/ /	| |/ /_  _/
+/____/\__, /\__,_/_/ /_/\___/\__, /_/ /_/\____/_____/	|___/ /_/
      /____/                 /____/
 
-010100110111100101100100011011100110010101111001001000000
-111011101101001011011000110110000100000011000010110110001
-110111011000010111100101110011001000000110001001100101001
-000000110110101111001001000000111011101100001011010010110
-011001110101
+		All-In-One mod for PAYDAY2      Developed by SydneyMOD Team
 ]]
 
 
@@ -61,6 +57,7 @@ if not SydneyHUD.setup then
 	}
 
 	-- var for util
+	SydneyHUD._calls = SydneyHUD._calls or {}
 	SydneyHUD._path = ModPath
 	SydneyHUD._lua_path = ModPath .. "lua/"
 	SydneyHUD._data_path = SavePath .. "SydneyHUD.json"
@@ -190,6 +187,79 @@ if not SydneyHUD.setup then
 			uppercaseNames = true
 		}
 	}
+
+	Hooks:Add("MenuUpdate", "SydneyHUD_DelayedCalls_MenuUpdate", function(t, dt)
+		SydneyHUD:Update(t, dt)
+	end)
+	Hooks:Add("GameSetupUpdate", "SydneyHUD_DelayedCalls_GameSetupUpdate", function(t, dt)
+		SydneyHUD:Update(t, dt)
+	end)
+
+	local upcoming = {}
+	local incoming = {}
+	local removals = {}
+
+	function SydneyHUD:DelayedCallsUpdate(time, deltaTime)
+		local immutable = self._calls
+		for k, v in pairs(immutable) do
+			v.currentTime = v.currentTime + deltaTime
+			if v.currentTime >= v.timeToWait then
+				if v.functionCall then
+					local status = pcall(v.functionCall)
+					if not status then
+						log(SydneyHUD.warn .. "Execution of callback has failed: " .. tostring(k))
+					end
+				end
+			else
+				upcoming[k] = v
+			end
+		end
+
+		for k, v in pairs(self._calls) do
+			upcoming[k] = v
+		end
+		for k, v in pairs(removals) do
+			if upcoming[k] ~= nil then
+				upcoming[k] = nil
+			end
+		end
+
+		for key, __ in pairs(immutable) do
+			immutable[key] = nil
+		end
+		for key, __ in pairs(self._calls) do
+			self._calls[key] = nil
+		end
+		for key, __ in pairs(removals) do
+			removals[key] = nil
+		end
+
+		self._calls, upcoming, incoming = upcoming, self._calls, immutable
+	end
+
+	function SydneyHUD:DelayedCallsAdd(id, time, func)
+		local data = self._calls[id]
+		if data == nil then
+			self._calls[id] = {
+				functionCall = func,
+				timeToWait = time,
+				currentTime = 0
+			}
+		else
+			data.functionCall = func
+			data.timeToWait = time
+			data.currentTime = 0
+		end
+	end
+
+	function SydneyHUD:DelayedCallsRemove(id)
+		local data = self._calls[id]
+		if data == nil then
+			removals[id] = true
+		else
+			self._calls[id] = nil
+		end
+	end
 
 	--[[
 		A simple save function that json encodes our _data table and saves it to a file.
