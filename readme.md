@@ -78,7 +78,7 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 
 
 ### Special Thanks
-SydneyHUD is using the following mods, codes & textures.  
+SydneyHUD is using the following mods, codes & textures.
 So, Big credit to these guys!
 
 * 🐔**JackHUD** by BangL [🔗](https://steamcommunity.com/groups/jackhud)
@@ -93,6 +93,7 @@ So, Big credit to these guys!
 * 📦**No Bag Bendy Tilt** by mluzarow [🔗](https://github.com/mluzarow/No-Bag-Bendy-Tilt)
 * 💉**FAK-Notifier** by SlashNephy [🔗](https://github.com/SlashNephy/FAK-Notifier)
 * 💬**Chat Info** by Nebby [🔗](https://modworkshop.net/mydownloads.php?action=view_down&did=19181)
+* 🕗**Delayed Calls Fix** by SNH20 [🔗](https://paydaymods.com/mods/362/delayedcallsfix)
 * many of inspired mod
 
 **AND YOU.**
