@@ -1,15 +1,17 @@
+--[[
 local receive_message_by_peer_original = ChatManager.receive_message_by_peer
 local init_original = ChatGui.init
 local _layout_input_panel_original = ChatGui._layout_input_panel
 local key_press_original = ChatGui.key_press
 local close_original = ChatGui.close
+--]]
 
 function ChatManager:_receive_message(channel_id, name, message, color, icon)
 	if not self._receivers[channel_id] then
 		return
 	end
 	local time = SydneyHUD._heist_time
-	log(SydneyHUD.dev .. "TimerManager: " .. TimerManager:game():time() or "nil")
+	-- log(SydneyHUD.dev .. "TimerManager: " .. TimerManager:game():time() or "nil")
 	for i, receiver in ipairs(self._receivers[channel_id]) do
 		if SydneyHUD:GetOption("show_heist_time") then
 			receiver:receive_message(time .. " " .. name, message, color, icon)
@@ -19,6 +21,7 @@ function ChatManager:_receive_message(channel_id, name, message, color, icon)
 	end
 end
 
+--[[
 function ChatManager:receive_message_by_peer(channel_id, peer, message)
 	receive_message_by_peer_original(self, channel_id, peer, message)
 	if tonumber(channel_id) == 1 then
@@ -132,3 +135,4 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedDataTypingInfo", function(sende
 		peer._last_typing_info_t = TimerManager:game():time()
 	end
 end)
+--]]
