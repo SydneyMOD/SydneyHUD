@@ -51,7 +51,7 @@ function BaseInteractionExt:selected(player)
 				icon = "equipment_trip_mine"
 			})
 		else
-			selected_original(self, player) 
+			selected_original(self, player)
 		end
 	end
 	return true
