@@ -375,15 +375,9 @@ if not SydneyHUD.setup then
 	end
 
 	function SydneyHUD:GetVersion()
-		local version = "1.0"
-		-- local revision = "0"
-		for k, v in pairs(LuaModManager.Mods) do
-			local info = v.definition
-			if info["name"] == "SydneyHUD" then
-				version = info["version"]
-			end
-		end
-		return version -- , revision
+		local id = string.match(self._path, "(%w+)[\\/]$") or "SydneyHUD"
+		local mod = BLT.Mods:GetMod(id)
+		return tostring(mod:GetVersion() or "(n/a)")
 	end
 
 	function SydneyHUD:SendChatMessage(name, message, isfeed, color)
