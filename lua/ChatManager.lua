@@ -1,10 +1,9 @@
---[[
+
 local receive_message_by_peer_original = ChatManager.receive_message_by_peer
 local init_original = ChatGui.init
 local _layout_input_panel_original = ChatGui._layout_input_panel
 local key_press_original = ChatGui.key_press
 local close_original = ChatGui.close
---]]
 
 function ChatManager:_receive_message(channel_id, name, message, color, icon)
 	if not self._receivers[channel_id] then
@@ -21,7 +20,6 @@ function ChatManager:_receive_message(channel_id, name, message, color, icon)
 	end
 end
 
---[[
 function ChatManager:receive_message_by_peer(channel_id, peer, message)
 	receive_message_by_peer_original(self, channel_id, peer, message)
 	if tonumber(channel_id) == 1 then
@@ -108,7 +106,7 @@ function ChatGui:update_info_text()
 		info_panel_text:set_range_color(range.from, range.to, tweak_data.chat_colors[range.id])
 	end
 
-	SydneyHUD:DelayedCallsAdd("SydneyHUD_chat_info_update_info_text", 0.1, function()
+	SydneyHUD:DelayedCallsAdd("sydneyHUD_chat_info_update_info_text", 0.1, function()
 		self:update_info_text()
 	end)
 end
@@ -135,4 +133,3 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedDataTypingInfo", function(sende
 		peer._last_typing_info_t = TimerManager:game():time()
 	end
 end)
---]]
