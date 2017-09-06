@@ -1,4 +1,3 @@
-
 local receive_message_by_peer_original = ChatManager.receive_message_by_peer
 local init_original = ChatGui.init
 local _layout_input_panel_original = ChatGui._layout_input_panel
@@ -10,7 +9,6 @@ function ChatManager:_receive_message(channel_id, name, message, color, icon)
 		return
 	end
 	local time = SydneyHUD._heist_time
-	-- log(SydneyHUD.dev .. "TimerManager: " .. TimerManager:game():time() or "nil")
 	for i, receiver in ipairs(self._receivers[channel_id]) do
 		if SydneyHUD:GetOption("show_heist_time") then
 			receiver:receive_message(time .. " " .. name, message, color, icon)
@@ -106,7 +104,7 @@ function ChatGui:update_info_text()
 		info_panel_text:set_range_color(range.from, range.to, tweak_data.chat_colors[range.id])
 	end
 
-	SydneyHUD:DelayedCallsAdd("sydneyHUD_chat_info_update_info_text", 0.1, function()
+	SydneyHUD:DelayedCallsAdd("SydneyHUD_chatinfo_update_info_text", 0.1, function()
 		self:update_info_text()
 	end)
 end
@@ -123,7 +121,7 @@ function ChatGui:key_press(o, k)
 end
 
 function ChatGui:close(...)
-	SydneyHUD:DelayedCallsRemove("sydneyHUD_chat_info_update_info_text")
+	SydneyHUD:DelayedCallsRemove("SydneyHUD_chatinfo_update_info_text")
 	close_original(self, ...)
 end
 
