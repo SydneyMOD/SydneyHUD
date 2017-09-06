@@ -53,6 +53,8 @@ function BaseInteractionExt:selected(player)
 		else
 			selected_original(self, player)
 		end
+	else
+		selected_original(self, player)
 	end
 	return true
 end
