@@ -95,6 +95,7 @@ if not SydneyHUD.setup then
 		"sydneyhud_hud_tweaks_waypoint"
 	}
 	SydneyHUD._hook_files = {
+		["core/lib/utils/coreapp"] = "Coreapp.lua"
 		["lib/managers/chatmanager"] = "ChatManager.lua",
 		["lib/managers/enemymanager"] = "EnemyManager.lua",
 		["lib/managers/group_ai_states/groupaistatebase"] = "GroupAIStateBase.lua",
@@ -187,13 +188,6 @@ if not SydneyHUD.setup then
 			uppercaseNames = true
 		}
 	}
-
-	Hooks:Add("MenuUpdate", "SydneyHUD_DelayedCalls_MenuUpdate", function(t, dt)
-		SydneyHUD:DelayedCallsUpdate(t, dt)
-	end)
-	Hooks:Add("GameSetupUpdate", "SydneyHUD_DelayedCalls_GameSetupUpdate", function(t, dt)
-		SydneyHUD:DelayedCallsUpdate(t, dt)
-	end)
 
 	local upcoming = {}
 	local incoming = {}
