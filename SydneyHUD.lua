@@ -95,7 +95,7 @@ if not SydneyHUD.setup then
 		"sydneyhud_hud_tweaks_waypoint"
 	}
 	SydneyHUD._hook_files = {
-		["core/lib/utils/coreapp"] = "Coreapp.lua"
+		["core/lib/utils/coreapp"] = "Coreapp.lua",
 		["lib/managers/chatmanager"] = "ChatManager.lua",
 		["lib/managers/enemymanager"] = "EnemyManager.lua",
 		["lib/managers/group_ai_states/groupaistatebase"] = "GroupAIStateBase.lua",
