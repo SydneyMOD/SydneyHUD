@@ -96,6 +96,7 @@ if not SydneyHUD.setup then
 	}
 	SydneyHUD._hook_files = {
 		["core/lib/utils/coreapp"] = "Coreapp.lua",
+		["core/lib/managers/menu/items/coremenuitemslider"] = "CoreItemSlider.lua",
 		["lib/managers/chatmanager"] = "ChatManager.lua",
 		["lib/managers/enemymanager"] = "EnemyManager.lua",
 		["lib/managers/group_ai_states/groupaistatebase"] = "GroupAIStateBase.lua",
