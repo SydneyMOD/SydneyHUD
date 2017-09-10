@@ -372,7 +372,7 @@ if not SydneyHUD.setup then
 	function SydneyHUD:GetVersion()
 		local id = string.match(self._path, "(%w+)[\\/]$") or "SydneyHUD"
 		local mod = BLT.Mods:GetMod(id)
-		return tostring(mod:GetVersion() or "(n/a)")
+		return tostring(mod and mod:GetVersion() or "(n/a)")
 	end
 
 	function SydneyHUD:SendChatMessage(name, message, isfeed, color)
