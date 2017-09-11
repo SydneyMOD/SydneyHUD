@@ -72,7 +72,6 @@ if not SydneyHUD.setup then
 		"sydneyhud_gadget_options_sniper",
 		"sydneyhud_gadget_options_turret",
 
-		"sydneyhud_hud_lists_options",
 		"sydneyhud_hud_lists_options_buffs",
 		"sydneyhud_hud_lists_options_civilian_color",
 		"sydneyhud_hud_lists_options_enemy_color",

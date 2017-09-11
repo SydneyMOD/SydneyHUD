@@ -3,21 +3,5 @@
 	"parent_menu_id": "blt_options",
 	"title": "sydneyhud_options",
 	"description": "sydneyhud_options_desc",
-	"items": [
-		{
-			"type": "multiple_choice",
-			"id": "sydneyhud_language",
-			"title": "sydneyhud_language",
-			"description": "sydneyhud_language_desc",
-			"callback": "callback_sydneyhud_language",
-			"items": [
-				"language_english",
-				"language_japanese",
-				"language_french",
-				"language_russian"
-			],
-			"value": "language",
-			"default_value": 1
-		}
-	]
+	"items": []
 }

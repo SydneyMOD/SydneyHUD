@@ -335,6 +335,8 @@
 	"swansong_effect_desc": "Полноэкранный эффект когда вы находитесь в Лебединой Песне",
 	"sydneyhud_chat_info": "Информация в чате",
 	"sydneyhud_chat_info_desc": "Отправлять информацию в чат",
+	"sydneyhud_core": "SydneyHUD core Settings",
+	"sydneyhud_core_desc": "Configure SydneyHUD",
 	"sydneyhud_corpse_remover_plus": "Настройка удаления тел",
 	"sydneyhud_corpse_remover_plus_desc": "Детальные настройки удаления тел",
 	"sydneyhud_experimental": "Экспериментальные возможности",

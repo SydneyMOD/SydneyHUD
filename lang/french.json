@@ -333,6 +333,8 @@
 	"stat_screen_skip_desc": "Passe l'écran des statistiques après X secondes",
 	"swansong_effect": "Effet \"Chant du signe\"",
 	"swansong_effect_desc": "Quand vous activez la compétence \"Chant du signe\", un effet clignotant visuel apparaît",
+	"sydneyhud_core": "SydneyHUD core Settings",
+	"sydneyhud_core_desc": "Configure SydneyHUD",
 	"sydneyhud_corpse_remover_plus": "Corpse Remover Plus options",
 	"sydneyhud_corpse_remover_plus_desc": "Configure Corpse Remover Plus",
 	"sydneyhud_chat_info": "Informations du chat",
