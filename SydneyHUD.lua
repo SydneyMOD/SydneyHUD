@@ -65,6 +65,7 @@ if not SydneyHUD.setup then
 	SydneyHUD._data = {}
 	SydneyHUD._menus = {
 		"sydneyhud_options",
+		"sydneyhud_core",
 
 		"sydneyhud_gadget_options",
 		"sydneyhud_gadget_options_others",
@@ -72,7 +73,6 @@ if not SydneyHUD.setup then
 		"sydneyhud_gadget_options_sniper",
 		"sydneyhud_gadget_options_turret",
 
-		"sydneyhud_hud_lists_options_buffs",
 		"sydneyhud_hud_lists_options_civilian_color",
 		"sydneyhud_hud_lists_options_enemy_color",
 		"sydneyhud_hud_lists_options_left",
