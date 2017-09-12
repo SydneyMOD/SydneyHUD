@@ -333,6 +333,8 @@
 	"stat_screen_skip_desc": "指定された秒数後に統計画面のスキップを行います。",
 	"swansong_effect": "Swan Song エフェクト",
 	"swansong_effect_desc": "Swan songの発動中に視界を青くします",
+	"sydneyhud_core": "SydneyHUD コア設定",
+	"sydneyhud_core_desc": "SydneyHUDの設定を変更します。",
 	"sydneyhud_corpse_remover_plus": "Corpse Remover Plus setting",
 	"sydneyhud_corpse_remover_plus_desc": "Configure Corpse Remover Plus",
 	"sydneyhud_chat_info": "チャット情報",

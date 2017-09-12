@@ -333,6 +333,8 @@
 	"stat_screen_skip_desc": "Skips the stat screen after X seconds",
 	"swansong_effect": "Swan Song Effect",
 	"swansong_effect_desc": "Fullscreen effect when you're in Swan song",
+	"sydneyhud_core": "SydneyHUD core Settings",
+	"sydneyhud_core_desc": "Configure SydneyHUD",
 	"sydneyhud_corpse_remover_plus": "Corpse Remover Plus setting",
 	"sydneyhud_corpse_remover_plus_desc": "Configure Corpse Remover Plus",
 	"sydneyhud_chat_info": "Chat information",
