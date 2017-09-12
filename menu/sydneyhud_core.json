@@ -1,6 +1,6 @@
 {
 	"menu_id": "sydneyhud_core",
-	"parent_menu_id": "sydneyhud_core",
+	"parent_menu_id": "sydneyhud_options",
 	"title": "sydneyhud_core",
 	"description": "sydneyhud_core_desc",
 	"items": [
