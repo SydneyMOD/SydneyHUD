@@ -54,7 +54,7 @@
 	"enable_buy_all_assets": "Enable Buy all assets",
 	"enable_buy_all_assets_desc": "Transforms the Gage package assets into 'Buy All', in the briefing screen",
 	"enable_corpse_remover_plus": "Enable Corpse Remover Plus",
-	"enable_corpse_remover_plus_desc": "Remove Bodies/Shields every N seconds",
+	"enable_corpse_remover_plus_desc": "Remove enemy's bodies/shields",
 	"enable_enhanced_assault_banner": "Enhanced Assault Banner",
 	"enable_enhanced_assault_banner_desc": "Shows detailed information about the current assault progress",
 	"enable_flashlight_extender": "Enable flashlight extender",
