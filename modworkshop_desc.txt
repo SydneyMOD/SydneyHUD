@@ -1,8 +1,9 @@
 [align=center]
     [size=large][color=#3399ff][font=Arial Black]SydneyHUD[/font][/color][/size]
 
-    [img]https://img.shields.io/github/release/SydneyMOD/SydneyHUD.svg?style=flat-square[/img]
-    [img]https://img.shields.io/github/issues/SydneyMOD/SydneyHUD.svg?style=flat-square[/img]
+	[img]https://img.shields.io/badge/BLT2-Compatibled-blue.svg?style=flat-square[/img]
+	[img]https://img.shields.io/github/release/SydneyMOD/SydneyHUD.svg?style=flat-square[/img]
+	[img]https://img.shields.io/github/issues/SydneyMOD/SydneyHUD.svg?style=flat-square[/img]
 
 	[url="https://travis-ci.org/SydneyMOD/SydneyHUD"][img]https://img.shields.io/travis/SydneyMOD/SydneyHUD.svg?style=flat-square[/img][/url]
 	[url="https://styleci.io/repos/75427456"][img]"https://styleci.io/repos/75427456/shield?branch=master"[/img][/url]

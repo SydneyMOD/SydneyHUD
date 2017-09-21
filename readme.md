@@ -2,6 +2,7 @@
 <p align="center">All-In-One PAYDAY2 HUD mod</p>
 
 <p align="center">
+<img src="https://img.shields.io/badge/BLT2-Compatibled-blue.svg?style=flat-square">
 <a href="https://travis-ci.org/SydneyMOD/SydneyHUD" target="_blank"><img src="https://img.shields.io/travis/SydneyMOD/SydneyHUD.svg?style=flat-square"></a>
 <a href="https://styleci.io/repos/75427456" target="_blank"><img src="https://styleci.io/repos/75427456/shield?branch=master"></a>
 <img src="https://reposs.herokuapp.com/?path=SydneyMOD/SydneyHUD&style=flat-square&color=lightgray">
