@@ -40,6 +40,7 @@
 * Health bar
 * Hold to pick
 * Ingame-voice indicators
+* Interact Time Hint
 * Kill-Counters
 * Laser options
 * Multi language Support (English / Japanese / French / Russian)
