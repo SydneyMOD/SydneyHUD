@@ -65,7 +65,7 @@ function ECMJammerBase:update(unit, t, dt, ...)
 				end
 			end
 		end
-	elseif self._chat then
+	elseif SydneyHUD._chat then
 		SydneyHUD:RemoveChatMessage()
 	end
 
