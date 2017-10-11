@@ -606,7 +606,7 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD._data.colorize_names = (item:value() == "on")
 		SydneyHUD:Save()
 	end
-	MenuCallbackHandler.callback_detection_risk = function(self, item)
+	MenuCallbackHandler.callback_show_detection_risk = function(self, item)
 		SydneyHUD._data.show_detection_risk = (item:value() == "on")
 		SydneyHUD:Save()
 	end
