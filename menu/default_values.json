@@ -122,6 +122,7 @@
 	"show_civilians": true,
 	"show_client_ranks": true,
 	"show_damage_popup": true,
+	"show_detection_risk": true,
 	"show_ecm_retrigger": true,
 	"show_ecms": true,
 	"show_enemies": true,

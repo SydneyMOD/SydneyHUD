@@ -52,8 +52,13 @@
 	end
 
 	function HUDTeammate:_init_revivecount()
+		local visibility = 1
+		if not SydneyHUD:GetOption("show_detection_risk") then
+			visibility = 0
+		end
 		self._detection_counter = self._player_panel:child("radial_health_panel"):text({
 			name = "detection_risk",
+			alpha = visibility,
 			visible = managers.groupai:state():whisper_mode(),
 			layer = 1,
 			Color = Color.white,
@@ -68,6 +73,7 @@
 		})
 		self._revives_counter = self._player_panel:child("radial_health_panel"):text({
 			name = "revives_counter",
+			alpha = visibility,
 			visible = not managers.groupai:state():whisper_mode(),
 			text = "0",
 			layer = 1,
