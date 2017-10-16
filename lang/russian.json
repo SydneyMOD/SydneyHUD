@@ -323,6 +323,8 @@
 	"show_timers_desc": "Включить или выключить таймеры",
 	"show_turrets": "Показывать SWAT турели",
 	"show_turrets_desc": "Показывает активные турели SWAT",
+	"show_underdog_aced": "Show Underdog Aced Indicator",
+	"show_underdog_aced_desc": "Displays a flashing yellow glow when the Underdog Aced skill is activated.",
 	"skip_black_screen": "Пропустить черный экран",
 	"skip_black_screen_desc": "Пропускает черный экран в начале ограбления",
 	"skip_card_picking": "Автоматически выбирать карточки",
@@ -403,5 +405,9 @@
 	"waypoint_color_g": "Цвет точки (Зеленый)",
 	"waypoint_color_g_desc": "Добавление зеленого цвета",
 	"waypoint_color_r": "Цвет точки (Красный)",
-	"waypoint_color_r_desc": "Добавление красного цвета"
+	"waypoint_color_r_desc": "Добавление красного цвета",
+	"waypoint_deploy": "Show Deployable Waypoint",
+	"waypoint_deploy_desc": "Shows waypoints for deployable",
+	"waypoint_timer": "Show Waypoint Timers",
+	"waypoint_timer_desc": "Shows waypoint for timers"
 }
