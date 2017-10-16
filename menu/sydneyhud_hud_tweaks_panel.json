@@ -45,6 +45,15 @@
 		},
 		{
 			"type": "toggle",
+			"id": "show_underdog_aced",
+			"title": "show_underdog_aced",
+			"description": "show_underdog_aced_desc",
+			"callback": "callback_show_underdog_aced",
+			"value": "show_underdog_aced",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
 			"id": "show_inspire_timer",
 			"title": "show_inspire_timer",
 			"description": "show_inspire_timer",
