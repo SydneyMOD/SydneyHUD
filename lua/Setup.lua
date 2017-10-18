@@ -3,27 +3,27 @@
 printf = printf or function(...) end
 
 if RequiredScript == "lib/setups/setup" and Setup then
-	
+
 	local init_managers_original = Setup.init_managers
 	local update_original = Setup.update
-	
+
 	function Setup:init_managers(managers, ...)
 		managers.gameinfo = managers.gameinfo or GameInfoManager:new()
 		managers.gameinfo:post_init()
 		return init_managers_original(self, managers, ...)
 	end
-	
+
 	function Setup:update(t, dt, ...)
 		managers.gameinfo:update(t, dt)
 		return update_original(self, t, dt, ...)
 	end
 
 end
-	
+
 if RequiredScript == "lib/setups/setup" and not Setup then
-	
+
 	GameInfoManager = GameInfoManager or class()
-	
+
 	GameInfoManager._TIMER_CALLBACKS = {
 		default = {
 			--Digital specific functions
@@ -51,7 +51,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			stop = function(timers, key)
 				GameInfoManager._TIMER_CALLBACKS.default.set_active(timers, key, false)
 			end,
-			
+
 			--General functions
 			update = function(timers, key, t, timer)
 				if timers[key] then
@@ -96,7 +96,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			stop_on_pause = function(...)
 				GameInfoManager._TIMER_CALLBACKS.default.stop(...)
 			end,
-		
+
 			[132864] = {	--Meltdown vault temperature
 				set = function(timers, key, timer)
 					if timer > 0 then
@@ -130,7 +130,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			--[135247] = { },	--Lab rats cloaker safe 4
 		}
 	}
-	
+
 	GameInfoManager._INTERACTIONS = {
 		INTERACTION_TO_CALLBACK = {
 			corpse_alarm_pager =				"_pager_event",
@@ -256,12 +256,12 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 	}
 	GameInfoManager._INTERACTIONS.IGNORE_IDS.watchdogs_2_day = table.deep_map_copy(GameInfoManager._INTERACTIONS.IGNORE_IDS.watchdogs_2)
 	GameInfoManager._INTERACTIONS.IGNORE_IDS.welcome_to_the_jungle_1_night = table.deep_map_copy(GameInfoManager._INTERACTIONS.IGNORE_IDS.welcome_to_the_jungle_1)
-	
+
 	GameInfoManager.CAMERAS = {
 		["6c5d032fe7e08d01"] = "standard",
 		["490a9313f945cccf"] = "drone",
 	}
-	
+
 	GameInfoManager._EQUIPMENT = {
 		SENTRY_KEYS = {
 			--unit:name():key() for friendly sentries
@@ -309,7 +309,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			[101473] = "biker_bunker_ammo",
 		},
 	}
-	
+
 	GameInfoManager._BUFFS = {
 		on_activate = {
 			armor_break_invulnerable_debuff = function(id, data)
@@ -331,7 +331,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 				end
 			end,
 		},
-		
+
 		--Temporary upgrades
 		temporary = {
 			chico_injector = "chico_injector",
@@ -356,7 +356,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			loose_ammo_give_team = "ammo_give_out_debuff",
 			armor_break_invulnerable = "armor_break_invulnerable_debuff",
 			single_shot_fast_reload = "aggressive_reload_aced",
-			
+
 			--"properties"
 			bloodthirst_reload_speed = "bloodthirst_aced",
 			revived_damage_reduction = "pain_killer",
@@ -371,7 +371,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 		},
 		stamina = {
 			multiplier = { id = "endurance", level = 0 },
-			passive_multiplier = { id = "crew_chief_3", level = 3 }, 
+			passive_multiplier = { id = "crew_chief_3", level = 3 },
 			hostage_multiplier =  { id = "crew_chief_9", level = 9 },
 		},
 		health = {
@@ -388,25 +388,25 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 		},
 --[[
 		weapon = {
-			recoil_multiplier = "leadership_aced", 
-			suppression_recoil_multiplier = "leadership_aced", 
+			recoil_multiplier = "leadership_aced",
+			suppression_recoil_multiplier = "leadership_aced",
 		},
 		pistol = {
-			recoil_multiplier = "leadership", 
-			suppression_recoil_multiplier = "leadership", 
+			recoil_multiplier = "leadership",
+			suppression_recoil_multiplier = "leadership",
 		},
 		akimbo = {
-			recoil_multiplier = "leadership", 
-			suppression_recoil_multiplier = "leadership", 
+			recoil_multiplier = "leadership",
+			suppression_recoil_multiplier = "leadership",
 		},
 ]]
 	}
-	
+
 	function GameInfoManager:init()
 		self._t = 0
 		self._scheduled_callbacks = {}
 		self._listeners = {}
-		
+
 		self._timers = {}
 		self._units = {}
 		self._unit_count = {}
@@ -426,7 +426,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 		self._buffs = {}
 		self._player_actions = {}
 		self._cameras = {}
-		
+
 		self._auto_expire_timers = {
 			on_expire = {},
 			expire_t = {},
@@ -434,40 +434,40 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 		self._timed_buff_expire_clbk = callback(self, self, "_on_timed_buff_expired")
 		self._timed_stack_expire_clbk = callback(self, self, "_on_timed_stack_expired")
 		self._player_actions_expire_clbk = callback(self, self, "_on_player_action_expired")
-		
-		
+
+
 	end
-	
+
 	function GameInfoManager:post_init()
 		for _, clbk in ipairs(GameInfoManager.post_init_events or {}) do
 			clbk()
 		end
-		
+
 		GameInfoManager.post_init_events = nil
 	end
-	
+
 	function GameInfoManager:update(t, dt)
 		self._t = t
 		self:_update_player_timer_expiration(t, dt)
-		
+
 		while self._scheduled_callbacks[1] and self._scheduled_callbacks[1].t <= t do
 			local data = table.remove(self._scheduled_callbacks, 1)
 			data.clbk(unpack(data.args))
 		end
 	end
-	
+
 	function GameInfoManager:add_scheduled_callback(id, delay, clbk, ...)
 		local t = self._t + delay
 		local pos = 1
-		
+
 		for i, data in ipairs(self._scheduled_callbacks) do
 			if data.t >= t then break end
 			pos = pos + 1
 		end
-		
+
 		table.insert(self._scheduled_callbacks, pos, { id = id, t = t, clbk = clbk, args = { ... } })
 	end
-	
+
 	function GameInfoManager:remove_scheduled_callback(id)
 		for i = 1, #self._scheduled_callbacks, 1 do
 			if data.id == id then
@@ -476,17 +476,17 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:event(source, ...)
 		local target = "_" .. source .. "_event"
-		
+
 		if self[target] then
 			self[target](self, ...)
 		else
 			printf("Error: No event handler for %s\n", target)
 		end
 	end
-	
+
 	function GameInfoManager:get_timers(key)
 		if key then
 			return self._timers[key]
@@ -494,7 +494,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._timers
 		end
 	end
-	
+
 	function GameInfoManager:get_units(key)
 		if key then
 			return self._units[key]
@@ -502,7 +502,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._units
 		end
 	end
-	
+
 	function GameInfoManager:get_unit_count(id)
 		if id then
 			return self._unit_count[id] or 0
@@ -510,7 +510,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._unit_count
 		end
 	end
-	
+
 	function GameInfoManager:get_minions(key)
 		if key then
 			return self._minions[key]
@@ -518,7 +518,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._minions
 		end
 	end
-	
+
 	function GameInfoManager:get_pagers(key)
 		if key then
 			return self._pagers[key]
@@ -526,7 +526,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._pagers
 		end
 	end
-	
+
 	function GameInfoManager:get_special_equipment(key)
 		if key then
 			return self._special_equipment[key]
@@ -534,7 +534,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._special_equipment
 		end
 	end
-	
+
 	function GameInfoManager:get_loot(key)
 		if key then
 			return self._loot[key]
@@ -542,7 +542,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._loot
 		end
 	end
-	
+
 	function GameInfoManager:get_ecms(key)
 		if key then
 			return self._ecms[key]
@@ -550,7 +550,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._ecms
 		end
 	end
-	
+
 	function GameInfoManager:get_cameras(key)
 		if key then
 			return self._cameras[key]
@@ -558,7 +558,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._cameras
 		end
 	end
-	
+
 	function GameInfoManager:get_deployables(type, key)
 		if type and key then
 			return self._deployables[type][key]
@@ -568,7 +568,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._deployables
 		end
 	end
-	
+
 	function GameInfoManager:get_sentries(key)
 		if key then
 			return self._sentries[key]
@@ -576,7 +576,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._sentries
 		end
 	end
-	
+
 	function GameInfoManager:get_buffs(id)
 		if id then
 			return self._buffs[id]
@@ -584,7 +584,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._buffs
 		end
 	end
-	
+
 	function GameInfoManager:get_player_actions(id)
 		if id then
 			return self._player_actions[id]
@@ -592,12 +592,12 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			return self._player_actions
 		end
 	end
-	
+
 	function GameInfoManager:_timer_event(event, key, ...)
 		if event == "create" then
-			if not self._timers[key] then	
+			if not self._timers[key] then
 				local unit, ext, device_type = ...
-				local id = unit:editor_id()		
+				local id = unit:editor_id()
 				self._timers[key] = { unit = unit, ext = ext, device_type = device_type, id = id, jammed = false, powered = true, upgradable = false }
 				self:_listener_callback("timer", "create", key, self._timers[key])
 			end
@@ -610,7 +610,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 		elseif self._timers[key] then
 			local timer_id = self._timers[key].id
 			local timer_override = GameInfoManager._TIMER_CALLBACKS.overrides[timer_id]
-			
+
 			if timer_override and timer_override[event] then
 				timer_override[event](self._timers, key, ...)
 			else
@@ -618,7 +618,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_unit_event(event, key, data)
 		if event == "add" then
 			if not self._units[key] then
@@ -632,14 +632,14 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 				self:_listener_callback("unit", event, key, self._units[key])
 				self:_unit_count_event("change", self._units[key].type, -1)
 				self._units[key] = nil
-				
+
 				if self._minions[key] then
 					self:_minion_event("remove", key)
 				end
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_unit_count_event(event, unit_type, value)
 		if event == "change" then
 			if value ~= 0 then
@@ -650,7 +650,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			self:_unit_count_event("change", unit_type, value - (self._unit_count[unit_type] or 0))
 		end
 	end
-	
+
 	function GameInfoManager:_minion_event(event, key, data)
 		if event == "add" then
 			if not self._minions[key] then
@@ -676,12 +676,12 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 				elseif event == "set_damage_multiplier" then
 					self._minions[key].damage_multiplier = data.damage_multiplier
 				end
-				
+
 				self:_listener_callback("minion", event, key, self._minions[key])
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_turret_event(event, key, unit)
 		if event == "add" then
 			if not self._turrets[key] then
@@ -695,28 +695,28 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_interactive_unit_event(event, key, data)
 		local lookup = GameInfoManager._INTERACTIONS
 		local level_id = managers.job:current_level_id()
-		
+
 		if lookup.IGNORE_IDS[level_id] and lookup.IGNORE_IDS[level_id][data.editor_id] then
 			return
 		end
-		
+
 		if lookup.CONDITIONAL_IGNORE_IDS[data.editor_id] then
 			if lookup.CONDITIONAL_IGNORE_IDS[data.editor_id]() then
 				return
 			end
 		end
-		
+
 		local interact_clbk = lookup.INTERACTION_TO_CALLBACK[data.interact_id]
-		
+
 		if interact_clbk then
 			self[interact_clbk](self, event, key, data)
 		else
 			local carry_id = data.unit:carry_data() and data.unit:carry_data():carry_id() or lookup.INTERACTION_TO_CARRY[data.interact_id] or (self._loot[key] and self._loot[key].carry_id)
-			
+
 			if carry_id then
 				data.carry_id = carry_id
 				self:_loot_interaction_handler(event, key, data)
@@ -725,15 +725,15 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_pager_event(event, key, data)
 		if event == "add" then
 			if not self._pagers[key] then
 				local t = Application:time()
-				
-				self._pagers[key] = { 
-					unit = data.unit, 
-					active = true, 
+
+				self._pagers[key] = {
+					unit = data.unit,
+					active = true,
 					answered = false,
 					start_t = t,
 					expire_t = t + 12,
@@ -754,7 +754,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_special_equipment_interaction_handler(event, key, data)
 		if event == "add" then
 			if not self._special_equipment[key] then
@@ -770,7 +770,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_special_equipment_count_event(event, interact_id, value, data)
 		if event == "change" then
 			if value ~= 0 then
@@ -778,29 +778,29 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_deployable_interaction_handler(event, key, data)
 		local type = GameInfoManager._EQUIPMENT.INTERACTION_ID_TO_TYPE[data.interact_id]
-		
+
 		if self._deployables[type][key] then
 			local active = event == "add"
 			local offset = GameInfoManager._EQUIPMENT.AMOUNT_OFFSETS[data.unit:editor_id()] or GameInfoManager._EQUIPMENT.AMOUNT_OFFSETS[data.interact_id]
-			
+
 			self:_bag_deployable_event("set_active", key, { active = active }, type)
-			
+
 			if active and offset then
 				self:_bag_deployable_event("set_amount_offset", key, { amount_offset = offset }, type)
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_loot_interaction_handler(event, key, data)
 		if event == "add" then
 			if not self._loot[key] then
 				local composite_lookup = GameInfoManager._INTERACTIONS.COMPOSITE_LOOT_UNITS
 				local count = composite_lookup[data.editor_id] or composite_lookup[data.interact_id] or 1
 				local bagged = GameInfoManager._INTERACTIONS.BAGGED_IDS[data.interact_id] and true or false
-			
+
 				self._loot[key] = { unit = data.unit, carry_id = data.carry_id, count = count, bagged = bagged }
 				self:_listener_callback("loot", "add", key, self._loot[key])
 				self:_loot_count_event("change", data.carry_id, bagged, count, self._loot[key])
@@ -813,7 +813,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_loot_count_event(event, carry_id, bagged, value, data)
 		if event == "change" then
 			if value ~= 0 then
@@ -821,7 +821,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_ecm_event(event, key, data)
 		if event == "create" then
 			if not self._ecms[key] then
@@ -861,23 +861,23 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_doc_bag_event(event, key, data)
 		self:_bag_deployable_event(event, key, data, "doc_bag")
 	end
-	
+
 	function GameInfoManager:_ammo_bag_event(event, key, data)
 		self:_bag_deployable_event(event, key, data, "ammo_bag")
 	end
-	
+
 	function GameInfoManager:_body_bag_event(event, key, data)
 		self:_bag_deployable_event(event, key, data, "body_bag")
 	end
-	
+
 	function GameInfoManager:_grenade_crate_event(event, key, data)
 		self:_bag_deployable_event(event, key, data, "grenade_crate")
 	end
-	
+
 	function GameInfoManager:_bag_deployable_event(event, key, data, type)
 		if event == "create" then
 			if not self._deployables[type][key] then
@@ -887,27 +887,27 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 		elseif self._deployables[type][key] then
 			local function update_aggregate_attribute(aggregate_key, attr)
 				if not self._deployables[type][aggregate_key] then return end
-			
+
 				local total = 0
 				for k, v in pairs(self._deployables[type][aggregate_key].aggregate_members or {}) do
 					if self._deployables[type][k].active then
 						total = total + (self._deployables[type][k][attr] or 0)
 					end
 				end
-				
+
 				self._deployables[type][aggregate_key][attr] = total
 				self:_listener_callback(type, "set_" .. attr, aggregate_key, self._deployables[type][aggregate_key])
 			end
-			
+
 			local aggregate_key = GameInfoManager._EQUIPMENT.AGGREAGATE_ITEMS[self._deployables[type][key].unit:editor_id()]
-			
+
 			if event == "destroy" then
 				self:_listener_callback(type, "destroy", key, self._deployables[type][key])
 				self._deployables[type][key] = nil
-				
+
 				if aggregate_key and self._deployables[type][aggregate_key] then
 					self._deployables[type][aggregate_key].aggregate_members[key] = nil
-					
+
 					if next(self._deployables[type][aggregate_key].aggregate_members or {}) == nil then
 						self:_listener_callback(type, "destroy", aggregate_key, self._deployables[type][aggregate_key])
 						self._deployables[type][aggregate_key] = nil
@@ -917,12 +917,12 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 				if aggregate_key then
 					self._deployables[type][key].aggregate_key = aggregate_key
 				end
-				
+
 				if self._deployables[type][key].active ~= data.active then
 					self._deployables[type][key].active = data.active
 					self:_listener_callback(type, "set_active", key, self._deployables[type][key])
 				end
-				
+
 				if aggregate_key then
 					self._deployables[type][aggregate_key] = self._deployables[type][aggregate_key] or {
 						position = self._deployables[type][key].unit:interaction():interact_position(),
@@ -930,7 +930,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 					}
 					self._deployables[type][aggregate_key].aggregate_members[key] = true
 					--TODO: Update position for each member added?
-					
+
 					local aggregate_active = false
 					for k, v in pairs(self._deployables[type][aggregate_key].aggregate_members or {}) do
 						if self._deployables[type][k].active then
@@ -938,12 +938,12 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 							break
 						end
 					end
-			
+
 					if self._deployables[type][aggregate_key].active ~= aggregate_active then
 						self._deployables[type][aggregate_key].active = aggregate_active
 						self:_listener_callback(type, "set_active", aggregate_key, self._deployables[type][aggregate_key])
 					end
-					
+
 					update_aggregate_attribute(aggregate_key, "amount")
 					update_aggregate_attribute(aggregate_key, "max_amount")
 					update_aggregate_attribute(aggregate_key, "amount_offset")
@@ -951,7 +951,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			elseif event == "set_owner" then
 				self._deployables[type][key].owner = data.owner
 				self:_listener_callback(type, "set_owner", key, self._deployables[type][key])
-				
+
 				--if aggregate_key then
 				--	self._deployables[type][aggregate_key].owner = owner
 				--	self:_listener_callback(type, "set_owner", aggregate_key, self._deployables[type][aggregate_key])
@@ -959,28 +959,28 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			elseif event == "set_max_amount" then
 				self._deployables[type][key].max_amount = data.max_amount
 				self:_listener_callback(type, "set_max_amount", key, self._deployables[type][key])
-				
+
 				if aggregate_key then
 					update_aggregate_attribute(aggregate_key, "max_amount")
 				end
 			elseif event == "set_amount_offset" then
 				self._deployables[type][key].amount_offset = data.amount_offset
 				self:_listener_callback(type, "set_amount_offset", key, self._deployables[type][key])
-				
+
 				if aggregate_key then
 					update_aggregate_attribute(aggregate_key, "amount_offset")
 				end
 			elseif event == "set_amount" then
 				self._deployables[type][key].amount = data.amount
 				self:_listener_callback(type, "set_amount", key, self._deployables[type][key])
-				
+
 				if aggregate_key then
 					update_aggregate_attribute(aggregate_key, "amount")
 				end
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_sentry_event(event, key, data)
 		if event == "create" then
 			if not self._sentries[key] and GameInfoManager._EQUIPMENT.SENTRY_KEYS[tostring(data.unit:name():key())] then
@@ -1004,19 +1004,19 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 				self:_sentry_event("set_active", key, { active = false })
 				self._sentries[key] = nil
 			end
-			
+
 			self:_listener_callback("sentry", event, key, self._sentries[key])
 		end
 	end
-	
+
 	function GameInfoManager:_whisper_mode_event(event, key, status)
 		self:_listener_callback("whisper_mode", "change", key, status)
 	end
-	
+
 	function GameInfoManager:_temporary_buff_event(event, data)
 		local buff_data = GameInfoManager._BUFFS[data.category][data.upgrade]
 		local id = data.level and type(buff_data) == "table" and buff_data[data.level] or buff_data
-		
+
 		if id then
 			self:_timed_buff_event(event, id, data)
 			if data.value ~= 0 then
@@ -1029,10 +1029,10 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_timed_buff_event(event, id, data)
 		self:_buff_event(event, id, data)
-		
+
 		if event == "activate" then
 			self:_buff_event("set_duration", id, { t = data.t, duration = data.duration, expire_t = data.expire_t })
 			self:_add_player_timer_expiration(id, id, self._buffs[id].expire_t, self._timed_buff_expire_clbk)
@@ -1040,34 +1040,34 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			self:_remove_player_timer_expiration(id)
 		end
 	end
-	
+
 	function GameInfoManager:_timed_stack_buff_event(event, id, data)
 		--printf("GameInfoManager:_timed_stack_buff_event(%s, %s, %s)\n", tostring(event), tostring(id), tostring(data))
-	
+
 		if event == "add_stack" then
 			if not self._buffs[id] then
 				self:_buff_event("activate", id)
 				self._buffs[id].stacks = {}
 			end
-			
+
 			local t = data.t or Application:time()
 			local expire_t = data.expire_t or data.duration and (data.duration + t) or t
 			local key = string.format("%s_%f_%f", id, t, math.random())
-			
+
 			local i = #self._buffs[id].stacks
 			while self._buffs[id].stacks[i] and self._buffs[id].stacks[i].expire_t > expire_t do
 				i = i - 1
 			end
 			table.insert(self._buffs[id].stacks, i + 1, { key = key, t = t, expire_t = expire_t })
 			self:_add_player_timer_expiration(key, id, expire_t, self._timed_stack_expire_clbk)
-			
+
 			self:_listener_callback("buff", "add_timed_stack", id, self._buffs[id])
 		end
 	end
-	
+
 	function GameInfoManager:_buff_event(event, id, data)
 		--printf("GameInfoManager:_buff_event(%s %s)\n", event, id)
-		
+
 		if event == "activate" then
 			if not self._buffs[id] then
 				self._buffs[id] = data or {}
@@ -1103,33 +1103,33 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 		end
 
 		self:_listener_callback("buff", event, id, self._buffs[id])
-		
+
 		local clbk_name = "on_" .. event
 		if GameInfoManager._BUFFS[clbk_name] and GameInfoManager._BUFFS[clbk_name][id] then
 			GameInfoManager._BUFFS[clbk_name][id](id, self._buffs[id])
 		end
 	end
-	
+
 	function GameInfoManager:_team_buff_event(event, data)
 		local buff_data = GameInfoManager._BUFFS[data.category] and GameInfoManager._BUFFS[data.category][data.upgrade]
 		local id = buff_data and buff_data.id
 		local level = buff_data and buff_data.level
-		
+
 		if id then
 			if event == "activate" then
 				local was_active = self._buffs[id]
-				
+
 				if not was_active then
 					self:_buff_event("activate", id)
 					self._buffs[id].peers = {}
 					self._buffs[id].level = level
 				end
-				
+
 				if not self._buffs[id].peers[data.peer] then
 					self._buffs[id].peers[data.peer] = true
 					self:_buff_event("change_stack_count", id, { difference = 1 })
 				end
-				
+
 				if not was_active and data.value ~= 0 then
 					self:_buff_event("set_value", id, { value = data.value })
 				end
@@ -1137,7 +1137,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 				if self._buffs[id] and self._buffs[id].peers[data.peer] then
 					self._buffs[id].peers[data.peer] = nil
 					self:_buff_event("change_stack_count", id, { difference = -1 })
-					
+
 					if next(self._buffs[id].peers) == nil then
 						self:_buff_event("deactivate", id)
 					end
@@ -1147,16 +1147,16 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			printf("Unknown team buff event: %s %s %s\n", event, data.category, data.upgrade)
 		end
 	end
-	
+
 	function GameInfoManager:_player_action_event(event, id, data)
 		--printf("GameInfoManager:_player_action_event(%s %s)", event, id)
-	
+
 		if event == "activate" then
 			if not self._player_actions[id] then
 				self._player_actions[id] = {}
 				self:_listener_callback("player_action", "activate", id, self._player_actions[id])
 			end
-			
+
 			if data and (data.duration or data.expire_t) then
 				self:_player_action_event("set_duration", id, data)
 				self:_add_player_timer_expiration(id, id, self._player_actions[id].expire_t, self._player_actions_expire_clbk)
@@ -1173,11 +1173,11 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			elseif event == "set_data" then
 				self._player_actions[id].data = data
 			end
-			
+
 			self:_listener_callback("player_action", event, id, self._player_actions[id])
 		end
 	end
-	
+
 	function GameInfoManager:_camera_event(event, key, data)
 		if event == "create" then
 			if not self._cameras[key] then
@@ -1195,31 +1195,31 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 				self._cameras[key].tape_loop_expire_t = nil
 				self._cameras[key].tape_loop_start_t = nil
 			end
-			
+
 			self:_listener_callback("camera", event, key, self._cameras[key])
-			
+
 			if event == "destroy" then
 				self._cameras[key] = nil
 			end
 		end
 	end
-	
-	
+
+
 	function GameInfoManager:register_listener(listener_id, source_type, event, clbk, keys, data_only)
 		local listener_keys = nil
-		
+
 		if keys then
 			listener_keys = {}
 			for _, key in ipairs(keys) do
 				listener_keys[key] = true
 			end
 		end
-		
+
 		self._listeners[source_type] = self._listeners[source_type] or {}
 		self._listeners[source_type][event] = self._listeners[source_type][event] or {}
 		self._listeners[source_type][event][listener_id] = { clbk = clbk, keys = listener_keys, data_only = data_only }
 	end
-	
+
 	function GameInfoManager:unregister_listener(listener_id, source_type, event)
 		if self._listeners[source_type] then
 			if self._listeners[source_type][event] then
@@ -1227,7 +1227,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_listener_callback(source, event, key, ...)
 		for listener_id, data in pairs(self._listeners[source] and self._listeners[source][event] or {}) do
 			if not data.keys or data.keys[key] then
@@ -1239,15 +1239,15 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_add_player_timer_expiration(key, id, expire_t, expire_clbk)
 		if self._auto_expire_timers.on_expire[key] then
 			self:_remove_player_timer_expiration(key)
 		end
-		
+
 		local expire_data = { key = key, id = id, expire_t = expire_t }
 		local t_size = #self._auto_expire_timers.expire_t
-		
+
 		if (t_size <= 0) or (expire_t >= self._auto_expire_timers.expire_t[t_size].expire_t) then
 			table.insert(self._auto_expire_timers.expire_t, expire_data)
 		else
@@ -1258,10 +1258,10 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 				end
 			end
 		end
-		
+
 		self._auto_expire_timers.on_expire[key] = expire_clbk
 	end
-	
+
 	function GameInfoManager:_remove_player_timer_expiration(key)
 		if self._auto_expire_timers.on_expire[key] then
 			for i, data in ipairs(self._auto_expire_timers.expire_t) do
@@ -1270,16 +1270,16 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 					break
 				end
 			end
-			
+
 			self._auto_expire_timers.on_expire[key] = nil
 		end
 	end
-	
+
 	function GameInfoManager:_update_player_timer_expiration(ut, udt)
 		local t = Application:time()
 		local dt = t - self._t
 		self._t = t
-	
+
 		while self._auto_expire_timers.expire_t[1] and self._auto_expire_timers.expire_t[1].expire_t < t do
 			local data = self._auto_expire_timers.expire_t[1]
 			local id = data.id
@@ -1288,46 +1288,46 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			self:_remove_player_timer_expiration(key)
 		end
 	end
-	
+
 	function GameInfoManager:_on_timed_buff_expired(t, key, id)
 		self:_buff_event("deactivate", id)
 	end
-	
+
 	function GameInfoManager:_on_timed_stack_expired(t, key, id)
 		if self._buffs[id].stacks[1] then
 			table.remove(self._buffs[id].stacks, 1)
 			self:_listener_callback("buff", "remove_timed_stack", id, self._buffs[id])
-			
+
 			if #self._buffs[id].stacks <= 0 then
 				self:_buff_event("deactivate", id)
 			end
 		end
 	end
-	
+
 	function GameInfoManager:_on_player_action_expired(t, key, id)
 		self:_player_action_event("deactivate", id)
 	end
-	
+
 	function GameInfoManager:_recount_active_cameras()
 		local count = 0
-		
+
 		for key, cam_data in pairs(self._cameras) do
 			--if cam_data.enabled then
 				--printf("Camera (%s): D:%s E:%s A:%s B:%s T:%s\n", key, tostring(cam_data.is_drone and true or false), tostring(cam_data.enabled and true or false), tostring(cam_data.active and true or false), tostring(cam_data.broken and true or false), tostring(cam_data.tape_loop_expire_t and true or false))
 			--end
-			
+
 			if --[[cam_data.enabled and]] not cam_data.broken and (cam_data.active or cam_data.tape_loop_expire_t) then
 				count = count + 1
 			end
 		end
-		
+
 		self._upd_camera_count = nil
 		self:_listener_callback("camera_count", "set_count", nil, count)
-		
+
 		return count
 	end
-	
-	
+
+
 	function GameInfoManager.add_post_init_event(clbk)
 		if managers and managers.gameinfo then
 			clbk()
@@ -1336,5 +1336,5 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			table.insert(GameInfoManager.post_init_events, clbk)
 		end
 	end
-	
+
 end

@@ -1,7 +1,7 @@
 if not SydneyHUD:GetOption("show_timer_waypoint") then return end
 
 TimerWaypoint = TimerWaypoint or class(CustomWaypoint)
-	
+
 local function format_time_string(value)
 	local frmt_string
 
@@ -14,15 +14,15 @@ local function format_time_string(value)
 	else
 		frmt_string = string.format("%.1f", 0)
 	end
-	
+
 	return frmt_string
-end	
-	
+end
+
 function TimerWaypoint:init(id, ws, data)
 	TimerWaypoint.super.init(self, id, ws, data)
-	
+
 	self._panel:set_size(40, 60)
-	
+
 	self._icon = self._panel:bitmap({
 		name = "icon",
 		texture = data.texture,
@@ -31,7 +31,7 @@ function TimerWaypoint:init(id, ws, data)
 		h = self._panel:w() * 0.875,
 		x = self._panel:w() * 0.125,
 	})
-	
+
 	local text_size = self._panel:h() - self._icon:h()
 	self._text = self._panel:text({
 		name = "text",
@@ -51,14 +51,14 @@ end
 
 function TimerWaypoint:_onscreen_state_change()
 	self._text:set_visible(self._onscreen)
-	
+
 	if self._onscreen then
 		self._icon:set_y(0)
 	else
 		self._arrow_radius = self._icon:w() * 0.75
 		self._icon:set_center(self._panel:w()/2, self._panel:h() / 2)
 	end
-	
+
 	return TimerWaypoint.super._onscreen_state_change(self)
 end
 
@@ -114,7 +114,7 @@ local function timer_clbk(event, key, data)
 				texture_rect = texture_rect,
 				show_offscreen = true,
 			}
-			
+
 			managers.waypoints:add_waypoint(id, data.id == 132864 and MeltdownTimerWaypoint or TimerWaypoint, params)
 		else
 			managers.waypoints:remove_waypoint(id)

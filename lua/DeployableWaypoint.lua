@@ -3,10 +3,10 @@ if not SydneyHUD:GetOption("show_deployable_waypoint") then return end
 DeployableWaypoint = DeployableWaypoint or class(CustomWaypoint)
 function DeployableWaypoint:init(id, ws, data)
 	DeployableWaypoint.super.init(self, id, ws, data)
-	
+
 	self._type = data.type
 	self._panel:set_size(35, 60)
-	
+
 	self._icon = self._panel:bitmap({
 		name = "icon",
 		texture = data.texture,
@@ -14,7 +14,7 @@ function DeployableWaypoint:init(id, ws, data)
 		w = self._panel:w(),
 		h = self._panel:w(),
 	})
-	
+
 	local text_size = self._panel:h() - self._icon:h()
 	self._text = self._panel:text({
 		name = "text",
@@ -26,17 +26,17 @@ function DeployableWaypoint:init(id, ws, data)
 		h = text_size,
 		y = self._icon:h(),
 	})
-	
+
 	self._cached_data = data.deployable_data or {}
 end
 
 function DeployableWaypoint:post_init()
 	DeployableWaypoint.super.post_init(self)
-	
+
 	self:set_amount(self._cached_data)
 	self:set_owner(self._cached_data)
 	self:set_upgrades(self._cached_data)
-	
+
 	self._cached_data = nil
 end
 
@@ -68,11 +68,11 @@ end
 AmmoBagDeployableWaypoint = AmmoBagDeployableWaypoint or class(BagDeployableWaypoint)
 function AmmoBagDeployableWaypoint:init(...)
 	AmmoBagDeployableWaypoint.super.init(self, ...)
-	
+
 	self._panel:set_h(self._panel:h() + self._icon:h())
-	
+
 	local size = self._icon:h()
-	
+
 	self._upgrade_icon = self._panel:bitmap({
 		name = "upgrade_icon",
 		texture = "guis/textures/pd2/skilltree_2/icons_atlas_2",
@@ -82,7 +82,7 @@ function AmmoBagDeployableWaypoint:init(...)
 		visible = false,
 	})
 	self._upgrade_icon:set_bottom(self._panel:h())
-	
+
 	self._aced_icon = self._panel:bitmap({
 		name = "aced_icon",
 		texture = "guis/textures/pd2/skilltree_2/ace_symbol",
@@ -132,15 +132,15 @@ local function add_wp(id, type, unit, key)
 		texture_rect = map.texture_rect,
 		deployable_data = managers.gameinfo:get_deployables(type, key),
 	}
-	
+
 	managers.waypoints:add_waypoint(id, class, params)
 end
 
 local function bag_clbk(event, key, data)
 	if data.aggregate_members then return end
-	
+
 	local id = "bag_wp_" .. key
-	
+
 	if event == "set_active" then
 		if data.active then
 			add_wp(id, data.type, data.unit, key)
@@ -149,7 +149,7 @@ local function bag_clbk(event, key, data)
 		end
 	elseif managers.waypoints:get_waypoint(id) then
 		if event == "set_amount_offset" then event = "set_amount" end
-		
+
 		managers.waypoints:do_callback(id, event, data)
 	end
 end

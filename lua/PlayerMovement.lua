@@ -33,12 +33,12 @@ end
 Hooks:PostHook( PlayerMovement , "_upd_underdog_skill" , "uHUDPostPlayerMovementUpdUnderdogSkill" , function( self , t )
 
 	if not self._underdog_skill_data.has_dmg_dampener then return end
-	
+
 	if not self._attackers or self:downed() then
 		managers.hud:hide_underdog()
 		return
 	end
-	
+
 	local my_pos = self._m_pos
 	local nr_guys = 0
 	local activated
@@ -57,6 +57,7 @@ Hooks:PostHook( PlayerMovement , "_upd_underdog_skill" , "uHUDPostPlayerMovement
 				managers.hud:show_underdog()
 			end
 		else
+		return
 		end
 	end
 
