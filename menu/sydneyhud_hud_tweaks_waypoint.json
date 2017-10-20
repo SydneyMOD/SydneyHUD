@@ -39,6 +39,24 @@
 			"min": 0,
 			"step": 0.01,
 			"default_value": 1
+		},
+		{
+			"type": "toggle",
+			"id": "waypoint_deploy",
+			"title": "waypoint_deploy",
+			"description": "waypoint_deploy_desc",
+			"callback": "callback_show_deployable_waypoint",
+			"value": "show_deployable_waypoint",
+			"default_value": true
+		},
+		{
+			"type": "toggle",
+			"id": "waypoint_timer",
+			"title": "waypoint_timer",
+			"description": "waypoint_timer_desc",
+			"callback": "callback_show_timer_waypoint",
+			"value": "show_timer_waypoint",
+			"default_value": true
 		}
 	]
 }

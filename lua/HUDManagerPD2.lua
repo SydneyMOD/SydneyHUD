@@ -294,6 +294,22 @@ function HUDManager.remove_interact(self)
 	return remove_interact_original(self)
 end
 
+function HUDManager:show_underdog()
+	if not SydneyHUD:GetOption("show_underdog_aced") then
+		self._teammate_panels[ HUDManager.PLAYER_PANEL ]:hide_underdog()
+		return
+	end
+
+	self._teammate_panels[ HUDManager.PLAYER_PANEL ]:show_underdog()
+
+end
+
+function HUDManager:hide_underdog()
+
+	self._teammate_panels[ HUDManager.PLAYER_PANEL ]:hide_underdog()
+
+end
+
 function HUDManager:_setup_player_info_hud_pd2(...)
 	_setup_player_info_hud_pd2_original(self, ...)
 

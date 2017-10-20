@@ -323,6 +323,8 @@
 	"show_timers_desc": "タイマーを有効化/無効化します。",
 	"show_turrets": "タレットの表示",
 	"show_turrets_desc": "有効なSWATタレットを表示します。",
+	"show_underdog_aced": "Show Underdog Aced Indicator",
+	"show_underdog_aced_desc": "Displays a flashing yellow glow when the Underdog Aced skill is activated.",
 	"skip_black_screen": "ブラックスクリーンのスキップ",
 	"skip_black_screen_desc": "Job開始時のブラックスクリーンを自動的にスキップします。",
 	"skip_card_picking": "自動カードピック",
@@ -403,5 +405,9 @@
 	"waypoint_color_g": "目的地カラー (緑)",
 	"waypoint_color_g_desc": "目的地カラーの緑色の割合を調整します。 (Max:1.00)",
 	"waypoint_color_r": "目的地カラー (赤)",
-	"waypoint_color_r_desc": "目的地カラーの赤色の割合を調整します。 (Max:1.00)"
+	"waypoint_color_r_desc": "目的地カラーの赤色の割合を調整します。 (Max:1.00)",
+	"waypoint_deploy": "Show Deployable Waypoint",
+	"waypoint_deploy_desc": "Shows waypoints for deployable",
+	"waypoint_timer": "Show Waypoint Timers",
+	"waypoint_timer_desc": "Shows waypoint for timers"
 }

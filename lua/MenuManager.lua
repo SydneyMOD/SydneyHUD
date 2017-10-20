@@ -622,6 +622,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD._data.show_inspire_timer = (item:value() == "on")
 		SydneyHUD:Save()
 	end
+	MenuCallbackHandler.callback_show_underdog_aced = function(self, item)
+		SydneyHUD._data.show_underdog_aced = (item:value() == "on")
+		SydneyHUD:Save()
+	end
 	MenuCallbackHandler.callback_anti_stealth_grenades = function(self, item)
 		SydneyHUD._data.anti_stealth_grenades = (item:value() == "on")
 		SydneyHUD:Save()
@@ -753,7 +757,14 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD._data.waypoint_color_b = item:value()
 		SydneyHUD:Save()
 	end
-
+	MenuCallbackHandler.callback_show_deployable_waypoint = function(self, item)
+		SydneyHUD._data.show_deployable_waypoint = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_show_timer_waypoint = function(self, item)
+		SydneyHUD._data.show_timer_waypoint = (item:value() == "on")
+		SydneyHUD:Save()
+	end
 	MenuCallbackHandler.callback_civilian_spot = function(self, item)
 		SydneyHUD._data.civilian_spot = (item:value() == "on")
 		SydneyHUD:Save()
