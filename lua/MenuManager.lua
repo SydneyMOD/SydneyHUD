@@ -816,21 +816,3 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	SydneyHUD:Load()
 	SydneyHUD:InitAllMenus()
 end)
-
-Hooks:Add("CustomizeControllerOnKeySet", "CustomizeControllerOnKeySet_sydneyhud", function(connection_name, button)
-	--[[
-		Set keybind defaults
-	]]
-	local save_pre_bind = BLT.Keybinds:get_keybind("save_pre")
-	if save_pre_bind == "" then
-		save_pre_bind:SetKey("f6") -- change button from f5 to f6 'cause of the same of a vanilla keybind
-	end
-	local load_pre_bind = BLT.Keybinds:get_keybind("load_pre")
-	if load_pre_bind == "" then
-		load_pre_bind:SetKey("f7")
-	end
-	local check_ping_bind = BLT.Keybinds:get_keybind("check_ping")
-	if check_ping_bind == "" then
-		check_ping_bind:SetKey("f8")
-	end
-end)
