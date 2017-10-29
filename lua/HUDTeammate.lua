@@ -100,7 +100,6 @@
 			name = "radial_stamina",
 			visible = SydneyHUD:GetOption("show_stamina_meter"),
 			texture = "guis/textures/pd2/hud_radial_rim",
-			texture_rect = { 64, 0, -64, 64 },
 			render_template = "VertexColorTexturedRadial",
 			blend_mode = "add",
 			alpha = 1,

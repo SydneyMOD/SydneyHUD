@@ -2948,7 +2948,6 @@ function HUDList.MinionItem:init(parent, name, data)
 	self._health_bar = self._panel:bitmap({
 		name = "radial_health",
 		texture = "guis/textures/pd2/hud_health",
-		texture_rect = { 64, 0, -64, 64 },
 		render_template = "VertexColorTexturedRadial",
 		blend_mode = "add",
 		layer = 2,
@@ -2973,7 +2972,6 @@ function HUDList.MinionItem:init(parent, name, data)
 	self._outline = self._panel:bitmap({
 		name = "outline",
 		texture = "guis/textures/pd2/hud_shield",
-		texture_rect = { 64, 0, -64, 64 },
 		blend_mode = "add",
 		w = self._panel:w() * 0.95,
 		h = self._panel:w() * 0.95,

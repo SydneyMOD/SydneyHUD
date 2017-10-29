@@ -154,7 +154,7 @@ end
 function PlayerDamage:set_armor(armor, ...)
 	set_armor_original(self, armor, ...)
 
-	if armor >= self:_total_armor() then
+	if armor >= self:_max_armor() then
 		ARMOR_GRIND_ACTIVE = false
 		managers.gameinfo:event("player_action", "deactivate", "anarchist_armor_regeneration")
 		managers.gameinfo:event("player_action", "deactivate", "standard_armor_regeneration")
