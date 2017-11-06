@@ -415,9 +415,22 @@ if not SydneyHUD.setup then
 		table.insert(self._chat, tostring(name .. ": " .. message))
 	end
 
-	function SydneyHUD:RemoveChatMessage()
-		for _, _ in ipairs(self._chat) do
+	function SydneyHUD:RemoveChatMessage(type, message)
+		if not type then
+			type = "current"
+		end
+		if type == "all" then
+			for _, _ in ipairs(self._chat) do
+				table.remove(self._chat)
+			end
+		elseif type == "current" then
 			table.remove(self._chat)
+		elseif type == "select" then
+			for num, mes in ipairs(self._chat) do
+				if mes == message then
+					table.remove(self._chat, num)
+				end
+			end
 		end
 	end
 
