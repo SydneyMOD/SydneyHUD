@@ -52,15 +52,21 @@ function ECMJammerBase:update(unit, t, dt, ...)
 
 	if self._jammer_active then
 		-- log(SydneyHUD.dev .. "batt. life: " .. string.format("%.1f", self._battery_life))
-		if string.format("%.1f", self._battery_life) == "5.0" then -- 5.0sec remining
-			if SydneyHUD:GetOption("ecm_battery_chat_info") then
+		if string.format("%.1f", self._battery_life) == "5.0" and SydneyHUD:GetOption("ecm_battery_chat_info") then -- 5.0sec remining
+			local name = "ECM batt."
+			local message = "5sec remining"
+			if not managers.chat:is_spam(name, message) then
 				if SydneyHUD:GetOption("ecm_battery_chat_info_feed") then
-					SydneyHUD:SendChatMessage("ECM batt.", "5sec remining", true)
+					SydneyHUD:SendChatMessage(name, message, true)
+					SydneyHUD:SaveChatMessage(name, message)
 				else
-					SydneyHUD:SendChatMessage("ECM batt.", "5sec remining")
+					SydneyHUD:SendChatMessage(name, message)
+					SydneyHUD:SaveChatMessage(name, message)
 				end
 			end
 		end
+	elseif SydneyHUD._chat then
+		SydneyHUD:RemoveChatMessage()
 	end
 
 	if not self._battery_empty then

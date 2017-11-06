@@ -25,6 +25,16 @@ function ChatManager:receive_message_by_peer(channel_id, peer, message)
 	end
 end
 
+function ChatManager:is_spam(name, message)
+	local sentence = tostring(name .. ": " .. message)
+	for _, mes in ipairs(SydneyHUD._chat) do
+		if sentence == mes then
+			return true
+		end
+	end
+	return false
+end
+
 function ChatGui:init(...)
 	init_original(self, ...)
 	self:_create_info_panel()
