@@ -606,6 +606,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD._data.colorize_names = (item:value() == "on")
 		SydneyHUD:Save()
 	end
+	MenuCallbackHandler.callback_show_detection_risk = function(self, item)
+		SydneyHUD._data.show_detection_risk = (item:value() == "on")
+		SydneyHUD:Save()
+	end
 	MenuCallbackHandler.callback_show_stamina_meter = function(self, item)
 		SydneyHUD._data.show_stamina_meter = (item:value() == "on")
 		SydneyHUD:Save()
@@ -616,6 +620,10 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	end
 	MenuCallbackHandler.callback_show_inspire_timer = function(self, item)
 		SydneyHUD._data.show_inspire_timer = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_show_underdog_aced = function(self, item)
+		SydneyHUD._data.show_underdog_aced = (item:value() == "on")
 		SydneyHUD:Save()
 	end
 	MenuCallbackHandler.callback_anti_stealth_grenades = function(self, item)
@@ -749,7 +757,14 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 		SydneyHUD._data.waypoint_color_b = item:value()
 		SydneyHUD:Save()
 	end
-
+	MenuCallbackHandler.callback_show_deployable_waypoint = function(self, item)
+		SydneyHUD._data.show_deployable_waypoint = (item:value() == "on")
+		SydneyHUD:Save()
+	end
+	MenuCallbackHandler.callback_show_timer_waypoint = function(self, item)
+		SydneyHUD._data.show_timer_waypoint = (item:value() == "on")
+		SydneyHUD:Save()
+	end
 	MenuCallbackHandler.callback_civilian_spot = function(self, item)
 		SydneyHUD._data.civilian_spot = (item:value() == "on")
 		SydneyHUD:Save()
@@ -800,22 +815,4 @@ Hooks:Add("MenuManagerInitialize", "MenuManagerInitialize_sydneyhud", function(m
 	]]
 	SydneyHUD:Load()
 	SydneyHUD:InitAllMenus()
-end)
-
-Hooks:Add("CustomizeControllerOnKeySet", "CustomizeControllerOnKeySet_sydneyhud", function(connection_name, button)
-	--[[
-		Set keybind defaults
-	]]
-	local save_pre_bind = BLT.Keybinds:get_keybind("save_pre")
-	if save_pre_bind == "" then
-		save_pre_bind:SetKey("f6") -- change button from f5 to f6 'cause of the same of a vanilla keybind
-	end
-	local load_pre_bind = BLT.Keybinds:get_keybind("load_pre")
-	if load_pre_bind == "" then
-		load_pre_bind:SetKey("f7")
-	end
-	local check_ping_bind = BLT.Keybinds:get_keybind("check_ping")
-	if check_ping_bind == "" then
-		check_ping_bind:SetKey("f8")
-	end
 end)

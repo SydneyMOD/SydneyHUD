@@ -259,6 +259,8 @@
 	"show_client_ranks_desc": "Show team mate ranks in front of the names",
 	"show_damage_popup": "Damage popup",
 	"show_damage_popup_desc": "Show damage popup",
+	"show_detection_risk": "Show detection risk / down counter",
+	"show_detection_risk_desc": "Show your detection risk or downed count",
 	"show_ecm_retrigger": "Show ECM Retrigger",
 	"show_ecm_retrigger_desc": "Countdown for own ECM feedback retrigger delay",
 	"show_ecms": "Show ECM's",
@@ -321,6 +323,8 @@
 	"show_timers_desc": "Enables or disables timers",
 	"show_turrets": "Show Turrets",
 	"show_turrets_desc": "Show active SWAT turrets",
+	"show_underdog_aced": "Show Underdog Aced Indicator",
+	"show_underdog_aced_desc": "Displays a flashing yellow glow when the Underdog Aced skill is activated.",
 	"skip_black_screen": "Skip the black screen",
 	"skip_black_screen_desc": "Skips the black screen at the beginning of a heist",
 	"skip_card_picking": "Auto pick card",
@@ -371,7 +375,7 @@
 	"sydneyhud_hud_tweaks_desc": "Tweak contents of HUD",
 	"sydneyhud_hud_tweaks_interact": "Interact Setting",
 	"sydneyhud_hud_tweaks_interact_desc": "Configure Interact Setting",
-	"sydneyhud_hud_tweaks_name": "Useename panel Setting",
+	"sydneyhud_hud_tweaks_name": "Username panel Setting",
 	"sydneyhud_hud_tweaks_name_desc": "Configure Username panel",
 	"sydneyhud_hud_tweaks_panel": "Info panel Setting",
 	"sydneyhud_hud_tweaks_panel_desc": "Configure Info panel",
@@ -401,5 +405,9 @@
 	"waypoint_color_g": "Waypoint color (Green)",
 	"waypoint_color_g_desc": "Cofigure ratio of waypoint green color (Max:1.00)",
 	"waypoint_color_r": "Waypoint color (Red)",
-	"waypoint_color_r_desc": "Cofigure ratio of waypoint red color (Max:1.00)"
+	"waypoint_color_r_desc": "Cofigure ratio of waypoint red color (Max:1.00)",
+	"waypoint_deploy": "Show Deployable Waypoint",
+	"waypoint_deploy_desc": "Shows waypoints for deployable",
+	"waypoint_timer": "Show Waypoint Timers",
+	"waypoint_timer_desc": "Shows waypoint for timers"
 }

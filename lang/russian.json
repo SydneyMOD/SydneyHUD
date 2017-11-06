@@ -259,6 +259,8 @@
 	"show_client_ranks_desc": "Показывает уровни и ДР ваших поддельников рядом с никами",
 	"show_damage_popup": "Всплывающий урон",
 	"show_damage_popup_desc": "Показывает урон по противнику всплывающими цифрами",
+	"show_detection_risk": "Показать риск обнаружения",
+	"show_detection_risk_desc": "Показывает ваш риск обнаружения в нижнем контейнере в HP-баре",
 	"show_ecm_retrigger": "Время отката ECM петли",
 	"show_ecm_retrigger_desc": "Показывать время отката ECM петли",
 	"show_ecms": "Показать ECM",
@@ -321,6 +323,8 @@
 	"show_timers_desc": "Включить или выключить таймеры",
 	"show_turrets": "Показывать SWAT турели",
 	"show_turrets_desc": "Показывает активные турели SWAT",
+	"show_underdog_aced": "Show Underdog Aced Indicator",
+	"show_underdog_aced_desc": "Displays a flashing yellow glow when the Underdog Aced skill is activated.",
 	"skip_black_screen": "Пропустить черный экран",
 	"skip_black_screen_desc": "Пропускает черный экран в начале ограбления",
 	"skip_card_picking": "Автоматически выбирать карточки",
@@ -374,7 +378,7 @@
 	"sydneyhud_hud_tweaks_name": "Настройки панели имен",
 	"sydneyhud_hud_tweaks_name_desc": "Детальные настройки панели имен игроков",
 	"sydneyhud_hud_tweaks_panel": "Настройки информационной панели",
-	"sydneyhud_hud_tweaks_panel_desc": "Изменить насройки информационной панели",
+	"sydneyhud_hud_tweaks_panel_desc": "Изменить настройки информационной панели",
 	"sydneyhud_hud_tweaks_waypoint": "Точка маршрута",
 	"sydneyhud_hud_tweaks_waypoint_desc": "Настройка точки маршрута",
 	"sydneyhud_int_locked": "Нажмите $BTN_CANCEL для отмены взаимодейсвтия",
@@ -401,5 +405,9 @@
 	"waypoint_color_g": "Цвет точки (Зеленый)",
 	"waypoint_color_g_desc": "Добавление зеленого цвета",
 	"waypoint_color_r": "Цвет точки (Красный)",
-	"waypoint_color_r_desc": "Добавление красного цвета"
+	"waypoint_color_r_desc": "Добавление красного цвета",
+	"waypoint_deploy": "Show Deployable Waypoint",
+	"waypoint_deploy_desc": "Shows waypoints for deployable",
+	"waypoint_timer": "Show Waypoint Timers",
+	"waypoint_timer_desc": "Shows waypoint for timers"
 }

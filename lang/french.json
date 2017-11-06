@@ -259,6 +259,8 @@
 	"show_client_ranks_desc": "Affiche les rangs des coéquipiers devant leurs noms",
 	"show_damage_popup": "Afficheur de dégâts",
 	"show_damage_popup_desc": "Montre les dégâts infligés aux ennemis",
+	"show_detection_risk": "Montre le compteur de détection / compteur de morts",
+	"show_detection_risk_desc": "Montre le compteur de détection ou le compteur de morts",
 	"show_ecm_retrigger": "Affiche les secondes restantes des CMEs",
 	"show_ecm_retrigger_desc": "Décompte pour le délai de fonctionement de ton propre CME",
 	"show_ecms": "Affiche les CMEs",
@@ -321,6 +323,8 @@
 	"show_timers_desc": "Active ou désactive les minuteurs",
 	"show_turrets": "Affiche les tourelles",
 	"show_turrets_desc": "Affiche les tourelles du SWAT actives",
+	"show_underdog_aced": "Show Underdog Aced Indicator",
+	"show_underdog_aced_desc": "Displays a flashing yellow glow when the Underdog Aced skill is activated.",
 	"skip_black_screen": "Passe l'écran noir",
 	"skip_black_screen_desc": "Passe les écrans noirs au démarrage d'un braquage",
 	"skip_card_picking": "Prend une carte automatiquement",
@@ -401,5 +405,9 @@
 	"waypoint_color_g": "Couleur du point de repère (Vert)",
 	"waypoint_color_g_desc": "Couleur du point de repère personalisé",
 	"waypoint_color_r": "Couleur du point de repère (Rouge)",
-	"waypoint_color_r_desc": "Couleur du point de repère personalisé"
+	"waypoint_color_r_desc": "Couleur du point de repère personalisé",
+	"waypoint_deploy": "Show Deployable Waypoint",
+	"waypoint_deploy_desc": "Shows waypoints for deployable",
+	"waypoint_timer": "Show Waypoint Timers",
+	"waypoint_timer_desc": "Shows waypoint for timers"
 }

@@ -294,6 +294,22 @@ function HUDManager.remove_interact(self)
 	return remove_interact_original(self)
 end
 
+function HUDManager:show_underdog()
+	if not SydneyHUD:GetOption("show_underdog_aced") then
+		self._teammate_panels[ HUDManager.PLAYER_PANEL ]:hide_underdog()
+		return
+	end
+
+	self._teammate_panels[ HUDManager.PLAYER_PANEL ]:show_underdog()
+
+end
+
+function HUDManager:hide_underdog()
+
+	self._teammate_panels[ HUDManager.PLAYER_PANEL ]:hide_underdog()
+
+end
+
 function HUDManager:_setup_player_info_hud_pd2(...)
 	_setup_player_info_hud_pd2_original(self, ...)
 
@@ -2932,7 +2948,6 @@ function HUDList.MinionItem:init(parent, name, data)
 	self._health_bar = self._panel:bitmap({
 		name = "radial_health",
 		texture = "guis/textures/pd2/hud_health",
-		texture_rect = { 64, 0, -64, 64 },
 		render_template = "VertexColorTexturedRadial",
 		blend_mode = "add",
 		layer = 2,
@@ -2957,7 +2972,6 @@ function HUDList.MinionItem:init(parent, name, data)
 	self._outline = self._panel:bitmap({
 		name = "outline",
 		texture = "guis/textures/pd2/hud_shield",
-		texture_rect = { 64, 0, -64, 64 },
 		blend_mode = "add",
 		w = self._panel:w() * 0.95,
 		h = self._panel:w() * 0.95,

@@ -12,11 +12,81 @@
 			self:_init_armor_timer()
 			self:_init_inspire_timer()
 			self:_init_hps_meter()
+			self:inject_health_glow()
 		else
 			self:_init_interact_info()
 		end
 		self:_init_killcount()
 		self:_init_revivecount()
+	end
+
+	function HUDTeammate:inject_health_glow()
+		local radial_health_panel = self._player_panel:child( "radial_health_panel" )
+		local underdog_glow = radial_health_panel:bitmap({
+			valign 			= "center",
+			halign 			= "center",
+			w 				= 64,
+			h 				= 64,
+			name 			= "underdog_glow",
+			visible 		= false,
+			texture 		= "guis/textures/pd2/crimenet_marker_glow",
+			texture_rect 	= {
+								0,
+								0,
+								64,
+								64
+							},
+			color 			= Color.yellow,
+			layer 			= 2,
+			blend_mode 		= "add"
+		})
+
+		underdog_glow:set_center( radial_health_panel:w() / 2 , radial_health_panel:h() / 2 )
+	end
+
+
+	function HUDTeammate:show_underdog()
+
+	local teammate_panel = self._panel:child( "player" )
+	local radial_health_panel = teammate_panel:child( "radial_health_panel" )
+	local underdog_glow = radial_health_panel:child( "underdog_glow" )
+
+	if not self._underdog_animation then
+		underdog_glow:set_visible( true )
+		underdog_glow:animate( callback( self , self , "_animate_glow" ) )
+
+		self._underdog_animation = true
+	end
+
+	end
+
+	function HUDTeammate:hide_underdog()
+
+		local teammate_panel = self._panel:child( "player" )
+		local radial_health_panel = teammate_panel:child( "radial_health_panel" )
+		local underdog_glow = radial_health_panel:child( "underdog_glow" )
+
+		if self._underdog_animation then
+			underdog_glow:set_alpha( 0 )
+			underdog_glow:set_visible( false )
+			underdog_glow:stop()
+
+			self._underdog_animation = nil
+		end
+
+	end
+
+	function HUDTeammate:_animate_glow( glow )
+
+	local t = 0
+
+	while true do
+
+		t = t + coroutine.yield()
+		glow:set_alpha( ( math.abs( math.sin( ( 4 + t ) * 360 * 4 / 4 ) ) ) )
+
+	end
+
 	end
 
 	function HUDTeammate:_init_stamina_meter()
@@ -30,7 +100,6 @@
 			name = "radial_stamina",
 			visible = SydneyHUD:GetOption("show_stamina_meter"),
 			texture = "guis/textures/pd2/hud_radial_rim",
-			texture_rect = { 64, 0, -64, 64 },
 			render_template = "VertexColorTexturedRadial",
 			blend_mode = "add",
 			alpha = 1,
@@ -52,8 +121,13 @@
 	end
 
 	function HUDTeammate:_init_revivecount()
+		local visibility = 1
+		if not SydneyHUD:GetOption("show_detection_risk") then
+			visibility = 0
+		end
 		self._detection_counter = self._player_panel:child("radial_health_panel"):text({
 			name = "detection_risk",
+			alpha = visibility,
 			visible = managers.groupai:state():whisper_mode(),
 			layer = 1,
 			Color = Color.white,
@@ -68,6 +142,7 @@
 		})
 		self._revives_counter = self._player_panel:child("radial_health_panel"):text({
 			name = "revives_counter",
+			alpha = visibility,
 			visible = not managers.groupai:state():whisper_mode(),
 			text = "0",
 			layer = 1,
