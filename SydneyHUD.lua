@@ -58,6 +58,7 @@ if not SydneyHUD.setup then
 
 	-- var for util
 	SydneyHUD._calls = SydneyHUD._calls or {}
+	SydneyHUD._chat = {}
 	SydneyHUD._path = ModPath
 	SydneyHUD._lua_path = ModPath .. "lua/"
 	SydneyHUD._data_path = SavePath .. "SydneyHUD.json"
@@ -405,6 +406,29 @@ if not SydneyHUD.setup then
 				local peer = managers.network:session():peer(i)
 				if peer then
 					peer:send("send_chat_message", ChatManager.GAME, name .. ": " .. message)
+				end
+			end
+		end
+	end
+
+	function SydneyHUD:SaveChatMessage(name, message)
+		table.insert(self._chat, tostring(name .. ": " .. message))
+	end
+
+	function SydneyHUD:RemoveChatMessage(type, message)
+		if not type then
+			type = "current"
+		end
+		if type == "all" then
+			for _, _ in ipairs(self._chat) do
+				table.remove(self._chat)
+			end
+		elseif type == "current" then
+			table.remove(self._chat)
+		elseif type == "select" then
+			for num, mes in ipairs(self._chat) do
+				if mes == message then
+					table.remove(self._chat, num)
 				end
 			end
 		end
