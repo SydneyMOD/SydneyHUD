@@ -33,12 +33,18 @@ function BaseInteractionExt:interact_start(player, data)
 	return interact_start_original(self, player, data)
 end
 
-function BaseInteractionExt:selected(player)
+function BaseInteractionExt:selected(...)
+	selected_original(self, ...)
+
 	if SydneyHUD:GetOption("interact_time_hint") then
 		local _text_id = self._tweak_data.text_id or alive(self._unit) and self._unit:base().interaction_text_id and self._unit:base():interaction_text_id()
 		local _string_macros = {}
 
 		self:_add_string_macros(_string_macros)
+
+		if self._tweak_data.special_equipment and not managers.player:has_special_equipment(self._tweak_data.special_equipment) then
+			return true
+		end
 
 		if _text_id then
 			local basic_text = managers.localization:text(_text_id, _string_macros)
@@ -46,8 +52,6 @@ function BaseInteractionExt:selected(player)
 				text = basic_text .. " (" .. self:check_interact_time() .. " s)",
 				icon = self._tweak_data.icon
 			})
-		else
-			selected_original(self, player)
 		end
 
 		return true
