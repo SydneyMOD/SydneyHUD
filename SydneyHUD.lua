@@ -501,7 +501,7 @@ if not SydneyHUD.setup then
 	end
 
 	function SydneyHUD:Peer_id_To_Peer(peer_id)
-		local session = managers.network.session()
+		local session = managers.network:session()
 		return session and session:peer(peer_id)
 	end
 
