@@ -128,6 +128,21 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			--[135076] = { },	--Lab rats cloaker safe 2
 			--[135246] = { },	--Lab rats cloaker safe 3
 			--[135247] = { },	--Lab rats cloaker safe 4
+			[141821] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 1 timer
+			[141822] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 1 timer
+			[141823] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 1 timer
+			[140321] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 2 timer
+			[140322] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 2 timer
+			[140323] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 2 timer
+			[139821] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 3 timer
+			[139822] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 3 timer
+			[139823] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 3 timer
+			[141321] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 4 timer
+			[141322] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 4 timer
+			[141323] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 4 timer
+			[140821] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 5 timer
+			[140822] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 5 timer
+			[140823] = { pause = function(...) GameInfoManager._TIMER_CALLBACKS.overrides.stop_on_pause(...) end },	--Cursed kill room safe 5 timer
 		}
 	}
 
@@ -136,28 +151,41 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			corpse_alarm_pager =				"_pager_event",
 			gen_pku_crowbar =					"_special_equipment_interaction_handler",
 			pickup_keycard =					"_special_equipment_interaction_handler",
-			pickup_hotel_room_keycard =	"_special_equipment_interaction_handler",
+			pickup_hotel_room_keycard =			"_special_equipment_interaction_handler",
 			gage_assignment =					"_special_equipment_interaction_handler",
-			pickup_boards =					"_special_equipment_interaction_handler",
-			stash_planks_pickup =			"_special_equipment_interaction_handler",
-			muriatic_acid =					"_special_equipment_interaction_handler",
-			hydrogen_chloride =				"_special_equipment_interaction_handler",
+			pickup_boards =						"_special_equipment_interaction_handler",
+			stash_planks_pickup =				"_special_equipment_interaction_handler",
+			muriatic_acid =						"_special_equipment_interaction_handler",
+			hydrogen_chloride =					"_special_equipment_interaction_handler",
 			caustic_soda =						"_special_equipment_interaction_handler",
-			press_pick_up =					"_special_equipment_interaction_handler",
+			press_pick_up =						"_special_equipment_interaction_handler",
 			ring_band = 						"_special_equipment_interaction_handler",
 			firstaid_box =						"_deployable_interaction_handler",
 			ammo_bag =							"_deployable_interaction_handler",
 			doctor_bag =						"_deployable_interaction_handler",
 			bodybags_bag =						"_deployable_interaction_handler",
-			grenade_crate =					"_deployable_interaction_handler",
+			grenade_crate =						"_deployable_interaction_handler",
 		},
 		INTERACTION_TO_CARRY = {
-			weapon_case =				"weapon",
-			weapon_case_axis_z =		"weapon",
-			samurai_armor =			"samurai_suit",
-			gen_pku_warhead_box =	"warhead",
-			corpse_dispose =			"person",
-			hold_open_case =			"drone_control_helmet",	--May be reused in future heists for other loot
+			weapon_case =					"weapon",
+			weapon_case_axis_z =			"weapon",
+			samurai_armor =					"samurai_suit",
+			gen_pku_warhead_box =			"warhead",
+			corpse_dispose =				"person",
+			hold_open_case =				"drone_control_helmet",	--May be reused in future heists for other loot
+			cut_glass = 					"showcase",
+			diamonds_pickup = 				"diamonds_dah",
+			red_diamond_pickup = 			"red_diamond",
+			red_diamond_pickup_no_axis = 	"red_diamond",
+
+			hold_open_shopping_bag = 		"shopping_bag",
+			hold_take_toy = 				"robot_toy",
+			hold_take_wine = 				"ordinary_wine",
+			hold_take_expensive_wine = 		"expensive_vine",
+			hold_take_diamond_necklace =	"diamond_necklace",
+			hold_take_vr_headset = 			"vr_headset",
+			hold_take_shoes = 				"women_shoes",
+			hold_take_old_wine = 			"old_wine",
 		},
 		BAGGED_IDS = {
 			painting_carry_drop = true,
@@ -252,14 +280,19 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			fish = {	--Yacht (1x artifact painting)
 				[500533] = true,
 			},
+			dah = {	-- The Diamond Heist (1x Red Diamond Showcase)
+				[100952] = true,
+			}
 		},
 	}
 	GameInfoManager._INTERACTIONS.IGNORE_IDS.watchdogs_2_day = table.deep_map_copy(GameInfoManager._INTERACTIONS.IGNORE_IDS.watchdogs_2)
 	GameInfoManager._INTERACTIONS.IGNORE_IDS.welcome_to_the_jungle_1_night = table.deep_map_copy(GameInfoManager._INTERACTIONS.IGNORE_IDS.welcome_to_the_jungle_1)
 
 	GameInfoManager.CAMERAS = {
-		["6c5d032fe7e08d01"] = "standard",
-		["490a9313f945cccf"] = "drone",
+		["6c5d032fe7e08d01"] = "standard",	--units/payday2/equipment/gen_equipment_security_camera/gen_equipment_security_camera
+		["0c721a9fa6d2fe0a"] = "standard",	--units/world/props/security_camera/security_camera
+		["c64ffaefb39415bc"] = "standard",	--units/world/props/security_camera/security_camera_white
+		["490a9313f945cccf"] = "drone",		--units/pd2_dlc_dark/equipment/gen_drone_camera/gen_drone_camera
 	}
 
 	GameInfoManager._EQUIPMENT = {
@@ -274,40 +307,66 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			ammo_bag =							"ammo_bag",
 			doctor_bag =						"doc_bag",
 			bodybags_bag =						"body_bag",
-			grenade_crate =					"grenade_crate",
+			grenade_crate =						"grenade_crate",
 		},
 		AMOUNT_OFFSETS = {
 			--interaction_id or editor_id
 			firstaid_box = -1,	--GGC drill asset, HB infirmary
 		},
 		AGGREAGATE_ITEMS = {
-			[136859] = "hb_armory_grenade",
-			[136870] = "hb_armory_grenade",
-			[136869] = "hb_armory_grenade",
-			[136864] = "hb_armory_grenade",
-			[136866] = "hb_armory_grenade",
-			[136860] = "hb_armory_grenade",
-			[136867] = "hb_armory_grenade",
-			[136865] = "hb_armory_grenade",
-			[136868] = "hb_armory_grenade",
-			[136846] = "hb_armory_ammo",
-			[136844] = "hb_armory_ammo",
-			[136845] = "hb_armory_ammo",
-			[136847] = "hb_armory_ammo",
-			[101470] = "hb_infirmary_cabinet",
-			[101472] = "hb_infirmary_cabinet",
-			[101473] = "hb_infirmary_cabinet",
-			[151596] = "ggc_armory_grenade",
-			[151597] = "ggc_armory_grenade",
-			[151598] = "ggc_armory_grenade",
-			[151611] = "ggc_armory_ammo",
-			[151612] = "ggc_armory_ammo",
-			[100776] = "biker_bunker_grenade",
-			[101226] = "biker_bunker_grenade",
-			[101469] = "biker_bunker_grenade",
-			[101472] = "biker_bunker_ammo",
-			[101473] = "biker_bunker_ammo",
+			["first_aid_kit"] = "first_aid_kits",	-- Aggregate all FAKs
+			hox_2 = {	--Hoxton breakout
+				[136859] = "armory_grenade",
+				[136870] = "armory_grenade",
+				[136869] = "armory_grenade",
+				[136864] = "armory_grenade",
+				[136866] = "armory_grenade",
+				[136860] = "armory_grenade",
+				[136867] = "armory_grenade",
+				[136865] = "armory_grenade",
+				[136868] = "armory_grenade",
+				[136846] = "armory_ammo",
+				[136844] = "armory_ammo",
+				[136845] = "armory_ammo",
+				[136847] = "armory_ammo",
+				[101470] = "infirmary_cabinet",
+				[101472] = "infirmary_cabinet",
+				[101473] = "infirmary_cabinet",
+			},
+			kenaz = {	--GGC
+				[151596] = "armory_grenade",
+				[151597] = "armory_grenade",
+				[151598] = "armory_grenade",
+				[151611] = "armory_ammo",
+				[151612] = "armory_ammo",
+			},
+			born = {	--Biker heist
+				[100776] = "bunker_grenade",
+				[101226] = "bunker_grenade",
+				[101469] = "bunker_grenade",
+				[101472] = "bunker_ammo",
+				[101473] = "bunker_ammo",
+			},
+			spa = {		--10-10
+				[132935] = "armory_ammo",
+				[132938] = "armory_ammo",
+				[133085] = "armory_ammo",
+				[133088] = "armory_ammo",
+				[133835] = "armory_ammo",
+				[133838] = "armory_ammo",
+				[134135] = "armory_ammo",
+				[134138] = "armory_ammo",
+				[137885] = "armory_ammo",
+				[137888] = "armory_ammo",
+			},
 		},
+	}
+
+	GameInfoManager._UNITS = {
+		TWEAK_ID_BY_NAME = {
+			[tostring(Idstring("units/pd2_dlc_born/characters/npc_male_mechanic/npc_male_mechanic"))] = "mechanic",
+			[tostring(Idstring("units/pd2_dlc_born/characters/npc_male_mechanic/npc_male_mechanic_husk"))] = "mechanic"
+		}
 	}
 
 	GameInfoManager._BUFFS = {
@@ -356,6 +415,7 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 			loose_ammo_give_team = "ammo_give_out_debuff",
 			armor_break_invulnerable = "armor_break_invulnerable_debuff",
 			single_shot_fast_reload = "aggressive_reload_aced",
+			unseen_strike = "unseen_strike",
 
 			--"properties"
 			bloodthirst_reload_speed = "bloodthirst_aced",
@@ -434,8 +494,6 @@ if RequiredScript == "lib/setups/setup" and not Setup then
 		self._timed_buff_expire_clbk = callback(self, self, "_on_timed_buff_expired")
 		self._timed_stack_expire_clbk = callback(self, self, "_on_timed_stack_expired")
 		self._player_actions_expire_clbk = callback(self, self, "_on_player_action_expired")
-
-
 	end
 
 	function GameInfoManager:post_init()
