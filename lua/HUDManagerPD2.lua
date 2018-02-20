@@ -339,41 +339,41 @@ HUDListManager = HUDListManager or class()
 
 HUDListManager.ListOptions = {
 	--General settings
-	right_list_height_offset = SydneyHUD:GetOption("center_assault_banner") and 0 or 50,	--Margin from top for the right list
-	right_list_scale = SydneyHUD:GetOption("right_list_scale") or 1,	--Size scale of right list
-	left_list_height_offset = 80,	--Margin from top for the left list
-	left_list_scale = SydneyHUD:GetOption("left_list_scale") or 1,	--Size scale of left list
-	buff_list_height_offset = 80,	--Margin from bottom for the buff list
-	buff_list_scale = SydneyHUD:GetOption("buff_list_scale") or 1,	--Size scale of buff list
+	right_list_height_offset = 		SydneyHUD:GetOption("center_assault_banner") and 0 or 50,	--Margin from top for the right list
+	right_list_scale = 				SydneyHUD:GetOption("right_list_scale") or 1,	--Size scale of right list
+	left_list_height_offset = 		80,	--Margin from top for the left list
+	left_list_scale = 				SydneyHUD:GetOption("left_list_scale") or 1,	--Size scale of left list
+	buff_list_height_offset = 		80,	--Margin from bottom for the buff list
+	buff_list_scale = 				SydneyHUD:GetOption("buff_list_scale") or 1,	--Size scale of buff list
 
 	--Left side list
-	show_timers = SydneyHUD:GetOption("show_timers"),	--Drills, time locks, hacking etc.
-	show_ammo_bags = SydneyHUD:GetOption("show_equipment"),	--Show ammo bags/shelves and remaining amount, color-coded by owner
-	show_doc_bags = SydneyHUD:GetOption("show_equipment"),	--Show doc bags/cabinets and remaining charges, color-coded by owner
-	show_body_bags = SydneyHUD:GetOption("show_equipment"),	--Show body bags and remaining amount, color-coded by owner. Auto-disabled if heist goes loud
-	show_grenade_crates = SydneyHUD:GetOption("show_equipment"),	--Show grenade crates with remaining amount
-	show_sentries = SydneyHUD:GetOption("show_sentries"),	--Deployable sentries
-	show_ecms = SydneyHUD:GetOption("show_ecms"),	--Active ECMs with time remaining
-	show_ecm_retrigger = SydneyHUD:GetOption("show_ecm_retrigger"),	--Countdown for player owned ECM feedback retrigger delay
-	show_minions = SydneyHUD:GetOption("show_minions"),	--Converted enemies, type and health
-	show_pagers = SydneyHUD:GetOption("show_pagers"),	--Show currently active pagers
-	show_tape_loop = SydneyHUD:GetOption("show_tape_loop"),	--Show active tape loop duration
+	show_timers = 					SydneyHUD:GetOption("show_timers"),	--Drills, time locks, hacking etc.
+	show_ammo_bags = 				SydneyHUD:GetOption("show_equipment"),	--Show ammo bags/shelves and remaining amount, color-coded by owner
+	show_doc_bags = 				SydneyHUD:GetOption("show_equipment"),	--Show doc bags/cabinets and remaining charges, color-coded by owner
+	show_body_bags = 				SydneyHUD:GetOption("show_equipment"),	--Show body bags and remaining amount, color-coded by owner. Auto-disabled if heist goes loud
+	show_grenade_crates = 			SydneyHUD:GetOption("show_equipment"),	--Show grenade crates with remaining amount
+	show_sentries = 				SydneyHUD:GetOption("show_sentries"),	--Deployable sentries
+	show_ecms = 					SydneyHUD:GetOption("show_ecms"),	--Active ECMs with time remaining
+	show_ecm_retrigger = 			SydneyHUD:GetOption("show_ecm_retrigger"),	--Countdown for player owned ECM feedback retrigger delay
+	show_minions = 					SydneyHUD:GetOption("show_minions"),	--Converted enemies, type and health
+	show_pagers = 					SydneyHUD:GetOption("show_pagers"),	--Show currently active pagers
+	show_tape_loop = 				SydneyHUD:GetOption("show_tape_loop"),	--Show active tape loop duration
 
 	--Right side list
-	show_enemies = SydneyHUD:GetOption("show_enemies"),		--Currently spawned enemies
-	aggregate_enemies = SydneyHUD:GetOption("aggregate_enemies"),	--Aggregate all enemies into a single item
-	show_turrets = SydneyHUD:GetOption("show_turrets"),	--Show active SWAT turrets
-	show_civilians = SydneyHUD:GetOption("show_civilians"),	--Currently spawned, untied civs
-	show_hostages = SydneyHUD:GetOption("show_hostages"),	--Currently tied civilian and dominated cops
-	aggregate_hostages = SydneyHUD:GetOption("aggregate_hostages"),	--Aggregate all hostages into a single item
-	show_minion_count = SydneyHUD:GetOption("show_minion_count"),	--Current number of jokered enemies
-	show_pager_count = SydneyHUD:GetOption("show_pager_count"),	--Show number of triggered pagers (only counts pagers triggered while you were present). Auto-disabled if heist goes loud
-	show_camera_count = SydneyHUD:GetOption("show_camera_count"),	--Show number of active cameras on the map. Auto-disabled if heist goes loud (experimental, has some issues)
-	show_loot = SydneyHUD:GetOption("show_loot"),	--Show spawned and active loot bags/piles (may not be shown if certain mission parameters has not been met)
-	aggregate_loot = SydneyHUD:GetOption("aggregate_loot"),	--Aggregate all loot into a single item
-	separate_bagged_loot = SydneyHUD:GetOption("separate_bagged_loot"),	 --Show bagged/unbagged loot as separate values
-	show_special_pickups = SydneyHUD:GetOption("show_special_pickups"),	--Show number of special equipment/items
-	show_gage_packages = SydneyHUD:GetOption("show_gage_packages"),	--Show number of gage packages
+	show_enemies = 					SydneyHUD:GetOption("show_enemies"),		--Currently spawned enemies
+	aggregate_enemies = 			SydneyHUD:GetOption("aggregate_enemies"),	--Aggregate all enemies into a single item
+	show_turrets = 					SydneyHUD:GetOption("show_turrets"),	--Show active SWAT turrets
+	show_civilians = 				SydneyHUD:GetOption("show_civilians"),	--Currently spawned, untied civs
+	show_hostages = 				SydneyHUD:GetOption("show_hostages"),	--Currently tied civilian and dominated cops
+	aggregate_hostages = 			SydneyHUD:GetOption("aggregate_hostages"),	--Aggregate all hostages into a single item
+	show_minion_count = 			SydneyHUD:GetOption("show_minion_count"),	--Current number of jokered enemies
+	show_pager_count = 				SydneyHUD:GetOption("show_pager_count"),	--Show number of triggered pagers (only counts pagers triggered while you were present). Auto-disabled if heist goes loud
+	show_camera_count = 			SydneyHUD:GetOption("show_camera_count"),	--Show number of active cameras on the map. Auto-disabled if heist goes loud (experimental, has some issues)
+	show_loot = 					SydneyHUD:GetOption("show_loot"),	--Show spawned and active loot bags/piles (may not be shown if certain mission parameters has not been met)
+	aggregate_loot = 				SydneyHUD:GetOption("aggregate_loot"),	--Aggregate all loot into a single item
+	separate_bagged_loot = 			SydneyHUD:GetOption("separate_bagged_loot"),	 --Show bagged/unbagged loot as separate values
+	show_special_pickups = 			SydneyHUD:GetOption("show_special_pickups"),	--Show number of special equipment/items
+	show_gage_packages = 			SydneyHUD:GetOption("show_gage_packages"),	--Show number of gage packages
 
 	--Buff list
 	show_buffs = SydneyHUD:GetOption("show_buffs")	--Active effects (buffs/debuffs)
@@ -381,13 +381,41 @@ HUDListManager.ListOptions = {
 }
 
 HUDListManager.TIMER_SETTINGS = {
-	[132864] = {	--Meltdown vault temperature
-		class = "TemperatureGaugeItem",
-		params = { start = 0, goal = 50 },
+	shoutout_raid = {
+		[132864] = {	--Meltdown vault temperature
+			class = "TemperatureGaugeItem",
+			params = { start = 0, goal = 50 },
+		},
 	},
-	[135076] = { ignore = true },	--Lab rats cloaker safe 2
-	[135246] = { ignore = true },	--Lab rats cloaker safe 3
-	[135247] = { ignore = true },	--Lab rats cloaker safe 4
+	nail = {
+		[135076] = { ignore = true },	--Lab rats cloaker safe 2
+		[135246] = { ignore = true },	--Lab rats cloaker safe 3
+		[135247] = { ignore = true },	--Lab rats cloaker safe 4
+	},
+	help = {
+		[400003] = { ignore = true },	--Prison Nightmare Big Loot timer
+	},
+	hvh = {
+		[100007] = { ignore = true },	--Cursed kill room timer
+		[100888] = { ignore = true },	--Cursed kill room timer
+		[100889] = { ignore = true },	--Cursed kill room timer
+		[100891] = { ignore = true },	--Cursed kill room timer
+		[100892] = { ignore = true },	--Cursed kill room timer
+		[100878] = { ignore = true },	--Cursed kill room timer
+		[100176] = { ignore = true },	--Cursed kill room timer
+		[100177] = { ignore = true },	--Cursed kill room timer
+		[100029] = { ignore = true },	--Cursed kill room timer
+		[141821] = { ignore = true },	--Cursed kill room safe 1 timer
+		[141822] = { ignore = true },	--Cursed kill room safe 1 timer
+		[140321] = { ignore = true },	--Cursed kill room safe 2 timer
+		[140322] = { ignore = true },	--Cursed kill room safe 2 timer
+		[139821] = { ignore = true },	--Cursed kill room safe 3 timer
+		[139822] = { ignore = true },	--Cursed kill room safe 3 timer
+		[141321] = { ignore = true },	--Cursed kill room safe 4 timer
+		[141322] = { ignore = true },	--Cursed kill room safe 4 timer
+		[140821] = { ignore = true },	--Cursed kill room safe 5 timer
+		[140822] = { ignore = true },	--Cursed kill room safe 5 timer
+	}
 }
 
 HUDListManager.UNIT_TYPES = {
@@ -400,128 +428,191 @@ HUDListManager.UNIT_TYPES = {
 	fbi_swat = 					{ type_id = "cop",			category = "enemies",	long_name = "FBI SWAT" },
 	fbi_heavy_swat = 			{ type_id = "cop",			category = "enemies",	long_name = "H. FBI SWAT" },
 	city_swat = 				{ type_id = "cop",			category = "enemies",	long_name = "Elite" },
-	bolivian_indoors =		{ type_id = "security",		category = "enemies",	long_name = "Sosa Security" },
+	bolivian_indoors =			{ type_id = "security",		category = "enemies",	long_name = "Sosa Security" },
 	security = 					{ type_id = "security",		category = "enemies",	long_name = "Sec. guard" },
-	security_undominatable ={ type_id = "security",		category = "enemies",	long_name = "Sec. guard" },
+	security_undominatable =	{ type_id = "security",		category = "enemies",	long_name = "Sec. guard" },
 	gensec = 					{ type_id = "security",		category = "enemies",	long_name = "GenSec" },
 	bolivian =					{ type_id = "thug",			category = "enemies",	long_name = "Sosa Thug" },
 	gangster = 					{ type_id = "thug",			category = "enemies",	long_name = "Gangster" },
 	mobster = 					{ type_id = "thug",			category = "enemies",	long_name = "Mobster" },
-	biker = 						{ type_id = "thug",			category = "enemies",	long_name = "Biker" },
-	biker_escape = 			{ type_id = "thug",			category = "enemies",	long_name = "Biker" },
+	biker = 					{ type_id = "thug",			category = "enemies",	long_name = "Biker" },
+	biker_escape = 				{ type_id = "thug",			category = "enemies",	long_name = "Biker" },
 	tank = 						{ type_id = "tank",			category = "enemies",	long_name = "Bulldozer" },
 	tank_hw = 					{ type_id = "tank",			category = "enemies",	long_name = "Headless Bulldozer" },
-	spooc = 						{ type_id = "spooc",			category = "enemies",	long_name = "Cloaker" },
-	taser = 						{ type_id = "taser",			category = "enemies",	long_name = "Taser" },
+	spooc = 					{ type_id = "spooc",		category = "enemies",	long_name = "Cloaker" },
+	taser = 					{ type_id = "taser",		category = "enemies",	long_name = "Taser" },
 	shield = 					{ type_id = "shield",		category = "enemies",	long_name = "Shield" },
 	sniper = 					{ type_id = "sniper",		category = "enemies",	long_name = "Sniper" },
-	medic = 						{ type_id = "medic",			category = "enemies",	long_name = "Medic" },
+	medic = 					{ type_id = "medic",		category = "enemies",	long_name = "Medic" },
 	biker_boss =				{ type_id = "thug_boss",	category = "enemies",	long_name = "Biker Boss" },
 	chavez_boss =				{ type_id = "thug_boss",	category = "enemies",	long_name = "Chavez" },
 	drug_lord_boss =			{ type_id = "thug_boss",	category = "enemies",	long_name = "Sosa Boss" },
-	drug_lord_boss_stealth ={ type_id = "thug_boss",	category = "enemies",	long_name = "Sosa Boss" },
-	mobster_boss = 			{ type_id = "thug_boss",	category = "enemies",	long_name = "Commissar" },
+	drug_lord_boss_stealth =	{ type_id = "thug_boss",	category = "enemies",	long_name = "Sosa Boss" },
+	mobster_boss = 				{ type_id = "thug_boss",	category = "enemies",	long_name = "Commissar" },
 	hector_boss = 				{ type_id = "thug_boss",	category = "enemies",	long_name = "Hector" },
-	hector_boss_no_armor = 	{ type_id = "thug_boss",	category = "enemies",	long_name = "Hector" },
+	hector_boss_no_armor = 		{ type_id = "thug_boss",	category = "enemies",	long_name = "Hector" },
 	phalanx_vip = 				{ type_id = "phalanx",		category = "enemies",	long_name = "Cpt. Winter" },
 	phalanx_minion = 			{ type_id = "phalanx",		category = "enemies",	long_name = "Phalanx" },
 	civilian = 					{ type_id = "civ",			category = "civilians",	long_name = "Civilian" },
-	civilian_female = 		{ type_id = "civ",			category = "civilians",	long_name = "Civilian" },
-	bank_manager = 			{ type_id = "civ",			category = "civilians",	long_name = "Bank mngr." },
-	--drunk_pilot = 				{ type_id = "unique",		category = "civilians",	long_name = "Pilot" },	--White X-mas
+	civilian_female = 			{ type_id = "civ",			category = "civilians",	long_name = "Civilian" },
+	bank_manager = 				{ type_id = "civ",			category = "civilians",	long_name = "Bank mngr." },
+	--drunk_pilot = 			{ type_id = "unique",		category = "civilians",	long_name = "Pilot" },	--White X-mas
 	--escort = 					{ type_id = "unique",		category = "civilians",	long_name = "Escort" },	--?
-	--old_hoxton_mission = 	{ type_id = "unique",		category = "civilians",	long_name = "Hoxton" },	--Hox Breakout/BtM (Locke)
+	--old_hoxton_mission = 		{ type_id = "unique",		category = "civilians",	long_name = "Hoxton" },	--Hox Breakout/BtM (Locke)
 	--inside_man = 				{ type_id = "unique",		category = "civilians",	long_name = "Insider" },	--FWB
-	--boris = 						{ type_id = "unique",		category = "civilians",	long_name = "Boris" },	--Goat sim
+	--boris = 					{ type_id = "unique",		category = "civilians",	long_name = "Boris" },	--Goat sim
 	--escort_undercover = 		{ type_id = "unique",		category = "civilians",	long_name = "Taxman" },	--Undercover
 
 	--Custom unit definitions
 	turret = 					{ type_id = "turret",		category = "turrets",	long_name = "SWAT Turret" },
 	cop_hostage =				{ type_id = "cop_hostage",	category = "hostages",	long_name = "Dominated" },
 	civ_hostage =				{ type_id = "civ_hostage",	category = "hostages",	long_name = "Hostage" },
-	minion =						{ type_id = "minion",		category = "minions",	long_name = "Joker" },
+	minion =					{ type_id = "minion",		category = "minions",	long_name = "Joker" },
 }
 
 HUDListManager.SPECIAL_PICKUP_TYPES = {
 	gen_pku_crowbar =					"crowbar",
 	pickup_keycard =					"keycard",
-	pickup_hotel_room_keycard =	"keycard",	--GGC keycard
+	pickup_hotel_room_keycard =			"keycard",
 	gage_assignment =					"courier",
-	pickup_boards =					"planks",
-	stash_planks_pickup =			"planks",
-	muriatic_acid =					"meth_ingredients",
-	hydrogen_chloride =				"meth_ingredients",
+	pickup_case = 						"gage_case",
+	pickup_keys = 						"gage_key",
+	hold_take_mask = 					"paycheck_masks",
+	pickup_boards =						"planks",
+	stash_planks_pickup =				"planks",
+	muriatic_acid =						"meth_ingredients",
+	hydrogen_chloride =					"meth_ingredients",
 	caustic_soda =						"meth_ingredients",
-	press_pick_up =					"secret_item",		--Biker heist bottle
-	ring_band = 						"secret_item",		--BoS rings
+	gen_pku_blow_torch =				"blowtorch",
+	drk_pku_blow_torch = 				"blowtorch",
+	hold_born_receive_item_blow_torch = "blowtorch",
+	thermite = 							"thermite",
+	gasoline_engine = 					"thermite",
+	gen_pku_thermite = 					"thermite",
+	gen_pku_thermite_paste = 			"thermite",
+	gen_int_thermite_rig = 				"thermite",
+	hold_take_gas_can = 				"thermite",
+	gen_pku_thermite_paste_z_axis = 	"thermite",
+	c4_bag = 							"c4",
+	money_wrap_single_bundle = 			"small_loot",
+	money_wrap_single_bundle_active = 	"small_loot",
+	money_wrap_single_bundle_dyn = 		"small_loot",
+	cas_chips_pile = 					"small_loot",
+	diamond_pickup = 					"small_loot",
+	diamond_pickup_pal = 				"small_loot",
+	diamond_pickup_axis = 				"small_loot",
+	safe_loot_pickup = 					"small_loot",
+	pickup_tablet = 					"small_loot",
+	pickup_phone = 						"small_loot",
+	press_pick_up =						"secret_item",
+	hold_pick_up_turtle = 				"secret_item",
+	diamond_single_pickup_axis = 		"secret_item",
+	ring_band = 						"rings",
+	glc_hold_take_handcuffs = 			"handcuffs",
+	hold_take_missing_animal_poster = 	"poster",
+	press_take_folder = 				"poster",
+	--take_confidential_folder_icc = 	"poster",
+	take_jfr_briefcase = 				"briefcase",
 }
 
 HUDListManager.LOOT_TYPES = {
 	ammo =						"shell",
 	artifact_statue =			"artifact",
+	bike_part_light = 			"bike",
+	bike_part_heavy = 			"bike",
 	circuit =					"server",
-	cloaker_cocaine =			"coke",
-	cloaker_gold =				"gold",
-	cloaker_money =			"money",
+	cloaker_cocaine = 			"coke",
+	cloaker_gold = 				"gold",
+	cloaker_money = 			"money",
 	coke =						"coke",
 	coke_pure =					"coke",
-	counterfeit_money =		"money",
+	counterfeit_money =			"money",
 	cro_loot1 =					"bomb",
 	cro_loot2 =					"bomb",
-	diamond_necklace =		"jewelry",
 	diamonds =					"jewelry",
+	diamond_necklace = 			"jewelry",
 	din_pig =					"pig",
-	drk_bomb_part =			"bomb",
-	drone_control_helmet =	"drone_ctrl",
+	drk_bomb_part =				"bomb",
+	rone_control_helmet =		"drone_ctrl",
 	evidence_bag =				"evidence",
-	expensive_vine =			"wine",
+	expensive_vine = 			"wine",
 	goat = 						"goat",
 	gold =						"gold",
 	hope_diamond =				"diamond",
+	diamonds_dah = 				"diamonds",
+	red_diamond = 				"diamond",
 	lost_artifact = 			"artifact",
 	mad_master_server_value_1 =	"server",
 	mad_master_server_value_2 =	"server",
 	mad_master_server_value_3 =	"server",
 	mad_master_server_value_4 =	"server",
 	master_server = 			"server",
-	masterpiece_painting =	"painting",
+	masterpiece_painting =		"painting",
 	meth =						"meth",
 	meth_half =					"meth",
 	money =						"money",
 	mus_artifact =				"artifact",
 	mus_artifact_paint =		"painting",
-	ordinary_wine =			"wine",
+	old_wine = 					"wine",
+	ordinary_wine = 			"wine",
 	painting =					"painting",
-	person =						"body",
+	person =					"body",
 	present = 					"present",
 	prototype = 				"prototype",
-	robot_toy =					"toy",
+	robot_toy = 				"toy",
 	safe_ovk =					"safe",
 	safe_wpn =					"safe",
 	samurai_suit =				"armor",
 	sandwich =					"toast",
 	special_person =			"body",
-	toothbrush =				"toothbrush",
-	turret =						"turret",
+	toothbrush = 				"toothbrush",
+	turret =					"turret",
 	unknown =					"dentist",
-	vr_headset =				"headset",
+	vr_headset = 				"vr",
 	warhead =					"warhead",
-	weapon =						"weapon",
+	weapon =					"weapon",
 	weapon_glock =				"weapon",
 	weapon_scar =				"weapon",
-	women_shoes =				"shoes",
-	yayo =						"coke",
+	women_shoes = 				"shoes",
+	yayo = 						"coke",
+}
+
+HUDListManager.POTENTIAL_LOOT_TYPES = {
+	crate = 					"crate",
+	xmas_present = 				"xmas_present",
+	shopping_bag = 				"shopping_bag",
+	showcase = 					"showcase",
 }
 
 HUDListManager.LOOT_TYPES_CONDITIONS = {
 	body = function(id, data)
-		if managers.job:current_level_id() == "mad" then
+		if managers.job:current_level_id() == "mad" then -- Boiling Point
 			return data.bagged or data.unit:editor_id() ~= -1
 		end
 
 		--TODO: Bodies need to be omitted from aggregation, okayish for PB heist but bad for generic stealth maps
 		--return managers.groupai and managers.groupai:state():whisper_mode()
 	end,
+	crate = function(id, data)
+		local level_id = managers.job:current_level_id()
+		local disabled_lvls = {
+			"election_day_3", 		-- Election Day Day 2 Warehouse
+			"election_day_3_skip1",
+			"election_day_3_skip2",
+			"mia_1",		 		-- Hotline Miami Day 1
+			"pal" 					-- Counterfeit
+		}
+		return not (level_id and table.contains(disabled_lvls, level_id))
+	end,
+	showcase = function(id, data)
+		local level_id = managers.job:current_level_id()
+		local disabled_lvls = {
+			"mus", 		-- The Diamond
+		}
+		return not (level_id and table.contains(disabled_lvls, level_id))
+	end
+}
+
 }
 
 HUDListManager.BUFFS = {
@@ -565,8 +656,14 @@ HUDListManager.BUFFS = {
 		armor_break_invulnerable_debuff = "armor_break_invulnerable",
 		grinder_debuff = "grinder",
 		chico_injector_debuff = "chico_injector",
+		delayed_damage_debuff = "delayed_damage",
+		maniac_debuff = "maniac",
+		sicario_dodge_debuff = "sicario_dodge",
+		smoke_screen_grenade_debuff = "smoke_screen_grenade",
+		tag_team_debuff = "tag_team",
 		unseen_strike_debuff = "unseen_strike",
 		uppers_debuff = "uppers",
+		interact_debuff = "interact",
 	},
 }
 
@@ -2299,19 +2396,19 @@ HUDList.LootItem.MAP = {
 	meth =			{ text = "Meth" },
 	money =			{ text = "Money" },
 	painting =		{ text = "Painting" },
-	pig =				{ text = "Pig" },
+	pig =			{ text = "Pig" },
 	present =		{ text = "Present" },
 	prototype =		{ text = "Prototype" },
 	safe =			{ text = "Safe" },
-	server =			{ text = "Server" },
+	server =		{ text = "Server" },
 	shell =			{ text = "Shell" },
 	shoes =			{ text = "Shoes" },
 	toast =			{ text = "Toast" },
 	toothbrush =	{ text = "Toothbrush" },
-	toy =				{ text = "Toy" },
-	turret =			{ text = "Turret" },
+	toy =			{ text = "Toy" },
+	turret =		{ text = "Turret" },
 	warhead =		{ text = "Warhead" },
-	weapon =			{ text = "Weapon" },
+	weapon =		{ text = "Weapon" },
 	wine =			{ text = "Wine" },
 }
 function HUDList.LootItem:init(parent, name, id, members)
