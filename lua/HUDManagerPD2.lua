@@ -2376,38 +2376,44 @@ end
 
 HUDList.LootItem = HUDList.LootItem or class(HUDList.RightListItem)
 HUDList.LootItem.MAP = {
-	aggregate =		{ text = "" },	--Aggregated loot
+	aggregate =		{ text = "" },			--Aggregated loot
 
-	armor =			{ text = "Armor" },
-	artifact =		{ text = "Artifact" },
-	bomb =			{ text = "Bomb" },
+	armor =			{ text = "Armor" },   	-- Shadow Raid
+	artifact =		{ text = "Artifact" },   -- Shadow Raid, The Diamond, The Yacht Heist
+	bike =			{ text = "Bike Part" },  -- Biker Heist
+	body =			{ text = "Body" },   	-- Boiling Point
+	bomb =			{ text = "Bomb" },  	-- The Bomb: Dockyard/Forest, Murky Station
 	coke =			{ text = "Coke" },
-	body =			{ text = "Body" },
-	dentist =		{ text = "Unknown" },
-	diamond =		{ text = "Diamond" },
-	drone_ctrl =	{ text = "Drone" },
-	evidence =		{ text = "Evidence" },
-	goat =			{ text = "Goat" },
+	dentist =		{ text = "Unknown" },	-- Golden Grin Casino
+	diamond =		{ text = "Diamond" },	-- The Diamond, The Diamond Heist Red Diamond
+	diamonds =		{ text = "Diamond" }, 	-- The Diamond Heist
+	drone_ctrl =	{ text = "Drone" },		-- Biker Heist
+	evidence =		{ text = "Evidence" },	-- Hoxton Revenge
+	goat =			{ text = "Goat" },		-- Goat Simulator
 	gold =			{ text = "Gold" },
 	headset =		{ text = "Headset" },
 	jewelry =		{ text = "Jewelry" },
 	meth =			{ text = "Meth" },
 	money =			{ text = "Money" },
 	painting =		{ text = "Painting" },
-	pig =			{ text = "Pig" },
-	present =		{ text = "Present" },
+	pig =			{ text = "Pig" },		-- Slaughterhouse
+	present =		{ text = "Present" },	-- Santa's Workshop
 	prototype =		{ text = "Prototype" },
-	safe =			{ text = "Safe" },
+	safe =			{ text = "Safe" },		-- Aftershock
 	server =		{ text = "Server" },
-	shell =			{ text = "Shell" },
-	shoes =			{ text = "Shoes" },
-	toast =			{ text = "Toast" },
-	toothbrush =	{ text = "Toothbrush" },
-	toy =			{ text = "Toy" },
-	turret =		{ text = "Turret" },
-	warhead =		{ text = "Warhead" },
+	shell =			{ text = "Shell" },		-- Transport: Train Heist
+	shoes =			{ text = "Shoes" },		-- Stealing Xmas
+	toast =			{ text = "Toast" },		-- White Xmas
+	toothbrush =	{ text = "Toothbrush" },-- Panic Room
+	toy =			{ text = "Toy" },		-- Stealing Xmas
+	turret =		{ text = "Turret" },	-- Transport: Train Heist
+	warhead =		{ text = "Warhead" },	-- Meltdown
 	weapon =		{ text = "Weapon" },
-	wine =			{ text = "Wine" },
+	wine =			{ text = "Wine" },		-- Stealing Xmas
+	crate =	 		{ text = "Crate" },
+	xmas_present = 	{ text = "Present" },	-- White Xmas
+	shopping_bag = 	{ text = "Bag" },		-- White Xmas
+	showcase =		{ text = "Showcase" }	-- Diamond Heist
 }
 function HUDList.LootItem:init(parent, name, id, members)
 	local loot_data = HUDList.LootItem.MAP[id]
