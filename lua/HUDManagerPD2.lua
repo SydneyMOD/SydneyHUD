@@ -613,8 +613,6 @@ HUDListManager.LOOT_TYPES_CONDITIONS = {
 	end
 }
 
-}
-
 HUDListManager.BUFFS = {
 	--Buff list items affected by specific buffs/debuffs. Add entries if buff ID differs from the HUDList buff entry for some reason, or if a single buff ID affect multiple items
 	berserker = { "berserker", "damage_increase", "melee_damage_increase" },
