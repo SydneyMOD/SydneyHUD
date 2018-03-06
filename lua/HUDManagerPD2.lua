@@ -2318,24 +2318,38 @@ end
 HUDList.SpecialPickupItem = HUDList.SpecialPickupItem or class(HUDList.RightListItem)
 if SydneyHUD:GetOption("new_icon") then
 	HUDList.SpecialPickupItem.MAP = {
-		crowbar =			{ sydney = { 0, 0, 32, 32 } },
-		keycard =			{ sydney = { 32, 0, 32, 32 } },
-		courier =			{ sydney = { 224, 0, 32, 32 } },
-		planks =			{ sydney = { 64, 0, 32, 32 } },
-		meth_ingredients =	{ sydney = { 160, 0, 32, 32 } },
-		secret_item =		{ sydney = { 96, 0, 32, 32 } } -- TODO: find an actual icon for secret_item. this is still the blowtorch icon
+		crowbar =				{ sydney = { 0, 0, 32, 32 } },
+		keycard =				{ sydney = { 32, 0, 32, 32 } },
+		courier =				{ sydney = { 224, 0, 32, 32 } },
+		planks =				{ sydney = { 64, 0, 32, 32 } },
+		meth_ingredients =		{ sydney = { 160, 0, 32, 32 } },
+		secret_item =			{ sydney = { 96, 0, 32, 32 } } -- TODO: find an actual icon for secret_item. this is still the blowtorch icon
 	}
 else
 	HUDList.SpecialPickupItem.MAP = {
 		crowbar =					{ hudpickups = { 0, 64, 32, 32 } },
 		keycard =					{ hudpickups = { 32, 0, 32, 32 } },
-		courier = 					{ atlas = { 6, 0 } },
-		planks =						{ hudpickups = { 0, 32, 32, 32 } },
-		meth_ingredients =		{ waypoints = { 192, 32, 32, 32 } },
-		secret_item =				{ waypoints = { 96, 64, 32, 32 } },
+		planks =					{ hudpickups = { 0, 32, 32, 32 } },
+		meth_ingredients =			{ waypoints  = { 192, 32, 32, 32 } },
+		blowtorch = 				{ hudpickups = { 96, 192, 32, 32 } },
+		thermite = 					{ hudpickups = { 64, 64, 32, 32 } },
+		c4 = 						{ hudicons	 = { 36, 242, 32, 32 } },
+		small_loot = 				{ hudpickups = { 32, 224, 32, 32} },
+		briefcase = 				{ hudpickups = { 96, 224, 32, 32} },
+		courier = 					{ texture = "guis/dlcs/gage_pack_jobs/textures/pd2/endscreen/gage_assignment" },
+		gage_case = 				{ skills 	 = { 1, 0 } },
+		gage_key = 					{ hudpickups = { 32, 64, 32, 32 } },
+		paycheck_masks = 			{ hudpickups = { 128, 32, 32, 32 } },
+		secret_item =				{ waypoints  = { 96, 64, 32, 32 } },
+		rings = 					{ texture = "guis/textures/pd2/level_ring_small", w_ratio = 0.5, h_ratio = 0.5 },
+		poster = 					{ hudpickups = { 96, 96, 32, 32 } },
+		handcuffs = 				{ hud_icons  = {294,469, 40, 40 } }
 	}
 end
 function HUDList.SpecialPickupItem:init(parent, name, id, members)
+	-- debug
+	log(id)
+
 	local pickup_data = HUDList.SpecialPickupItem.MAP[id]
 	local params = { priority = pickup_data.priority }
 
@@ -2391,7 +2405,6 @@ HUDList.LootItem.MAP = {
 	evidence =		{ text = "Evidence" },	-- Hoxton Revenge
 	goat =			{ text = "Goat" },		-- Goat Simulator
 	gold =			{ text = "Gold" },
-	headset =		{ text = "Headset" },
 	jewelry =		{ text = "Jewelry" },
 	meth =			{ text = "Meth" },
 	money =			{ text = "Money" },
@@ -2407,6 +2420,7 @@ HUDList.LootItem.MAP = {
 	toothbrush =	{ text = "Toothbrush" },-- Panic Room
 	toy =			{ text = "Toy" },		-- Stealing Xmas
 	turret =		{ text = "Turret" },	-- Transport: Train Heist
+	vr = 			{ text = "Headset" },	-- Stealing Xmas
 	warhead =		{ text = "Warhead" },	-- Meltdown
 	weapon =		{ text = "Weapon" },
 	wine =			{ text = "Wine" },		-- Stealing Xmas
@@ -2417,6 +2431,9 @@ HUDList.LootItem.MAP = {
 }
 function HUDList.LootItem:init(parent, name, id, members)
 	local loot_data = HUDList.LootItem.MAP[id]
+
+	--debug
+	log(id)
 
 	HUDList.LootItem.super.init(self, parent, name, loot_data.icon_data or { hudtabs = { 32, 33, 32, 32 }, alpha = 0.75, w_ratio = 1.2 })
 
