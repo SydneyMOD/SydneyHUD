@@ -457,7 +457,7 @@ if not SydneyHUD.setup then
 		if peer then
 			local warn_down = 3
 
-			if Global.game_settings.difficulty == "sm_wish" then
+			if Global.game_settings.one_down then
 				warn_down = 1
 			end
 
