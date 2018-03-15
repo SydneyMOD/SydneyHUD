@@ -6,7 +6,7 @@
 	"aggregate_loot": "Agregar o loot",
 	"aggregate_loot_desc": "Não divide o loot por tipo; usa uma única entrada para tudo",
 	"anti_bobble": "Anti bobble",
-	"anti_bobble_desc": "No more bobble every time",
+	"anti_bobble_desc": "Reduz o balanço vertical da câmera",
 	"anti_stealth_grenades": "Anti granadas no stealth,"
 	"anti_stealth_grenades_desc": "Supressão de arremesso de granadas se estiver em stealth (clique 2x para forçar o arremesso)",
 	"assault_phase_chat_info": "Mostrar etapa do assault",
