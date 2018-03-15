@@ -237,7 +237,7 @@
 	"remove_shield_desc": "Remove SWAT Shields",
 	"remove_interval": "Intervalo de remoção",
 	"remove_interval_desc": "Remove corpos/shields a cada N segundos",
-	"replenished_chat_info": "Mostrar reabastecido,
+	"replenished_chat_info": "Mostrar reabastecido,"
 	"replenished_chat_info_desc": "Mostrar o reabastecido no chat quando você e seu colega de time usar doctor bags.",
 	"replenished_chat_info_feed": "Compartilhar reabasteceido",
 	"replenished_chat_info_feed_desc": "Se você for o host, envia uma mensagem no chat para todos. (É requerido ativar a opção Mostrar reabastecido)",
