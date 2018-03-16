@@ -48,7 +48,7 @@
 	"down_warning_chat_info_feed": "Compartilhar aviso de down",
 	"down_warning_chat_info_feed_desc": "Se você for o host, envia um aviso de down no chat para todos. (É requirido ativar a opção Mostrar aviso de down)",
 	"ecm_battery_chat_info": "Mostrar bateria do ECM",
-	"ecm_battery_chat_info_desc": "Mostrar a bateria do ECM no chat quando estiver abaixo de 5seg.",
+	"ecm_battery_chat_info_desc": "Mostrar a bateria do ECM no chat quando estiver abaixo de 5 segundos.",
 	"ecm_battery_chat_info_feed": "Compartilhar bateria do ECM",
 	"ecm_battery_chat_info_feed_desc": "Se você for o host, envia a informação da bateria do ECM para todos. (É requerido ativar a opção Mostrar bateria do ECM)",
 	"enable_buy_all_assets": "Ativar comprar todos os assets",
