@@ -76,6 +76,7 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 * hexco321: Feature contributer
 * STaJIKeR1: Russian Translator
 * exp1os1on: Russian Translator
+* Kazenin: Portuguese Translator
 * Nox-404: Bug fixer
 
 
