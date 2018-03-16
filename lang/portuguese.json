@@ -292,7 +292,7 @@
 	"show_interaction_text_desc": "Mostra o texto do temporizador de interação na frente",
 	"show_loot": "Mostrar loot",
 	"show_loot_desc": "Mostrar o loot spawnado",
-	"show_melee_interaction": "Tempo de carregamento de ataque melee como interação",
+	"show_melee_interaction": "Tempo de ataque melee como interação",
 	"show_melee_interaction_desc": "Exibe o tempo de interação ao carregar um ataque melee",
 	"show_minion_count": "Mostrar contagem de minions",
 	"show_minion_count_desc": "Número atual de inimigos convertidos",
