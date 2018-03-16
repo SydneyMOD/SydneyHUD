@@ -14,7 +14,8 @@
 				"language_english",
 				"language_japanese",
 				"language_french",
-				"language_russian"
+				"language_russian",
+				"language_portuguese"
 			],
 			"value": "language",
 			"default_value": 1
