@@ -439,6 +439,8 @@ HUDListManager.UNIT_TYPES = {
 	biker_escape = 				{ type_id = "thug",			category = "enemies",	long_name = "Biker" },
 	tank = 						{ type_id = "tank",			category = "enemies",	long_name = "Bulldozer" },
 	tank_hw = 					{ type_id = "tank",			category = "enemies",	long_name = "Headless Bulldozer" },
+	tank_medic = 				{ type_id = "tank",			category = "enemies",	long_name = "Medic Bulldozer" },
+	tank_mini = 				{ type_id = "tank",			category = "enemies",	long_name = "Minigun Bulldozer" },
 	spooc = 					{ type_id = "spooc",		category = "enemies",	long_name = "Cloaker" },
 	taser = 					{ type_id = "taser",		category = "enemies",	long_name = "Taser" },
 	shield = 					{ type_id = "shield",		category = "enemies",	long_name = "Shield" },
@@ -2347,9 +2349,6 @@ else
 	}
 end
 function HUDList.SpecialPickupItem:init(parent, name, id, members)
-	-- debug
-	log(id)
-
 	local pickup_data = HUDList.SpecialPickupItem.MAP[id]
 	local params = { priority = pickup_data.priority }
 
