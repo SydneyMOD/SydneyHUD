@@ -45,7 +45,7 @@
 	"current_hps_timeout_desc": "O tempo entre curas para ser adicionado à medição atual (em segundos)",
 	"down_warning_chat_info": "Mostrar aviso de queda",
 	"down_warning_chat_info_desc": "Mostra um aviso de queda no chat quando você e seu colega de time tiver caído.",
-	"down_warning_chat_info_feed": "Compartilhar aviso de queda,
+	"down_warning_chat_info_feed": "Compartilhar aviso de queda,"
 	"down_warning_chat_info_feed_desc": "Se você for o host, envia um aviso de queda no chat para todos. (É requirido ativar a opção Mostrar aviso de queda)",
 	"ecm_battery_chat_info": "Mostrar bateria do ECM",
 	"ecm_battery_chat_info_desc": "Mostrar a bateria do ECM no chat quando estiver abaixo de 5 segundos.",
