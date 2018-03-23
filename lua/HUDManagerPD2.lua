@@ -2431,9 +2431,6 @@ HUDList.LootItem.MAP = {
 function HUDList.LootItem:init(parent, name, id, members)
 	local loot_data = HUDList.LootItem.MAP[id]
 
-	--debug
-	log(id)
-
 	HUDList.LootItem.super.init(self, parent, name, loot_data.icon_data or { hudtabs = { 32, 33, 32, 32 }, alpha = 0.75, w_ratio = 1.2 })
 
 	self._id = id

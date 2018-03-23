@@ -9,6 +9,7 @@ local contour_interaction_original = ECMJammerBase.contour_interaction
 local destroy_original = ECMJammerBase.destroy
 
 function ECMJammerBase:init(unit, ...)
+	self._is_sent = false
 	self._ecm_unit_key = tostring(unit:key())
 	managers.gameinfo:event("ecm", "create", self._ecm_unit_key, { unit = unit })
 	return init_original(self, unit, ...)
@@ -50,22 +51,24 @@ end
 function ECMJammerBase:update(unit, t, dt, ...)
 	update_original(self, unit, t, dt, ...)
 
+	local ecm_life_time = string.format("%.1f", self._battery_life)
+
 	if self._jammer_active then
-		if string.format("%.1f", self._battery_life) == "5.0" and SydneyHUD:GetOption("ecm_battery_chat_info") then -- 5.0sec remining
-			local name = "ECM batt."
-			local message = "5sec remining"
-			if not managers.chat:is_spam(name, message) then
+		if not self._is_sent then
+			if ecm_life_time == "5.0" and SydneyHUD:GetOption("ecm_battery_chat_info") then -- 5.0sec remining
 				if SydneyHUD:GetOption("ecm_battery_chat_info_feed") then
-					SydneyHUD:SendChatMessage(name, message, true)
-					SydneyHUD:SaveChatMessage(name, message)
+					SydneyHUD:SendChatMessage("ECM batt.", "5sec remining", true)
 				else
-					SydneyHUD:SendChatMessage(name, message)
-					SydneyHUD:SaveChatMessage(name, message)
+					SydneyHUD:SendChatMessage("ECM batt.", "5sec remining")
 				end
+
+				self._is_sent = true
 			end
-		elseif SydneyHUD._chat then
-			SydneyHUD:RemoveChatMessage("current")
 		end
+	end
+
+	if self._is_sent and ecm_life_time ~= "5.0" then
+		self._is_sent = false
 	end
 
 	if not self._battery_empty then
