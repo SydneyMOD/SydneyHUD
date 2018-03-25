@@ -39,7 +39,7 @@
 	"counter_font_size_desc": "右下パネルのカウンターのフォントサイズを変更します。",
 	"critical_down_warning_chat_info": "ラストダウン警告の表示",
 	"critical_down_warning_chat_info_desc": "メンバーが3,4度目にダウンした時、チャットにダウン警告を表示します。",
-	"critical_down_warning_chat_info_feed": "ラストダウン警告の表示",
+	"critical_down_warning_chat_info_feed": "ラストダウン警告の送信",
 	"critical_down_warning_chat_info_feed_desc": "ホスト時、メンバー全員にラストダウン警告をチャットで送信します。 (ラストダウン警告の表示が必要です。)",
 	"current_hps_timeout": "Current HPS timeout",
 	"current_hps_timeout_desc": "The time between heals to be added to current measuring (seconds)",
