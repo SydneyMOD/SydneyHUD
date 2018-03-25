@@ -79,7 +79,6 @@ Join SydneyMOD [Steam Group](https://steamcommunity.com/groups/SydneyMOD) and re
 * Kazenin: Portuguese Translator
 * Nox-404: Bug fixer
 
-
 ### Special Thanks
 SydneyHUD is using the following mods, codes & textures.
 So, Big credit to these guys!

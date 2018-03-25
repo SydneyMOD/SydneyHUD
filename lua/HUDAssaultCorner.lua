@@ -62,8 +62,6 @@ function HUDAssaultCorner:feed_heist_time(t, ...)
 		r = string.format("00:%02d", t)
 	end
 
-	SydneyHUD._heist_time = time
-	-- log(SydneyHUD.dev .. t)
 	if self._assault_timer then
 		self._assault_timer:set_time(t)
 		local _, _, cw, _ = self._assault_timer._timer_text:text_rect()

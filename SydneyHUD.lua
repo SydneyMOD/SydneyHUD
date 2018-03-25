@@ -102,6 +102,7 @@ if not SydneyHUD.setup then
 		["lib/managers/chatmanager"] = "ChatManager.lua",
 		["lib/managers/enemymanager"] = "EnemyManager.lua",
 		["lib/managers/group_ai_states/groupaistatebase"] = "GroupAIStateBase.lua",
+		["lib/managers/hud/hudchat"] = "HUDChat.lua",
 		["lib/managers/hud/hudassaultcorner"] = "HUDAssaultCorner.lua",
 		["lib/managers/hud/hudinteraction"] = "HUDInteraction.lua",
 		["lib/managers/hud/hudpresenter"] = "HUDPresenter.lua",

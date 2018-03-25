@@ -43,6 +43,7 @@
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/enemymanager"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/group_ai_states/groupaistatebase"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/hud/hudassaultcorner"},
+		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/hud/hudchat"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/hud/hudinteraction"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/hud/hudstatsscreen"},
 		{"script_path": "SydneyHUD.lua", "hook_id": "lib/managers/hud/hudsuspicion"},
