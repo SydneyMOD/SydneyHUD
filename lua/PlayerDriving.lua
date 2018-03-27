@@ -9,10 +9,7 @@ function PlayerDriving:_start_action_exit_vehicle(t)
 end
 
 function PlayerDriving:_check_action_exit_vehicle(t, input, ...)
-	local exit_timer = self._exit_vehicle_expire_t
-	if not exit_timer then
-		exit_timer = 0
-	end
+	local exit_timer = self._exit_vehicle_expire_t or 0
 	if not (self:_check_interact_toggle(t, input) and SydneyHUD:GetOption("push_to_interact") and exit_timer >= SydneyHUD:GetOption("push_to_interact_delay")) then
 		return _check_action_exit_vehicle_original(self, t, input, ...)
 	end
