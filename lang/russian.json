@@ -119,8 +119,8 @@
 	"interaction_color_g_desc": "Добавление зеленого цвета",
 	"interaction_color_r": "Красный",
 	"interaction_color_r_desc": "Добавление красного цвета",
-	"interact_time_hint": "Interact time hint",
-	"interact_time_hint_desc": "Show interact time when seeing interactable objects.",
+	"interact_time_hint": "Показывать таймер взаимодейсвтия",
+	"interact_time_hint_desc": "Показывает таймер при взаимодействии с обьектами.",
 	"language_english": "English",
 	"language_french": "Français",
 	"language_japanese": "日本語",
@@ -339,7 +339,7 @@
 	"swansong_effect": "Эффект Лебединая Песня",
 	"swansong_effect_desc": "Полноэкранный эффект когда вы находитесь в Лебединой Песне",
 	"sydneyhud_chat_info": "Информация в чате",
-	"sydneyhud_chat_info_desc": "Отправлять информацию в чат",
+	"sydneyhud_chat_info_desc": "Информация в чате о падениях, излечениях и т.д.",
     "sydneyhud_core": "Настройка ядра SydneyHUD",
     "sydneyhud_core_desc": "Детальные настройки ядра SydneyHUD",
 	"sydneyhud_corpse_remover_plus": "Настройка удаления тел",
@@ -407,8 +407,8 @@
 	"waypoint_color_g_desc": "Добавление зеленого цвета",
 	"waypoint_color_r": "Цвет точки (Красный)",
 	"waypoint_color_r_desc": "Добавление красного цвета",
-	"waypoint_deploy": "Show Deployable Waypoint",
-	"waypoint_deploy_desc": "Shows waypoints for deployable",
-	"waypoint_timer": "Show Waypoint Timers",
-	"waypoint_timer_desc": "Shows waypoint for timers"
+	"waypoint_deploy": "Показать точки взаимодейсвтий",
+	"waypoint_deploy_desc": "Показывает точки взаимодейсвтия, такие как дрели/мешки/аптечки/патроны.",
+	"waypoint_timer": "Показывать таймер точек",
+	"waypoint_timer_desc": "Показывает таймер на точках взаимодейсвтия (дрели/сверла/взломы)."
 }
