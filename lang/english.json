@@ -353,7 +353,7 @@
 	"sydneyhud_gadget_options_player": "Player laser setting",
 	"sydneyhud_gadget_options_player_desc": "Configure player laser setting",
 	"sydneyhud_gadget_options_sniper": "Sniper laser setting",
-	"sydneyhud_gadget_options_snipers": "Configure sniper laser setting",
+	"sydneyhud_gadget_options_sniper_desc": "Configure sniper laser setting",
 	"sydneyhud_gadget_options_turret": "Turret laser setting",
 	"sydneyhud_gadget_options_turret_desc": "Configure turret laser setting",
 	"sydneyhud_gameplay_tweaks": "Gameplay tweaks",
